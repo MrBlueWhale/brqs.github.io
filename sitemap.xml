@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hesifan.top/2020/102425339.html</loc>
+    <loc>http://hesifan.top/2020/102646933.html</loc>
     
-    <lastmod>2020-10-26</lastmod>
+    <lastmod>2020-10-28</lastmod>
     
   </url>
   
   <url>
-    <loc>http://hesifan.top/2020/102646933.html</loc>
+    <loc>http://hesifan.top/2020/102425339.html</loc>
     
     <lastmod>2020-10-26</lastmod>
     
@@ -243,6 +243,13 @@
   
   <url>
     <loc>http://hesifan.top/tags/seo/</loc>
+    <lastmod>2020-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hesifan.top/tags/%E7%A2%8E%E8%AF%AD/</loc>
     <lastmod>2020-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
