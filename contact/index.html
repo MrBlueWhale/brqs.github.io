@@ -470,6 +470,30 @@
 
     </div>
 </div>
+<script> 
+	$.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(datastatus){ 
+		if(status=='success'){ 
+			$('#poem').html(data.hitokoto) 
+				if(data.from_who!=null){ 
+					$('#info').html(data.from_who+" · "+《 "+data.from+" 》"); 
+					} 
+					else{ 
+						$('#info').html(" “ "+data.from+"” "); 
+					} 
+				} 
+				else{
+					$('#poem').html("获取出错啦");}}); 
+</script>
+<!-- 加入网易云音乐热门评论，实时更新 --> 
+<div class="poem-wrap"> 
+	<div class="poem-border poem-left"> 
+	</div> 
+	<div class="poem-border poem-right"> 
+	</div> 
+	<h1>热评</h1> 
+	<p id="poem">我羡慕那些和你在同一座城市的人，可以和你擦肩而过，乘坐同一辆地铁，走同一条路，看同一处风景，他们甚至还可能在汹涌的人潮中不小心踩了你一脚说对不起，再听你温柔道声没关系，他们那么幸运，而我只能从心里对你说：我想你。</p> 
+	<p id="info">网易云热评《如风过境》</p> 
+</div>
 
 <main class="content">
     <div id="contact" class="container chip-container">
