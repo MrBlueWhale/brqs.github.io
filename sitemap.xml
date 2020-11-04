@@ -221,13 +221,6 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/hello-world/</loc>
-    <lastmod>2020-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hesifan.top/tags/hexo/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
@@ -235,14 +228,21 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>http://hesifan.top/tags/markdown/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/markdown/</loc>
+    <loc>http://hesifan.top/tags/hello-world/</loc>
+    <lastmod>2020-11-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hesifan.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
