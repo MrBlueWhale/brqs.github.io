@@ -41,7 +41,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">凡尘纪</span>
+                    <span class="logo-span diyFont ">凡尘纪</span>
                 </a>
             </div>
             
@@ -844,6 +844,13 @@ $(function () {
     
 	<script src="/js/FunnyTitle.js">
 	</script>
+<script type="text/javascript">
+//只在桌面版网页启用特效
+var windowWidth = $(window).width();
+if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+}
+</script>
 <!-- start webpushr code --> 
 <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BHH3PhmBAqvufM3T1xn9bVf9wkdK3JkjvL7n0bKwBGZSDH4nDm4Buer7nvjNIVJiu4svzQROfJ3u-X7Jks_4qVk' });</script>
 <!-- end webpushr code -->
