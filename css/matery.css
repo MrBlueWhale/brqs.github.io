@@ -268,8 +268,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #6DD0F2 0%, #6DD0F2 100%);
-    opacity: 1;  /*透明效果 值范围 0~1，看情况自己修改*/
+    background-image: linear-gradient(to right, #6DD0F2 0%, #F59ABE 100%);
+    opacity: 0.8;  /*透明效果 值范围 0~1，看情况自己修改*/
 }
 
 
@@ -288,7 +288,7 @@ mark {
     bottom: 0;
     z-index: 300;
     background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .sidenav-overlay {
