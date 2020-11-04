@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hesifan.top/about/index.html</loc>
+    
+    <lastmod>2020-11-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hesifan.top/sakura/index.html</loc>
     
     <lastmod>2020-11-03</lastmod>
@@ -184,13 +191,6 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/about/index.html</loc>
-    
-    <lastmod>2020-10-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://hesifan.top/friends/index.html</loc>
     
     <lastmod>2020-10-19</lastmod>
@@ -221,20 +221,6 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/hexo/</loc>
-    <lastmod>2020-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hesifan.top/tags/markdown/</loc>
-    <lastmod>2020-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hesifan.top/tags/hello-world/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
@@ -242,7 +228,21 @@
   </url>
   
   <url>
+    <loc>http://hesifan.top/tags/hexo/</loc>
+    <lastmod>2020-11-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hesifan.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2020-11-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hesifan.top/tags/markdown/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
