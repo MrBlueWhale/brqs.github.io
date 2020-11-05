@@ -30,7 +30,7 @@ function bot_ui_ini() {
         }).then(function () {
             botui.message.add({
                 delay: 1500,
-                content: "这是利用空余时间做出来的个人博客网站"
+                content: "这是我利用空余时间做出来的个人博客网站"
             }).then(function () {
                 botui.action.button({
                     delay: 1600,
