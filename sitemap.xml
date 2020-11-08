@@ -205,13 +205,6 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/gobang/package.json</loc>
-    
-    <lastmod>2019-02-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://hesifan.top/gobang/README.html</loc>
     
     <lastmod>2019-02-25</lastmod>
@@ -219,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/gobang/public/manifest.json</loc>
+    <loc>http://hesifan.top/gobang/package.json</loc>
     
     <lastmod>2019-02-25</lastmod>
     
@@ -227,6 +220,13 @@
   
   <url>
     <loc>http://hesifan.top/gobang/public/index.html</loc>
+    
+    <lastmod>2019-02-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hesifan.top/gobang/public/manifest.json</loc>
     
     <lastmod>2019-02-25</lastmod>
     
@@ -263,6 +263,13 @@
   </url>
   
   <url>
+    <loc>http://hesifan.top/tags/hello-world/</loc>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hesifan.top/tags/hexo/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
@@ -271,13 +278,6 @@
   
   <url>
     <loc>http://hesifan.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2020-11-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hesifan.top/tags/hello-world/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
