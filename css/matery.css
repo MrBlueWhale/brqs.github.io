@@ -2198,7 +2198,6 @@ footer .copy-right {
 	border-radius: 3px;
 	font-size: var(--content-font-size);
 }
-
 .note:not(.no-icon):before {
     position: absolute;
     font-family: FontAwesome;
@@ -2206,11 +2205,9 @@ footer .copy-right {
     top: 11px;
     left: 15px;
 }
-
 .note:not(.no-icon) {
     padding-left: 45px;
 }
-
 .note.info {
     background-color: #eef7fa;
 	border-left-color: #428bca;
@@ -2219,30 +2216,16 @@ footer .copy-right {
     background-color: #fdf8ea;
     border-left-color: #f0ad4e;
 }
-
-.note.warning:not(.no-icon):before {
-    content: "\f06a";
-    color: #f0ad4e;
-}
-
 .note.primary {
     background-color: #f5f0fa;
     border-left-color: #6f42c1;
 }
-
-.note.primary:not(.no-icon):before {
-    content: "\f055";
-    color: #6f42c1;
-}
-
 .note.danger {
     background-color: #fcf1f2;
     border-left-color: #d9534f;
 }
 
-.note.danger:not(.no-icon):before {
-    content: "\f056";
-    color: #d9534f;
-}
+
+
 
 
