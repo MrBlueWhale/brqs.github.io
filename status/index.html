@@ -145,31 +145,21 @@
       <td rowspan="2" class="sertitle">
         <span class="label label-status label-{{label}}"><span class="glyphicon glyphicon-{{statusicon}}"></span> {{statustext}}</span>
         <span class="wname">
-		{% raw %}
 		{{friendly_name}}
-		{% endraw %}
 		</span>
       </td>
-      {% raw %}
-	  {{#charts}}
-	  {% endraw %}
+      {{#charts}}
       <td class="center">
       <span class="status-{{uptype}} set-tooltip" data-toggle="tooltip" data-placement="top" title="{{uptimetext}}"><span class="glyphicon glyphicon-{{upsign}}"></span></span>
       </td>
-	  {% raw %}
       {{/charts}}
-	  {% endraw %}
     </tr>
     <tr class="{{alert}} barl">
       <td colspan="8" class="barls">
         <div class="progress">
-		 {% raw %}
         {{#progress}}
-		 {% endraw %}
           <div class="progress-bar progress-bar-{{types}} set-tooltip" style="width: {{len}}%" data-toggle="tooltip" data-placement="top" title="{{stattip}}"></div>
-         {% raw %}
-		{{/progress}}
-		 {% endraw %}
+        {{/progress}}
        </div>
       </td>
     </tr>
