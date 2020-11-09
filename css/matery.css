@@ -2186,3 +2186,62 @@ footer .copy-right {
 .poem-wrap p:nth-of-type(2) { font-size: 18px; margin: 15px auto; } 
 .bozhushuo { text-align: center; font-size: 19px!important; margin: 0 0 12px!important; line-height: 1.9rem; font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif; } .notice { margin: 30px auto; padding: 20px; border: 1px dashed #e6e6e6; color: #969696; position: relative; display: inline-block; width: 95%; background: #fbfbfb50; border-radius: 10px; font-size: 16px; } 
 .notice-content { display: initial; vertical-align: middle; }
+/* note 提示引用模块 */
+.note {
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: initial;
+    border-left: 3px solid #eee;
+    background-color: #f9f9f9;
+	border-radius: 3px;
+	font-size: var(--content-font-size);
+}
+
+.note:not(.no-icon):before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: larger;
+    top: 11px;
+    left: 15px;
+}
+
+.note:not(.no-icon) {
+    padding-left: 45px;
+}
+
+.note.info {
+    background-color: #eef7fa;
+	border-left-color: #428bca;
+}
+
+.note.info:not(.no-icon):before {
+    content: "\f05a";
+    color: #428bca;
+}
+
+.note.warning {
+    background-color: #fdf8ea;
+    border-left-color: #f0ad4e;
+}
+
+.note.warning:not(.no-icon):before {
+    content: "\f06a";
+    color: #f0ad4e;
+}
+
+.note.primary {
+    background-color: #f5f0fa;
+    border-left-color: #6f42c1;
+}
+
+.note.primary:not(.no-icon):before {
+    content: "\f055";
+    color: #6f42c1;
+}
+
+.note.danger {
+    background-color: #fcf1f2;
+    border-left-color: #d9534f;
+}
