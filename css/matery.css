@@ -2215,12 +2215,6 @@ footer .copy-right {
     background-color: #eef7fa;
 	border-left-color: #428bca;
 }
-
-.note.info:not(.no-icon):before {
-    content: "\f05a";
-    color: #428bca;
-}
-
 .note.warning {
     background-color: #fdf8ea;
     border-left-color: #f0ad4e;
@@ -2245,3 +2239,10 @@ footer .copy-right {
     background-color: #fcf1f2;
     border-left-color: #d9534f;
 }
+
+.note.danger:not(.no-icon):before {
+    content: "\f056";
+    color: #d9534f;
+}
+
+
