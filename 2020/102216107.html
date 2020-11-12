@@ -1840,5 +1840,18 @@ if (windowWidth > 768) {
 <!-- start webpushr code --> 
 <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BHH3PhmBAqvufM3T1xn9bVf9wkdK3JkjvL7n0bKwBGZSDH4nDm4Buer7nvjNIVJiu4svzQROfJ3u-X7Jks_4qVk' });</script>
 <!-- end webpushr code -->
+<script> if (localStorage.getItem('dark') === '1') { 
+         document.body.classList.add('dark'); 
+		 } 
+		 else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { 
+		 document.body.classList.add('dark'); 
+		 } 
+		 else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
+		 document.body.classList.add('dark'); 
+		 } 
+		 </script> 
+		 <a onclick="switchNightMode()" id="sma"> 
+		 <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
+		 </a>
 <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88');</script></body> 
 </html>
