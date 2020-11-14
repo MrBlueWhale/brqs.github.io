@@ -58,7 +58,7 @@
 }
 @font-face{
     font-family: 'hl';
-    src: url('../box/font/hl.ttf');
+    src: url('https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/box/font/hl.ttf');
 }
 
 /** 表示全局使用，如果不想全局使用不要添加该段 */
