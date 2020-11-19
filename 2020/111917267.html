@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo解决搜索异常问题, 凡尘纪">
+    <meta name="keywords" content="解决hexo搜索异常问题, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo解决搜索异常问题 | 凡尘纪</title>
+    <title>解决hexo搜索异常问题 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -701,12 +701,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo解决搜索异常问题</h1>
+                    <h1 class="description center-align post-title">解决hexo搜索异常问题</h1>
                 </div>
             </div>
         </div>
@@ -862,7 +862,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    700
+                    702
                 </div>
                 
 
@@ -887,7 +887,7 @@
                 <blockquote>
 <p>在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  </p>
 </blockquote>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>解决过程首先我怀疑是我的search.js文件的问题替换了友链其他人的，还是不行。<br>然后开始f12慢慢调试排查，我发现在searchlist里面显示的链接为不完整的链接如2020/111623576.html这样在主页没有问题在其他页面如<a href="https://hesifan.top/contact/">https://hesifan.top/contact/</a>  就会因为补全为<a href="https://hesifan.top/contact/2020/111623576.html%E5%AF%BC%E8%87%B4404%EF%BC%8C%E6%88%91%E5%B0%B1%E5%BC%80%E5%A7%8B%E6%94%B9search.js%E6%96%87%E4%BB%B6%E5%B0%86%E5%A2%9E%E5%8A%A0%E4%BA%86%E4%B8%80%E4%B8%AA">https://hesifan.top/contact/2020/111623576.html导致404，我就开始改search.js文件将增加了一个</a> <code>/</code></p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>解决过程首先我怀疑是我的search.js文件的问题替换了友链其他人的，还是不行。<br>然后开始f12慢慢调试排查，我发现在searchlist里面显示的链接为不完整的链接如2020/111623576.html这样在主页没有问题在其他页面如 <a href="https://hesifan.top/contact/">https://hesifan.top/contact/</a>  就会因为补全为 <a href="https://hesifan.top/contact/2020/111623576.html">https://hesifan.top/contact/2020/111623576.html</a> 导致404，我就开始改search.js文件将增加了一个 <code>/</code></p>
 <pre><code>if (isMatch) &#123;
                         str += &quot;&lt;li&gt;&lt;a href=&#39;/&quot; + data_url + &quot;&#39; class=&#39;search-result-title&#39;&gt;&quot; + data_title + &quot;&lt;/a&gt;&quot;;
 
@@ -1499,9 +1499,9 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="hexo解决搜索异常问题">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="解决hexo搜索异常问题">
                         
-                        <span class="card-title">hexo解决搜索异常问题</span>
+                        <span class="card-title">解决hexo搜索异常问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
