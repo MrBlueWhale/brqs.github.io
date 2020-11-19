@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="lab, 凡尘纪">
+    <meta name="keywords" content="hexo解决搜索异常问题, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>lab | 凡尘纪</title>
+    <title>hexo解决搜索异常问题 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -697,171 +697,510 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                念念不忘 必有回响
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['欲买桂花同载酒 终不似 少年游','骨子里文艺的人,一半柴米油盐酱醋茶,一半琴棋书画诗酒花,满头霜雪走过半生,抬眼之处,仍是少年出世之年。'],
-                        startDelay: 300,
-                        typeSpeed: 150,
-                        loop: true,
-                        backSpeed: 150,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo解决搜索异常问题</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-11-19
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-11-19
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    700
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  </p>
+</blockquote>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>解决过程首先我怀疑是我的search.js文件的问题替换了友链其他人的，还是不行。<br>然后开始f12慢慢调试排查，我发现在searchlist里面显示的链接为不完整的链接如2020/111623576.html这样在主页没有问题在其他页面如<a href="https://hesifan.top/contact/">https://hesifan.top/contact/</a>  就会因为补全为<a href="https://hesifan.top/contact/2020/111623576.html%E5%AF%BC%E8%87%B4404%EF%BC%8C%E6%88%91%E5%B0%B1%E5%BC%80%E5%A7%8B%E6%94%B9search.js%E6%96%87%E4%BB%B6%E5%B0%86%E5%A2%9E%E5%8A%A0%E4%BA%86%E4%B8%80%E4%B8%AA">https://hesifan.top/contact/2020/111623576.html导致404，我就开始改search.js文件将增加了一个</a> <code>/</code></p>
+<pre><code>if (isMatch) &#123;
+                        str += &quot;&lt;li&gt;&lt;a href=&#39;/&quot; + data_url + &quot;&#39; class=&#39;search-result-title&#39;&gt;&quot; + data_title + &quot;&lt;/a&gt;&quot;;
+
+</code></pre>
+<p>hexo d 之后正常，应该算是解决了吧，暂时还未出错。<br>贴上改后完整的js文件  </p>
+<pre><code>var searchFunc = function (path, search_id, content_id) &#123;
+    &#39;use strict&#39;;
+    $.ajax(&#123;
+        url: path,
+        dataType: &quot;xml&quot;,
+        success: function (xmlResponse) &#123;
+            // get the contents from search data
+            var datas = $(&quot;entry&quot;, xmlResponse).map(function () &#123;
+                return &#123;
+                    title: $(&quot;title&quot;, this).text(),
+                    content: $(&quot;content&quot;, this).text(),
+                    url: $(&quot;url&quot;, this).text()
+                &#125;;
+            &#125;).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener(&#39;input&#39;, function () &#123;
+                var str = &#39;&lt;ul class=\&quot;search-result-list\&quot;&gt;&#39;;
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = &quot;&quot;;
+                if (this.value.trim().length &lt;= 0) &#123;
+                    return;
+                &#125;
+                // perform local searching
+                datas.forEach(function (data) &#123;
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, &quot;&quot;).toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if (data_title != &#39;&#39; &amp;&amp; data_content != &#39;&#39;) &#123;
+                        keywords.forEach(function (keyword, i) &#123;
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) &#123;
+                                isMatch = false;
+                            &#125; else &#123;
+                                if (index_content &lt; 0) &#123;
+                                    index_content = 0;
+                                &#125;
+                                if (i == 0) &#123;
+                                    first_occur = index_content;
+                                &#125;
+                            &#125;
+                        &#125;);
+                    &#125;
+                    // show search results
+                    if (isMatch) &#123;
+                        str += &quot;&lt;li&gt;&lt;a href=&#39;/&quot; + data_url + &quot;&#39; class=&#39;search-result-title&#39;&gt;&quot; + data_title + &quot;&lt;/a&gt;&quot;;
+                        var content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, &quot;&quot;);
+                        if (first_occur &gt;= 0) &#123;
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if (start &lt; 0) &#123;
+                                start = 0;
+                            &#125;
+                            if (start == 0) &#123;
+                                end = 100;
+                            &#125;
+                            if (end &gt; content.length) &#123;
+                                end = content.length;
+                            &#125;
+                            var match_content = content.substr(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function (keyword) &#123;
+                                var regS = new RegExp(keyword, &quot;gi&quot;);
+                                match_content = match_content.replace(regS, &quot;&lt;em class=\&quot;search-keyword\&quot;&gt;&quot; + keyword + &quot;&lt;/em&gt;&quot;);
+                            &#125;);
+
+                            str += &quot;&lt;p class=\&quot;search-result\&quot;&gt;&quot; + match_content + &quot;...&lt;/p&gt;&quot;
+                        &#125;
+                        str += &quot;&lt;/li&gt;&quot;;
+                    &#125;
+                &#125;);
+                str += &quot;&lt;/ul&gt;&quot;;
+                $resultContent.innerHTML = str;
+            &#125;);
+        &#125;
+    &#125;);
+&#125;</code></pre>
+<h2 id="思考原因"><a href="#思考原因" class="headerlink" title="思考原因"></a>思考原因</h2><p>这里是胡乱猜测，可能是因为我使用的生成链接是全数字，我发现其他人是随机或者拼音都没问题。  </p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">hsf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://hesifan.top/2020/111917267.html">http://hesifan.top/2020/111917267.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">hsf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
-    </div>
-</div>
- <!-- 留言弹幕模块 -->
-        <style>
-        .box{
-        /* width: 800px;
-        height: 400px; */
-        padding: 12px;
-        /* background: rgba(0,0,0,0.1); */
-        margin: 0 auto ;
-        overflow: hidden;
-        background-size: cover; 
-        border-radius: 10px;
-        fill-opacity: .6;
-        }
-        .track{
-            line-height: 40px;
-            margin-bottom: 5px;   
-        }
-        .child{
-            line-height: 20px;
-            margin-bottom: 10px;
-            font-size: 18px;
-            font-family: MV Boli;
-            transform: translateX(1200px);
-            text-shadow: 2px 2px 2px rgba(0,0,0,0.1)
             
-        }
-        .child-1{
-            color: yellowgreen;
-            animation: minscrollTo linear 6.5s infinite;
-        }
-        .child-2{
-            color: #ad7a86;
-            animation: scrollTo linear 10.5s infinite;
-        }
-        .child-3{
-            color: coral;
-            animation: minscrollTo linear 7s infinite;
-        }
-        .child-4{
-            color: #ad7a86;
-            animation: minscrollTo linear 7.5s infinite;
-        }
-        .child-5{
-            color: yellowgreen;
-            animation: scrollTo linear 12s infinite;
-        }
-        .child-6{
-            color: coral;
-            animation: scrollTo linear 11s infinite;
-        }
-        .child-7{
-            color: #ad7a86;
-            animation: scrollTo linear 11s infinite;
-        }
-        .child-8{
-            color: yellowgreen;
-            animation: scrollTo linear 11.5s infinite;
-        }
-        .child-9{
-            color: coral;
-            animation: scrollTo linear 10.7s infinite;
-        }
-        @keyframes scrollTo {
-            to{
-                transform: translateX(-750px);
-            }
-        }
-        @keyframes minscrollTo {
-            to{
-                transform: translateX(-230px);
-            }
-        }
-        </style>
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 弹 幕 墙 ”</div>
-                        “ 念念不忘，必有回响”                      
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="track">
-                        <div class="child child-1">是非在己 毁誉由人 得丧不论</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-2">越难办到的事越有价值</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-3">欲买桂花同载酒 终不似 少年游</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-4">八百东风破吴越 何时再见吴钩还</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-9">两处相思同淋雪，也算此生共白头。冬去枯骨尘如是，春来尽做连理枝。鸟雀对鸣和和睦，好比我等再无忧。</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-5">但行好事 莫问前程</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-6">人生若只如初见 何事秋风悲画扇</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-7">一定要爱着点什么，恰似草木对光阴的钟情。汪曾祺 · 《 人间草木 》</div>
-                    </div>
-                    <div class="track">
-                        <div class="child child-8">参天尽物 博学慎思</div>
-                  </div>
-                </div>
-            </div>
         </div>
- <div class="card">
-            
+    </div>
 
-            
+    
 
-            
+    
 
-            
+    
 
-            
-            <style>
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -871,7 +1210,8 @@
     }
 
     #vcomments textarea {
-        box-sizing: border-box;   
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -1094,7 +1434,337 @@
         left: unset;
         visibility: visible;
     }
+	.v[data-class="v"] .vwrap .vheader .vinput {
+  width: 32%;
+  border-bottom: 1px dashed #dedede;
+}
 </style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    let metaPlaceholder = {"nick":"昵称/qq(必填)","mail":"邮箱(必填)","link":"网址(https://)选填"} ;
+//这里要换行
+new Valine({
+        el: '#vcomments',
+        appId: 'MTf2zMKqfswMOoRa90rOoCWC-gzGzoHsz',
+        appKey: 'lJMlfgSfSTKrTvrIzNhpGyhG',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-CN',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        meta: ["nick", "mail", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'monsterid',
+        requiredFields: ["f5a3318ea1fc0d20"],
+        master: 'ddf016c0f5a3318ea1fc0d20c8ac4429',
+        friends: ["efc1730bf09301ac92cf7ba5a8c88df0", "80a023e11167a78a35f72ef4dd0a48f4", "1512958e18378c98b498d5effe3e76ff"],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        metaPlaceholder: metaPlaceholder,
+
+    });
+</script>
+
+
+
+
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/111917267.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="hexo解决搜索异常问题">
+                        
+                        <span class="card-title">hexo解决搜索异常问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  
+
+解决过程解决过程首先我怀疑是我的search.j
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/111623576.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="关于我的实验室">
+                        
+                        <span class="card-title">关于我的实验室</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            关于我的实验室：实验室内大部分页面都是我平时浏览大佬的博客发现的有趣的页面，然后用F12扒下来的。这些页面大多为开源项目，可以按照其说明自由引用，本人崇尚开源精神
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">
+                        <span class="chip bg-color">实验室</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 凡尘纪<br />'
+            + '文章作者: hsf<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
 
     <footer class="page-footer bg-color">
     
