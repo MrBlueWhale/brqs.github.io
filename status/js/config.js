@@ -12,7 +12,7 @@ var __apiKeys = [
 	'm786337291-2dd7ac6a1ad11f01cee1af99',//initcool
 	'm786337261-bed8d5c4a30aaefdca3e85df',//mx
 	'm786337286-b3cfe0257cd38c68c26990f6',//海客go
-	
+	'm786449604-09aefb5fd13034ac06aca9b4',//柒比叁
 ];
 
 // refresh interval (in seconds)
