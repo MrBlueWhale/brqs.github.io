@@ -889,7 +889,7 @@
 <h4 id="1-4配置nodejs环境："><a href="#1-4配置nodejs环境：" class="headerlink" title="1.4配置nodejs环境："></a>1.4配置nodejs环境：</h4><blockquote>
 <p>NodeJS和NPM安装好了以后并不能直接使用，默认情况下，NPM安装的模块并不会安装到NodeJS的程序目录，比如我们安装的时候设置的D盘，“D:\Program Files\nodejs”，而我们使用npm安装一个cluster模块他会出现在C盘默认的路径下面，所以，如果我们不修改npm的模块安装目录，那么它默认情况下都会安装到这里，随着你测试开发各种不同的项目，安装的模块越来越多，这个文件夹的体积就会越来越大，直到占满你的C盘。(网上的说法我觉得只运行hexo不会)所以我们要修改npm的配置。  </p>
 </blockquote>
-<p>  (1).在nodejs文件夹下，创建两个为文件夹： <code>node_global</code>;<code>node_cecal</code><br>这是用来放安装过程的缓存文件以及最终的模块配置位置。<br>  (2).使用下面命令将npm的全局模块目录和缓存目录配置到我们刚才创建的那两个目录<br><code>npm config set prefix &quot;node_global文件的路径&quot;</code><br><code>npm config set cache &quot;node_cache的文件路径&quot;</code><br>例如：<code>npm config set prefix “D:\Program Files\nodejs\node_global”</code><br>(还在win+R调出来的黑色命令框里，输入你自己保存的路径可以在文件夹上复制路径)<br>(3).高级系统设置——环境变量（上一步完成后要将node_modules文件夹移入node_global文件夹下，网上教程大多没有提到这步）<br>新增系统变量(右键此电脑图标属性高级系统设置里面环境变量里面)：<br>变量名填：NODE_PATH<br>变量值填：（你自己的文件路径）<br><img src="https://img-blog.csdnimg.cn/20190530161206918.png" alt="系统变量"><br>将用户变量下的Path修改为<code>D:\Develop\nodejs\node_global 你自己的路径</code>   </p>
+<p>  (1).在nodejs文件夹下，创建两个为文件夹： <code>node_global</code>;<code>node_cecal</code><br>这是用来放安装过程的缓存文件以及最终的模块配置位置。<br>  (2).使用下面命令将npm的全局模块目录和缓存目录配置到我们刚才创建的那两个目录<br><code>npm config set prefix "node_global文件的路径"</code><br><code>npm config set cache "node_cache的文件路径"</code><br>例如：<code>npm config set prefix “D:\Program Files\nodejs\node_global”</code><br>(还在win+R调出来的黑色命令框里，输入你自己保存的路径可以在文件夹上复制路径)<br>(3).高级系统设置——环境变量（上一步完成后要将node_modules文件夹移入node_global文件夹下，网上教程大多没有提到这步）<br>新增系统变量(右键此电脑图标属性高级系统设置里面环境变量里面)：<br>变量名填：NODE_PATH<br>变量值填：（你自己的文件路径）<br><img src="https://img-blog.csdnimg.cn/20190530161206918.png" alt="系统变量"><br>将用户变量下的Path修改为<code>D:\Develop\nodejs\node_global 你自己的路径</code>   </p>
 <h4 id="1-5修改完成后测试："><a href="#1-5修改完成后测试：" class="headerlink" title="1.5修改完成后测试："></a>1.5修改完成后测试：</h4><p>输入命令：node 回车——再输入 require(“cluster”)能正常使用没出现err这样的内容就算配置成功，网上教程有把“”打成‘’我用了之后显示没有这命令推测是他打错了。我给成”“结果成功了。到这里nodejs就配置好了。     </p>
 <h3 id="2-淘宝云镜像："><a href="#2-淘宝云镜像：" class="headerlink" title="2.淘宝云镜像："></a>2.淘宝云镜像：</h3><blockquote>
 <p>在国内使用npm下载东西可能会比较慢，若配置了淘宝云镜像就可通过国内渠道下载会快很多只需在下载命令前加一个c </p>
@@ -917,8 +917,8 @@ npm config get registry  </code></pre>
 <h3 id="4-推荐一个编辑工具便于后面修改创建文件："><a href="#4-推荐一个编辑工具便于后面修改创建文件：" class="headerlink" title="4. 推荐一个编辑工具便于后面修改创建文件："></a>4. 推荐一个编辑工具便于后面修改创建文件：</h3><pre><code>notepad++ 可以在百度上搜索下在，我用的是这个当然可以用其他的。    </code></pre>
 <h2 id="注册GitHub账号并创建仓库"><a href="#注册GitHub账号并创建仓库" class="headerlink" title="注册GitHub账号并创建仓库"></a>注册GitHub账号并创建仓库</h2><p>注册很简单，仓库你的GitHub用户名加github.io如：brqs.github.io  </p>
 <h2 id="利用脚本快速搭建hexo博客"><a href="#利用脚本快速搭建hexo博客" class="headerlink" title="利用脚本快速搭建hexo博客"></a>利用脚本快速搭建hexo博客</h2><h3 id="1-下载-hexo-script-的安装脚本："><a href="#1-下载-hexo-script-的安装脚本：" class="headerlink" title="1. 下载[hexo-script]的安装脚本："></a>1. 下载[hexo-script]的安装脚本：</h3><p>  你只需要在某个目录下,右键打开git bash然后执行下面这条命令即可下载完成<br><code>curl -O https://cdn.jsdelivr.net/gh/kjhuanhao/hexo-script@master/install.sh</code><br>我们更建议直接在releases下载,选择最新版本,只需下载install.sh即可</p>
-<p>  建议新建一个目录存放此安装脚本,最好是你想存放博客文件的地方.<br>如图:我创建了一个<img src="https://gblobscdn.gitbook.com/assets%2F-LlpfTEtpw-XHjloYx-t%2F-LluijETOwVdISk9cx63%2F-LlujpjLExHk7K73O-Gb%2F1.png?alt=media&token=19632c44-33dd-4025-a8e5-2042e219ff98" alt="myblog">myblog文件夹,然后在此文件夹下右键打开git bash</p>
-<p>  然后运行了下载命令,安装脚本(install.sh)就会下载在你的当前文件夹中<img src="https://gblobscdn.gitbook.com/assets%2F-LlpfTEtpw-XHjloYx-t%2F-Llujyttm0BWO_RMRg-2%2F-LlukgEwkesx8NRKmBdo%2F2.png?alt=media&token=ec7c6fd6-108a-4161-a3d5-1a67438fa83d">  </p>
+<p>  建议新建一个目录存放此安装脚本,最好是你想存放博客文件的地方.<br>如图:我创建了一个<img src="https://gblobscdn.gitbook.com/assets%2F-LlpfTEtpw-XHjloYx-t%2F-LluijETOwVdISk9cx63%2F-LlujpjLExHk7K73O-Gb%2F1.png?alt=media&amp;token=19632c44-33dd-4025-a8e5-2042e219ff98" alt="myblog">myblog文件夹,然后在此文件夹下右键打开git bash</p>
+<p>  然后运行了下载命令,安装脚本(install.sh)就会下载在你的当前文件夹中<img src="https://gblobscdn.gitbook.com/assets%2F-LlpfTEtpw-XHjloYx-t%2F-Llujyttm0BWO_RMRg-2%2F-LlukgEwkesx8NRKmBdo%2F2.png?alt=media&amp;token=ec7c6fd6-108a-4161-a3d5-1a67438fa83d">  </p>
 <h3 id="2-自动完成全部安装过程并生成博客文件"><a href="#2-自动完成全部安装过程并生成博客文件" class="headerlink" title="2.自动完成全部安装过程并生成博客文件:"></a>2.自动完成全部安装过程并生成博客文件:</h3><p>   hexo_win的使用<br>您需要在存放install.sh脚本的目录中,右键打开git bash运行以下命令:</p>
 <p>  <code>source install.sh hexo_win</code>  </p>
 <blockquote>
@@ -1766,7 +1766,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28.1k</span>&nbsp;字
+                class="white-color">25.9k</span>&nbsp;字
             
             
             

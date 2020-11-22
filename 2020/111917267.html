@@ -861,14 +861,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    702
+                    595
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -887,96 +887,96 @@
 <p>在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  </p>
 </blockquote>
 <h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>解决过程首先我怀疑是我的search.js文件的问题替换了友链其他人的，还是不行。<br>然后开始f12慢慢调试排查，我发现在searchlist里面显示的链接为不完整的链接如2020/111623576.html这样在主页没有问题在其他页面如 <a href="https://hesifan.top/contact/">https://hesifan.top/contact/</a>  就会因为补全为 <a href="https://hesifan.top/contact/2020/111623576.html">https://hesifan.top/contact/2020/111623576.html</a> 导致404，我就开始改search.js文件将增加了一个 <code>/</code></p>
-<pre><code>if (isMatch) &#123;
-                        str += &quot;&lt;li&gt;&lt;a href=&#39;/&quot; + data_url + &quot;&#39; class=&#39;search-result-title&#39;&gt;&quot; + data_title + &quot;&lt;/a&gt;&quot;;
+<pre><code>if (isMatch) {
+                        str += "&lt;li&gt;&lt;a href='/" + data_url + "' class='search-result-title'&gt;" + data_title + "&lt;/a&gt;";
 
 </code></pre>
 <p>hexo d 之后正常，应该算是解决了吧，暂时还未出错。<br>贴上改后完整的js文件  </p>
-<pre><code>var searchFunc = function (path, search_id, content_id) &#123;
-    &#39;use strict&#39;;
-    $.ajax(&#123;
+<pre><code>var searchFunc = function (path, search_id, content_id) {
+    'use strict';
+    $.ajax({
         url: path,
-        dataType: &quot;xml&quot;,
-        success: function (xmlResponse) &#123;
+        dataType: "xml",
+        success: function (xmlResponse) {
             // get the contents from search data
-            var datas = $(&quot;entry&quot;, xmlResponse).map(function () &#123;
-                return &#123;
-                    title: $(&quot;title&quot;, this).text(),
-                    content: $(&quot;content&quot;, this).text(),
-                    url: $(&quot;url&quot;, this).text()
-                &#125;;
-            &#125;).get();
+            var datas = $("entry", xmlResponse).map(function () {
+                return {
+                    title: $("title", this).text(),
+                    content: $("content", this).text(),
+                    url: $("url", this).text()
+                };
+            }).get();
             var $input = document.getElementById(search_id);
             var $resultContent = document.getElementById(content_id);
-            $input.addEventListener(&#39;input&#39;, function () &#123;
-                var str = &#39;&lt;ul class=\&quot;search-result-list\&quot;&gt;&#39;;
+            $input.addEventListener('input', function () {
+                var str = '&lt;ul class=\"search-result-list\"&gt;';
                 var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                $resultContent.innerHTML = &quot;&quot;;
-                if (this.value.trim().length &lt;= 0) &#123;
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length &lt;= 0) {
                     return;
-                &#125;
+                }
                 // perform local searching
-                datas.forEach(function (data) &#123;
+                datas.forEach(function (data) {
                     var isMatch = true;
                     var content_index = [];
                     var data_title = data.title.trim().toLowerCase();
-                    var data_content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, &quot;&quot;).toLowerCase();
+                    var data_content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, "").toLowerCase();
                     var data_url = data.url;
                     var index_title = -1;
                     var index_content = -1;
                     var first_occur = -1;
                     // only match artiles with not empty titles and contents
-                    if (data_title != &#39;&#39; &amp;&amp; data_content != &#39;&#39;) &#123;
-                        keywords.forEach(function (keyword, i) &#123;
+                    if (data_title != '' &amp;&amp; data_content != '') {
+                        keywords.forEach(function (keyword, i) {
                             index_title = data_title.indexOf(keyword);
                             index_content = data_content.indexOf(keyword);
-                            if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) &#123;
+                            if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) {
                                 isMatch = false;
-                            &#125; else &#123;
-                                if (index_content &lt; 0) &#123;
+                            } else {
+                                if (index_content &lt; 0) {
                                     index_content = 0;
-                                &#125;
-                                if (i == 0) &#123;
+                                }
+                                if (i == 0) {
                                     first_occur = index_content;
-                                &#125;
-                            &#125;
-                        &#125;);
-                    &#125;
+                                }
+                            }
+                        });
+                    }
                     // show search results
-                    if (isMatch) &#123;
-                        str += &quot;&lt;li&gt;&lt;a href=&#39;/&quot; + data_url + &quot;&#39; class=&#39;search-result-title&#39;&gt;&quot; + data_title + &quot;&lt;/a&gt;&quot;;
-                        var content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, &quot;&quot;);
-                        if (first_occur &gt;= 0) &#123;
+                    if (isMatch) {
+                        str += "&lt;li&gt;&lt;a href='/" + data_url + "' class='search-result-title'&gt;" + data_title + "&lt;/a&gt;";
+                        var content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, "");
+                        if (first_occur &gt;= 0) {
                             // cut out 100 characters
                             var start = first_occur - 20;
                             var end = first_occur + 80;
-                            if (start &lt; 0) &#123;
+                            if (start &lt; 0) {
                                 start = 0;
-                            &#125;
-                            if (start == 0) &#123;
+                            }
+                            if (start == 0) {
                                 end = 100;
-                            &#125;
-                            if (end &gt; content.length) &#123;
+                            }
+                            if (end &gt; content.length) {
                                 end = content.length;
-                            &#125;
+                            }
                             var match_content = content.substr(start, end);
                             // highlight all keywords
-                            keywords.forEach(function (keyword) &#123;
-                                var regS = new RegExp(keyword, &quot;gi&quot;);
-                                match_content = match_content.replace(regS, &quot;&lt;em class=\&quot;search-keyword\&quot;&gt;&quot; + keyword + &quot;&lt;/em&gt;&quot;);
-                            &#125;);
+                            keywords.forEach(function (keyword) {
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "&lt;em class=\"search-keyword\"&gt;" + keyword + "&lt;/em&gt;");
+                            });
 
-                            str += &quot;&lt;p class=\&quot;search-result\&quot;&gt;&quot; + match_content + &quot;...&lt;/p&gt;&quot;
-                        &#125;
-                        str += &quot;&lt;/li&gt;&quot;;
-                    &#125;
-                &#125;);
-                str += &quot;&lt;/ul&gt;&quot;;
+                            str += "&lt;p class=\"search-result\"&gt;" + match_content + "...&lt;/p&gt;"
+                        }
+                        str += "&lt;/li&gt;";
+                    }
+                });
+                str += "&lt;/ul&gt;";
                 $resultContent.innerHTML = str;
-            &#125;);
-        &#125;
-    &#125;);
-&#125;</code></pre>
+            });
+        }
+    });
+}</code></pre>
 <h2 id="思考原因"><a href="#思考原因" class="headerlink" title="思考原因"></a>思考原因</h2><p>这里是胡乱猜测，可能是因为我使用的生成链接是全数字，我发现其他人是随机或者拼音都没问题。  </p>
 
             </div>
@@ -1777,7 +1777,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28.1k</span>&nbsp;字
+                class="white-color">25.9k</span>&nbsp;字
             
             
             

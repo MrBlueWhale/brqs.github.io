@@ -1,6 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-
----
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>---
 layout: false
 ---
 
@@ -286,7 +284,7 @@ function setup1() {
 
   // -------------------------------
 
-  for (var i = 0; i < numLines; i++) {
+  for (var i = 0; i &lt; numLines; i++) {
 
     var rad = Math.random() * 2 + .5;
     var theta = Math.random() * Math.PI * 2;
@@ -318,7 +316,7 @@ function setup2() {
 
   // -------------------------------
 
-  for (var ii = 0; ii < numLines; ii++) {
+  for (var ii = 0; ii &lt; numLines; ii++) {
     var rad = ( 0.1 + .2 * Math.random() );
     var theta = Math.random() * Math.PI * 2;
     var velTheta = Math.random() * Math.PI * 2 / 30;
@@ -359,7 +357,7 @@ function draw0() {
   var num;
   var targetX, targetY;
 
-  for (i = 0; i < numLines * 2; i += 2) {
+  for (i = 0; i &lt; numLines * 2; i += 2) {
     count += .3;
     bp = i * 3;
 
@@ -395,7 +393,7 @@ function draw1() {
   var num;
   var targetX, targetY;
 
-  for (i = 0; i < numLines * 2; i += 2) {
+  for (i = 0; i &lt; numLines * 2; i += 2) {
     count += .3;
     bp = i * 3;
 
@@ -435,7 +433,7 @@ function draw2() {
   var rad;
   var num;
 
-  for (i = 0; i < numLines * 2; i += 2) {
+  for (i = 0; i &lt; numLines * 2; i += 2) {
     count += .3;
     bp = i * 3;
     // copy old positions

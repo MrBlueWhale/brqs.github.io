@@ -865,7 +865,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.3k
                 </div>
                 
 
@@ -953,7 +953,7 @@ ssh -v git@yourIp
 <p>使用vim打开nginx.conf文件</p>
 <pre><code>vim /etc/nginx/nginx.conf</code></pre>
 <p>按i进入编辑模式粘贴完按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入:，然后输入wq回车）</p>
-<pre><code>server &#123;
+<pre><code>server {
         listen       80 default_server;
         listen       [::]:80 default_server;
         server_name  www.muyiio.com;   //你的博客域名
@@ -961,17 +961,17 @@ ssh -v git@yourIp
     # Load configuration files for the default server block.
     include /etc/nginx/default.d/*.conf;
 
-    location / &#123;
-    &#125;
+    location / {
+    }
 j
     error_page 404 /404.html;
-        location = /40x.html &#123;
-    &#125;
+        location = /40x.html {
+    }
 
     error_page 500 502 503 504 /50x.html;
-        location = /50x.html &#123;
-    &#125;
-&#125;</code></pre>
+        location = /50x.html {
+    }
+}</code></pre>
 <h3 id="2-启动Nginx"><a href="#2-启动Nginx" class="headerlink" title="2.启动Nginx"></a>2.启动Nginx</h3><pre><code>systemctl start nginx.service</code></pre>
 <h3 id="3-重启Nginx"><a href="#3-重启Nginx" class="headerlink" title="3.重启Nginx"></a>3.重启Nginx</h3><pre><code>systemctl restart nginx.service</code></pre>
 <h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><h3 id="1-获取root权限"><a href="#1-获取root权限" class="headerlink" title="1.获取root权限"></a>1.获取root权限</h3><pre><code>su root</code></pre>
@@ -991,10 +991,10 @@ git init --bare blog.git</code></pre>
 hexo g
 hexo d</code></pre>
 <p>输入hexo d的时候，会要求你输入自己的服务器密码</p>
-<pre><code>Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;https://e.coding.net/godxiaolon/godxiaolon.git&#39;.
+<pre><code>Branch 'master' set up to track remote branch 'master' from 'https://e.coding.net/godxiaolon/godxiaolon.git'.
 On branch master
 nothing to commit, working tree clean
-root@119.25.56.82&#39;s password:
+root@119.25.56.82's password:
 Enumerating objects: 182, done.
 Counting objects: 100% (182/182), done.
 Delta compression using up to 12 threads
@@ -1004,7 +1004,7 @@ Total 95 (delta 45), reused 0 (delta 0)
 remote: hooks/post-receive: line 1: t: command not found
 To 118.25.27.52:/home/git/hexoBlog.git
    8df3691..7d63b39  HEAD -&gt; master
-Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;root@118.25.27.52:/home/git/hexoBlog.git&#39;.
+Branch 'master' set up to track remote branch 'master' from 'root@118.25.27.52:/home/git/hexoBlog.git'.
 INFO  Deploy done: git</code></pre>
 <p>输入密码不会有显示，输完回车就可以</p>
 <h3 id="3-如果出现bash-git-receive-pack-command-not-found-则运行："><a href="#3-如果出现bash-git-receive-pack-command-not-found-则运行：" class="headerlink" title="3.如果出现bash: git-receive-pack: command not found,则运行："></a>3.如果出现bash: git-receive-pack: command not found,则运行：</h3><pre><code>sudo ln -s /usr/local/git/bin/git-receive-pack  /usr/bin/git-receive-pack</code></pre>
@@ -1812,7 +1812,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28.1k</span>&nbsp;字
+                class="white-color">25.9k</span>&nbsp;字
             
             
             

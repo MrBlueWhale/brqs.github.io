@@ -865,14 +865,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.6k
+                    5.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    34 分
+                    28 分
                 </div>
                 
 
@@ -893,52 +893,52 @@
 <h2 id="1-matery主题下载："><a href="#1-matery主题下载：" class="headerlink" title="1.matery主题下载："></a>1.matery主题下载：</h2><p> <a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">主题下载</a><br> 解压后替换hexoblog下theme文件夹里的那个文件夹整体替换。</p>
 <h2 id="2-主题优化"><a href="#2-主题优化" class="headerlink" title="2. 主题优化"></a>2. 主题优化</h2><h3 id="2-1-切换主题"><a href="#2-1-切换主题" class="headerlink" title="2.1 切换主题"></a>2.1 切换主题</h3><p>修改 Hexo 根目录下的 _config.yml 的 theme 的值：<code>theme: hexo-theme-matery</code>同时修改两个 <code>per_page</code> 的分页条数值为 6 的倍数，如：12、18 等，这样文章列表在各个屏幕（电脑，手机，pad）下都能较好的显示。  </p>
 <h3 id="2-2-新建一些页面"><a href="#2-2-新建一些页面" class="headerlink" title="2.2 新建一些页面"></a>2.2 新建一些页面</h3><p>在根目录hexoblog下git bash here 依次输入下列命令  </p>
-<pre><code>hexo new page &quot;categories&quot;
-hexo new page &quot;tags&quot;  
-hexo new page &quot;about&quot;  
-hexo new page &quot;friends&quot;  
-hexo new page &quot;contact&quot;  </code></pre>
+<pre><code>hexo new page "categories"
+hexo new page "tags"  
+hexo new page "about"  
+hexo new page "friends"  
+hexo new page "contact"  </code></pre>
 <blockquote>
 <p>网上教程一般都没有提到最后一个这会导致一个问题就是你的留言板页面打不开404，我当时真的搞了好久通过后我自己新加一个页面个人常用网站才解决  </p>
 </blockquote>
 <p>然后依次在hexoblog/source/tags(/categorite/about/friends/contact)/index.md 补充以下内容  </p>
-<pre><code>type: &quot;tags&quot;  
-layout: &quot;tags&quot;     
-type: &quot;categories&quot;  
-layout: &quot;categories&quot;  
-type: &quot;about&quot;  
-layout: &quot;about&quot;  
-type: &quot;friends&quot;  
-layout: &quot;friends&quot;   
-type: &quot;contact&quot;  
-layout: &quot;contact&quot;  </code></pre>
+<pre><code>type: "tags"  
+layout: "tags"     
+type: "categories"  
+layout: "categories"  
+type: "about"  
+layout: "about"  
+type: "friends"  
+layout: "friends"   
+type: "contact"  
+layout: "contact"  </code></pre>
 <p>如/source/tags/index.md</p>
 <pre><code>---  
 title: tags   
 date: 2018-09-30 18:23:38  
-type: &quot;tags&quot;  
-layout: &quot;tags&quot;  
+type: "tags"  
+layout: "tags"  
 --- </code></pre>
 <p>其中启用友情链接还需要在 source 目录下新建 _data 目录，在 _data 目录中新建 friends.json (新建一个文本文件txt连带后缀重命名修改就好，提示确认就好) 文件，文件内容如下所示：</p>
-<pre><code>[&#123;
-    &quot;avatar&quot;: &quot;http://hesifan.top/medias/avatar.jpg&quot;,
-    &quot;name&quot;: &quot;凡尘纪&quot;,
-    &quot;introduction&quot;: &quot;念念不忘 必有回响&quot;,
-    &quot;url&quot;: &quot;http://hesifan.top/&quot;,
-    &quot;title&quot;: &quot;前去参观&quot;
-&#125;, &#123;
-    &quot;avatar&quot;: &quot;https://wiki.hyperledger.org/download/attachments/2392069/fabric?version=1&amp;modificationDate=1540928132000&amp;api=v2&quot;,
-    &quot;name&quot;: &quot;Fabric&quot;,
-    &quot;introduction&quot;: &quot;A Blockchain Platform for the Enterprise&quot;,
-    &quot;url&quot;: &quot;https://hyperledger-fabric.readthedocs.io/en/master/&quot;,
-    &quot;title&quot;: &quot;前去学习&quot;
-&#125;, &#123;
-    &quot;avatar&quot;: &quot;https://www.bootcdn.cn/assets/img/maoyun.svg&quot;,
-    &quot;name&quot;: &quot;BootCDN&quot;,
-    &quot;introduction&quot;: &quot;稳定、快速、免费的前端开源项目 CDN 加速服务。&quot;,
-    &quot;url&quot;: &quot;https://www.bootcdn.cn/&quot;,
-    &quot;title&quot;: &quot;前去加速&quot;
-&#125;]  </code></pre>
+<pre><code>[{
+    "avatar": "http://hesifan.top/medias/avatar.jpg",
+    "name": "凡尘纪",
+    "introduction": "念念不忘 必有回响",
+    "url": "http://hesifan.top/",
+    "title": "前去参观"
+}, {
+    "avatar": "https://wiki.hyperledger.org/download/attachments/2392069/fabric?version=1&amp;modificationDate=1540928132000&amp;api=v2",
+    "name": "Fabric",
+    "introduction": "A Blockchain Platform for the Enterprise",
+    "url": "https://hyperledger-fabric.readthedocs.io/en/master/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://www.bootcdn.cn/assets/img/maoyun.svg",
+    "name": "BootCDN",
+    "introduction": "稳定、快速、免费的前端开源项目 CDN 加速服务。",
+    "url": "https://www.bootcdn.cn/",
+    "title": "前去加速"
+}]  </code></pre>
 <h3 id="2-3代码高亮"><a href="#2-3代码高亮" class="headerlink" title="2.3代码高亮"></a>2.3代码高亮</h3><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 hexo-prism-plugin 的 Hexo 插件来做代码高亮，安装命令如下：  </p>
 <pre><code>npm i -S hexo-prism-plugin  </code></pre>
 <p>然后，修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并新增 prism 插件相关的配置，主要配置如下：  </p>
@@ -946,8 +946,8 @@ layout: &quot;tags&quot;
   enable: false
 
 prism_plugin:
-  mode: &#39;preprocess&#39; #realtime/preprocess
-  theme: &#39;tomorrow&#39;
+  mode: 'preprocess' #realtime/preprocess
+  theme: 'tomorrow'
   line_number: false    # default false
   custom_css:</code></pre>
 <h3 id="2-4-搜索"><a href="#2-4-搜索" class="headerlink" title="2.4 搜索"></a>2.4 搜索</h3><p>本主题中还使用到了 hexo-generator-search 的 Hexo 插件来做内容搜索，安装命令如下：  </p>
@@ -958,8 +958,8 @@ prism_plugin:
   field: post   </code></pre>
 <h3 id="2-5-修改页脚"><a href="#2-5-修改页脚" class="headerlink" title="2.5 修改页脚"></a>2.5 修改页脚</h3><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 /layout/_partial/footer.ejs 文件中，包括站点、使用的主题、访问量等。  </p>
 <h3 id="2-6-修改社交链接"><a href="#2-6-修改社交链接" class="headerlink" title="2.6 修改社交链接"></a>2.6 修改社交链接</h3><p>修改社交链接<br>在主题的 _config.yml 文件中，默认支持 QQ、GitHub 和邮箱的配置，可以在主题文件的 /layout/_partial/social-link.ejs 文件中，新增、修改需要的社交链接地址，增加链接如B站可参考如下代码：  </p>
-<pre><code>&lt;a href=&quot;https://space.bilibili.com/602389627&quot; class=&quot;tooltipped&quot; target=&quot;_blank&quot; data-tooltip=&quot;访问我的B站&quot; data-position=&quot;top&quot; data-delay=&quot;50&quot;&gt;  
-    &lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;
+<pre><code>&lt;a href="https://space.bilibili.com/602389627" class="tooltipped" target="_blank" data-tooltip="访问我的B站" data-position="top" data-delay="50"&gt;  
+    &lt;i class="fa fa-github"&gt;&lt;/i&gt;
 &lt;/a&gt;
 </code></pre>
 <blockquote>
@@ -1016,8 +1016,8 @@ abbrlink:
 </code></pre>
 <h3 id="2-13-新建文章模板修改"><a href="#2-13-新建文章模板修改" class="headerlink" title="2.13 新建文章模板修改"></a>2.13 新建文章模板修改</h3><p>首先为了新建文章方便，我们可以修改一下文章模板，可以将/scaffolds/post.md修改为如下代码：</p>
 <pre><code>---   
-title: &#123;&#123; title &#125;&#125;   
-date: &#123;&#123; date &#125;&#125;  
+title: {{ title }}   
+date: {{ date }}  
 author:   
 img:   
 coverImg:  
@@ -1033,12 +1033,12 @@ categories:
 ---
 </code></pre>
 <h3 id="2-14-关闭首页颜色变换"><a href="#2-14-关闭首页颜色变换" class="headerlink" title="2.14 关闭首页颜色变换"></a>2.14 关闭首页颜色变换</h3><p>进入主题文件的 /source/css/matery.css文件中，搜索 rainbow来关闭颜色变换：  </p>
-<pre><code>@-webkit-keyframes rainbow &#123;
+<pre><code>@-webkit-keyframes rainbow {
    /* 动态切换背景颜色.即滤镜颜色，不想要可以全部注释，或者换成你喜欢的颜色 */ 
-&#125;
- @keyframes rainbow &#123;
+}
+ @keyframes rainbow {
     /* 动态切换背景颜色.，不想要可以全部注释，或者换成你喜欢的颜色 */
-&#125;  </code></pre>
+}  </code></pre>
 <h3 id="2-15-markdown书写文章用"><a href="#2-15-markdown书写文章用" class="headerlink" title="2.15 markdown书写文章用"></a>2.15 markdown书写文章用</h3><p>1)下载markdown安装包<br>[点我下载]<a target="_blank" rel="noopener" href="http://editor.md.ipandao.com/">http://editor.md.ipandao.com/</a> 下载完成之后是一个压缩包，解压。<br>2)移植文件:  </p>
 <ul>
 <li>将压缩包解压之后放到 主题文件夹的source-&gt;libs目录中。可以将文件夹定改为editorMd   </li>
@@ -1047,83 +1047,83 @@ categories:
 <pre><code>---
 title: editor.md
 date: 2020-02-16 11:20:03
-type: &quot;MyMarkdown&quot;
-layout: &quot;MyMarkdown&quot;
+type: "MyMarkdown"
+layout: "MyMarkdown"
 ---  </code></pre>
 <p>3)导入editor的css和js<br>打开主题目录下的_config.yml文件，将editor的js文件和CSS写入，如下<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYW9zaGlkaS1odWIvUGljR08vcGljdHVyZS9ta2Q2LnBuZw?x-oss-process=image/format,png#pic_center"><br>4)新建MyMarkdown.ejs文件<br>在主题文件夹下的layout文件夹中新建MyMarkdown.ejs文件。将下列代码复制到MyMarkdown.ejs文件中。  </p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- theme.libs.css.editormdCss %&gt;&quot;&gt;
+<pre><code>&lt;link rel="stylesheet" href="&lt;%- theme.libs.css.editormdCss %&gt;"&gt;
 
-&lt;style type=&quot;text/css&quot;&gt;
-    /* don&#39;t remove. */
-    .page-cover &#123;
+&lt;style type="text/css"&gt;
+    /* don't remove. */
+    .page-cover {
         /* height: 75vh; */
         height: 940px;
-    &#125;
+    }
 
-    .editormd &#123;
+    .editormd {
       top: 76px;
-    &#125;
+    }
 
-    pre &#123;
+    pre {
       padding: 0;
-    &#125;
+    }
 
-    .editormd-menu &gt; li.divider &#123;
+    .editormd-menu &gt; li.divider {
       overflow: inherit; 
       padding: 5px 0px;
-    &#125;
+    }
 
-    header .nav-transparent &#123;    /*修改当行兰样式*/
+    header .nav-transparent {    /*修改当行兰样式*/
         background-image: linear-gradient(to right, #bf30a3 0%, #0f9d58 100%);
-    &#125;
+    }
 
-    .editormd-form input[type=&quot;text&quot;], 
-    .editormd-form input[type=&quot;number&quot;] &#123;
+    .editormd-form input[type="text"], 
+    .editormd-form input[type="number"] {
         height: 15px;
         margin: 0px;
         font-size: 14px;
-    &#125;
+    }
 
-    .editormd-form input[type=&quot;text&quot;] &#123;
+    .editormd-form input[type="text"] {
         display: inline-block;
         width: 246px;
-    &#125;
+    }
 
-    .editormd-dialog-container label &#123;
+    .editormd-dialog-container label {
       font-size: 14px;
       color: #444;
-  &#125;
+  }
 
-    .editormd-dialog-container select &#123;
+    .editormd-dialog-container select {
       display: inline-block;
       background-color: rgba(255,255,255,0.9);
       width: 182px;
       border-radius: 2px;
       height: 25px;
-  &#125;
+  }
 
 &lt;/style&gt;
 
-&lt;div class=&quot;pd-header page-cover&quot;&gt;
-  &lt;div class=&quot;editormd&quot; id=&quot;my-editormd&quot;&gt;
-    &lt;textarea style=&quot;display:none;&quot;&gt;&lt;/textarea&gt;
+&lt;div class="pd-header page-cover"&gt;
+  &lt;div class="editormd" id="my-editormd"&gt;
+    &lt;textarea style="display:none;"&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;script src=&quot;&lt;%- theme.libs.js.jquery %&gt;&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&lt;%- theme.libs.js.editormdJs %&gt;&quot;&gt;&lt;/script&gt;
-&lt;script  type=&quot;text/javascript&quot;&gt;
+&lt;script src="&lt;%- theme.libs.js.jquery %&gt;"&gt;&lt;/script&gt;
+&lt;script src="&lt;%- theme.libs.js.editormdJs %&gt;"&gt;&lt;/script&gt;
+&lt;script  type="text/javascript"&gt;
   var myEditor;
-  $(function() &#123;  
-      myEditor = editormd(&quot;my-editormd&quot;, &#123;
-        width   : &quot;98%&quot;,
+  $(function() {  
+      myEditor = editormd("my-editormd", {
+        width   : "98%",
         height  : 840,
-        syncScrolling : &quot;single&quot;,
-        path    : &quot;/libs/editorMd/lib/&quot;,
-       // theme: &quot;dark&quot;,
-      //  previewTheme: &quot;dark&quot;,
-      //  editorTheme: &quot;pastel-on-dark&quot;,
-        markdown: &#39;&#39;,
+        syncScrolling : "single",
+        path    : "/libs/editorMd/lib/",
+       // theme: "dark",
+      //  previewTheme: "dark",
+      //  editorTheme: "pastel-on-dark",
+        markdown: '',
         codeFold: true,
         emoji: true,
         taskList: true,
@@ -1131,9 +1131,9 @@ layout: &quot;MyMarkdown&quot;
         tex: true,                   // 开启科学公式TeX语言支持，默认关闭
         flowChart: true,             // 开启流程图支持，默认关闭
         sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
-        htmlDecode : &quot;style,script,iframe|on*&quot;,            // 开启 HTML 标签解析，为了安全性，默认不开启   
-    &#125;);
-  &#125;);
+        htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启   
+    });
+  });
 &lt;/script&gt;  </code></pre>
 <h3 id="2-16hexo安装插件hexo-admin"><a href="#2-16hexo安装插件hexo-admin" class="headerlink" title="2.16hexo安装插件hexo-admin"></a>2.16hexo安装插件hexo-admin</h3><blockquote>
 <p>hexo使用编辑文章时，若用其原生方式，则不便利，还好官网提供了一款插件hexo-admin界面化了markdown编辑器，只需要访问：<a target="_blank" rel="noopener" href="http://127.0.0.1:4000/admin">http://127.0.0.1:4000/admin</a> 即可方便快捷的进行博文编辑了，  </p>
@@ -1146,180 +1146,180 @@ layout: &quot;MyMarkdown&quot;
 <pre><code>---
 title: 个人常用网站
 date:  2020-10-09 11:19:14  
-type: &quot;navigate&quot;
-layout: &quot;navigate&quot;   
+type: "navigate"
+layout: "navigate"   
 ---  </code></pre>
 <p>3)在主题配置文件_config.yml中添加个人常用网站  </p>
 <pre><code>  导航:
     url: /navigate
     icon: fas fa-location-arrow  </code></pre>
 <p>4)在 matery/layout 下新建 navigate.ejs</p>
-<pre><code> &lt;div class=&quot;navi-height bg-cover pd-header &quot;&gt; 
-    &lt;div class=&quot; link-box container&quot;&gt; 
+<pre><code> &lt;div class="navi-height bg-cover pd-header "&gt; 
+    &lt;div class=" link-box container"&gt; 
         &lt;!-- 搜索框 --&gt; 
-        &lt;div class=&quot;baidu baidu-2 large-screen&quot;&gt; 
-            &lt;form name=&quot;f&quot; action=&quot;https://www.baidu.com/&quot; target=&quot;_blank&quot;&gt; 
-                 &lt;div id=&quot;Select-2&quot;&gt; 
-                     &lt;div class=&quot;Select-box-2&quot; id=&quot;baidu&quot;&gt; 
-                         &lt;ul style=&quot;height: 46px;&quot;&gt; 
-                            &lt;li class=&quot;this_s&quot;&gt;百 · 度&lt;/li&gt; 
-                            &lt;li class=&quot;bing_s&quot;&gt;必 · 应&lt;/li&gt; 
-                            &lt;li class=&quot;google_s&quot;&gt;谷 · 歌&lt;/li&gt; 
-                            &lt;li class=&quot;baidu_s&quot;&gt;百 · 度&lt;/li&gt; 
+        &lt;div class="baidu baidu-2 large-screen"&gt; 
+            &lt;form name="f" action="https://www.baidu.com/" target="_blank"&gt; 
+                 &lt;div id="Select-2"&gt; 
+                     &lt;div class="Select-box-2" id="baidu"&gt; 
+                         &lt;ul style="height: 46px;"&gt; 
+                            &lt;li class="this_s"&gt;百 · 度&lt;/li&gt; 
+                            &lt;li class="bing_s"&gt;必 · 应&lt;/li&gt; 
+                            &lt;li class="google_s"&gt;谷 · 歌&lt;/li&gt; 
+                            &lt;li class="baidu_s"&gt;百 · 度&lt;/li&gt; 
                          &lt;/ul&gt; 
-                     &lt;/div&gt; &lt;input name=&quot;wd&quot; id=&quot;kw-2&quot; maxlength=&quot;100&quot; autocomplete=&quot;off&quot; type=&quot;text&quot;&gt; 
+                     &lt;/div&gt; &lt;input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text"&gt; 
                  &lt;/div&gt; 
-                 &lt;div class=&quot;qingkong&quot; id=&quot;qingkong&quot; title=&quot;清 · 空&quot; style=&quot;display: none;&quot;&gt;x&lt;/div&gt; &lt;input value=&quot;搜 · 索&quot; 
-                     id=&quot;su-2&quot; type=&quot;submit&quot;&gt; 
-                 &lt;ul class=&quot;keylist&quot;&gt;&lt;/ul&gt; 
+                 &lt;div class="qingkong" id="qingkong" title="清 · 空" style="display: none;"&gt;x&lt;/div&gt; &lt;input value="搜 · 索" 
+                     id="su-2" type="submit"&gt; 
+                 &lt;ul class="keylist"&gt;&lt;/ul&gt; 
              &lt;/form&gt; 
          &lt;/div&gt; &lt;!-- 链接 --&gt;
-         &lt;div class=&quot;row tags-posts &quot;&gt; 
-             &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-                 &lt;div class=&quot;card&quot;&gt; 
-                     &lt;div class=&quot;jj-list-tit&quot;&gt;娱乐 · 影视&lt;/div&gt; 
-                     &lt;ul class=&quot;jj-list-con&quot;&gt;  
-                         &lt;li&gt;&lt;a href=&quot;https:pixiv.net&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Pixiv&lt;/a&gt;&lt;/li&gt;  
-                         &lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;哔哩哔哩&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.acfun.cn/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;ACfun&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.spotify.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Spotify&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://awbw.amarriner.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;AWBW&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot; https://music.163.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;网易云音乐&lt;/a&gt;&lt;/li&gt;
+         &lt;div class="row tags-posts "&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; 
+                     &lt;div class="jj-list-tit"&gt;娱乐 · 影视&lt;/div&gt; 
+                     &lt;ul class="jj-list-con"&gt;  
+                         &lt;li&gt;&lt;a href="https:pixiv.net" class="link-3" target="_blank"&gt;Pixiv&lt;/a&gt;&lt;/li&gt;  
+                         &lt;li&gt;&lt;a href="https://www.bilibili.com/" class="link-3" target="_blank"&gt;哔哩哔哩&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.acfun.cn/" class="link-3" target="_blank"&gt;ACfun&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.spotify.com/" class="link-3" target="_blank"&gt;Spotify&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://awbw.amarriner.com/" class="link-3" target="_blank"&gt;AWBW&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href=" https://music.163.com/" class="link-3" target="_blank"&gt;网易云音乐&lt;/a&gt;&lt;/li&gt;
                      &lt;/ul&gt; 
                  &lt;/div&gt; 
              &lt;/div&gt; 
-             &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-                 &lt;div class=&quot;card&quot;&gt; 
-                     &lt;div class=&quot;jj-list-tit&quot;&gt;社区 · Code&lt;/div&gt; 
-                     &lt;ul class=&quot;jj-list-con&quot;&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://github.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://coding.net/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Coding&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://juejin.im/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;掘金&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://gitee.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;码云&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.v2ex.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;V2EX&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.52pojie.cn/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;吾爱破解&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://segmentfault.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;思否&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://cloud.tencent.com/developer/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;云+社区&lt;/a&gt;&lt;/li&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; 
+                     &lt;div class="jj-list-tit"&gt;社区 · Code&lt;/div&gt; 
+                     &lt;ul class="jj-list-con"&gt; 
+                         &lt;li&gt;&lt;a href="https://github.com/" class="link-3" target="_blank"&gt;GitHub&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://coding.net/" class="link-3" target="_blank"&gt;Coding&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://juejin.im/" class="link-3" target="_blank"&gt;掘金&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://gitee.com/" class="link-3" target="_blank"&gt;码云&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.v2ex.com/" class="link-3" target="_blank"&gt;V2EX&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.jianshu.com/" class="link-3" target="_blank"&gt;简书&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.52pojie.cn/" class="link-3" target="_blank"&gt;吾爱破解&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://segmentfault.com/" class="link-3" target="_blank"&gt;思否&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://cloud.tencent.com/developer/" class="link-3" target="_blank"&gt;云+社区&lt;/a&gt;&lt;/li&gt; 
                      &lt;/ul&gt; 
                  &lt;/div&gt; 
              &lt;/div&gt; 
-             &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-                 &lt;div class=&quot;card&quot;&gt; 
-                     &lt;div class=&quot;jj-list-tit&quot;&gt;图片处理&lt;/div&gt; 
-                     &lt;ul class=&quot;jj-list-con&quot;&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://tinypng.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;TingPNG&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.upyun.com/webp&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;又拍云Webp&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://www.iconfont.cn/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;IconFont&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://fontawesome.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;AweSome&lt;/a&gt;&lt;/li&gt; 
-                         &lt;li&gt;&lt;a href=&quot;https://wallhaven.cc/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;超清壁纸&lt;/a&gt;&lt;/li&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; 
+                     &lt;div class="jj-list-tit"&gt;图片处理&lt;/div&gt; 
+                     &lt;ul class="jj-list-con"&gt; 
+                         &lt;li&gt;&lt;a href="https://tinypng.com/" class="link-3" target="_blank"&gt;TingPNG&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.upyun.com/webp" class="link-3" target="_blank"&gt;又拍云Webp&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.iconfont.cn/" class="link-3" target="_blank"&gt;IconFont&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://fontawesome.com/" class="link-3" target="_blank"&gt;AweSome&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://wallhaven.cc/" class="link-3" target="_blank"&gt;超清壁纸&lt;/a&gt;&lt;/li&gt; 
                      &lt;/ul&gt; 
                  &lt;/div&gt; 
              &lt;/div&gt; 
-             &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-                 &lt;div class=&quot;card&quot;&gt; &lt;div class=&quot;jj-list-tit&quot;&gt;实用 · 工具&lt;/div&gt; 
-                 &lt;ul class=&quot;jj-list-con&quot;&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://mdnice.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Nice编辑器&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://www.processon.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;思维导图&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://cli.im/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;二维码&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://my.openwrite.cn/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;OW分发&lt;/a&gt;&lt;/li&gt;  
-                     &lt;li&gt;&lt;a href=&quot;https://www.guidgen.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;GUID在线生成&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://console.upyun.com/purge/purge_url/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;又拍云刷新网站&lt;/a&gt;&lt;/li&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; &lt;div class="jj-list-tit"&gt;实用 · 工具&lt;/div&gt; 
+                 &lt;ul class="jj-list-con"&gt; 
+                     &lt;li&gt;&lt;a href="https://mdnice.com/" class="link-3" target="_blank"&gt;Nice编辑器&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.processon.com/" class="link-3" target="_blank"&gt;思维导图&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://cli.im/" class="link-3" target="_blank"&gt;二维码&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://my.openwrite.cn/" class="link-3" target="_blank"&gt;OW分发&lt;/a&gt;&lt;/li&gt;  
+                     &lt;li&gt;&lt;a href="https://www.guidgen.com/" class="link-3" target="_blank"&gt;GUID在线生成&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://console.upyun.com/purge/purge_url/" class="link-3" target="_blank"&gt;又拍云刷新网站&lt;/a&gt;&lt;/li&gt; 
 
 
                  &lt;/ul&gt; 
              &lt;/div&gt; 
          &lt;/div&gt; 
-         &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-             &lt;div class=&quot;card&quot;&gt; 
-                 &lt;div class=&quot;jj-list-tit&quot;&gt;编程 · 学习&lt;/div&gt; 
-                 &lt;ul class=&quot;jj-list-con&quot;&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://www.oschina.net/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;开源中国&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://htmldog.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;HTML狗&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://www.icourse163.org/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;中国大学慕课&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;慕课网&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;http://www.wxapp-union.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;小程序&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://blog.51cto.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;51CTO&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://www.shiyanlou.com/library/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;实验楼&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://spring.io/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Spring&lt;/a&gt;&lt;/li&gt; 
-                     &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;csdn&lt;/a&gt;&lt;/li&gt;
+         &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+             &lt;div class="card"&gt; 
+                 &lt;div class="jj-list-tit"&gt;编程 · 学习&lt;/div&gt; 
+                 &lt;ul class="jj-list-con"&gt; 
+                     &lt;li&gt;&lt;a href="https://www.oschina.net/" class="link-3" target="_blank"&gt;开源中国&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://htmldog.com/" class="link-3" target="_blank"&gt;HTML狗&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.icourse163.org/" class="link-3" target="_blank"&gt;中国大学慕课&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.imooc.com/" class="link-3" target="_blank"&gt;慕课网&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="http://www.wxapp-union.com/" class="link-3" target="_blank"&gt;小程序&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://blog.51cto.com/" class="link-3" target="_blank"&gt;51CTO&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.shiyanlou.com/library/" class="link-3" target="_blank"&gt;实验楼&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://spring.io/" class="link-3" target="_blank"&gt;Spring&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://blog.csdn.net/" class="link-3" target="_blank"&gt;csdn&lt;/a&gt;&lt;/li&gt;
                  &lt;/ul&gt; 
              &lt;/div&gt; 
          &lt;/div&gt; 
-         &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-             &lt;div class=&quot;card&quot;&gt; 
-                  &lt;div class=&quot;jj-list-tit&quot;&gt;资讯 · 趋势&lt;/div&gt; 
-                  &lt;ul class=&quot;jj-list-con&quot;&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://www.huxiu.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;虎嗅&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://insights.stackoverflow.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;技术调查&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;http://www.asciiworld.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;摸鱼&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://sspai.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;少数派&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://zh.wikihow.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;WikeHom&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://www.awesomes.cn/rank?sort=hot&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;前端趋势&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://github-trending.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;GitHub趋势&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://www.tiobe.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;编程趋势&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://trends.google.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Google趋势&lt;/a&gt;&lt;/li&gt; 
+         &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+             &lt;div class="card"&gt; 
+                  &lt;div class="jj-list-tit"&gt;资讯 · 趋势&lt;/div&gt; 
+                  &lt;ul class="jj-list-con"&gt; 
+                      &lt;li&gt;&lt;a href="https://www.huxiu.com/" class="link-3" target="_blank"&gt;虎嗅&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://insights.stackoverflow.com/" class="link-3" target="_blank"&gt;技术调查&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="http://www.asciiworld.com/" class="link-3" target="_blank"&gt;摸鱼&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://sspai.com/" class="link-3" target="_blank"&gt;少数派&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://zh.wikihow.com/" class="link-3" target="_blank"&gt;WikeHom&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://www.awesomes.cn/rank?sort=hot" class="link-3" target="_blank"&gt;前端趋势&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://github-trending.com/" class="link-3" target="_blank"&gt;GitHub趋势&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://www.tiobe.com/" class="link-3" target="_blank"&gt;编程趋势&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://trends.google.com/" class="link-3" target="_blank"&gt;Google趋势&lt;/a&gt;&lt;/li&gt; 
                   &lt;/ul&gt; 
               &lt;/div&gt; 
           &lt;/div&gt; 
-          &lt;div class=&quot;col s12 m6 l4 friend-div&quot; data-aos=&quot;zoom-in-up&quot;&gt; 
-              &lt;div class=&quot;card&quot;&gt; 
-                  &lt;div class=&quot;jj-list-tit&quot;&gt;常用· 其他&lt;/div&gt; 
-                  &lt;ul class=&quot;jj-list-con&quot;&gt;   
-                      &lt;li&gt;&lt;a href=&quot;https://www.qvdv.com/tools/qvdv-guid.html&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;在线工具&lt;/a&gt; 
-                      &lt;li&gt;&lt;a href=&quot;http://zhongguose.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;中国色&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://opensource.builders/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;OpenSource&lt;/a&gt;&lt;/li&gt; 
-                      &lt;li&gt;&lt;a href=&quot;https://cloud.tencent.com/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;腾讯云&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;https://www.leancloud.cn/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;leancloud&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;http://127.0.0.1:4000/admin/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;管理&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;https://www.natfrp.com/user/&quot; class=&quot;link-3&quot; target=&quot;_blank&quot;&gt;Sakura&lt;/a&gt;&lt;/li&gt;
+          &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+              &lt;div class="card"&gt; 
+                  &lt;div class="jj-list-tit"&gt;常用· 其他&lt;/div&gt; 
+                  &lt;ul class="jj-list-con"&gt;   
+                      &lt;li&gt;&lt;a href="https://www.qvdv.com/tools/qvdv-guid.html" class="link-3" target="_blank"&gt;在线工具&lt;/a&gt; 
+                      &lt;li&gt;&lt;a href="http://zhongguose.com/" class="link-3" target="_blank"&gt;中国色&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://opensource.builders/" class="link-3" target="_blank"&gt;OpenSource&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://cloud.tencent.com/" class="link-3" target="_blank"&gt;腾讯云&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="https://www.leancloud.cn/" class="link-3" target="_blank"&gt;leancloud&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="http://127.0.0.1:4000/admin/" class="link-3" target="_blank"&gt;管理&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="https://www.natfrp.com/user/" class="link-3" target="_blank"&gt;Sakura&lt;/a&gt;&lt;/li&gt;
                   &lt;/ul&gt; 
               &lt;/div&gt; 
           &lt;/div&gt; 
       &lt;/div&gt; 
-      &lt;script&gt; /*选择搜索引擎*/ $(&#39;.Select-box ul&#39;).hover(function () &#123; $(this).css(&#39;height&#39;, &#39;auto&#39;) &#125;, function () &#123; $(this).css(&#39;height&#39;, &#39;40px&#39;) &#125;); $(&#39;.Select-box-2 ul&#39;).hover(function () &#123; $(this).css(&#39;height&#39;, &#39;auto&#39;) &#125;, function () &#123; $(this).css(&#39;height&#39;, &#39;46px&#39;) &#125;); $(&#39;.Select-box li&#39;).click(function () &#123; var _tihs = $(this).attr(&#39;class&#39;); var _html = $(this).html(); if (_tihs == &#39;baidu_s&#39;) &#123; _tihs = &#39;https://www.baidu.com/s&#39;; _name = &#39;wd&#39;; &#125; if (_tihs == &#39;google_s&#39;) &#123; _tihs = &#39;https://www.google.com/search&#39;; _name = &#39;q&#39;; &#125; if (_tihs == &#39;bing_s&#39;) &#123; _tihs = &#39;https://www.bing.com/search&#39;; _name = &#39;q&#39;; &#125; $(&#39;.baidu form&#39;).attr(&#39;action&#39;, _tihs); $(&#39;.this_s&#39;).html(_html); $(&#39;#kw&#39;).attr(&#39;name&#39;, _name); $(&#39;.Select-box ul&#39;).css(&#39;height&#39;, &#39;40px&#39;) &#125;); $(&#39;.Select-box-2 li&#39;).click(function () &#123; var _tihs = $(this).attr(&#39;class&#39;); var _html = $(this).html(); if (_tihs == &#39;baidu_s&#39;) &#123; _tihs = &#39;https://www.baidu.com/s&#39;; _name = &#39;wd&#39;; &#125; if (_tihs == &#39;google_s&#39;) &#123; _tihs = &#39;https://www.google.com/search&#39;; _name = &#39;q&#39;; &#125; if (_tihs == &#39;bing_s&#39;) &#123; _tihs = &#39;https://www.bing.com/search&#39;; _name = &#39;q&#39;; &#125; $(&#39;.baidu form&#39;).attr(&#39;action&#39;, _tihs); $(&#39;.this_s&#39;).html(_html); $(&#39;#kw-2&#39;).attr(&#39;name&#39;, _name); $(&#39;.Select-box-2 ul&#39;).css(&#39;height&#39;, &#39;48px&#39;) &#125;); //清空输入框内容 $(&#39;.qingkong&#39;).click(function () &#123; cls(); $(this).css(&#39;display&#39;, &#39;none&#39;) &#125;); function cls() &#123; var sum = 0; var t = document.getElementsByTagName(&quot;INPUT&quot;); for (var i = 0; i &lt; t.length; i++) &#123; if (t[i].type == &#39;text&#39;) &#123; ++sum; t[i].value = &quot;&quot;;//清空 &#125; &#125; &#125; //清空输入框按钮的显示和隐藏 function if_btn() &#123; var btn_obj = document.getElementById(&quot;kw&quot;) || document.getElementById(&quot;kw-2&quot;); var cls_btn = document.getElementById(&quot;qingkong&quot;); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == &#39;&#39; || btn_obj == null) &#123; return false; //如果没有找到这个元素，则将函数返回，不继续执行 &#125; btn_obj.onfocus = function () &#123; times = setInterval(function () &#123; btn_obj_val = btn_obj.value; if (btn_obj_val != 0) &#123; cls_btn.style.display = &quot;block&quot;; &#125; else &#123; cls_btn.style.display = &quot;none&quot;; &#125; &#125;, 200); &#125; //元素失去焦点时 btn_obj.onblur = function () &#123; clearInterval(times); &#125; &#125; &lt;/script&gt; 
+      &lt;script&gt; /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i &lt; t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } &lt;/script&gt; 
   &lt;/div&gt; 
 &lt;/div&gt; 
 &lt;style&gt; 
-    * &#123; 
+    * { 
         margin: 0; 
         padding: 0; 
-        font-family: &quot;微软雅黑&quot; 
-    &#125; 
-    ul,li,h1,h2,h3,h4,h5,h6,p,form,dl,dt,dd &#123; 
+        font-family: "微软雅黑" 
+    } 
+    ul,li,h1,h2,h3,h4,h5,h6,p,form,dl,dt,dd { 
         margin: 0px; 
         padding: 0px; 
         font-size: 14px; 
         font-weight: normal; 
-    &#125; 
+    } 
 
-    img &#123; 
+    img { 
         border-style: none; 
-    &#125;     
+    }     
 
-    li &#123; 
+    li { 
         list-style: none; 
         float: left 
-    &#125;     
+    }     
 
-    a &#123; 
+    a { 
         text-decoration: none 
-    &#125; 
+    } 
 
-    .card &#123; 
+    .card { 
        background-color: rgba(25, 240, 229, 0); 
        width: 96%; 
        margin-left: 2% 
-     &#125; 
+     } 
 
-     .baidu &#123; 
+     .baidu { 
          float: left; 
          margin-left: 100px; 
-    &#125; 
+    } 
 
-    .baidu form &#123; 
+    .baidu form { 
         position: relative 
-    &#125; 
+    } 
 
-    .Select-box ul &#123; 
+    .Select-box ul { 
         height: 40px; 
         position: absolute; 
         left: -1px; 
@@ -1329,9 +1329,9 @@ layout: &quot;navigate&quot;
         border: 1px solid #ccc; 
         border-top: none; 
         overflow: hidden 
-    &#125; 
+    } 
 
-    .Select-box li &#123; 
+    .Select-box li { 
         width: 60px; 
         line-height: 40px; 
         font-size: 14px; 
@@ -1339,23 +1339,23 @@ layout: &quot;navigate&quot;
         border: 0; 
         cursor: 
         pointer; 
-    &#125; 
+    } 
 
-    .Select-box li:hover &#123; 
+    .Select-box li:hover { 
         background: #3385ff; 
         color: #FFF; 
-    &#125; 
+    } 
 
-    .Select-box .this_s &#123; 
+    .Select-box .this_s { 
         color: #317ef3; 
-    &#125; 
+    } 
 
-    .Select-box .this_s:hover &#123; 
+    .Select-box .this_s:hover { 
         background: #FFF; 
         color: #317ef3;    
-    &#125; 
+    } 
 
-    .qingkong &#123; 
+    .qingkong { 
         position: absolute; 
         right: 120px; 
         top: 12px; 
@@ -1369,46 +1369,46 @@ layout: &quot;navigate&quot;
         text-align: center; 
         font-size: 14px; 
         display: none; 
-    &#125; 
+    } 
 
-    .qingkong:hover &#123;
+    .qingkong:hover {
         background: rgba(0, 0, 0, 0.2); 
-    &#125; 
+    } 
 
-    .qingkong:active &#123; 
+    .qingkong:active { 
         background: rgba(0, 0, 0, 0.3);        
-    &#125; 
+    } 
 
-    .baidu-2 &#123; 
+    .baidu-2 { 
         width: 100%; 
         height: 110px; 
         margin: 0 auto; 
         background: none; 
         padding-top: 50px; 
-    &#125; 
+    } 
 
-    .baidu-2 form &#123; 
+    .baidu-2 form { 
         width: 520px; 
         margin: 0 auto; 
-    &#125; 
+    } 
 
-    .baidu-2 input &#123; 
+    .baidu-2 input { 
         padding: 13px 8px; 
         opacity: 0.9; 
         font-size: 15px; 
-    &#125; 
+    } 
 
-    #Select-2 &#123; 
+    #Select-2 { 
         float: left; 
-    &#125; 
+    } 
 
-    .Select-box-2 &#123; 
+    .Select-box-2 { 
         text-align: center; 
         float: left; 
         position: relative; 
-    &#125; 
+    } 
 
-    .Select-box-2 ul &#123; 
+    .Select-box-2 ul { 
         height: 46px; 
         position: absolute; 
         left: 0px; 
@@ -1417,32 +1417,32 @@ layout: &quot;navigate&quot;
         background: rgba(255, 255, 255, 0.9); 
         border: 1px solid #ccc; border-top: none; 
         overflow: hidden 
-    &#125; 
+    } 
 
-    .Select-box-2 li &#123; 
+    .Select-box-2 li { 
         width: 60px; 
         line-height: 46px; 
         font-size: 15px; 
         color: #484848; 
         border: 0; 
         cursor: pointer; 
-    &#125; 
+    } 
 
-    .Select-box-2 li:hover &#123; 
+    .Select-box-2 li:hover { 
         background: #3385ff; 
         color: #FFF; 
-    &#125; 
+    } 
 
-    .Select-box-2 .this_s &#123; 
+    .Select-box-2 .this_s { 
         color: #317ef3; 
-    &#125; 
+    } 
 
-    .Select-box-2 .this_s:hover &#123; 
+    .Select-box-2 .this_s:hover { 
         background: none; 
         color: #317ef3; 
-    &#125; 
+    } 
 
-    #kw-2 &#123; 
+    #kw-2 { 
         width: 335px; 
         outline: 0; 
         border: 1px solid #ccc; 
@@ -1450,10 +1450,10 @@ layout: &quot;navigate&quot;
         color: #000000; 
         padding-left: 70px; 
         font-weight: bold; 
-    &#125; 
+    } 
 
     /*修改搜索框样式*/ 
-    #su-2 &#123; 
+    #su-2 { 
         width: 90px; 
         background: blue; 
         border: none; 
@@ -1463,41 +1463,41 @@ layout: &quot;navigate&quot;
         cursor: pointer;
         /*去轮廓阴影*/ 
         outline: none; 
-    &#125; 
+    } 
 
     /*光标移动到搜索框颜色*/ 
-    #su-2:hover &#123; 
+    #su-2:hover { 
         background: blue; 
         border-bottom: 1px 
         solid blue; 
-    &#125; 
+    } 
 
-    #su-2:active &#123; 
+    #su-2:active { 
         background: blue; 
         box-shadow: inset 1px 1px 3px blue; 
         -webkit-box-shadow: inset 1px 1px 3px blue; 
-    &#125; 
+    } 
 
-    .jj-list-tit &#123; 
+    .jj-list-tit { 
         font-size: 16px; 
         line-height: 25px; 
         color: #ffffff; 
         width: 100%; 
         padding-left: 38.5%; 
-    &#125; 
+    } 
 
-    .jj-list-con &#123; 
+    .jj-list-con { 
         overflow: hidden; 
         margin: 0 auto 
-    &#125; 
+    } 
 
     /*控制网站列表间距*/ 
-    .jj-list-con li &#123; 
+    .jj-list-con li { 
         width: 31.333%; 
         margin: 1%; 
-    &#125; 
+    } 
 
-    .link-3 &#123; 
+    .link-3 { 
         display: block; 
         background: rgba(0, 0, 0, .35); 
         color: #FFF; 
@@ -1507,103 +1507,103 @@ layout: &quot;navigate&quot;
         padding: 4px 0; 
         border-radius: 2px; 
         transition: all 0.2s 
-    &#125; 
+    } 
 
 
-    .link-3:hover &#123; 
+    .link-3:hover { 
         background: rgba(0, 0, 0, .45); 
         font-size: 15px; 
         font-weight: bold 
-    &#125; 
+    } 
 
     /*1栏 小于584*/ 
-    @media only screen and (max-width: 584px) &#123; 
-        .navi-height &#123; 
+    @media only screen and (max-width: 584px) { 
+        .navi-height { 
             height: 1300px; 
-        &#125; 
+        } 
 
-        .link-box &#123; 
+        .link-box { 
             margin-top: 5%; 
-        &#125; 
+        } 
 
-        .large-screen &#123; 
+        .large-screen { 
             display: none; 
-        &#125; 
-    &#125; 
+        } 
+    } 
 
     /* 2栏 大于584 小于993px */ 
-    @media only screen and (min-width: 584px) and (max-width: 993px) &#123; 
-        .navi-height &#123; 
+    @media only screen and (min-width: 584px) and (max-width: 993px) { 
+        .navi-height { 
             height: 800px; 
-        &#125; 
+        } 
 
-        .link-box &#123; 
+        .link-box { 
             margin-top: 5%; 
-        &#125; 
+        } 
 
-        .large-screen &#123; 
+        .large-screen { 
             display: none; 
-        &#125; 
-    &#125; 
+        } 
+    } 
 
     /*3栏 大于993px*/ 
-    @media only screen and (min-width: 993px) &#123; 
-        .navi-height &#123; 
+    @media only screen and (min-width: 993px) { 
+        .navi-height { 
             position: absolute; 
             width: 100%; 
             height: 100%; 
-        &#125; 
-    &#125; 
+        } 
+    } 
 
     /* 隐藏footer */ 
-    .page-footer &#123; 
+    .page-footer { 
         display: none; 
-    &#125; 
+    } 
 &lt;/style&gt; 
-&lt;% if (theme.banner.enable) &#123; %&gt; 
+&lt;% if (theme.banner.enable) { %&gt; 
 &lt;script&gt; 
     // 每天切换 banner 图. Switch banner image every day. 
-    var bannerUrl = &quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(&#39;/medias/banner/&#39;) %&gt;&quot; + new Date().getDay() + &#39;.jpg&#39;; $(&#39;.bg-cover&#39;).css(&#39;background-image&#39;, &#39;url(&#39; + bannerUrl + &#39;)&#39;); 
+    var bannerUrl = "&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for('/medias/banner/') %&gt;" + new Date().getDay() + '.jpg'; $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')'); 
     &lt;/script&gt; 
-    &lt;% &#125; else &#123; %&gt; 
+    &lt;% } else { %&gt; 
     &lt;script&gt; 
-    $(&#39;.bg-cover&#39;).css(&#39;background-image&#39;, &#39;url(&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(&#39;/medias/banner/0.jpg&#39;) %&gt;)&#39;); 
+    $('.bg-cover').css('background-image', 'url(&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for('/medias/banner/0.jpg') %&gt;)'); 
 &lt;/script&gt; 
-&lt;% &#125; %&gt;
+&lt;% } %&gt;
 </code></pre>
 <h3 id="2-18-Hexo-博客订阅文章通知功能"><a href="#2-18-Hexo-博客订阅文章通知功能" class="headerlink" title="2.18 Hexo 博客订阅文章通知功能"></a>2.18 Hexo 博客订阅文章通知功能</h3><p>进入站点根目录</p>
 <pre><code>npm install hexo-web-push-notification --save </code></pre>
 <p>编辑站点配置文件_config.yml</p>
 <pre><code>webPushNotification:
-  webpushrKey: &quot;your webpushr rest api key&quot;
-  webpushrAuthToken: &quot;your webpushr authorize token&quot;
-  trackingCode: &quot;AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88&quot;</code></pre>
+  webpushrKey: "your webpushr rest api key"
+  webpushrAuthToken: "your webpushr authorize token"
+  trackingCode: "AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88"</code></pre>
 <p> [注册账号]<a target="_blank" rel="noopener" href="https://app.webpushr.com/signup">https://app.webpushr.com/signup</a></p>
 <p>按照步骤操作<br>将第二步中所指的代码复制粘贴到你的 layout.ejs文件内,执行hexo clean&amp;&amp;hexo g&amp;&amp;hexo d部署即可！</p>
 <p>部署之后可能会遇到无法正常发送通知的情况.</p>
-<p>进入目录 node_modules/hexo-web-push-notification/index.js文件中第22行<code>&#39;summary&#39;: util.stripHTML(newPost.excerpt)</code>,这里取值取的是<code>excerpt</code>，改成<code>summary</code>即可。</p>
+<p>进入目录 node_modules/hexo-web-push-notification/index.js文件中第22行<code>'summary': util.stripHTML(newPost.excerpt)</code>,这里取值取的是<code>excerpt</code>，改成<code>summary</code>即可。</p>
 <p>修改前</p>
 <pre><code>json
-var JSONFeed = &#123;
-        &#39;title&#39;: newPost.title,
-        &#39;id&#39;: newPost.path,
-        &#39;date_published&#39;: newPost.date.format(&#39;L&#39;),
-        &#39;summary&#39;: util.stripHTML(newPost.excerpt),
-        &#39;url&#39;: newPost.permalink,
-        &#39;tags&#39;: newPost.tags.data.map(function (v) &#123; return v.name &#125;),
-        &#39;categories&#39;: newPost.categories.data.map(function (v) &#123; return v.name &#125;)
-    &#125;</code></pre>
+var JSONFeed = {
+        'title': newPost.title,
+        'id': newPost.path,
+        'date_published': newPost.date.format('L'),
+        'summary': util.stripHTML(newPost.excerpt),
+        'url': newPost.permalink,
+        'tags': newPost.tags.data.map(function (v) { return v.name }),
+        'categories': newPost.categories.data.map(function (v) { return v.name })
+    }</code></pre>
 <p>修改后</p>
 <pre><code>json
-var JSONFeed = &#123;
-        &#39;title&#39;: newPost.title,
-        &#39;id&#39;: newPost.path,
-        &#39;date_published&#39;: newPost.date.format(&#39;L&#39;),
-        &#39;summary&#39;: util.stripHTML(newPost.summary),
-        &#39;url&#39;: newPost.permalink,
-        &#39;tags&#39;: newPost.tags.data.map(function (v) &#123; return v.name &#125;),
-        &#39;categories&#39;: newPost.categories.data.map(function (v) &#123; return v.name &#125;)
-    &#125;</code></pre>
+var JSONFeed = {
+        'title': newPost.title,
+        'id': newPost.path,
+        'date_published': newPost.date.format('L'),
+        'summary': util.stripHTML(newPost.summary),
+        'url': newPost.permalink,
+        'tags': newPost.tags.data.map(function (v) { return v.name }),
+        'categories': newPost.categories.data.map(function (v) { return v.name })
+    }</code></pre>
 
             </div>
             <hr/>
@@ -2402,7 +2402,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28.1k</span>&nbsp;字
+                class="white-color">25.9k</span>&nbsp;字
             
             
             
