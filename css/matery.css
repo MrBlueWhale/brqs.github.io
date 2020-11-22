@@ -34,12 +34,12 @@
 }
 
 body {
- background-color: #eaeaea;
-
-  background: url('https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io@master/medias/qiang_bg.gif')；
+  background-color: #eaeaea;
+  background:linear-gradient(60deg,rgba(224,255,125,.5) 5%,rgba(0,228,255,.35)) 0 0/cover,url(""),url(https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io@master/medias/qiang_bg.gif) 0 0;
   background-attachment: fixed;
   margin: 0;
-
+  overflow-x:hidden;
+  overflow-y:auto
   color: #34495e;
 
 }
@@ -2295,5 +2295,18 @@ body.dark, body.dark .v[data-class=v] .vcount, body.dark #rewardModal .modal-con
 /* 改变透明度 */ 
 body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark strong { filter: brightness(.7); }
 
-
+/*滚动条 */
+::-webkit-scrollbar-thumb {
+    background-color: #6DD0F2;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 2em;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(73,177,245,.2);
+    border-radius: 2em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
 
