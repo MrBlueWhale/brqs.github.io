@@ -13,6 +13,7 @@ var __apiKeys = [
 	'm786337261-bed8d5c4a30aaefdca3e85df',//mx
 	'm786337286-b3cfe0257cd38c68c26990f6',//海客go
 	'm786449604-09aefb5fd13034ac06aca9b4',//柒比叁
+	'm786456008-ea8f434a1f93759f3e1dd905',//蝉时雨
 ];
 
 // refresh interval (in seconds)
