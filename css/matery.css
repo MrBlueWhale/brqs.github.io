@@ -1608,7 +1608,15 @@ thead {
         animation: cd-bounce-2 0.6s;
     }
 }
+@media only screen and (max-width: 1030px) {
+    .jz {
+        padding: 0!important;
+    }
 
+.jz {}
+
+.jz {}
+}   
 /* about page styles. */
 
 .about-container {
@@ -1621,8 +1629,7 @@ thead {
     .about-container {
         width: 95%;
     }
-}
-
+} 
 .post-statis {
     text-align: center;
 }
@@ -1708,7 +1715,32 @@ thead {
     max-width: 600px;
     color: #999;
 }
+.jz {
+    padding: 0 118px;
+    /* font-family: 'Architects Daughter', cursive!important; */
+}
+.jz ul {
+    padding-left: 6px;
+    font-family: 'Architects Daughter', cursive!important;
+    margin-left: 2em;
+}
+.jz ul li ul li{
+    list-style-type: circle
+ 
+}
 
+.jz ul li, .jz p {
+    font-size: 1.38rem!important;
+    line-height: 1.6;
+    font-family: 'Architects Daughter', cursive!important;
+    
+}
+.jz p a {
+    color: #42b983!important;
+}
+.jz h4{
+    text-indent: 2em;
+}
 .post-charts,
 .my-projects,
 .my-skills,
@@ -2309,4 +2341,3 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     width: 8px;
     height: 8px;
 }
-
