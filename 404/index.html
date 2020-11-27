@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2020/11, 凡尘纪">
+    <meta name="keywords" content="关于, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2020/11 | 凡尘纪</title>
+    <title>关于 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -714,141 +714,12 @@
 
 </header>
 
-    <style>
-    /*归档页自定义样式*/
-    .archive-container{
-      padding: 20px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      background-color: #fff;
-    }
-    .archive:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-    
-    .archive .articles {
-      border-left: 1px solid #dbdbdb;
-    }
-    
-    .archive .article {
-      border-top: none;
-      margin-left: -1px;
-      padding: 0.4rem 1.5rem;
-      border-left: 3px solid transparent;
-    }
-    
-    .archive .article:hover {
-      transition: all .6s;
-      -webkit-transition: all .6s;
-      -o-transition: all .6s;
-      -moz-transition: all .6s;
-      border-left-color: #0f9d58 ;
-    }
-    
-    .archive .article time {
-      font-size: 1rem;
-      color: deeppink;
-      /* color: darkgray; */
-    }
-    article-sort-item_title{
-      display: -webkit-box;
-      overflow: hidden;
-      height: 60px;
-      color: #4c4948;
-      font-size: .75rem;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -o-transition: all .3s;
-      -ms-transition: all .3s;
-      transition: all .3s;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-    
-    .archive .article h6 {
-      margin: 0;
-    }
-    
-    .archive .article h6 a {
-      line-height: 2.5;
-      color: inherit;
-      border-bottom: 1px dashed transparent;
-    }
-    
-    .archive .article h6 a:hover {
-      border-bottom-color: #0f9d58;
-      padding-left: 16px;
-      transition: all .5s;
-      -webkit-transition: all .5s;
-      -o-transition: all .5s;
-      -moz-transition: all .5s;
-    }
-    
-    .archive .articles .imgcontent{
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      overflow: hidden;
-    }
-    
-    .archive .articles .imgcontent .postimg{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .archive .articles .imgcontent .postimg:hover{
-      transform: scale(1.3);
-      transition: all .6s;
-      -webkit-transition: all .6s;
-      -o-transition: all .6s;
-      -moz-transition: all .6s;
-    }
-    .article-sort-post{
-      display: inline-block;
-      position: relative;
-      top: -16px;
-      left: 10px;
-    }
-    
-    .hbe-input-container{
-      width: 80%;
-      max-width: 800px;
-      position: relative;
-      margin: 100px auto;
-    }
-    
-    .hbe-input-container  .btn-decrypt{
-      display: inline-block;
-      vertical-align: top;
-      width: 120px;
-      height: 32px;
-      line-height: 32px;
-      font-size: 16px;
-      color: #ffffff;
-      background-color: #3f90ff;
-      text-align: center;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-    }
+    <style type="text/css">
+    /* don't remove. */
     .about-cover {
-      height: 50vh;
+        height: 75vh;
     }
-    .desc-content{
-      padding: 0 50px;
-    }
-    @media only screen and (max-width: 601px) {
-      .desc-content {
-        padding: 0 15px;
-      }
-    }
-    
-    .v .vlist .vcard {
-      padding-top: 2.5em !important;
-    }
-    
- </style>
+</style>
 
 <div class="bg-cover pd-header about-cover">
     <div class="container">
@@ -894,329 +765,284 @@
 
 <main class="content">
 
-    
-        <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
+                        
+<div class="statis">
+    <span class="count"><a href="/">13</a></span>
+    <span class="name">文章</span>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
 
-    
 
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2019-11-27", "2020-11-27"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2019-11-27", 0], ["2019-11-28", 0], ["2019-11-29", 0], ["2019-11-30", 0], ["2019-12-01", 0], ["2019-12-02", 0], ["2019-12-03", 0], ["2019-12-04", 0], ["2019-12-05", 0], ["2019-12-06", 0], ["2019-12-07", 0], ["2019-12-08", 0], ["2019-12-09", 0], ["2019-12-10", 0], ["2019-12-11", 0], ["2019-12-12", 0], ["2019-12-13", 0], ["2019-12-14", 0], ["2019-12-15", 0], ["2019-12-16", 0], ["2019-12-17", 0], ["2019-12-18", 0], ["2019-12-19", 0], ["2019-12-20", 0], ["2019-12-21", 0], ["2019-12-22", 0], ["2019-12-23", 0], ["2019-12-24", 0], ["2019-12-25", 0], ["2019-12-26", 0], ["2019-12-27", 0], ["2019-12-28", 0], ["2019-12-29", 0], ["2019-12-30", 0], ["2019-12-31", 0], ["2020-01-01", 0], ["2020-01-02", 0], ["2020-01-03", 0], ["2020-01-04", 0], ["2020-01-05", 0], ["2020-01-06", 0], ["2020-01-07", 0], ["2020-01-08", 0], ["2020-01-09", 0], ["2020-01-10", 0], ["2020-01-11", 0], ["2020-01-12", 0], ["2020-01-13", 0], ["2020-01-14", 0], ["2020-01-15", 0], ["2020-01-16", 0], ["2020-01-17", 0], ["2020-01-18", 0], ["2020-01-19", 0], ["2020-01-20", 0], ["2020-01-21", 0], ["2020-01-22", 0], ["2020-01-23", 0], ["2020-01-24", 0], ["2020-01-25", 0], ["2020-01-26", 0], ["2020-01-27", 0], ["2020-01-28", 0], ["2020-01-29", 0], ["2020-01-30", 0], ["2020-01-31", 0], ["2020-02-01", 0], ["2020-02-02", 0], ["2020-02-03", 0], ["2020-02-04", 0], ["2020-02-05", 0], ["2020-02-06", 0], ["2020-02-07", 0], ["2020-02-08", 0], ["2020-02-09", 0], ["2020-02-10", 0], ["2020-02-11", 0], ["2020-02-12", 0], ["2020-02-13", 0], ["2020-02-14", 0], ["2020-02-15", 0], ["2020-02-16", 0], ["2020-02-17", 0], ["2020-02-18", 0], ["2020-02-19", 0], ["2020-02-20", 0], ["2020-02-21", 0], ["2020-02-22", 0], ["2020-02-23", 0], ["2020-02-24", 0], ["2020-02-25", 0], ["2020-02-26", 0], ["2020-02-27", 0], ["2020-02-28", 0], ["2020-02-29", 0], ["2020-03-01", 0], ["2020-03-02", 0], ["2020-03-03", 0], ["2020-03-04", 0], ["2020-03-05", 0], ["2020-03-06", 0], ["2020-03-07", 0], ["2020-03-08", 0], ["2020-03-09", 0], ["2020-03-10", 0], ["2020-03-11", 0], ["2020-03-12", 0], ["2020-03-13", 0], ["2020-03-14", 0], ["2020-03-15", 0], ["2020-03-16", 0], ["2020-03-17", 0], ["2020-03-18", 0], ["2020-03-19", 0], ["2020-03-20", 0], ["2020-03-21", 0], ["2020-03-22", 0], ["2020-03-23", 0], ["2020-03-24", 0], ["2020-03-25", 0], ["2020-03-26", 0], ["2020-03-27", 0], ["2020-03-28", 0], ["2020-03-29", 0], ["2020-03-30", 0], ["2020-03-31", 0], ["2020-04-01", 0], ["2020-04-02", 0], ["2020-04-03", 0], ["2020-04-04", 0], ["2020-04-05", 0], ["2020-04-06", 0], ["2020-04-07", 0], ["2020-04-08", 0], ["2020-04-09", 0], ["2020-04-10", 0], ["2020-04-11", 0], ["2020-04-12", 0], ["2020-04-13", 0], ["2020-04-14", 0], ["2020-04-15", 0], ["2020-04-16", 0], ["2020-04-17", 0], ["2020-04-18", 0], ["2020-04-19", 0], ["2020-04-20", 0], ["2020-04-21", 0], ["2020-04-22", 0], ["2020-04-23", 0], ["2020-04-24", 0], ["2020-04-25", 0], ["2020-04-26", 0], ["2020-04-27", 0], ["2020-04-28", 0], ["2020-04-29", 0], ["2020-04-30", 0], ["2020-05-01", 0], ["2020-05-02", 0], ["2020-05-03", 0], ["2020-05-04", 0], ["2020-05-05", 0], ["2020-05-06", 0], ["2020-05-07", 0], ["2020-05-08", 0], ["2020-05-09", 0], ["2020-05-10", 0], ["2020-05-11", 0], ["2020-05-12", 0], ["2020-05-13", 0], ["2020-05-14", 0], ["2020-05-15", 0], ["2020-05-16", 0], ["2020-05-17", 0], ["2020-05-18", 0], ["2020-05-19", 0], ["2020-05-20", 0], ["2020-05-21", 0], ["2020-05-22", 0], ["2020-05-23", 0], ["2020-05-24", 0], ["2020-05-25", 0], ["2020-05-26", 0], ["2020-05-27", 0], ["2020-05-28", 0], ["2020-05-29", 0], ["2020-05-30", 0], ["2020-05-31", 0], ["2020-06-01", 0], ["2020-06-02", 0], ["2020-06-03", 0], ["2020-06-04", 0], ["2020-06-05", 0], ["2020-06-06", 0], ["2020-06-07", 0], ["2020-06-08", 0], ["2020-06-09", 0], ["2020-06-10", 0], ["2020-06-11", 0], ["2020-06-12", 0], ["2020-06-13", 0], ["2020-06-14", 0], ["2020-06-15", 0], ["2020-06-16", 0], ["2020-06-17", 0], ["2020-06-18", 0], ["2020-06-19", 0], ["2020-06-20", 0], ["2020-06-21", 0], ["2020-06-22", 0], ["2020-06-23", 0], ["2020-06-24", 0], ["2020-06-25", 0], ["2020-06-26", 0], ["2020-06-27", 0], ["2020-06-28", 0], ["2020-06-29", 0], ["2020-06-30", 0], ["2020-07-01", 0], ["2020-07-02", 0], ["2020-07-03", 0], ["2020-07-04", 0], ["2020-07-05", 0], ["2020-07-06", 0], ["2020-07-07", 0], ["2020-07-08", 0], ["2020-07-09", 0], ["2020-07-10", 0], ["2020-07-11", 0], ["2020-07-12", 0], ["2020-07-13", 0], ["2020-07-14", 0], ["2020-07-15", 0], ["2020-07-16", 0], ["2020-07-17", 0], ["2020-07-18", 0], ["2020-07-19", 0], ["2020-07-20", 0], ["2020-07-21", 0], ["2020-07-22", 0], ["2020-07-23", 0], ["2020-07-24", 0], ["2020-07-25", 0], ["2020-07-26", 0], ["2020-07-27", 0], ["2020-07-28", 0], ["2020-07-29", 0], ["2020-07-30", 0], ["2020-07-31", 0], ["2020-08-01", 0], ["2020-08-02", 0], ["2020-08-03", 0], ["2020-08-04", 0], ["2020-08-05", 0], ["2020-08-06", 0], ["2020-08-07", 0], ["2020-08-08", 0], ["2020-08-09", 0], ["2020-08-10", 0], ["2020-08-11", 0], ["2020-08-12", 0], ["2020-08-13", 0], ["2020-08-14", 0], ["2020-08-15", 0], ["2020-08-16", 0], ["2020-08-17", 0], ["2020-08-18", 0], ["2020-08-19", 0], ["2020-08-20", 0], ["2020-08-21", 0], ["2020-08-22", 0], ["2020-08-23", 0], ["2020-08-24", 0], ["2020-08-25", 0], ["2020-08-26", 0], ["2020-08-27", 0], ["2020-08-28", 0], ["2020-08-29", 0], ["2020-08-30", 0], ["2020-08-31", 0], ["2020-09-01", 0], ["2020-09-02", 0], ["2020-09-03", 0], ["2020-09-04", 0], ["2020-09-05", 0], ["2020-09-06", 0], ["2020-09-07", 0], ["2020-09-08", 0], ["2020-09-09", 0], ["2020-09-10", 0], ["2020-09-11", 0], ["2020-09-12", 0], ["2020-09-13", 0], ["2020-09-14", 0], ["2020-09-15", 0], ["2020-09-16", 0], ["2020-09-17", 0], ["2020-09-18", 0], ["2020-09-19", 0], ["2020-09-20", 0], ["2020-09-21", 0], ["2020-09-22", 0], ["2020-09-23", 0], ["2020-09-24", 0], ["2020-09-25", 0], ["2020-09-26", 0], ["2020-09-27", 0], ["2020-09-28", 0], ["2020-09-29", 0], ["2020-09-30", 0], ["2020-10-01", 0], ["2020-10-02", 0], ["2020-10-03", 0], ["2020-10-04", 0], ["2020-10-05", 0], ["2020-10-06", 0], ["2020-10-07", 0], ["2020-10-08", 0], ["2020-10-09", 0], ["2020-10-10", 0], ["2020-10-11", 0], ["2020-10-12", 0], ["2020-10-13", 0], ["2020-10-14", 0], ["2020-10-15", 0], ["2020-10-16", 0], ["2020-10-17", 0], ["2020-10-18", 0], ["2020-10-19", 0], ["2020-10-20", 0], ["2020-10-21", 0], ["2020-10-22", 2], ["2020-10-23", 0], ["2020-10-24", 7], ["2020-10-25", 0], ["2020-10-26", 1], ["2020-10-27", 0], ["2020-10-28", 0], ["2020-10-29", 1], ["2020-10-30", 0], ["2020-10-31", 0], ["2020-11-01", 0], ["2020-11-02", 0], ["2020-11-03", 0], ["2020-11-04", 0], ["2020-11-05", 0], ["2020-11-06", 0], ["2020-11-07", 0], ["2020-11-08", 0], ["2020-11-09", 0], ["2020-11-10", 0], ["2020-11-11", 0], ["2020-11-12", 0], ["2020-11-13", 0], ["2020-11-14", 0], ["2020-11-15", 0], ["2020-11-16", 1], ["2020-11-17", 0], ["2020-11-18", 0], ["2020-11-19", 1], ["2020-11-20", 0], ["2020-11-21", 0], ["2020-11-22", 0], ["2020-11-23", 0], ["2020-11-24", 0], ["2020-11-25", 0], ["2020-11-26", 0], ["2020-11-27", 0]]
-        }]
+<div class="statis">
+    <span class="count"><a href="/categories">4</a></span>
+    <span class="name">分类</span>
+</div>
 
-    };
 
-    myChart.setOption(option);
-</script>
 
-    
+<div class="statis">
+    <span class="count"><a href="/tags">14</a></span>
+    <span class="name">标签</span>
+</div>
 
-    <div class="container archive-container ">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-chips">
-                    <span onclick="showTable()" id="sp-table" class="chip center-align waves-effect waves-light default"
-                          data-tagname="时间列表"
-                          style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); color:#fff">时间列表
-                    </span>
-                    <span onclick="showTime()" id="sp-timeline"
-                          class="chip center-align waves-effect waves-light default"
-                          data-tagname="时间轴" style="background-color: #F9EBEA;">时间轴
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="cd-table" class="container archive-container">
-        <div class="card">
-            <div class="card-content">
-                
-                
-                    <div class="archive">
-                        <h4 class="archive-year" id="2020">2020年</h4>
-                        <div class="articles">
-                            
-                                <div class="article content>">
-                                <!--  <a href="/2020/111917267.html">
-                                    <div class="imgcontent"><img class="postimg" src="" alt="解决hexo-matery主题站内搜索异常问题"></div>  
-                                  </a> -->
-                                  <div class="article-sort-post">
-                                    <div class="article-sort-item_title">
-                                      <a href="/2020/111917267.html">
-                                        <h5>
-                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
-                                          <time class="is-text-small" datetime="2020-11-19T14:26:00.000Z" itemprop="datePublished" >
-                                            2020-11-19 
-                                          </time>
-                                        </h5>
-                                        <h6 class="is-6"><a href="/2020/111917267.html">解决hexo-matery主题站内搜索异常问题</a></h6>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                            
-                                <div class="article content>">
-                                <!--  <a href="/2020/111623576.html">
-                                    <div class="imgcontent"><img class="postimg" src="" alt="关于我的实验室"></div>  
-                                  </a> -->
-                                  <div class="article-sort-post">
-                                    <div class="article-sort-item_title">
-                                      <a href="/2020/111623576.html">
-                                        <h5>
-                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
-                                          <time class="is-text-small" datetime="2020-11-16T13:06:00.000Z" itemprop="datePublished" >
-                                            2020-11-16 
-                                          </time>
-                                        </h5>
-                                        <h6 class="is-6"><a href="/2020/111623576.html">关于我的实验室</a></h6>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                            
-                        </div>
                     </div>
-                
-            </div>
-        </div>
-    </div>
-    
-
-    <div id="cd-timeline" class="container" style="display: none">
-        
-            <div class="cd-timeline-block">
-
-                
-                
-                    
-                    <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                        <a href="/archives/2020">2020</a>
-                    </div>
-                
-
-                
-                
-                    
-                    <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                        <a href="/archives/2020/11">11</a>
-                    </div>
-                
-
-                
-                <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                    <span>19</span>
-                </div>
-                <article class="cd-timeline-content" data-aos="fade-up">
-                    <div class="article col s12 m6">
-                        <div class="card">
-                            <a href="/2020/111917267.html">
-                                <div class="card-image">
+                    <div class="col s12 m12 l4">
+                        <div class="profile center-align">
+                            <div class="avatar">
+                                <img src="/medias/avatar.jpg" alt="不染轻裳"
+                                     class="circle responsive-img avatar-img">
+                            </div>
+                            <div class="author">
+                                <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
-                                        
-                                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="解决hexo-matery主题站内搜索异常问题">
-                                    
-                                    <span class="card-title">解决hexo-matery主题站内搜索异常问题</span>
+<div class="statis">
+    <span class="count"><a href="/">13</a></span>
+    <span class="name">文章</span>
+</div>
+
+
+
+<div class="statis">
+    <span class="count"><a href="/categories">4</a></span>
+    <span class="name">分类</span>
+</div>
+
+
+
+<div class="statis">
+    <span class="count"><a href="/tags">14</a></span>
+    <span class="name">标签</span>
+</div>
+
+
                                 </div>
-                            </a>
-                            <div class="card-content article-content">
-                                <div class="summary block-with-text">
+                                <div class="title">不染轻裳</div>
+                                <div class="career">学生</div>
+                                <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
-                                        
-在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  
 
-解决过程解决过程首先我怀疑是我的search.j
-                                    
-                                </div>
-                                <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
-                                </span>
-                                    <span class="publish-author">
-                                        
-                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                            
-                                                <a href="/categories/hexo/" class="post-category"
-                                                   target="_blank">
-                                    hexo
-                                    </a>
-                                            
-                                        
-                                    </span>
+
+    <a href="mailto:3447851674@qq.com  1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3447851674" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3447851674" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+ 
+    <a href="https://space.bilibili.com/602389627" class="tooltipped" target="_blank" data-tooltip="在B站上关注我" " data-position="top" data-delay="50"> 
+	    <i class="fas fa-play-circle"></i> 
+	</a> 
+
+
+
                                 </div>
                             </div>
-
-                            
-                                <div class="card-action article-tags">
-                                    
-                                        <a href="/tags/hexo/"><span
-                                                    class="chip bg-color">hexo</span></a>
-                                    
-                                </div>
-                            
                         </div>
                     </div>
-                </article>
-            </div>
-        
-            <div class="cd-timeline-block">
+                    <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
+                        <div class="social-link">
+                            
 
-                
-                
 
-                
-                
+    <a href="mailto:3447851674@qq.com  1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
-                
-                <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                    <span>16</span>
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3447851674" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3447851674" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+ 
+    <a href="https://space.bilibili.com/602389627" class="tooltipped" target="_blank" data-tooltip="在B站上关注我" " data-position="top" data-delay="50"> 
+	    <i class="fas fa-play-circle"></i> 
+	</a> 
+
+
+
+                        </div>
+                    </div>
                 </div>
-                <article class="cd-timeline-content" data-aos="fade-up">
-                    <div class="article col s12 m6">
-                        <div class="card">
-                            <a href="/2020/111623576.html">
-                                <div class="card-image">
-                                    
-                                        
-                                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="关于我的实验室">
-                                    
-                                    <span class="card-title">关于我的实验室</span>
-                                </div>
-                            </a>
-                            <div class="card-content article-content">
-                                <div class="summary block-with-text">
-                                    
-                                        关于我的实验室：实验室内大部分页面都是我平时浏览大佬的博客发现的有趣的页面，然后用F12扒下来的。这些页面大多为开源项目，可以按照其说明自由引用，本人崇尚开源精神
-                                    
-                                </div>
-                                <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
-                                </span>
-                                    <span class="publish-author">
-                                        
-                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                            
-                                                <a href="/categories/hexo/" class="post-category"
-                                                   target="_blank">
-                                    hexo
-                                    </a>
-                                            
-                                        
-                                    </span>
-                                </div>
-                            </div>
+                   
 
-                            
-                                <div class="card-action article-tags">
-                                    
-                                        <a href="/tags/hexo/"><span
-                                                    class="chip bg-color">hexo</span></a>
-                                    
-                                        <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"><span
-                                                    class="chip bg-color">实验室</span></a>
-                                    
-                                </div>
-                            
-                        </div>
-                    </div>
-                </article>
-            </div>
-        
-    </div>
+                </div>
 
+                <div class="introduction center-align" data-aos="fade-up">迷途漫漫 终有一归</div>
+				<div class="jz">
+                    <h3>🏡关于我</h3> 
+                    <ul>
+                        <li>我混迹网络世界的名称：不染轻裳（brqs）</li>
+                        <li>我对这个世界充满了好奇，渴望获取知识，创造新的知识，以及改变世界。</li>
+                        <li>我的智力和毅力很普通，但还算擅长自学——我相信通过实例能最快地学习。</li>
+                    </ul>
+                    <h4>性格属性</h4>
+                    <ul>
+                        <li>
+                            测试性格：
+                            <ul>
+                                <li><a href="https://www.16personalities.com/ch/entp-%E4%BA%BA%E6%A0%BC" target="_blank" > ENTP-A </a></li>
+                            </ul>       
+                        </li>
+                        <li>
+                            自认为的性格：
+                                <ul>
+                                    <li ><strong>专注者</strong> ，对于一件热衷的事情往往可以废寝忘食，忘却时间，做自己喜欢做的事情往往一坐在桌前就是一下午一晚上。</li>
+                                    <li><strong>随性者</strong>，我做的很多事都没有缘由，只是我想做这件事那就做，我更喜欢听从自己内心的选择，不问因果，但求随心。</li>
+                                    <li><strong>伪完美主义者</strong>，当我认真做一件事时，往往会追求做到符合我内心的目标,通常这个目标有点高。</li>
+                                    <li><strong>乐观主义者</strong>，即使事情再糟糕，也不会让自己一直悲伤难过，善于振作自己，取悦自己。</li>
+                                    <li><strong>异想天开者</strong>，脑中经常突然跳出一些很有趣的想法，对于这些想法，我十分乐意去实践他们，尽管会花很多时间，比如这个网站最初就是脑中闪过的一个念头。</li>
+                                    <li><strong>轻度社交恐惧患者</strong>，现实生活中不是特别喜欢和人交流，网上还好。</li>
+                                    <li><strong>轻度懒癌</strong>，坦白说自己确实很懒。</li>
+                                    <li><strong>向往知识者</strong>，对知识充满好奇,但往往浅尝辄止。</li>
+                                </ul>
+                        </li>
+                    </ul>
+                    <h4>兴趣爱好</h4>
+                    <ul>
+                        <li><strong> 音乐</strong>：只要对胃口的都听但主要是以下几类
+                        <ul>
+                            <li><strong>电音</strong>最喜欢的dj是教主Alan Walker </li>
+                            <li><strong>指弹</strong>特别喜欢吉他，这辈子一定要学会指弹。</li>
+                            <li><strong>纯音乐</strong>有些时候没歌词往往更加动听。</li>
+                            <li><strong>民谣</strong>听闻民谣听者有三孤独平庸落魄，而我仅仅是喜欢听罢了无他。</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <li><strong>游戏</strong>：<br>自从沉迷各种知识之后玩的比较少了，pc主要是mc（我也当过一段时间腐竹，开过服务器，网站服务器之前还是为了玩mc开服买的）和lol，lol打的极菜，希望有朝一日自己能变强，想买的游戏只狼一直舍不得买但很想玩，可能要等到自己生日再买给自己。还有一款鲜为人知，但真的特别硬核的战棋游戏（一旦入坑就无法脱坑的战旗游戏<a href="https://awbw.amarriner.com/" target="_blank" >awbw</a>）安利一波</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>阅读</strong>：不管是小说，散文，传记，诗歌都看，但是最喜欢看的还是小说，最喜欢的网文是雪中悍刀行（强推），最喜欢的诗人是纳兰性德，最喜欢的作家是汪曾祺。
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>写作</strong>：偶尔也会写一些情感，故事，小说，诗词等文章，但无奈文笔拙劣，往往仅供自己阅读。
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>旅行</strong>：我向往的旅行不是那种跟团打卡式的旅行，而是能够慢下来细细地去品味旅行地的种种风情，感受不一样的天地，期待一场单人旅行。
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>编程</strong>：自从机缘巧合接触到一些编程知识我就越发的沉迷了。努力学习更多知识。
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><strong>瞎研究</strong>：遇到什么感兴趣的，都会投入大量精力去研究,虽然可能并没有什么结果，但这个过程令我快乐。</li>
+                    </ul>
+                    <h4>我的梦</h4>
+                    <ul><li>
+                     <strong>  未完成的梦：</strong>
+                        <ul>
+                            <li>在东北住一个冬天</li>
+                            <li>吃毛肚吃到饱</li>
+                            <li>买下只狼</li>
+                            <li>自己的完整编程作品</li>
+                            <li>自己做一个开源项目</li>
+                            <li>买一台特别高配的电脑</li>
+                            <li>租一个四核八G的服务器</li>
+                            <li>一个自己的博客模板</li>
+                            <li>GitHub 拥有一套属于自己的源码</li>
+                            <li>买一个不至于被说成烧火棍的吉他</li>
+                            <li>掌握十首以上指弹吉他曲目</li>
+                            <li>学指弹，可以自己弹奏</li>
+                            <li>围棋梦，入门围棋</li>
+                            <li>单人旅行，一个人没有约束的旅行</li>
+                            <li>白嫖一张 RTX 2070</li>
+                            <li>一辆可拆卸折叠的自行车</li>
+                            <li>骑行环绕一座城市</li>
+                            <li>一架无人机</li>
+                            <li>运动相机</li>
+                            <li>看得下去的字</li>
+                            <li>去一次Alan Walker的巡演现场</li>
+                            <li>看一次流星雨</li>
+                            <li>去西藏云南旅行</li>
+                            <li>有一群码农的朋友</li>
+                            <li>1t的移动硬盘</li>
+                            <li>awbwgl上1200+</li>
+                        </ul>
+                    <strong>已完成的梦想</strong>
+                        <ul>
+                            <li>自己的域名hesifan.top</li>
+                            <li>自己的服务器lhins-2za8vnim</li>
+                            <li>自己的个人网站</li>
+                            <li>开自己的 MC 服务器</li>
+                            <li>有一群可靠的朋友</li>
+                        </ul>
+                    </li></ul>
+                    <h3>📬 我的联系方式</h3>
+                    <p>可在留言板留言，看到了会尽快回复哒~</p>
+                    <p>Q Q：3447851674</p>
+                    <p>邮箱：3447851674@qq.com</p>
+                </div>
+				<link href="https://cdn.bootcss.com/botui/0.3.9/botui-theme-default.css" rel="stylesheet">
+				<link href="https://cdn.bootcss.com/botui/0.3.9/botui.min.css" rel="stylesheet">
+				<style>
+				#myTalk{
+				margin-top:30px}
+				</style>
+				<div id="myTalk" class="container other-skills chip-container" data-aos="zoom-in-up">
+				<div class="entry-content">
+				<div id="hello-xiaocai" class="popcontainer" style="min-height:300px;padding:2px 6px 4px;background-color:#24c8ff;border-radius:10px">
+				<center>
+				<h4>与&nbsp;<ruby>不染轻裳 &nbsp;<rp></rp></ruby>对话中...</h4><p></p>
+				</center>
+				<bot-ui></bot-ui>
+				</div>
+				</div>
+				</div>
+				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/js/botui.js">
+				</script>
+				<script>
+				bot_ui_ini()
+				</script>
+				</div>
+				</div>
+				</div>
+				</div>			
+				</div>
+		<div class="card">
+		
+	</div>
+</div>		
 </main>
 
-
-<script>
-    function showTime() {
-        $("#cd-timeline").show();
-        $("#cd-table").hide();
-        $("#sp-timeline").css('background', 'linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)');
-        $("#sp-timeline").css('color', '#fff');
-        $("#sp-table").css('background', '#F9EBEA')
-        $("#sp-table").css('color', 'rgba(0,0,0,0.6)');
-    }
-
-    function showTable() {
-        $("#cd-timeline").hide();
-        $("#cd-table").show();
-        $("#sp-table").css('background', 'linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)');
-        $("#sp-table").css('color', '#fff');
-        $("#sp-timeline").css('background', '#F9EBEA')
-        $("#sp-timeline").css('color', 'rgba(0,0,0,0.6)');
-    }
-
-</script>
 
     <footer class="page-footer bg-color">
     
