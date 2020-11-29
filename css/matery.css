@@ -2341,3 +2341,10 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     width: 8px;
     height: 8px;
 }
+.tangguo {
+    vertical-align: middle;
+    width: 34px;
+}
+.dashang th, .dashang td {
+    text-align: center;
+}
