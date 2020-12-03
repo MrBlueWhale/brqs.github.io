@@ -898,7 +898,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-29
+                    2020-12-03
                 </div>
                 
 
@@ -1018,7 +1018,7 @@ j
 <h3 id="2-建立git仓库"><a href="#2-建立git仓库" class="headerlink" title="2.建立git仓库"></a>2.建立git仓库</h3><pre><code>cd /home/git
 git init --bare blog.git</code></pre>
 <h3 id="3-修改blog-gi权限"><a href="#3-修改blog-gi权限" class="headerlink" title="3.修改blog.gi权限"></a>3.修改blog.gi权限</h3><pre><code>chown git:git -R blog.git</code></pre>
-<h3 id="4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。"><a href="#4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。" class="headerlink" title="4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。"></a>4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。</h3><pre><code>im blog.git/hooks/post-receive</code></pre>
+<h3 id="4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。"><a href="#4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。" class="headerlink" title="4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。"></a>4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。</h3><pre><code>vim blog.git/hooks/post-receive</code></pre>
 <p>按 i 键进入文件的编辑模式，在该文件中添加两行代码（将下边的代码粘贴进去)，指定 Git 的工作树（源代码）和 Git 目录</p>
 <pre class=" language-#!/bin/bash"><code class="language-#!/bin/bash">git --work-tree=/home/hexo --git-dir=/home/git/blog.git checkout -f </code></pre>
 <p>按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入：，然后输入wq回车）</p>
@@ -1064,7 +1064,7 @@ INFO  Deploy done: git</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">hsf</a>
+                    <a href="/about" rel="external nofollow noreferrer">不染轻裳</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -1087,7 +1087,7 @@ INFO  Deploy done: git</code></pre>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">hsf</a>
+                    <a href="/about" target="_blank">不染轻裳</a>
                     !
                 </span>
             </div>
