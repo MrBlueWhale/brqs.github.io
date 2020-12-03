@@ -1017,7 +1017,7 @@ j
 <h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><h3 id="1-获取root权限"><a href="#1-获取root权限" class="headerlink" title="1.获取root权限"></a>1.获取root权限</h3><pre><code>su root</code></pre>
 <h3 id="2-建立git仓库"><a href="#2-建立git仓库" class="headerlink" title="2.建立git仓库"></a>2.建立git仓库</h3><pre><code>cd /home/git
 git init --bare blog.git</code></pre>
-<h3 id="3-修改blog-gi权限"><a href="#3-修改blog-gi权限" class="headerlink" title="3.修改blog.gi权限"></a>3.修改blog.gi权限</h3><pre><code>chown git:git -R blog.git</code></pre>
+<h3 id="3-修改blog-git权限"><a href="#3-修改blog-git权限" class="headerlink" title="3.修改blog.git权限"></a>3.修改blog.git权限</h3><pre><code>chown git:git -R blog.git</code></pre>
 <h3 id="4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。"><a href="#4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。" class="headerlink" title="4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。"></a>4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。</h3><pre><code>vim blog.git/hooks/post-receive</code></pre>
 <p>按 i 键进入文件的编辑模式，在该文件中添加两行代码（将下边的代码粘贴进去)，指定 Git 的工作树（源代码）和 Git 目录</p>
 <pre class=" language-#!/bin/bash"><code class="language-#!/bin/bash">git --work-tree=/home/hexo --git-dir=/home/git/blog.git checkout -f </code></pre>
