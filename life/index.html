@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决hexo-matery主题站内搜索异常问题, 凡尘纪">
+    <meta name="keywords" content="凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>解决hexo-matery主题站内搜索异常问题 | 凡尘纪</title>
+    <title>凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -784,12 +784,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决hexo-matery主题站内搜索异常问题</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -907,25 +907,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -934,28 +921,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-19
+                    2020-11-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-01
+                    2020-11-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    730
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -970,101 +957,293 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  </p>
-</blockquote>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>解决过程首先我怀疑是我的search.js文件的问题替换了友链其他人的，还是不行。<br>然后开始f12慢慢调试排查，我发现在searchlist里面显示的链接为不完整的链接如2020/111623576.html这样在主页没有问题在其他页面如 <a href="https://hesifan.top/contact/">https://hesifan.top/contact/</a>  就会因为补全为 <a href="https://hesifan.top/contact/2020/111623576.html">https://hesifan.top/contact/2020/111623576.html</a> 导致404，我就开始改search.js文件将增加了一个 <code>/</code></p>
-<pre><code>if (isMatch) {
-                        str += "&lt;li&gt;&lt;a href='/" + data_url + "' class='search-result-title'&gt;" + data_title + "&lt;/a&gt;";
+                
+	<div id="iriska-page" class="iriska-site-wrapper">
+	<a class="iriska-skip-link screen-reader-text" href="#iriska-content">Skip to content</a>			
+	<header id="iriska-masthead" class="iriska-site-header iriska-sticky-header">
+							<div class="iriska-header-wrapper">
+					<div class="iriska-container">
+						<div class="iriska-row">
+				    	<div class="iriska-menu-logo-wrapper iriska-logo-position-left clearfix">
+	<div class="iriska-site-branding-wrapper iriska-col-md-3 iriska-col-sm-3 iriska-col-xs-4">
+		<div class="iriska-site-branding">
+			<div class="iriska-site-logo ">
+							</div>
+					</div><!-- .iriska-site-branding -->
+	</div><!-- .iriska-site-branding-wrapper -->
+	<div class="iriska-main-site-navigation-wrapper iriska-col-md-9 iriska-col-sm-9 iriska-col-xs-8">
+		<div class="iriska-main-navigation-wrapper">
+			<div class="iriska-close-button-wrapper">
+				<div class="iriska-close-button iriska-close-button-menu">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 250 250" width="25" height="25"><path d="M13.63 3.02L246.98 236.37L236.37 246.98L3.02 13.63L13.63 3.02Z" opacity="1" fill-opacity="1"></path><path d="M246.98 13.63L13.63 246.98L3.02 236.37L236.37 3.02L246.98 13.63Z" opacity="1" fill-opacity="1"></path></svg>				</div>
+			</div>
+			<nav id="iriska-site-navigation" class="iriska-main-navigation">
+							</nav><!-- #iriska-site-navigation -->
+		</div>
+		<div class="iriska-open-menu-button-wrapper">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 250 170" width="25" height="17"><path d="M0 0L250 0L250 10L0 10L0 0Z" opacity="1" fill-opacity="1"></path><path d="M0 79.97L250 79.97L250 89.97L0 89.97L0 79.97Z" opacity="1" fill-opacity="1"></path><path d="M0 160L250 160L250 170L0 170L0 160Z" opacity="1" fill-opacity="1"></path></svg>		</div>
+	</div><!-- .iriska-main-site-navigation-wrapper -->
+</div><!-- .iriska-logo-position-left -->						</div>
+					</div>
+				</div><!-- .iriska-header-wrapper -->
+	</header><!-- #iriska-masthead -->
+	<div id="iriska-content" class="iriska-site-content iriska-site-have-sticky-header"><div id="iriska-primary" class="iriska-content-area">
+<main id="iriska-main" class="iriska-site-main">
+		<div class="iriska-wrapper-content iriska-wrapper-content-single">
+			<div class="iriska-container">
+				<div class="iriska-row">
+					<div class="iriska-col-md-4 iriska-left-side-content iriska-main-sidebar-wrapper">
+							<div class="iriska-sidebar-wrapper iriska-single-sidebar">
+								<div class="iriska-sidebar-content">
+									<div class="iriska-close-button-wrapper">
+										<div class="iriska-close-button iriska-close-button-sidebar">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 250 250" width="25" height="25"><path d="M13.63 3.02L246.98 236.37L236.37 246.98L3.02 13.63L13.63 3.02Z" opacity="1" fill-opacity="1"></path><path d="M246.98 13.63L13.63 246.98L3.02 236.37L236.37 3.02L246.98 13.63Z" opacity="1" fill-opacity="1"></path></svg>										</div>
+									</div>
+									
+<div id="iriska-main-widgets-area" class="iriska-sidebar widget-area">
+<aside id="nav_menu-19" class="widget widget_nav_menu">
+	<div class="menu-menu-container">
+		<ul id="menu-menu" class="menu">
+			<li id="menu-item-13661" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-13661"><a href="/tenfour/homepage">关于我</a></li>
+			<li id="menu-item-13823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13823"><a href="/tenfour">返回十四主页</a></li>
+			<li id="menu-item-13823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13823"><a href="/">返回博客主页</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<div class="iriska-col-md-8 iriska-right-side-content iriska-single-content-area-wrapper">				
+<style>
+	article {
+		margin-bottom: 40px;
+	}
+</style>
 
-</code></pre>
-<p>hexo d 之后正常，应该算是解决了吧，暂时还未出错。<br>贴上改后完整的js文件  </p>
-<pre><code>var searchFunc = function (path, search_id, content_id) {
-    'use strict';
-    $.ajax({
-        url: path,
-        dataType: "xml",
-        success: function (xmlResponse) {
-            // get the contents from search data
-            var datas = $("entry", xmlResponse).map(function () {
-                return {
-                    title: $("title", this).text(),
-                    content: $("content", this).text(),
-                    url: $("url", this).text()
-                };
-            }).get();
-            var $input = document.getElementById(search_id);
-            var $resultContent = document.getElementById(content_id);
-            $input.addEventListener('input', function () {
-                var str = '&lt;ul class=\"search-result-list\"&gt;';
-                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                $resultContent.innerHTML = "";
-                if (this.value.trim().length &lt;= 0) {
-                    return;
-                }
-                // perform local searching
-                datas.forEach(function (data) {
-                    var isMatch = true;
-                    var content_index = [];
-                    var data_title = data.title.trim().toLowerCase();
-                    var data_content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, "").toLowerCase();
-                    var data_url = data.url;
-                    var index_title = -1;
-                    var index_content = -1;
-                    var first_occur = -1;
-                    // only match artiles with not empty titles and contents
-                    if (data_title != '' &amp;&amp; data_content != '') {
-                        keywords.forEach(function (keyword, i) {
-                            index_title = data_title.indexOf(keyword);
-                            index_content = data_content.indexOf(keyword);
-                            if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) {
-                                isMatch = false;
-                            } else {
-                                if (index_content &lt; 0) {
-                                    index_content = 0;
-                                }
-                                if (i == 0) {
-                                    first_occur = index_content;
-                                }
-                            }
-                        });
-                    }
-                    // show search results
-                    if (isMatch) {
-                        str += "&lt;li&gt;&lt;a href='/" + data_url + "' class='search-result-title'&gt;" + data_title + "&lt;/a&gt;";
-                        var content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, "");
-                        if (first_occur &gt;= 0) {
-                            // cut out 100 characters
-                            var start = first_occur - 20;
-                            var end = first_occur + 80;
-                            if (start &lt; 0) {
-                                start = 0;
-                            }
-                            if (start == 0) {
-                                end = 100;
-                            }
-                            if (end &gt; content.length) {
-                                end = content.length;
-                            }
-                            var match_content = content.substr(start, end);
-                            // highlight all keywords
-                            keywords.forEach(function (keyword) {
-                                var regS = new RegExp(keyword, "gi");
-                                match_content = match_content.replace(regS, "&lt;em class=\"search-keyword\"&gt;" + keyword + "&lt;/em&gt;");
-                            });
 
-                            str += "&lt;p class=\"search-result\"&gt;" + match_content + "...&lt;/p&gt;"
-                        }
-                        str += "&lt;/li&gt;";
-                    }
-                });
-                str += "&lt;/ul&gt;";
-                $resultContent.innerHTML = str;
-            });
-        }
-    });
-}</code></pre>
-<h2 id="思考原因"><a href="#思考原因" class="headerlink" title="思考原因"></a>思考原因</h2><p>这里是胡乱猜测，可能是因为我使用的生成链接是全数字，我发现其他人是随机或者拼音都没问题。  </p>
+
+<!-- 文章部分开始，每一篇文章都是一整个article标签	 -->
+<article class="iriska-single-post post-14934 post type-post status-publish format-standard hentry category-2107784">
+	<section class="iriska-single-post-content-section">
+		<div class="iriska-single-post-content-wrapper">
+			<div class="iriska-single-post-meta-wrapper">
+				<div class="iriska-single-post-meta-info">
+					<div class="iriska-post-meta iriska-post-meta-info">
+						<span class="iriska-meta-item iriska-postdate">
+							<!-- 文章时间 -->
+							<time class="iriska-entry-date iriska-date-published">
+								November 08, 2020
+							</time>
+						</span>		
+					</div>
+				</div>
+			</div>
+			<div class="iriska-single-post-header">
+				<!-- 文章标题 -->
+				<h1 class="iriska-single-post-title">例文标题</h1>
+			</div>
+<!-- 文章主题内容开始 -->
+<div class="iriska-single-post-content">
+				
+	<!-- 文章中插入图片demo -->
+	<!-- <figure class="wp-block-image size-large">
+		<img src="https://7.dusays.com/2020/10/23/93e2abd6bda7f.jpeg" 
+		style="filter: brightness(0.6);" />
+	</noscript>
+	</figure> -->
+
+	<p>本文写于：2020/11/25 晚八点。</p>
+	<p>正文</p>
+</div>				
+	<div class="nav-links" style="font-size: 0.6rem;margin-top: 24px;">
+		<div class="nav-previous">到底了，继续向下阅读下一篇~</div>
+	</div>
+</div>
+</section>
+<!-- 小屏幕下的侧边栏模块	 -->
+<div class="iriska-fixed-button-wrapper">
+	<span class="iriska-fixed-button iriska-sidebar-open-button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 250 170" width="25" height="17"><path d="M0 0L250 0L250 10L0 10L0 0Z" opacity="1" fill-opacity="1"></path><path d="M0 79.97L250 79.97L250 89.97L0 89.97L0 79.97Z" opacity="1" fill-opacity="1"></path><path d="M0 160L250 160L250 170L0 170L0 160Z" opacity="1" fill-opacity="1"></path></svg>
+		<span class="iriska-fixed-button-text"></span>
+	</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- #iriska-content -->
+
+<!-- 回到顶部模块 -->
+<style>
+	#backtop{
+    background: whitesmoke;
+    width: 60px;
+    height: 60px;
+    position: fixed;  /*fixed属性可以将div固定在指定位置*/
+    z-index: 99;
+    right: 20px;
+    bottom: 20px;
+	cursor: pointer;
+}
+#backtop p{
+    line-height: 60px;
+    text-align: center;
+    color: burlywood;
+}
+</style>
+<div id="backtop">
+    <p>Top</p>
+</div>
+<script>
+	//获取对象
+var back = document.getElementById('backtop')
+back.style.display ='none'
+//检查滚动条,是否显示返回顶部的按钮
+document.onscroll = function(){
+    //只有滚动条滚动的长度大于100px的时候显示按钮，其他情况则隐藏按钮
+    if (document.documentElement.scrollTop > 100){
+        back.style.display = 'block'
+    }else{
+        back.style.display = 'none'
+    }
+};
+
+//点击事件
+back.onclick = function(){
+    document.documentElement.scrollTop = 0
+}
+</script>
+
+<footer id="iriska-footer" class="iriska-site-footer">
+<div class="iriska-copyright-area">
+	<div class="iriska-container">
+		<div class="iriska-row">
+		<div class="iriska-col-md-12">
+		<div class="iriska-site-info">
+			<div style="font-size: 11px">
+				<a href="/">不染轻裳' Ten Four</a><br>
+			© 2019 - 2020 brqs All rights reserved
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+</footer><!-- #iriska-footer -->
+</div><!-- #iriska-page -->
+
+<script defer="" id="bilmur" data-provider="wordpress.com" data-service="atomic" src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202043"></script>
+<link rel="stylesheet" id="all-css-b7878e32ef77a289ee685ff36d302459" href="https://nine-lie.com/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css?m=1593527050" type="text/css" media="all">
+<script id="contact-form-7-js-extra">
+var wpcf7 = {"apiSettings":{"root":"https:\/\/nine-lie.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+</script>
+<script id="jetpack-carousel-js-extra">
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/nine-lie.com\/wp-admin\/admin-ajax.php","nonce":"aaf4f3b918","display_exif":"0","display_comments":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"white","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/nine-lie.com\/wp-login.php?redirect_to=https%3A%2F%2Fnine-lie.com%2F%25e5%2591%25b8%25ef%25bc%258c%25e5%2591%25a8%25e4%25b8%2580%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+</script>
+<script type="text/javascript" src="https://nine-lie.com/_static/??-eJyVkdFOwzAMRX+IzEwVm3hAfApKE691m8RR7G5sX0+qUahAm+Apip17rn1zysZxUkwKOUwdJYEBNVs3whslB+1EwUPuWTl9HptIaTPIw+m31HEb2I0CnkRh+C4YmyhaJf6/MlDXa8vvN4VJrVNz4BLNHurMYfIoM0JcoazyQ6g9xtqnQjJasCKoAnUlOhD6WXbtrLZcMx3HWCmmYA7nO0ksIR4xeS5gJ+W6v5JbOibYy9nUULoKluJm+Kp0w75eMbbo/+C8+j5nC0+C4ct7KdzB2JEkol4xc7j13Wt82e4em2bbPD3vPwBFXdeE"></script>
+<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+<script type="text/javascript">
+			(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=54791999&postid=14934&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=transparent&lang=en_US&jetpack_version=9.0.2&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=791f68ec6190fa44c9d70e58e876a09cd77cb585#parent=https%3A%2F%2Fnine-lie.com%2F%25e5%2591%25b8%25ef%25bc%258c%25e5%2591%25a8%25e4%25b8%2580%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=54791999&postid=14934&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=transparent&lang=en_US&jetpack_version=9.0.2&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=791f68ec6190fa44c9d70e58e876a09cd77cb585#parent=https%3A%2F%2Fnine-lie.com%2F%25e5%2591%25b8%25ef%25bc%258c%25e5%2591%25a8%25e4%25b8%2580%2F";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "https:\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						}
+					}
+				})
+
+			})();
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202043.js" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.0.2',blog:'54791999',post:'14934',tz:'10.5',srv:'nine-lie.com'} ]);
+	_stq.push([ 'clickTrackerInit', '54791999', '14934' ]);
+</script>
+
+
 
             </div>
             <hr/>
@@ -1090,7 +1269,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hesifan.top/2020/111917267.html">http://hesifan.top/2020/111917267.html</a>
+                    <a href="http://hesifan.top/life/index.html">http://hesifan.top/life/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1127,11 +1306,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1581,49 +1756,55 @@ new Valine({
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/111917267.html">
+                <a href="/life/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="解决hexo-matery主题站内搜索异常问题">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">解决hexo-matery主题站内搜索异常问题</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  
-
-解决过程解决过程首先我怀疑是我的search.j
+	
+	Skip to content			
+	
+							
+					
+						
+				    	
+	
+		
+			
+							
+					
+	
+	
+		
+			
+				
+									
+			
+			
+							
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            不染轻裳
                             
                         </span>
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
@@ -1631,52 +1812,58 @@ new Valine({
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/111623576.html">
+                <a href="/life/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="关于我的实验室">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">关于我的实验室</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于我的实验室：实验室内大部分页面都是我平时浏览大佬的博客发现的有趣的页面，然后用F12扒下来的。这些页面大多为开源项目，可以按照其说明自由引用，本人崇尚开源精神
+                            
+	
+	Skip to content			
+	
+							
+					
+						
+				    	
+	
+		
+			
+							
+					
+	
+	
+		
+			
+				
+									
+			
+			
+							
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            不染轻裳
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">
-                        <span class="chip bg-color">实验室</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
