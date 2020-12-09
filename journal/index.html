@@ -834,7 +834,130 @@
         border-radius: 10px;
         font-size: 16px;
         margin: 12px auto;
-	)
+	}
+    * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+
+        body {
+            background: #F6F7F8;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 1200px;
+            min-width: 300px;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .tit {
+            text-align: center;
+            padding: 40px 0;
+            letter-spacing: 2px;
+            font-size: 32px;
+            color: #333;
+        }
+
+        .min {
+            position: relative;
+        }
+
+        .line {
+            height: 100%;
+            width: 4px;
+            background: #666666;
+            position: absolute;
+            left: 50%;
+            margin-left: -2px;
+            display: none;
+        }
+
+        .vas {
+            padding-top: 20px;
+        }
+
+        .list {
+            width: 100%;
+            height: 160px;
+            margin-top: 40px;
+            position: relative;
+            display: none;
+        }
+
+        .dian {
+            width: 20px;
+            height: 20px;
+            background: #666666;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            border: 3px solid #ffffff;
+            box-sizing: border-box;
+            margin-left: -10px;
+            margin-top: 5px;
+            z-index: 2;
+        }
+
+
+        .list_box {
+            width: 50%;
+            height: 100%;
+            float: left;
+            position: relative;
+            /* background: red; */
+        }
+
+
+        .hx {
+            width: 150px;
+            height: 4px;
+            background: #666666;
+            margin-top: 12px;
+            float: right;
+            z-index: 1;
+        }
+
+        .list_nr {
+            width: 65%;
+            height: auto;
+            padding: 15px;
+            background: #118DF0;
+            border-radius: 6px;
+            color: #f6f7f8;
+            float: left;
+            margin-top: -15px;
+            margin-left: 19%;
+        }
+
+        .nr_tit {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 10px 0;
+            margin-top: 0px;
+        }
+
+        .nr_nr {
+            line-height: 25px;
+            position: relative;
+        }
+
+        .date {
+            position: absolute;
+            right: 12%;
+            background: #ffffff;
+            padding: 5px;
+            top: -32px;
+            color: #333;
+            border-radius: 10px;
+            font-size: 12px;
+        }
 </style>	
 <main class="content">
 	<div class="container">
@@ -871,7 +994,7 @@
                     categories: [0, 
                             1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,
                            16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
-                           31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,
+                           31,32,33,34,35,36,37,38,00,40,41,42,43,44,45,
                            46,47,48,49,50,51,52,53,54,55,56,57,58,59,60
                            ],
                     calculable: true,
@@ -880,7 +1003,7 @@
                         color: ['#ebedf0',
                                  '#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b',
                                  '#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f', 
-                                 '#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b','#239a3b', 
+                                 '#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b', 
                                  '#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127'
                                  ]
                     },
@@ -936,127 +1059,570 @@
 					<div class="journal">
                         <div class="title center-align">“ 日志”</div>
                         “ 这是本站的站点日志用来记录本站建立过程，变动内容，新增内容 ”                      
-					</div>					
+					</div>
+					<div class="box">
+						<div class="tit"></div>
+						<div class="min">
+							<div class="line"></div>
+							<div class="vas">
+								<div class="list">
+									<div class="dian"></div>
+									<div class="list_box">
+										<div class="hx"></div>
+										<div class="list_nr">
+											<p class="date">2020-12-09 20:25:00</p>
+											<div class="nr_tit">
+												<a href=""># 修改日志页面</a>
+											</div>
+											<div class="nr_nr">
+												修改日志页面为当前样式，借鉴心月云日志页面</div>
+										</div>
+									</div>
+								</div> 
+								<div class="list">
+									<div class="dian"></div>
+									<div class="list_box">
+										<div class="hx"></div>
+										<div class="list_nr">
+											<p class="date">2020-12-05 23:29:00</p>
+											<div class="nr_tit">
+												<a href="/books"># 书单</a>
+											</div>
+											<div class="nr_nr">
+												新增书单页面，感谢老朋友itsneko。</div>
+										</div>
+									</div>
+								</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-29 15:28:36</p>
+															<div class="nr_tit">
+																<a href="/donate"># 资助系统</a>
+															</div>
+															<div class="nr_nr">
+																新增资助系统页面，感谢老朋友itsneko。</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-29 13:32:00</p>
+															<div class="nr_tit">
+																<a href="/artitalk"># artitalk同步更新</a>
+															</div>
+															<div class="nr_nr">
+																替换了js文件，保持artitalk同步更新。
+															</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-26 10:38:00</p>
+															<div class="nr_tit">
+																<a href="/journal"># 访客日历</a>
+															</div>
+															<div class="nr_nr">
+																在关于日志中增加了访客日历，由于不会JavaScript这个做的真丑日后修改。
+															</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-25 16:58:00</p>
+															<div class="nr_tit">
+																<a href="/life"># 写作站人间草木</a>
+															</div>
+															<div class="nr_nr">
+																新增写作站主要用于书写非技术类文章，记录日常点滴，风花雪月。感谢我们的老朋友itsneko。
+																</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-25 15:33:00</p>
+															<div class="nr_tit">
+																<a href=""># 移除客服</a>
+															</div>
+															<div class="nr_nr">
+																由于客服延时太高，本来用于查看是否有人访问鉴于现在有更好的办法，所以移除客服功能。</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-25 10:38:00</p>
+															<div class="nr_tit">
+																<a href="/blog"># 站点页面</a>
+															</div>
+															<div class="nr_nr">
+																新增站点页面记录建站工具及环境并补充解释权属于我的霸王条款（站点协议）</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-25 09:38:00</p>
+															<div class="nr_tit">
+																<a href=""># 移出相册页面</a>
+															</div>
+															<div class="nr_nr">
+																由于暂时没有上传相册图片的打算，关闭相册页面</div>
+														</div>
+													</div>
+												</div> 
+												v<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-24 20:38:00</p>
+															<div class="nr_tit">
+																<a href="/about"># 修改补充关于我信息</a>
+															</div>
+															<div class="nr_nr">
+																补充关于我信息，听取大佬意见，替换了个人真实姓名，保护个人隐私避免不必要的麻烦。</div>
+														</div>
+													</div>
+												</div> <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-23 22:39:00</p>
+															<div class="nr_tit">
+																<a href="/sakura"># 修改樱花雨页面</a>
+															</div>
+															<div class="nr_nr">
+																修改樱花雨页面为自我介绍增加实用性。</div>
+														</div>
+													</div>
+												</div> <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-22 00:38:00</p>
+															<div class="nr_tit">
+																<a href=""># 细节优化</a>
+															</div>
+															<div class="nr_nr">
+																toc目录添加白色背景，增加了背景图片及遮罩，优化了侧边滑动条，去除了订阅功能，压根没人订阅还占地方</div>
+														</div>
+													</div>
+												</div> <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-21 09:38:00</p>
+															<div class="nr_tit">
+																<a href="/bulletin"># 公告板</a>
+															</div>
+															<div class="nr_nr">
+																因为意义不大删除了弹幕墙页面。增加了公告板页面公布网站正在进行的项目，关于我的一些重要事情。</div>
+														</div>
+													</div>
+												</div> <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-19 08:20:00</p>
+															<div class="nr_tit">
+																<a href=""># 细节优化</a>
+															</div>
+															<div class="nr_nr">
+																调整了导航栏，修复了搜索异常问题，增加粒子特效页面。</div>
+														</div>
+													</div>
+												</div> <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-17 16:263:00</p>
+															<div class="nr_tit">
+																<a href=""># 修复问题</a>
+															</div>
+															<div class="nr_nr">
+																修复了原来valineqq无法拉取昵称和无法启用博主小伙伴标签的问题，这个问题发现好久了并给添加itsneko添加了小伙伴标签。
+															</div>
+														</div>
+													</div>
+												</div> <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-15 09:38:00</p>
+															<div class="nr_tit">
+																<a href=""># 更换字体</a>
+															</div>
+															<div class="nr_nr">
+																更换了站点字体江西拙楷</div>
+														</div>
+													</div>
+												</div> 
+												 <div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-15 19:08:00</p>
+															<div class="nr_tit">
+																<a href="/archive"># 新增时间列表</a>
+															</div>
+															<div class="nr_nr">
+																文章日历页面新增时间列表，感谢<a href="https://blog.sky03.cn/" target="_blank">sky03大佬</a> 提供的源码</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-14 09:38:00</p>
+															<div class="nr_tit">
+																<a href=""># 细节优化</a>
+															</div>
+															<div class="nr_nr">
+																增加百度统计功能便于了解访客数量及访问量，增加了夜间模式按钮，更正了留言板友链头像信息，</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-12  08:36:00</p>
+															<div class="nr_tit">
+																<a href=""># app</a>
+															</div>
+															<div class="nr_nr">
+																将网站打包app，但是由于效果并不好仅供我自己使用。后面有空再优化。</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-11 23:38:00</p>
+															<div class="nr_tit">
+																<a href=""># 实验室单页</a>
+															</div>
+															<div class="nr_nr">
+																陆续增加了实验室单页mikutap，mikutap这个页面我垂涎已久，这是一个开源的项目不知道为什么我用不了在网上今天找到一个修改版终于可以了。帮你百度，拒绝当伸手党学会百度，音乐隧道音乐用的是我的idol Alan walker的歌，小游戏谷歌恐龙加强版，我的源头nekodeng的网站，液体，烟火秀，樱花雨，todolist</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-09 19:08:00</p>
+															<div class="nr_tit">
+																<a href=""># 细节优化</a>
+															</div>
+															<div class="nr_nr">
+																将原本标签页面与分类页面合并为文章统计页面，删除关于我中相册，我的项目等内容。改变了原有的主题颜色，真的挑了好久，这个是比较满意的，有时间估计还会调其他的，不是特别满意。删除内容关于我页面中的我的技能，我的其他技能。将文章统计图从关于我页面迁移至文章统计页面，增加使用微软表单方式收集友链信息，调整导航栏顺序。</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-07 07:13:00</p>
+															<div class="nr_tit">
+																<a href=""># 升级valine</a>
+															</div>
+															<div class="nr_nr">
+																升级了valine评论系统，修复了主题自带版本不能显示头像的问题</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-06 12:49:00</p>
+															<div class="nr_tit">
+																<a href="/about"># 增加botui机器人</a>
+															</div>
+															<div class="nr_nr">
+																在我？页面增加botui对话（不知道为什么hexo g会改写botui.js文件只好使用奇怪的手段解决）</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-06 15:23:00</p>
+															<div class="nr_tit">
+																<a href="/status"># 友链检测页面</a>
+															</div>
+															<div class="nr_nr">
+																新增友链检测功能并将友链页面从关于移出合并为友链及其检测页面，向今今今生大佬表达感谢</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-05 09:58:00</p>
+															<div class="nr_tit">
+																<a href="/time"># 倒计时页面</a>
+															</div>
+															<div class="nr_nr">
+																增加了骚气的倒计时页面，人生短暂，加油吧少年！	</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-11-03 14:32:00</p>
+															<div class="nr_tit">
+																<a href="/contact"># 完善留言板</a>
+															</div>
+															<div class="nr_nr">
+																完善了留言板和友情链接信息，留言板增加网易云热评，诗词（动态刷新）
+																</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-10-30 07:59:00</p>
+															<div class="nr_tit">
+																<a href=""># artitalk说说页面</a>
+															</div>
+															<div class="nr_nr">
+																新增artitalk说说页面</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-10-30 09:48:00</p>
+															<div class="nr_tit">
+																<a href=""># sl证书</a>
+															</div>
+															<div class="nr_nr">
+																安装ssl证书并强制htpps</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-10-28 08:25:00</p>
+															<div class="nr_tit">
+																<a href=""># 备案</a>
+															</div>
+															<div class="nr_nr">
+																完成网站备案工作，用时九天。</div>
+														</div>
+													</div>
+												</div> 
+												<div class="list">
+													<div class="dian"></div>
+													<div class="list_box">
+														<div class="hx"></div>
+														<div class="list_nr">
+															<p class="date">2020-10-24 19:38:00</p>
+															<div class="nr_tit">
+																<a href=""># 基础</a>
+															</div>
+															<div class="nr_nr">
+																完成部署到服务器以及基础优化工作</div>
+														</div>
+													</div>
+												</div> 
+												
+				 
+				
+				
+					<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+					<script src="../src/tiao_c.js"></script>
+					<script>
+				
+				
+						$(document).ready(_ => {
+				
+							let list_box = $(".list_box");
+							let hx = $(".hx");
+							let list_nr = $(".list_nr");
+							let date = $(".date");
+							let arr_color = ['#118DF0', '#8bc24c', '#FF5F5F', '#515bd4', '#F7B32D'];
+							let flag = 0;
+							let wy = $("body").width();
+				
+							function pc() {
+				
+								if (wy <= 700) {
+									window.history.go(0);
+								}
+				
+								if ($("body").width() < 1240) {
+									$(".top img").css("right", "5px");
+								} else {
+									$(".top img").css("right", "-22px");
+								}
+				
+								$(".top").css("display", "block");
+				
+								for (let index = 0; index < list_box.length; index++) {
+				
+									$(list_nr[index]).css("background", arr_color[flag]);
+									if (flag == 4) {
+										flag = 0;
+									} else {
+										flag += 1;
+									}
+				
+									if (index % 2 != 0) {
+										let a = $(list_box[index]);
+										let b = $(hx[index]);
+										let c = $(list_nr[index]);
+										let d = $(date[index]);
+										a.css({
+											"float": "right"
+										});
+										b.css({
+											"float": "left"
+										})
+										c.css({
+											"float": "right",
+											"margin-right": "19%"
+										})
+										d.css({
+											"right": 'unset',
+											"left": "12%"
+										})
+				
+									}
+								}
+								$(".list").slideDown(800);
+							}
+				
+							function move() {
+				
+								if (wy > 700) {
+									window.history.go(0);
+								}
+								for (let index = 0; index < list_box.length; index++) {
+									$(list_nr[index]).css("background", arr_color[flag]);
+									if (flag == 4) {
+										flag = 0;
+									} else {
+										flag += 1;
+									}
+				
+								}
+				
+								$(".list").css("margin-top", "60px");
+								$(".line").css("left", "10%");
+								$(".dian").css("left", "10%");
+								$(".list_box").css("width", "100%");
+								$(".hx").css("float", "left");
+								$(".list_nr").css({
+									"max-height": "146px",
+									"line-height": "17px",
+									"font-size": "12px"
+								});
+								$($(".list")['0']).css("margin-top", "20px");
+								$(".list").slideDown(800);
+				
+							}
+				
+							function win() {
+								let width = $("body").width();
+								$(".line").slideDown(800, _ => {
+									if (width <= 700) {
+										move();
+									} else {
+										pc();
+									}
+								});
+							}
+							$(window).resize(win);
+							win();
+						});
+				
+						$(".nr_nr").click((e) => {
+				
+							if ($("body").width() <= 700) {
+								alert(e.delegateTarget.innerText);
+							}
+				
+						})
+				
+						$(".top img").click(_ => {
+							$(document).scrollTop(0);
+						})
+				
+				
+						var time = new Date();
+						var time_new = time.getTime();
+						var str = '2019-03-01 12:14:46'; 
+						str = str.replace(/-/g, '/'); 
+						var date = new Date(str); 
+						var time_old = date.getTime();
+						var cha = (time_new - time_old)/86400000; 
+						console.log('本站已运行'+Math.floor(cha)+'天');
+				
+				
+						// 我也不写注释了，js部分的代码，主要就是拿来兼容移动端和PC端。
+						
+					</script>					
 				</div>
-				<p>站点日志：新增资助系统页面，感谢老朋友itsneko2020.11.29</p>
-				<br>
-				<p>站点日志：保持artitalk同步更新2020.11.29</p>
-				<br>
-				<p>站点日志：新增访客日历2020.11.26</p>
-				<br>
-				<p>站点日志：新增十四tenfour写作站主要用于书写非技术类文章，感谢我们的老朋友itsneko2020.11.25</p>
-				<br>
-				<p>站点日志：由于客服延时太高，本来用于查看是否有人访问鉴于现在有更好的办法，所以移除客服功能。2020.11.25</p>
-				<br>
-				<p>站点日志：站点页面补充站点协议2020.11.25</p>
-				<br>
-				<p>站点日志：新增站点页面2020.11.25</p>
-				<br>
-				<p>站点日志：暂时没有上传相册的打算关闭了相册页面2020.11.25</p>
-				<br>
-				<p>站点日志：听取大佬建议，替换个人真实姓名，保护隐私2020.11.24</p>
-				<br>
-				<p>站点日志：补充关于我信息2020.11.24</p>
-				<br>
-				<p>站点日志：修改樱花雨页面为个人介绍增加实用性2020.11.23</p>
-				<br>
-				<p>站点日志：toc目录添加白色背景2020.11.22</p>
-				<br>
-				<p>站点日志：增加了背景图片及遮罩2020.11.22</p>
-				<br>
-				<p>站点日志：优化了侧边滑动条2020.11.22</p>
-				<br>
-				<p>站点日志：去除了订阅功能，压根没人订阅还占地方2020.11.21</p>
-				<br>
-				<p>站点日志：新增了公告板2020.11.21</p>
-				<br>
-				<p>站点日志：因为意义不大删除了弹幕墙页面2020.11.21</p>
-				<br>
-				<p>站点日志：调整了导航栏2020.11.21</p>
-				<br>
-				<p>站点日志：修复了搜索异常问题。2020.11.19</p>
-				<br>
-				<p>站点日志：增加粒子特效页面2020.11.17</p>
-				<br>
-				<p>站点日志：修复了原来valineqq无法拉取昵称和无法启用博主小伙伴标签的问题，这个问题发现好久了 2020.11.15</p>
-				<br>
-				<p>站点日志：更换了站点字体江西拙楷 2020.11.15</p>
-				<br>
-				<p>站点日志：文章日历页面新增时间列表，感谢<a href="https://blog.sky03.cn/" target="_blank">sky03大佬</a> 提供的源码 2020.11.15</p>
-				<br>
-				<p>站点日志：增加百度站点统计页面2020.11.14</p>
-				<br>
-				<p>站点日志：增加了夜间模式按钮2020.11.14</p>
-				<br>
-				<p>站点日志：更正了留言板友链头像信息2020.11.13</p>
-				<br>
-				<p>站点日志：将网站打包app2020.11.12</p>
-				<br>
-				<p>站点日志：新增访客地图便于了解站点实际访问情况2020.11.11</p>
-				<br>
-				<p>站点日志：新增实验室单页mikutap这个页面我垂涎已久，这是一个开源的项目不知道为什么我用不了在网上今天找到一个修改版终于可以了2020.11.11</p>
-				<br>
-				<p>站点日志：新增实验室单页帮你百度，拒绝当伸手党学会百度2020.11.10</p>
-				<br>
-				<p>站点日志：新增实验室单页音乐隧道音乐用的是我的idol Alan walker的歌2020.11.10</p>
-				<br>
-				<p>站点日志：新增友链检测功能并将友链页面从关于移出合并为友链及其检测页面，向今今今生大佬表达感谢2020.11.09</p>
-				<br>
-				<p>站点日志：由于之前客服窗口异常问题没能解决，所以将原客服系统crisp更换客服系统为tidio2020.11.09</p>
-				<br>
-				<p>站点日志：新增实验室小游戏谷歌恐龙加强版，我的源头nekodeng的网站2020.11.09</p>
-				<br>
-				<p>站点日志：由于客服图标在手机上有些浏览器显示异常故关闭手机端客服显示2020.11.07</p>
-				<br>
-				<p>站点日志：升级了valine评论系统到1.14修复了不能显示头像的问题2020.11.06</p>
-				<br>
-				<p>站点日志：在我？页面增加botui对话（不知道为什么hexo g会改写botui.js文件只好使用奇怪的手段解决）2020.11.05</p>
-				<br>
-				<p>站点日志：调整导航栏顺序2020.11.05</p>
-				<br>
-				<p>站点日志：增加使用微软表单方式收集友链信息 2020.11.05</p>
-				<br>
-				<p>站点日志：将文章统计图从关于我页面迁移至文章统计页面2020.11.05</p>
-				<br>
-				<p>站点日志：删除内容关于我页面中的我的技能，我的其他技能2020.11.05</p>
-				<br>
-				<p>站点日志：新增站点日志页面将站点日志由碎语迁至该页面2020.11.05</p>
-				<br>
-				<p>站点日志：增加减少版樱花特效只在电脑显示2020.11.04</p>
-				<br>
-				<p>站点日志：改变了原有的主题颜色，真的挑了好久，这个是比较满意的，有时间估计还会调其他的，不是特别满意。2020.11.04</p>
-				<br>
-				<p>站点日志：增加液体实验室单页2020.11.3</p>
-				<br>
-				<p>站点日志：新增实验室单页烟火秀2020.11.03</p>
-				<br>
-				<p>站点日志：实验室新增单页樱花雨2020.11.03</p>
-				<br>
-				<p>站点日志：将原本标签页面与分类页面合并为文章统计页面，删除关于我中相册，我的项目等内容。2020.11.03</p>
-				<br>
-				<p>站点日志：新增弹幕墙页面上面的句子都是我以前喜欢的句子后面还会继续补充的2020.11.02 </p>
-				<br>
-				<p>站点日志：关闭看板娘功能原先的看板娘功能比较低级，待我在打佬那学会高级的看板娘再装回。2020.11.02 </p>
-				<br>
-				<p>站点日志：增加客服可以用这来找聊天啦，期待第一个访客。 2020.11.02</p>
-				<br>
-				<p>站点日志：增加了骚气的倒计时页面，人生短暂，加油吧少年！ 2020.11.02 </p>
-				<br>
-				<p>站点日志：完善了留言板和友情链接信息 2020.11.02</p>
-				<br>
-				<p>站点日志：留言板增加网易云热评，诗词（动态刷新）2020.0.31 </p>
-				<br>
-				<p>站点日志：增加myflag未经hexo渲染页面，写下自己十年之约吧。2020.10.31 </p>
-				<br>
-				<p>站点日志：新增独立相册页面（由于还没有搞图床以及没啥想放的图片，后续有了在加吧！）2020.10.30</p>
-				<br>
-				<p>站点日志：新增artitalk说说页面  2020.10.30</p>
-				<br>
-				<p>站点日志：安装ssl证书，强制htpps  2020.10.29</p>
-				<br>				
-				<p>站点日志：完成网站备案工作  2020.10.28</p>
-				<br>
-				<p>站点日志：完成部署到服务器以及基础优化工作  2020.10.24</p>
+				
 			</div>
 			
 		</div>
