@@ -396,12 +396,9 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
-  <li>
-    <a href="javascript:;" onclick="enterFullScreen()">
-      <i id="searchIcon" class="fa fa-expand-arrows-alt" title="进入全屏" style="zoom: 0.85;"></i>
-    </a>       
-    <a href="javascript:;" onclick="exitFullScreen()">
-      <i id="searchIcon" class="fa fa-desktop" title="退出全屏" style="zoom: 0.85;"></i>
+  <li id="fullscreen_li" class="fullscreen nav-show">
+    <a href="javascript:void(0);" class="modal-trigger waves-effect waves-light">
+      <i id="fullscreen" class="fa fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i>
     </a>
   </li>
 </ul>
@@ -2011,29 +2008,49 @@ if (windowWidth > 768) {
 		 <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
          </a>
          <script>
-         //进入全屏
 
-                function enterFullScreen() {
-                  var de = document.documentElement;
-                   if (de.requestFullscreen) {
-                         de.requestFullscreen();
-                     } else if (de.mozRequestFullScreen) {
-                         de.mozRequestFullScreen();
-                     } else if (de.webkitRequestFullScreen) {
-                         de.webkitRequestFullScreen();
-                    }
-                }
-                //退出全屏
-                function exitFullScreen() {
-                    var de = document;
-                    if (de.exitFullscreen) {
-                        de.exitFullscreen();
-                    } else if (de.mozCancelFullScreen) {
-                        de.mozCancelFullScreen();
-                    } else if (de.webkitCancelFullScreen) {
-                        de.webkitCancelFullScreen();
-                    }
-                }
+function enterfullscreen() { //进入全屏
+    
+    var docElm = document.documentElement;
+    //W3C
+    if(docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+    }
+    //FireFox
+    else if(docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen();
+    }
+    //Chrome等
+    else if(docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen();
+    }
+    //IE11
+    else if(elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+    $("#fullscreen").removeClass("fa-expand-arrows-alt").addClass("fa-desktop");
+}
+
+function exitfullscreen() { //退出全屏
+   // $("#fullscreen").html("切换全屏");
+    
+    if(document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if(document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+    } else if(document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+    } else if(document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }
+    $("#fullscreen").removeClass("fa-desktop").addClass("fa-expand-arrows-alt");
+}
+
+let b = false;
+$('#fullscreen_li ').on('click', function() {
+    b = !b;
+    b ? enterfullscreen() : exitfullscreen();
+})
            </script>
 </body> 
 </html>
