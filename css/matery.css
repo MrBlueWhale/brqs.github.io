@@ -4,12 +4,18 @@
     .container {
         width: 95%;
     }
+    .fullscreen { 
+        display: none; 
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 90%;
+    }
+    .fullscreen { 
+        display: none; 
     }
 }
 

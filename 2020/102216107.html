@@ -396,11 +396,12 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
-  <li id="fullscreen_li" class="fullscreen">
+  <li id="fullscreen_li" class="fullscreen nav-show">
     <a href="javascript:void(0);" class="modal-trigger waves-effect waves-light">
       <i id="fullscreen" class="fa fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i>
     </a>
   </li>
+  
 </ul>
 
 
@@ -1974,8 +1975,7 @@ if (windowWidth > 768) {
 		 <a onclick="switchNightMode()" id="sma"> 
 		 <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
          </a>
-         <script>
-
+<script>
 function enterfullscreen() { //进入全屏
     
     var docElm = document.documentElement;
@@ -2018,6 +2018,6 @@ $('#fullscreen_li ').on('click', function() {
     b = !b;
     b ? enterfullscreen() : exitfullscreen();
 })
-           </script>
+</script>
 </body> 
 </html>
