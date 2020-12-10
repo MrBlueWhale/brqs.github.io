@@ -316,6 +316,15 @@
       </li>
       
       <li>
+        <a href="/todolist">
+          
+          <i class="fa fa-clipboard-list" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的flag</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/sakura">
           
           <i class="fa fa-hands" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -348,15 +357,6 @@
           <i class="fa fa-search" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>帮你百度</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/todolist">
-          
-          <i class="fa fa-clipboard-list" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>我的flag</span>
         </a>
       </li>
       
@@ -394,6 +394,14 @@
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" onclick="enterFullScreen()">
+      <i id="searchIcon" class="fa fa-expand-arrows-alt" title="进入全屏" style="zoom: 0.85;"></i>
+    </a>       
+    <a href="javascript:;" onclick="exitFullScreen()">
+      <i id="searchIcon" class="fa fa-desktop" title="退出全屏" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -686,6 +694,16 @@
               
                 <li>
 
+                  <a href="/todolist " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-clipboard-list" style="position: absolute;left:50px" ></i>
+			      
+		          <span>我的flag</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/sakura " style="margin-left:75px">
 				  
 				   <i class="fa fa fa-hands" style="position: absolute;left:50px" ></i>
@@ -721,16 +739,6 @@
 				   <i class="fa fa fa-search" style="position: absolute;left:50px" ></i>
 			      
 		          <span>帮你百度</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/todolist " style="margin-left:75px">
-				  
-				   <i class="fa fa fa-clipboard-list" style="position: absolute;left:50px" ></i>
-			      
-		          <span>我的flag</span>
                   </a>
                 </li>
               
@@ -1065,7 +1073,31 @@ if (windowWidth > 768) {
 		 </script> 
 		 <a onclick="switchNightMode()" id="sma"> 
 		 <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
-		 </a>
-		 
+         </a>
+         <script>
+         //进入全屏
+
+                function enterFullScreen() {
+                  var de = document.documentElement;
+                   if (de.requestFullscreen) {
+                         de.requestFullscreen();
+                     } else if (de.mozRequestFullScreen) {
+                         de.mozRequestFullScreen();
+                     } else if (de.webkitRequestFullScreen) {
+                         de.webkitRequestFullScreen();
+                    }
+                }
+                //退出全屏
+                function exitFullScreen() {
+                    var de = document;
+                    if (de.exitFullscreen) {
+                        de.exitFullscreen();
+                    } else if (de.mozCancelFullScreen) {
+                        de.mozCancelFullScreen();
+                    } else if (de.webkitCancelFullScreen) {
+                        de.webkitCancelFullScreen();
+                    }
+                }
+           </script>
 </body> 
 </html>
