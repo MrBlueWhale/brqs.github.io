@@ -38,6 +38,12 @@
         max-width: 1250px;
     }
 }
+.navbar {
+    display: none;
+}
+
+
+    
 
 body {
   background-color: #eaeaea;
