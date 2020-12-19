@@ -902,6 +902,169 @@
         
         border-bottom: 2px solid #e96900;
     }
+        .dy {
+            text-align: center;
+            margin: 50px 0 20px 0;
+            font-size: 20px;
+            font-weight: 200;
+        }
+
+        .de {
+            width: 100%;
+         
+        }
+
+        .de>div {
+            width: 90%;
+            margin: 0 auto;
+            
+        }
+
+        .dyy,
+        .dss {
+            width: 15%;
+            height: 20px;
+            float: left;
+            text-align: center;
+            padding: 5px 0;
+            margin: 10px 0;
+            
+        }
+
+        .dee {
+            width: 70%;
+            height: 20px;
+            float: left;
+            text-align: center;
+            padding: 5px 0px;
+            margin: 10px 0;
+           
+        }
+
+        .dee .jdt {
+            text-align: left;
+            background: RGB(244, 245, 249);
+            border-radius: 15px;
+            position: relative;
+            top: 2px;
+          
+        }
+
+        .dee .jdt .jdt_son {
+            height: 100%;
+            width: 0%;
+            border-radius: 15px;
+           
+        }
+
+        .jt .dee .jdt .jdt_son {
+            background: #32B4FF;
+        }
+
+        .bz .dee .jdt .jdt_son {
+            background: #F54170;
+        }
+
+        .by .dee .jdt .jdt_son {
+            background: #FECE14;
+        }
+
+        .jn .dee .jdt .jdt_son {
+            background: #31DB83;
+        }
+
+        .cs .dee .jdt .jdt_son {
+            background: #9749DD;
+        }
+        .jzb{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        }
+       
+        .clock {
+      min-width: 250px;
+      width: 250px;
+      height: 250px;
+      background-color: white;
+      border: 15px solid white;
+      border-radius: 50%;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1),
+        0 10px 10px rgba(0, 0, 0, 0.3), 0 0 0 4px white;
+      background-image: url("/medias/clock.png");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .clock::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      z-index: 999;
+      background-color: rgb(58, 58, 58);
+      border-radius: 50%;
+    }
+    .hour,
+    .min,
+    .sec {
+      position: absolute;
+    }
+    .hour,
+    .hr {
+      width: 130px;
+      height: 130px;
+    }
+    .min,
+    .mn {
+      width: 160px;
+      height: 160px;
+    }
+    .sec,
+    .sc {
+      width: 200px;
+      height: 200px;
+    }
+    .hr,
+    .mn,
+    .sc {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+    }
+    .hr::before {
+      width: 5px;
+      height: 60px;
+      background-color: rgba(219, 0, 0, 0.808);
+      content: "";
+      border-radius: 6px 6px 0 0;
+    }
+    .mn::before {
+      width: 3px;
+      height: 80px;
+      background-color: rgb(0, 235, 125);
+      content: "";
+      border-radius: 6px 6px 0 0;
+    }
+    .sc::before {
+      width: 3px;
+      height: 120px;
+      background-color: rgb(0, 170, 248);
+      content: "";
+      border-radius: 6px;
+    }
+    .sc {
+      transition: linear 1s;
+    }
+    .mn {
+      transition: linear 0.1s;
+    }
+    .hr {
+      transition: linear 0.1s;
+    }
 </style>
 <main class="content">
     <div class="container">
@@ -952,6 +1115,224 @@
       
         <div class="card">
             <div class="card-content">
+                
+                <div class="biaotis">
+                    <span>时间从来不语，只在悄然间流逝。</span>
+                                     
+                </div>
+               
+                <div class="de">
+        
+                    <div class="jt">
+                        <div class="dyy">
+                            今天
+                        </div>
+                        <div class="dee">
+                            <div class="jdt">
+                                <div class="jdt_son" style="width: 52.3414%;">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="dss">512%</div>
+                    </div>
+        
+                    <div class="bz">
+                        <div class="dyy">
+                            本周
+                        </div>
+                        <div class="dee">
+                            <div class="jdt">
+                                <div class="jdt_son" style="width: 78.9059%;">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="dss">79%</div>
+                    </div>
+        
+                    <div class="by">
+                        <div class="dyy">
+                            本月
+                        </div>
+                        <div class="dee">
+                            <div class="jdt">
+                                <div class="jdt_son" style="width: 58.5879%;">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="dss">59%</div>
+                    </div>
+        
+                    <div class="jn">
+                        <div class="dyy">
+                            今年
+                        </div>
+                        <div class="dee">
+                            <div class="jdt">
+                                <div class="jdt_son" style="width: 97.2357%;">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="dss">97%</div>
+                    </div>
+        
+        
+                </div>
+            </div>
+        
+        
+            <script>
+        
+                // 人生进度条
+                function Progress_time() {
+                    var mydate = new Date();
+                    var nian = mydate.getFullYear();
+                    var yue = mydate.getMonth() + 1;
+                    var ri = mydate.getDate();
+        
+                        // 计算出今天的百分比
+                        var jt_a = ((mydate.getHours() * 3600) + (mydate.getMinutes() * 60) + mydate.getSeconds()) / 864;
+                        var jt = jt_a + '%';
+                        $(".jt .dss").text(parseFloat(jt.replace("%", "")).toFixed(0) + '%');
+        
+                        // 计算出本周的百分比
+                        var bz = null;
+                        if (mydate.getDay() == 0) {
+                            bz = (6 + jt_a / 100) / 0.07 + '%';
+                        } else {
+                            bz = ((mydate.getDay() - 1) + jt_a / 100) / 0.07 + '%'
+                        }
+                        $(".bz .dss").text(parseFloat(bz.replace("%", "")).toFixed(0) + '%');
+        
+                        // 计算出当月共有多少天（方便下面调用）
+                        function yue_s(z) {
+                            if (z == 1 || z == 3 || z == 5 || z == 7 || z == 8 || z == 10 || z == 12) {
+                                return 31;
+                            } else if (z != 2) {
+                                return 30;
+                            } else {
+                                if (nian / 4 == 0) {
+                                    return 29;
+                                } else {
+                                    return 28;
+                                }
+                            }
+                        }
+        
+                        // 计算出本月的百分比
+                        by = ((ri-1) / yue_s(yue))*100+jt_a/100;
+                        by_viw = by + '%';
+                        $(".by .dss").text(parseFloat(by_viw.replace("%", "")).toFixed(0) + '%');
+        
+                        // 计算出：从今年1月1号，直到现在共有多少天
+                        var jn = 0;
+                        var dayue = yue;
+                        for (i = 1; i < dayue + 1; ++i) {
+                            if (i >= 3) {
+                                if (i != dayue) {
+                                    jn = jn + yue_s(i);
+                                } else {
+                                    jn = jn + ri;
+                                }
+                            } else if (i == 2) {
+                                if (i != dayue) {
+                                    jn = jn + yue_s(2);
+                                } else {
+                                    jn = jn + ri;
+                                }
+                            } else if (i == 1) {
+                                if (i != dayue) {
+                                    jn = 31;
+                                } else {
+                                    jn = ri;
+                                }
+                            }
+                        }
+        
+                        // 计算出今年的百分比
+                        var runi = 3.65;
+                        if (yue_s(2) == 29) {
+                            runi = 3.66
+                        }
+                        jn = (jn / runi + jt_a / 100) + '%';
+                        $(".jn .dss").text(parseFloat(jn.replace("%", "")).toFixed(0) + '%');
+    
+        
+        
+                        // 把上面计算出的数据，展示在页面上
+                        $(".jt .dee .jdt .jdt_son").animate({
+                            width: jt
+                        }, 2000);
+        
+                        $(".bz .dee .jdt .jdt_son").animate({
+                            width: bz
+                        }, 2000);
+        
+                        $(".by .dee .jdt .jdt_son").animate({
+                            width: by_viw
+                        }, 2000);
+        
+                        $(".jn .dee .jdt .jdt_son").animate({
+                            width: jn
+                        }, 2000);
+        
+
+        
+                }
+                Progress_time();
+        
+        
+        
+            </script>
+             <div class="jzb">
+                <div class="clock">
+                    <div class="hour">
+                      <div class="hr"></div>
+                    </div>
+              
+                    <div class="min">
+                      <div class="mn"></div>
+                    </div>
+              
+                    <div class="sec">
+                      <div class="sc"></div>
+                    </div>
+                  </div>
+             </div>
+          
+              <script>
+                // 获取几个时钟的dom
+                let hr = document.querySelector(".hr");
+                let mn = document.querySelector(".mn");
+                let sc = document.querySelector(".sc");
+                let time = document.querySelector(".time_wrap1");
+                //根据当前时间初始化表盘时钟
+                let date = new Date();
+                let hour = date.getHours();
+                let min = date.getMinutes();
+                let sec = date.getSeconds();
+                let n = sec;
+                setInterval(() => {
+                  hour = date.getHours();
+                  hr.style.transform = `rotateZ(${hour * 30 + min / 2}deg)`;
+                  mn.style.transform = `rotateZ(${min * 6}deg)`;
+                  sc.style.transform = `rotateZ(${sec * 6}deg)`;
+          
+                  n++;
+                  min = min + parseInt(i / 60);
+                  sec++;
+                  if (n === 60) i = 0;
+          
+                  let startTime = new Date("2019-9-1"); // 开始时间
+                  let endTime = new Date(); // 结束时间
+                  let usedTime = endTime - startTime; // 相差的毫秒数
+                  let days = Math.floor(usedTime / (24 * 3600 * 1000)); // 计算出天数
+                  let leavel = usedTime % (24 * 3600 * 1000); // 计算天数后剩余的时间
+                  let hours = Math.floor(leavel / (3600 * 1000)); // 计算剩余的小时数
+                  let leavel2 = leavel % (3600 * 1000); // 计算剩余小时后剩余的毫秒数
+                  let minutes = Math.floor(leavel2 / (60 * 1000)); // 计算剩余的分钟数
+                  let level3 = leavel2 - minutes * 60 * 1000;
+                  let seconds = Math.floor(level3 / 1000);
+                }, 1000);
+              </script>
+    
+            <br>
+         
                 <div class="biaotis">
                     <span>距离</span>
                     <span class="zhuti">2021</span>
@@ -991,6 +1372,7 @@
                 }
                 setInterval(getRTime,1000);
                 </script>
+                 
       
             </div>
         </div>
