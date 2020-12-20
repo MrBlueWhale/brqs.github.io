@@ -11,7 +11,7 @@
         bottom: 122px!important;
     }
     #switchspring {
-        top: 606px;
+        top: 600px!important;
     }
 }
 
@@ -2392,7 +2392,6 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     margin-bottom: 0;
     z-index: 998;
     cursor: pointer;
-
 }
 .chunjiepic {
     width: 38px;
