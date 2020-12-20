@@ -29,13 +29,25 @@
     
     
     <entry>
-      <title></title>
-      <link href="2020/12130.html"/>
-      <url>2020/12130.html</url>
+      <title>我常用的一些快捷键</title>
+      <link href="2020/122050093.html"/>
+      <url>2020/122050093.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>剪贴板历史<br>Windows键+V<br>访问剪贴板。剪贴板仍然使用<br>Ctrl+C<br>来复制、<br>Ctrl+V<br>粘贴。我们很轻松就可以查看我们复制的记录，单击历史记录就可以将历史记录复制下来，十分方便。<br>一键恢复不小心关闭的网页<br>Ctrl+Shift+T</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>剪贴板历史:</p><blockquote><p>Windows键+V 访问剪贴板历史，粘贴历史复制内容  </p></blockquote><blockquote><p>恢复不小心关闭的网页:<br>Ctrl+Shift+T</p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快捷键 </tag>
+            
+        </tags>
       
     </entry>
     
