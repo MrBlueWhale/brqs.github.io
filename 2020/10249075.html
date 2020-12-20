@@ -802,6 +802,26 @@
 
         
     </nav>
+    <div class="denglong">
+        <div class="deng-box">
+            <div class="deng">
+                <div class="xian"></div>
+                <div class="deng-a">
+                    <div class="deng-b"><div class="deng-t">喜迎</div></div>
+                </div>
+                <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+            </div>
+        </div>
+        <div class="deng-box1">
+            <div class="deng">
+                <div class="xian"></div>
+                <div class="deng-a">
+                    <div class="deng-b"><div class="deng-t">元旦</div></div>
+                </div>
+                <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+            </div>
+        </div>
+    </div>
 
 </header>
 
@@ -916,7 +936,6 @@
     #toc-content .is-active-link {
         color: #42b983;
     }
-
     #floating-toc-btn {
         position: fixed;
         right: 15px;
@@ -927,13 +946,14 @@
     }
 
     #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
     }
 
     #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
+        line-height: 38px;
+        position: absolute;
+        right: 0px;
     }
 </style>
 <div class="row">
@@ -2527,7 +2547,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.9k</span>&nbsp;字
+                class="white-color">28.4k</span>&nbsp;字
             
             
             
@@ -2713,7 +2733,8 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 	<script src="/js/FunnyTitle.js">
-	</script>
+    </script>
+<!-- 樱花特效 -->
 <script type="text/javascript">
 //只在桌面版网页启用特效
 var windowWidth = $(window).width();
@@ -2721,16 +2742,20 @@ if (windowWidth > 768) {
     document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
 }
 </script>
-<script> if (localStorage.getItem('dark') === '1') { 
-         document.body.classList.add('dark'); 
-		 } 
-		 else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
-		 document.body.classList.add('dark'); 
-		 } 
-		 </script> 
-		 <a onclick="switchNightMode()" id="sma"> 
-		 <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
-         </a>
+
+<script> 
+//深色模式
+if (localStorage.getItem('dark') === '1') { 
+    document.body.classList.add('dark'); 
+	} 
+else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
+	document.body.classList.add('dark'); } 
+</script> 
+<!-- 深色模式按钮 -->
+<a onclick="switchNightMode()" id="sma"> 
+	<i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
+</a>
+
 <script>
 function enterfullscreen() { //进入全屏
     
@@ -2775,5 +2800,19 @@ $('#fullscreen_li ').on('click', function() {
     b ? enterfullscreen() : exitfullscreen();
 })
 </script>
+<!-- 网站主题切换模式开始 -->
+<script>
+    if (localStorage.getItem('themespring') === '1') {
+    document.body.classList.add('themespring');
+    }
+    else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+    document.body.classList.add('themespring');
+    }
+</script>
+<a onclick="switchThemes()" id="switchspring">
+    <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
+</a>
+
 </body> 
+
 </html>
