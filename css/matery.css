@@ -21,6 +21,9 @@
     .fullscreen { 
         display: none; 
     }
+    .denglong .deng-box ,.denglong .deng-box1{
+        display: none;
+    }
     
 }
 
