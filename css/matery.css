@@ -7,7 +7,7 @@
     .fullscreen { 
         display: none; 
     }
-    .denglong{
+    .denglong .deng-box ,.denglong .deng-box1{
         display: none;
     }
     
