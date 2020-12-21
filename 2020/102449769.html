@@ -962,6 +962,12 @@
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
+            <!-- 财神按钮 （中） -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png">
+                </div>              
+            </div>
             <div class="row tag-cate">
                 <div class="col s7">
                     
@@ -1526,6 +1532,12 @@ c. 不易丢失</code></pre>
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
+    <!-- 春节主题 福到按钮（左） -->
+    <div class="caishendeng">        
+        <div class="caishenxian fudaixian">
+            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
+        </div>              
+    </div>
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
@@ -2050,6 +2062,50 @@ $(function () {
     
 	<script src="/js/FunnyTitle.js">
     </script>
+<script>
+    function enterfullscreen() { //进入全屏
+        
+        var docElm = document.documentElement;
+        //W3C
+        if(docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        }
+        //FireFox
+        else if(docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        }
+        //Chrome等
+        else if(docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        }
+        //IE11
+        else if(elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+        $("#fullscreen").removeClass("fa-expand-arrows-alt").addClass("fa-desktop");
+    }
+    
+    function exitfullscreen() { //退出全屏
+       // $("#fullscreen").html("切换全屏");
+        
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if(document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if(document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if(document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+        $("#fullscreen").removeClass("fa-desktop").addClass("fa-expand-arrows-alt");
+    }
+    
+    let b = false;
+    $('#fullscreen_li ').on('click', function() {
+        b = !b;
+        b ? enterfullscreen() : exitfullscreen();
+    })
+    </script>
 <!-- 樱花特效 -->
 <script type="text/javascript">
 //只在桌面版网页启用特效
@@ -2072,50 +2128,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 	<i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
 </a>
 
-<script>
-function enterfullscreen() { //进入全屏
-    
-    var docElm = document.documentElement;
-    //W3C
-    if(docElm.requestFullscreen) {
-        docElm.requestFullscreen();
-    }
-    //FireFox
-    else if(docElm.mozRequestFullScreen) {
-        docElm.mozRequestFullScreen();
-    }
-    //Chrome等
-    else if(docElm.webkitRequestFullScreen) {
-        docElm.webkitRequestFullScreen();
-    }
-    //IE11
-    else if(elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-    }
-    $("#fullscreen").removeClass("fa-expand-arrows-alt").addClass("fa-desktop");
-}
 
-function exitfullscreen() { //退出全屏
-   // $("#fullscreen").html("切换全屏");
-    
-    if(document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if(document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-    } else if(document.webkitCancelFullScreen) {
-        document.webkitCancelFullScreen();
-    } else if(document.msExitFullscreen) {
-        document.msExitFullscreen();
-    }
-    $("#fullscreen").removeClass("fa-desktop").addClass("fa-expand-arrows-alt");
-}
-
-let b = false;
-$('#fullscreen_li ').on('click', function() {
-    b = !b;
-    b ? enterfullscreen() : exitfullscreen();
-})
-</script>
 <!-- 网站主题切换模式开始 -->
 <script>
     if (localStorage.getItem('themespring') === '1') {
