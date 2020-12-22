@@ -1562,10 +1562,12 @@ hexo s</code></pre>
         left: unset;
         visibility: visible;
     }
-	.v[data-class="v"] .vwrap .vheader .vinput {
+
+.v[data-class="v"] .vwrap .vheader .vinput {
   width: 32%;
   border-bottom: 1px dashed #dedede;
 }
+	
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
@@ -1579,11 +1581,11 @@ hexo s</code></pre>
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
-    <div id="vcomments" class="card-content" style="display: grid">
+    <div id="vcomments" class="card-content" style="display: grid" data-class="v">
     </div>
 </div>
 
-<script src="/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/av-min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/Valine.min.js"></script>
 <script>
     let metaPlaceholder = {"nick":"昵称/qq(必填)","mail":"邮箱(必填)","link":"网址(https://)选填"} ;
@@ -2189,6 +2191,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 <a onclick="switchThemes()" id="switchspring">
     <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
 </a>
+
 
 </body> 
 

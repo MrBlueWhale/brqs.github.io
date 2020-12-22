@@ -7,8 +7,14 @@
     .fullscreen { 
         display: none; 
     }
-    .denglong .deng-box ,.denglong .deng-box1{
-        display: none;
+    .vcards , .vcard  ,.vcontent {
+        word-wrap: break-word;
+        word-break: break-all;
+        font-size: .875em;
+        line-height: 2;
+        position: relative;
+        margin-bottom: .75em;
+        padding-top: .625em;
     }
     
 }
@@ -20,9 +26,6 @@
     }
     .fullscreen { 
         display: none; 
-    }
-    .denglong .deng-box ,.denglong .deng-box1{
-        display: none;
     }
     
 }
@@ -2621,14 +2624,13 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
 .labelmz {
     width: 34px;
     height: 34px;
-    position: absolute;
     top: 7px;
     right: -84px;
     transform: rotate(40deg);
     position: absolute;
     z-index: 99;
     -webkit-transform-origin: 50% -100px;
-    -webkit-animation: mzanimate 1.8s infinite ease-in-out;
+    -webkit-animation: mzanimate 5s infinite ease-in-out;
 }
 .weilemz {
     position: relative;
@@ -2643,7 +2645,8 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     position: absolute;
     z-index: 99;
     -webkit-transform-origin: 50% -100px;
-    -webkit-animation: mzanimate 1.8s infinite ease-in-out;
+    -webkit-animation: mzanimate 1.2s infinite ease-in-out;
+    
 }
 
 .xiaomaozitx {
@@ -2691,8 +2694,8 @@ body.themespring .denglong {
     }
 }
 @media only screen and (max-width: 760px) {
-    .deng-box, .deng-box1 {
-        width: 40%;
+    .denglong .deng-box ,.denglong .deng-box1{
+        display: none;
     }
     body.themespring .right {
         float: left!important;
@@ -2858,3 +2861,20 @@ body.themespring .denglong {
         }
     }
 /*春节主题样式结束*/
+/*valine修改*/
+#vcomments .vcards .vcard {
+    padding: 15px 20px 0 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+    transition: all .3s;
+
+}
+#vcomments .vcards .vcard:hover {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+}
+
+#vcomments .vcards .vcard .vh .vcard {
+    border: none;
+    box-shadow: none;
+}
