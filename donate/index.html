@@ -976,10 +976,15 @@
                     <p>维护网站不易，像我这样的小白一路走到现在真的太难了，域名服务器也有一定成本，如果可以的话，能赏我一杯水喝吗，卑微博主在线乞讨 ~ 
                         路人甲：哎，博主好可怜，一定支持一下。~ 路人乙：下次一定。
                     </p>
-                    <!--春节主题 年货挂件（右）-->
+                    <!--主题 挂件-->
+                    <div class="caishendengsd">        
+                        <div class="caishenxiansd">
+                            <img class="caishenpic huadengpic" src="/medias/christmas-img/5.png">
+                        </div>              
+                    </div>
                     <div class="caishendeng">        
                         <div class="caishenxian">
-                            <img class="caishenpic huadengpic" src="/medias/spring-img/nianhuo.png">
+                            <img class="caishenpic huadengpic" src="/medias/spring-img/5.png">
                         </div>              
                     </div>
                 </div>
@@ -1032,10 +1037,15 @@
                         </div>
                     <p></p>
                     
-<!-- 春节主题 福到挂件（右） -->
+<!-- 主题 挂件-->
+<div class="caishendengsd">        
+    <div class="caishenxiansd">
+        <img class="caishenpic fudao" src="/medias/christmas-img/2.png">
+    </div>              
+</div>
 <div class="caishendeng">        
     <div class="caishenxian">
-        <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
+        <img class="caishenpic fudao" src="/medias/spring-img/2.png">
     </div>              
 </div>
                 </div>
@@ -1045,10 +1055,15 @@
                     <p>
                         打赏规则：1 软妹币 = 1000 糖果 （打赏时可在支付页面填写自己的网址，博客名，备注信息哦，再次感谢支持）
                     </p>
-                    <!--春节主题 爆竹挂件（右）-->
+                    <!--主题 挂件-->
+                    <div class="caishendengsd">        
+                        <div class="caishenxiansd">
+                            <img class="caishenpic lions" src="/medias/christmas-img/11.png">
+                        </div>              
+                    </div>
                     <div class="caishendeng">        
                         <div class="caishenxian">
-                            <img class="caishenpic lions" src="/medias/spring-img/baozhu.png">
+                            <img class="caishenpic lions" src="/medias/spring-img/11.png">
                         </div>              
                     </div>
                 </div>
@@ -1456,15 +1471,21 @@
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    <!-- 春节主题 福到挂件（左） -->
-    <div class="caishendeng">        
-        <div class="caishenxianleft">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
-        </div>              
-    </div>
+    
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
+    </div>
+    <!-- 主题 挂件 -->
+    <div class="caishendengsd">        
+        <div class="caishenxianleftsd">
+            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
+        </div>              
+    </div>
+    <div class="caishendeng">        
+        <div class="caishenxianleft">
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
+        </div>              
     </div>
     <div id="vcomments" class="card-content" style="display: grid" data-class="v">
     </div>
@@ -1777,6 +1798,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 
 
 <!-- 网站主题切换模式开始 -->
+<!--春节模式按钮-->
 <script>
     if (localStorage.getItem('themespring') === '1') {
     document.body.classList.add('themespring');
@@ -1785,10 +1807,21 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('themespring');
     }
 </script>
-<a onclick="switchThemes()" id="switchspring">
-    <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
+<div onclick="switchSpringThemes()" id="switchspring">
+    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
+</div>
+<!--圣诞模式按钮-->
+<script>
+    if (localStorage.getItem('themechris') === '1') {
+    document.body.classList.add('themechris');
+    }
+    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+    document.body.classList.add('themechris');
+    }
+</script>
+<a onclick="switchChrisThemes()" id="switchchristmas">
+    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
 </a>
-
 
 </body> 
 

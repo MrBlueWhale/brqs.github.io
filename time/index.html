@@ -1098,17 +1098,28 @@
                         “ 人生几何，九百月矣，深深的话，浅浅的说 ”                      
                     </div>
                     <hr>
- <!-- 春节主题 福袋挂件 -->
- <div class="caishendeng">        
+ <!-- 主题 挂件 -->
+ <div class="caishendengsd">        
+    <div class="caishenxianleftsd">
+        <img class="caishenpic fudai" src="/medias/christmas-img/1.png" />
+    </div>              
+</div>
+<div class="caishendengsd">        
+    <div class="caishenxiansd">
+        <img class="caishenpic fudai" src="/medias/christmas-img/1.png" />
+    </div>              
+</div>
+<div class="caishendeng">        
     <div class="caishenxianleft">
-        <img class="caishenpic fudai" src="/medias/spring-img/fudai.png" />
+        <img class="caishenpic lions" src="/medias/spring-img/1.png">
     </div>              
 </div>
 <div class="caishendeng">        
     <div class="caishenxian">
-        <img class="caishenpic fudai" src="/medias/spring-img/fudai.png" />
+        <img class="caishenpic lions" src="/medias/spring-img/1.png">
     </div>              
 </div>
+
                     <!-- 计算时间模块 -->
                     <div class="wrap">
                         <p>“ 人生只有 900 余月</p>
@@ -1147,15 +1158,25 @@
       
         <div class="card">
             <div class="card-content">
-                <!-- 春节主题 老虎挂件 -->
+                <!-- 主题 挂件 -->
+                <div class="caishendengsd">        
+                    <div class="caishenxianleftsd">
+                        <img class="caishenpic lions" src="/medias/christmas-img/6.png">
+                    </div>              
+                </div>
+                <div class="caishendengsd">        
+                    <div class="caishenxiansd">
+                        <img class="caishenpic lions" src="/medias/christmas-img/6.png">
+                    </div>              
+                </div>
                 <div class="caishendeng">        
                     <div class="caishenxianleft">
-                        <img class="caishenpic lions" src="/medias/spring-img/lion.png">
+                        <img class="caishenpic fudai" src="/medias/spring-img/6.png" />
                     </div>              
                 </div>
                 <div class="caishendeng">        
                     <div class="caishenxian">
-                        <img class="caishenpic lions" src="/medias/spring-img/lion.png">
+                        <img class="caishenpic fudai" src="/medias/spring-img/6.png" />
                     </div>              
                 </div>
                 <div class="biaotis">
@@ -1688,6 +1709,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 
 
 <!-- 网站主题切换模式开始 -->
+<!--春节模式按钮-->
 <script>
     if (localStorage.getItem('themespring') === '1') {
     document.body.classList.add('themespring');
@@ -1696,10 +1718,21 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('themespring');
     }
 </script>
-<a onclick="switchThemes()" id="switchspring">
-    <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
+<div onclick="switchSpringThemes()" id="switchspring">
+    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
+</div>
+<!--圣诞模式按钮-->
+<script>
+    if (localStorage.getItem('themechris') === '1') {
+    document.body.classList.add('themechris');
+    }
+    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+    document.body.classList.add('themechris');
+    }
+</script>
+<a onclick="switchChrisThemes()" id="switchchristmas">
+    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
 </a>
-
 
 </body> 
 

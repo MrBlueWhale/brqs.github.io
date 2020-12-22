@@ -2376,7 +2376,7 @@ footer .copy-right {
     position: fixed;
     border-radius: 50%;
     right: 15px;
-    bottom: 170px;
+    bottom: 125px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
@@ -2436,31 +2436,9 @@ body.dark .card, body.dark .block-with-text:after { background-color: #282c34; }
 body.dark, body.dark .v[data-class=v] .vcount, body.dark #rewardModal .modal-content, body.dark .modal, body.dark header .side-nav, body.dark header .side-nav .menu-list .m-nav-show { background-color: #12121c; } 
 /* 改变透明度 */ 
 body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark strong { filter: brightness(.7); }
-
-/*滚动条 */
-::-webkit-scrollbar-thumb {
-    background-color: #6DD0F2;
-    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
-    border-radius: 2em;
-}
-::-webkit-scrollbar-track {
-    background-color: rgba(73,177,245,.2);
-    border-radius: 2em;
-}
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.tangguo {
-    vertical-align: middle;
-    width: 34px;
-}
-.dashang th, .dashang td {
-    text-align: center;
-}
-/*春节模式 */
-/* 春节模式 按钮*/
-#switchspring {
+/*节日模式 */
+/* 节日模式 按钮*/
+#switchspring { 
     background: #dc8f03;
     width: 38px;
     height: 38px;
@@ -2468,20 +2446,43 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     position: fixed;
     border-radius: 50%;
     right: 15px;
-    bottom: 125px;
+    bottom: 170px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
     cursor: pointer;
 }
-.chunjiepic {
+#switchchristmas {
+    background: #FFF;
+    width: 38px;
+    height: 38px;
+    display: block;
+    position: fixed;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 215px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
+    cursor: pointer;
+}
+.theme-button {
     width: 38px;
     height: 38px;
     border-radius: 50%;
     position: absolute;
     bottom: 0px;
 }
-/*春节主题 挂件吊线*/
+.theme-buttonchrismas {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 1.7px
+}
+/*节日主题 挂件吊线*/
+/*春节*/
 .caishenxianleft {
     left: 16%!important;
     position: absolute;
@@ -2494,6 +2495,7 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     -webkit-transform-origin: 50% -100px;
     -webkit-animation: swing 3.5s infinite ease-in-out;
 }
+
 .caishenxian {
     position: absolute;
     top: 0px;
@@ -2522,7 +2524,50 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     left: 50%!important;
     z-index: 998;
 }
- /*春节主题 挂件*/
+/*圣诞节 挂件绳*/
+.caishenxianleftsd {
+    left: 16%!important;
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    height: 20px;
+    background:#5be4db;
+    transform-origin: 50% -100px;
+    animation: swing 3.5s infinite ease-in-out;
+    -webkit-transform-origin: 50% -100px;
+    -webkit-animation: swing 3.5s infinite ease-in-out;
+}
+
+.caishenxiansd {
+    position: absolute;
+    top: 0px;
+    right: 20%;
+    width: 2px;
+    height: 20px;
+    background:#5be4db;
+    transform-origin: 50% -100px;
+    animation: swing 3.5s infinite ease-in-out;
+    -webkit-transform-origin: 50% -100px;
+    -webkit-animation: swing 3.5s infinite ease-in-out;
+}
+
+.guguxiansd {
+    position: absolute;
+    top: 0px;
+    left: 20%;
+    width: 2px;
+    height: 20px;
+    background: #5be4db;
+    transform-origin: 50% -100px;
+    animation: swing 3.5s infinite ease-in-out;
+    -webkit-transform-origin: 50% -100px;
+    -webkit-animation: swing 3.5s infinite ease-in-out;
+}
+.wenzhangxiansd {
+    left: 50%!important;
+    z-index: 998;
+}
+ /*主题 挂件*/
  .fudai {
     top: 14px!important;
     left: -22px!important;
@@ -2599,7 +2644,23 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     left: -18px!important;
     top: 18px!important;
 }
-/*春节主题 帽子*/
+/*圣诞挂件*/
+.caishenpicsd {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: -22px;
+    z-index: 9;
+    /* transform-origin: 50% -100px; */
+    animation: swing 3.5s infinite ease-in-out;
+    /* -webkit-transform-origin: 50% -100px; */
+    -webkit-animation: swing 3.5s infinite ease-in-out;
+}
+
+
+/*主题 帽子*/
 .labelmz {
     width: 34px;
     height: 34px;
@@ -2643,14 +2704,16 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
 .caishendeng,
 .xiaomaozitx,
 .labelmz,
-.friendmz
+.friendmz,
+.caishendengsd
 {
     display: none;
 }
 body.themespring .caishendeng,
 body.themespring .xiaomaozitx,
 body.themespring .labelmz,
-body.themespring .friendmz
+body.themespring .friendmz,
+body.themechris .caishendengsd
 {
     display: block;
 }
@@ -2839,7 +2902,7 @@ body.themespring .denglong {
                 -webkit-transform: rotate(-10deg)
         }
     }
-/*春节主题样式结束*/
+/*主题样式结束*/
 /*valine修改*/
 #vcomments .vcards .vcard {
     padding: 15px 20px 0 20px;
@@ -2862,4 +2925,26 @@ body.themespring .denglong {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/*滚动条 */
+::-webkit-scrollbar-thumb {
+    background-color: #6DD0F2;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 2em;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(73,177,245,.2);
+    border-radius: 2em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.tangguo {
+    vertical-align: middle;
+    width: 34px;
+}
+.dashang th, .dashang td {
+    text-align: center;
 }

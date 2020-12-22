@@ -889,15 +889,25 @@
                         <div class="title center-align">“ 关于站点”</div>
                         “ 关于这个博客，欢迎来访——这里是我在浩瀚海洋中的一片自留地。我在此记录知识点，总结技能树，人生长谈，风花雪月之事，折腾日志，分享生活。水平有限，我的智力和毅力很普通，但还算擅长自学——我相信通过实例能最快地学习。也希望我写下的东西能帮助到别人。”                      
 					</div>
-                    <!-- 春节主题 福到挂件 -->
+                    <!-- 主题 挂件 -->
+                    <div class="caishendengsd">        
+                        <div class="caishenxiansd">
+                            <img class="caishenpic fudai" src="/medias/christmas-img/11.png">
+                        </div>              
+                    </div>
+                    <div class="caishendengsd">        
+                        <div class="caishenxianleftsd">
+                            <img class="caishenpic fudai" src="/medias/christmas-img/11.png">
+                        </div>              
+                    </div>
                     <div class="caishendeng">        
                         <div class="caishenxian">
-                            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
+                            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
                         </div>              
                     </div>
                     <div class="caishendeng">        
                         <div class="caishenxianleft">
-                            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
+                            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
                         </div>              
                     </div>
                 </div>
@@ -1340,6 +1350,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 
 
 <!-- 网站主题切换模式开始 -->
+<!--春节模式按钮-->
 <script>
     if (localStorage.getItem('themespring') === '1') {
     document.body.classList.add('themespring');
@@ -1348,10 +1359,21 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('themespring');
     }
 </script>
-<a onclick="switchThemes()" id="switchspring">
-    <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
+<div onclick="switchSpringThemes()" id="switchspring">
+    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
+</div>
+<!--圣诞模式按钮-->
+<script>
+    if (localStorage.getItem('themechris') === '1') {
+    document.body.classList.add('themechris');
+    }
+    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+    document.body.classList.add('themechris');
+    }
+</script>
+<a onclick="switchChrisThemes()" id="switchchristmas">
+    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
 </a>
-
 
 </body> 
 

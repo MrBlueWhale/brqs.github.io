@@ -962,10 +962,15 @@
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
-            <!-- 春节主题 财神挂件 （中） -->
+            <!-- 主题 挂件 （中） -->
+            <div class="caishendengsd">        
+                <div class="guguxiansd wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/christmas-img/2.png">
+                </div>              
+            </div>
             <div class="caishendeng">        
                 <div class="guguxian wenzhangxian">
-                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png">
+                    <img class="caishenpic gugus" src="/medias/spring-img/2.png">
                 </div>              
             </div>
             <div class="row tag-cate">
@@ -1633,15 +1638,21 @@ INFO  Deploy done: git</code></pre>
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    <!-- 春节主题 福到挂件（左） -->
-    <div class="caishendeng">        
-        <div class="caishenxianleft">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
-        </div>              
-    </div>
+    
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
+    </div>
+    <!-- 主题 挂件 -->
+    <div class="caishendengsd">        
+        <div class="caishenxianleftsd">
+            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
+        </div>              
+    </div>
+    <div class="caishendeng">        
+        <div class="caishenxianleft">
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
+        </div>              
     </div>
     <div id="vcomments" class="card-content" style="display: grid" data-class="v">
     </div>
@@ -2231,6 +2242,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 
 
 <!-- 网站主题切换模式开始 -->
+<!--春节模式按钮-->
 <script>
     if (localStorage.getItem('themespring') === '1') {
     document.body.classList.add('themespring');
@@ -2239,10 +2251,21 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('themespring');
     }
 </script>
-<a onclick="switchThemes()" id="switchspring">
-    <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
+<div onclick="switchSpringThemes()" id="switchspring">
+    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
+</div>
+<!--圣诞模式按钮-->
+<script>
+    if (localStorage.getItem('themechris') === '1') {
+    document.body.classList.add('themechris');
+    }
+    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+    document.body.classList.add('themechris');
+    }
+</script>
+<a onclick="switchChrisThemes()" id="switchchristmas">
+    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
 </a>
-
 
 </body> 
 

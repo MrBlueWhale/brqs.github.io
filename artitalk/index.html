@@ -911,15 +911,25 @@
 
       <div class=" card">
         <div class="card-content" >
-          <!--春节主题 福倒挂件-->
+          <!--主题 挂件-->
+        <div class="caishendengsd">        
+          <div class="caishenxiansd">
+            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
+          </div>              
+        </div>
+        <div class="caishendengsd">        
+          <div class="caishenxianleftsd">
+            <img class="caishenpic fudao" src="/medias/Christmas-img/9.png">
+          </div>              
+        </div>
         <div class="caishendeng">        
           <div class="caishenxian">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
           </div>              
         </div>
         <div class="caishendeng">        
           <div class="caishenxianleft">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png">
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
           </div>              
         </div>
           <div class="tag-title center-align">
@@ -1225,6 +1235,7 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
 
 
 <!-- 网站主题切换模式开始 -->
+<!--春节模式按钮-->
 <script>
     if (localStorage.getItem('themespring') === '1') {
     document.body.classList.add('themespring');
@@ -1233,10 +1244,21 @@ else if (matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('themespring');
     }
 </script>
-<a onclick="switchThemes()" id="switchspring">
-    <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="节日模式">
+<div onclick="switchSpringThemes()" id="switchspring">
+    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
+</div>
+<!--圣诞模式按钮-->
+<script>
+    if (localStorage.getItem('themechris') === '1') {
+    document.body.classList.add('themechris');
+    }
+    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+    document.body.classList.add('themechris');
+    }
+</script>
+<a onclick="switchChrisThemes()" id="switchchristmas">
+    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
 </a>
-
 
 </body> 
 
