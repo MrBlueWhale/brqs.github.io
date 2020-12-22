@@ -2700,12 +2700,24 @@ body.dark .aplayer{background: #2f3742!important;} body.dark img, body.dark stro
     z-index: 99;
     -webkit-animation: mzanimate 1.2s infinite ease-in-out;
 }
+.labelmzsd {
+    width: 34px;
+    height: 34px;
+    top: 10px;
+    right: -95px;
+    transform: rotate(40deg);
+    position: absolute;
+    z-index: 99;
+    -webkit-transform-origin: 50% -100px;
+    -webkit-animation: mzanimate 5s infinite ease-in-out;
+}
 /* 点击显示或者隐藏总样式开始 */
 .caishendeng,
 .xiaomaozitx,
 .labelmz,
 .friendmz,
-.caishendengsd
+.caishendengsd,
+.labelmzsd
 {
     display: none;
 }
@@ -2713,7 +2725,8 @@ body.themespring .caishendeng,
 body.themespring .xiaomaozitx,
 body.themespring .labelmz,
 body.themespring .friendmz,
-body.themechris .caishendengsd
+body.themechris .caishendengsd,
+body.themechris .labelmzsd
 {
     display: block;
 }
