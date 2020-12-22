@@ -7,14 +7,8 @@
     .fullscreen { 
         display: none; 
     }
-    .vcards , .vcard  ,.vcontent {
-        word-wrap: break-word;
-        word-break: break-all;
-        font-size: .875em;
-        line-height: 2;
-        position: relative;
-        margin-bottom: .75em;
-        padding-top: .625em;
+    .vcards,.vcard,.vpanel{
+        width: 90vw ;
     }
     
 }
@@ -742,7 +736,7 @@ header .go-back i {
 }
 /*标签卡*/
     @media only screen and (max-width: 800px) {
-        .swbk {
+    .swbk {
             padding: 26px 2px!important;
             margin: 14px 0px!important;
         }
@@ -766,23 +760,8 @@ header .go-back i {
         -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
         box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
     }
-    .swbk:before {
-        content: " “ ";
-        top: 56px;
-        /* left: -14px; */
-    }
-    .swbk:after {
-        content: " ” ";
-        bottom: 8px;
-        right: 5px;
-    }
-    .swbk:after, .swbk:before {
-        position: absolute;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 42px;
-        text-decoration: inherit;
-    }
+   
+    
     .ziwojieshao .swbk:after, .ziwojieshao .swbk:before {
         display: none;
     }
