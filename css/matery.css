@@ -2857,3 +2857,9 @@ body.themespring .denglong {
     border: none;
     box-shadow: none;
 }
+/* 友链对齐*/
+.frind-ship .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
