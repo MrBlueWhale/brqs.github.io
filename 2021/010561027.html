@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="books, 凡尘纪">
+    <meta name="keywords" content="centos服务器手动安装PHP环境, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>books | 凡尘纪</title>
+    <title>centos服务器手动安装PHP环境 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -711,409 +711,590 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                念念不忘 必有回响
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['欲买桂花同载酒 终不似 少年游','骨子里文艺的人,一半柴米油盐酱醋茶,一半琴棋书画诗酒花,满头霜雪走过半生,抬眼之处,仍是少年出世之年。'],
-                        startDelay: 300,
-                        typeSpeed: 150,
-                        loop: true,
-                        backSpeed: 150,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
 </script>
 
 
 
-    </div>
-</div>
-<style>
-    .card-content {
-        padding: 12px!important;
-    }
-    .miaoshus {
-        padding: 12px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 3px auto 0px;
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-</style>
-<!-- 以下是书单模块css样式 -->
-<style>
-    body.dark .page {
-        background-color: #282c34!important;
-    }
-    body.dark .page .content li {
-        background-color: #282c34!important;
-    }
-    @media screen and (min-width: 768px) {
-        #book .page {
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        }
-    }
-    #book .page {
-        overflow: hidden;
-        border-radius: 3px;
-    }
-    @media screen and (min-width: 768px) {
-        #book .content {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    #book .content {
-        display: grid;
-        grid-column-gap: 16px;
-        padding: 16px;
-        text-align: justify;
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li .info {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        padding: 16px 12px 0;
-        line-height: 1.7;
-        list-style: none;
-    }
-    .book-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-perspective: 600px;
-        perspective: 600px;
-    }
-    .book {
-        position: relative;
-        width: 100px;
-        height: 150px;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform: rotateY(-30deg);
-        transform: rotateY(-30deg);
-        -webkit-transition: 1s ease;
-        transition: 1s ease;
-        -webkit-animation: bookRotate 0s 1s ease 0s;
-        animation: bookRotate 0s 1s ease 0s;
-        list-style: none;
-    }
-    .book:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 2px;
-        width: 23px;
-        height: 146px;
-        -webkit-transform: translateX(84.5px) rotateY(90deg);
-        transform: translateX(84.5px) rotateY(90deg);
-        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(5%,#f9f9f9),color-stop(10%,#fff),color-stop(15%,#f9f9f9),color-stop(20%,#fff),color-stop(25%,#f9f9f9),color-stop(30%,#fff),color-stop(35%,#f9f9f9),color-stop(40%,#fff),color-stop(45%,#f9f9f9),color-stop(50%,#fff),color-stop(55%,#f9f9f9),color-stop(60%,#fff),color-stop(65%,#f9f9f9),color-stop(70%,#fff),color-stop(75%,#f9f9f9),color-stop(80%,#fff),color-stop(85%,#f9f9f9),color-stop(90%,#fff),color-stop(95%,#f9f9f9),to(#fff));
-        background: linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);
-    }
-    .book>:first-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(12.5px);
-        transform: translateZ(12.5px);
-        border-radius: 0 2px 2px 0;
-        -webkit-box-shadow: 5px 5px 20px #666;
-        box-shadow: 5px 5px 20px #666;
-    }
-    .book:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(-12.5px);
-        transform: translateZ(-12.5px);
-        background-color: #555;
-        border-radius: 0 2px 2px 0;
-    }
-    #book .content li .info>div {
-        margin-left: 26px;
-    }
-    #book .content li .info h3 {
-        font-size: 16px;
-    }
-    #book .content li .info p a {
-        position: relative;
-        color: #b854d4;
-    }
-    #book .content li .info p a:before {
-        content: " " attr(href);
-        position: absolute;
-        padding: 0 4px;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        pointer-events: none;
-        font-family: Fontello;
-        font-size: 12px;
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        border-radius: 3px;
-        background-color: #fff;
-        opacity: 0;
-        -webkit-transform: scale(.7) translateY(-75%);
-        transform: scale(.7) translateY(-75%);
-        -webkit-transform-origin: left center;
-        transform-origin: left center;
-        -webkit-transition: all .3s ease 0s;
-        transition: all .3s ease 0s;
-    }
-    #book .content li .info p a:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5px;
-        background-color: #b854d4;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: bottom right;
-        transform-origin: bottom right;
-        -webkit-transition: -webkit-transform .3s ease-out;
-        transition: -webkit-transform .3s ease-out;
-        transition: transform .3s ease-out;
-        transition: transform .3s ease-out,-webkit-transform .3s ease-out;
-    }
-    #book .content li .info .fa-star {
-        margin-right: 4px;
-        color: #d68fe9;
-    }
-    .icon-star:before {
-        content: "\e80b";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    #book .content li .description {
-        padding: 12px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-    #book .content li .info p {
-        font-size: 14px;
-        line-height: 1.7;
 
-    }
-    @media screen and (min-width: 768px) {
-        #book .content li:hover {
-            -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-            -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-            box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-        }
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li:hover .book {
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-    }
-    .quote {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 16px;
-        padding: 32px 0;
-    }
-    .quote i:first-child {
-        top: 0;
-        left: 16px;
-    }
-    .quote i {
-        position: absolute;
-        font-size: 24px;
-    }
-    .icon-quote-left:before {
-        content: "\f10d";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-</style>
-<main class="content">
-    <div class="container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 我的书单 ”</div>
-                        “ 读书使我快乐！ ”
-                    </div>
-                    <!--主题 挂件-->
-                    <div class="caishendengsd">        
-                        <div class="caishenxiansd">
-                            <img class="caishenpic gugus" src="/medias/christmas-img/7.png">
-                        </div>              
-                    </div>
-                    <div class="caishendeng">        
-                        <div class="caishenxian">
-                            <img class="caishenpic gugus" src="/medias/spring-img/7.png">
-                        </div>              
-                    </div>
-
-<!-- 书单模块开始 -->
-<div id="book">
-<div class="page">
-<ul class="content">
-    <!-- 每个li标签内容代表一本书籍的所有信息 -->
-    <li>
-        <div class="info">
-            <a href="https://www.duokan.com/book/169714" target="_blank" rel="noreferrer noopener" class="book-container">
-                <div class="book">
-                    <img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/ES6-标准入门.jpg" alt="ES6 标准入门">
-                </div>
-            </a>
-            <div>
-                <h3>《 ES6 标准入门 》</h3>
-                <p>作者：阮一峰</p>
-                <p>出版时间：2017-09-01</p>
-                <p>阅读进度：正在阅读...</p>
-                <p>
-                    <span>读书笔记：</span>
-                    <a href="https://nekodeng.gitee.io/posts/note-demo.html" target="_blank" rel="noopener noreferrer"> ES6 标准入门 </a>
-                </p>
-                <p> 
-                    <span>推荐指数：</span>
-                    <span></span>
-                    <!-- 推荐指数，多少个星星就有以下多少个i标签 -->
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                </p>
-            </div>
-            </div>
-            <p class="description">“ 柏林已经来了命令，阿尔萨斯和洛林的学校只许教 ES6 了...他转身朝着黑板，拿起一支粉笔，使出全身的力量，写了两个大字：“ES6 万岁！”《最后一课》。 ”</p>
-    </li>
-    <!-- 每个li标签内容代表一本书籍的所有信息 -->
-    <li><div class="info"><a href="https://www.duokan.com/book/120447" target="_blank" rel="noreferrer noopener" class="book-container"><div class="book"><img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/JavaScript-设计模式与开发实践.jpg" alt="JavaScript 设计模式与开发实践"></div></a><div><h3>《 JavaScript 设计模式与开发实践 》</h3><p>作者：曾探</p><p>出版时间：2015-05-01</p><p>阅读进度：正在阅读...</p><p><span>读书笔记：</span><a href="javascript:;" target="" rel="noopener noreferrer"> 暂无 </a></p><p><span>推荐指数：</span><span></span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></div></div><p class="description">“ 设计模式的定义：在面向对象软件设计过程中针对特定问题的简洁而优雅的解决方案。书中介绍了 JavaScript 常用的 16 种设计模式，受益良多。 ”</p></li><li><div class="info"><a href="https://www.duokan.com/book/102758" target="_blank" rel="noreferrer noopener" class="book-container"><div class="book"><img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/You_Dont_Know_JavaScript(上卷).jpg" alt="你不知道的 JavaScript(上卷)"></div></a><div><h3>《 你不知道的 JavaScript(上卷) 》</h3><p>作者：Kyle Simpson</p><p>出版时间：2015-04-01</p><p>阅读进度：正在阅读...</p><p><span>读书笔记：</span><a href="javascript:;" target="" rel="noopener noreferrer">暂无</a></p><p><span>推荐指数：</span><span></span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></div></div><p class="description">“ You-Dont-Know-JS 系列目前在 Github 上已获得近 7.5 万 star，说是 2017 年最火的一个项目也不为过，学而不思则殆，重新温故知新。 ”</p></li><li><div class="info"><a href="https://www.jb51.net/onlineread/JavaScript-Garden-CN/#intro" target="_blank" rel="noreferrer noopener" class="book-container"><div class="book"><img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/JavaScript-秘密花园.jpg" alt="JavaScript 秘密花园"></div></a><div><h3>《 JavaScript 秘密花园 》</h3><p>作者：伊沃·韦特泽尔</p><p>出版时间：未出版</p><p>阅读进度：温习中</p><p><span>读书笔记：</span><a href="javascript:;" target="" rel="noopener noreferrer"> 暂无 </a></p><p><span>推荐指数：</span><span></span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></div></div><p class="description">“ JavaScript 秘密花园是一个不断更新，主要关心 JavaScript 一些古怪用法的文档。初学者可以籍此深入了解 JavaScript 的语言特性。 ”</p>
-    </li>
-</ul>
-</div>
-</div>
-<!-- 书单模块结束 -->
-                    
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">centos服务器手动安装PHP环境</h1>
                 </div>
             </div>
         </div>
-      
-        <!-- 评论模块 -->
-        <div class="card">
-            
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+		width: 345px;
+		padding-left: 20px;
+		background-color: rgb(255, 255, 255,0.7);
+		border-radius: 10px;
+		box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+	}
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 38px;
+        height: 38px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 38px;
+        position: absolute;
+        right: 0px;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <!-- 主题 挂件 （中） -->
+            <div class="caishendengsd">        
+                <div class="guguxiansd wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/christmas-img/2.png">
+                </div>              
+            </div>
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/2.png">
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                                <span class="chip bg-color">服务器</span>
+                            </a>
+                        
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
+                            </a>
+                        
+                            <a href="/tags/apache/">
+                                <span class="chip bg-color">apache</span>
+                            </a>
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/PHP/" class="post-category">
+                                PHP
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-05
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-01-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>为什么选择手动安装呢，因为不会用宝塔，虽然很多人都说宝塔好用，但我确实不太会用宝塔，还是选择手动安装吧。本文是我在安装过程中对网上教程的总结避坑，以及自己碰到的问题的总结。</p>
+</blockquote>
+<h2 id="安装顺序"><a href="#安装顺序" class="headerlink" title="安装顺序"></a>安装顺序</h2><p>最佳的安装顺序是先安装apache再安装mysql最后PHP，否则后面安装需要对应的依赖包，很麻烦，很容易因为版本的原因出现对应的错误mysqli未安装,GD库未安装等，我就是在处理依赖的时候遇到很多问题，后面发现只要按照顺序安装就没有那么麻烦。</p>
+<h2 id="apache"><a href="#apache" class="headerlink" title="apache"></a>apache</h2><h3 id="安装apache"><a href="#安装apache" class="headerlink" title="安装apache"></a>安装apache</h3><pre><code>yum install httpd //根据提示，输入Y安装即可成功安装</code></pre>
+<h3 id="修改默认端口"><a href="#修改默认端口" class="headerlink" title="修改默认端口"></a>修改默认端口</h3><p>apache默认的端口是80，而我的服务器之前已经安装了nginx占用了80端口启动apache就会报错。</p>
+<p>apache的配置文件路径是<code>/etc/httpd/conf/httpd.conf</code>你可以选择使用vim修改，我是用的是winscp直接连接打开文件修改比较方便，将listen 80改成其他空的端口例如改成8080，记得要在防火墙放行你修改的端口。</p>
+<h3 id="启动apache"><a href="#启动apache" class="headerlink" title="启动apache"></a>启动apache</h3><p>开启apache服务</p>
+<pre><code>systemctl start httpd </code></pre>
+<p>然后打开浏览器输入服务器ip地址加端口就可以出现apache的默认页面，这就代表安装完成了。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>apache的配置文件路径是<code>/etc/httpd/conf/httpd.conf</code>你可以在配置文件中修改其他配置如默认站点根目录<code>var/www/html</code>,绑定域名等</p>
+<p>其他命令</p>
+<pre><code>systemctl stop httpd  //停止apache服务   
+systemctl restart httpd //重启apache服务，修改完配置文件需要重启apache以生效
+systemctl status httpd   //查看apache运行状态  </code></pre>
+<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><blockquote>
+<p>这里不得不来吐槽一句了，三个里面MySQL的安装是最慢的，最慢的一次5kb每秒就tm离谱这速度不要下一年啊。而且问题也比较多目前还有一些问题要解决。     </p>
+</blockquote>
+<p>下载mysql源安装包</p>
+<pre><code>wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</code></pre>
+<p>安装mysql源</p>
+<pre><code>yum localinstall mysql57-community-release-el7-8.noarch.rpm</code></pre>
+<p>检查mysql源是否安装成功</p>
+<pre><code>yum repolist enabled | grep "mysql.*-community.*"</code></pre>
+<p>安装MySQL</p>
+<pre><code>yum install mysql-community-server</code></pre>
+<p>然后就慢慢等吧！！！！</p>
+<h3 id="启动MySQL"><a href="#启动MySQL" class="headerlink" title="启动MySQL"></a>启动MySQL</h3><pre><code>systemctl start mysqld</code></pre>
+<h3 id="设置开机自动启动"><a href="#设置开机自动启动" class="headerlink" title="设置开机自动启动"></a>设置开机自动启动</h3><pre><code>systemctl enable mysqld
+systemctl daemon-reload</code></pre>
+<h3 id="修改root默认密码"><a href="#修改root默认密码" class="headerlink" title="修改root默认密码"></a>修改root默认密码</h3><blockquote>
+<p>这一步导致我重装过一次，让我又承受了一次缓慢安装的痛苦  </p>
+</blockquote>
+<p> 1.获取临时密码，MySQL5.7为root用户随机生成了一个密码</p>
+<pre><code>grep 'temporary password' /var/log/mysqld.log </code></pre>
+<p>会出现如下内容root@localhost: 后面的就是临时密码，要修改之后才能正常使用mysql</p>
+<pre><code>[root@VM-4-14-centos ~]# grep 'temporary password' /var/log/mysqld.log    
+2021-01-04T01:03:56.594304Z 1 [Note] A temporary password is generated for root@localhost: P:0w2vuqP6I=</code></pre>
+<p>2.通过临时密码登录MySQL，进行修改密码操作</p>
+<pre><code>mysql -uroot -p</code></pre>
+<p>使用临时密码登录后，不能进行其他的操作，不能直接在-p后输入密码否则会因为安全策略报错<br>3.修改密码</p>
+<pre><code>ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourpassword';</code></pre>
+<p>注意：mysql5.7默认安装了密码安全检查插件（validate_password），默认密码检查策略要求密码必须包含：大小写字母、数字和特殊符号，并且长度不能少于8位。否则会提示ERROR 1819 (HY000): Your password does not satisfy the current policy requirements错误。<br>输入quit; 退出数据库。</p>
+<h3 id="添加远程登录用户"><a href="#添加远程登录用户" class="headerlink" title="添加远程登录用户"></a>添加远程登录用户</h3><p>默认只允许root帐户在本地登录，如果要在其它机器上连接mysql，必须修改root允许远程连接，或者添加一个允许远程连接的帐户，为了安全起见，添加一个新的帐户，在这我修改配置：<br>登入mysql后，更改 “mysql” 数据库里的 “user” 表里的 “host” 项，从”localhost”改称”%”</p>
+<pre><code>mysql -u root -pvmwaremysql&gt;use mysql;
+mysql&gt;update user set host = '%' where user = 'root';
+mysql&gt;select host, user from user;</code></pre>
+<h3 id="配置默认编码为utf8"><a href="#配置默认编码为utf8" class="headerlink" title="配置默认编码为utf8"></a>配置默认编码为utf8</h3><p>修改/etc/my.cnf配置文件，在[mysqld]下添加编码配置，同样可以使用vim或者winscp直接修改如下所示：</p>
+<pre><code>[mysqld]
+character_set_server=utf8
+init_connect='SET NAMES utf8'</code></pre>
+<p>重启mysql服务以生效配置</p>
+<pre><code>systemctl restart mysqld</code></pre>
+<h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><p>默认配置文件路径：配置文件：/etc/my.cnf<br>日志文件：/var/log//var/log/mysqld.log<br>服务启动脚本：/usr/lib/systemd/system/mysqld.service socket<br>文件：/var/run/mysqld/mysqld.pid   </p>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><h3 id="安装PHP和PHP组件"><a href="#安装PHP和PHP组件" class="headerlink" title="安装PHP和PHP组件"></a>安装PHP和PHP组件</h3><p>安装命令：  </p>
+<pre><code>yum install php
+yum install php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt  
+</code></pre>
+<p>到此我们的apache、mysql、php都安装完了。再次重启一次apache和mysql  </p>
+<pre><code>service httpd  restart    
+service mysqld restart    
+</code></pre>
+<h2 id="卸载重装"><a href="#卸载重装" class="headerlink" title="卸载重装"></a>卸载重装</h2><blockquote>
+<p>有些时候当遇到一些很久没能解决的问题的时候，重装也许可以解决问题。  </p>
+</blockquote>
+<h3 id="卸载apache"><a href="#卸载apache" class="headerlink" title="卸载apache"></a>卸载apache</h3><p>先停止httpd服务：</p>
+<pre><code>systemctl stop httpd.service</code></pre>
+<p>如果设置了开机启动则关掉</p>
+<pre><code>systemctl disable httpd.service</code></pre>
+<p>查看httpd依赖包</p>
+<pre><code>rpm -qa | grep httpd</code></pre>
+<p>上面命令返回结果：</p>
+<pre><code>httpd-tools-2.4.6-45.el7.centos.4.x86_64
+httpd-2.4.6-45.el7.centos.4.x86_64</code></pre>
+<p>挨个删除</p>
+<pre><code>rpm -e httpd-tools-2.4.6-45.el7.centos.4.x86_64
+
+rpm -e httpd-2.4.6-45.el7.centos.4.x86_64</code></pre>
+<blockquote>
+<p>注意：根据你自己的查包结果删除。<br>如果一个删除失败，可能会报错另一个包在使用它，则先删除另外一个包  </p>
+</blockquote>
+<h3 id="卸载mysql"><a href="#卸载mysql" class="headerlink" title="卸载mysql"></a>卸载mysql</h3><p>1.删除MySQL组件的命令</p>
+<pre><code>yum remove  mysql mysql-server mysql-libs mysql-server;</code></pre>
+<p>2.查找跟MySQL相关的文件及文件夹</p>
+<pre><code>find / -name mysql</code></pre>
+<p>3.删除MySQL文件及文件夹</p>
+<pre><code>rm -rf /var/lib/mysql</code></pre>
+<p>4.查找已安装的MySQL组件</p>
+<pre><code>
+rpm -qa|grep -i mysql</code></pre>
+<p>5.RPM方式卸载已安装组件</p>
+<pre><code>
+rpm -ev mysql57-community-release-el7-10</code></pre>
+<h3 id="php卸载"><a href="#php卸载" class="headerlink" title="php卸载"></a>php卸载</h3><p>Centos7彻底删除PHP<br>查看php版本命令：</p>
+<pre><code>php -v</code></pre>
+<p>下面的命令是删除不干净的</p>
+<pre><code>yum remove php</code></pre>
+<p>因为使用这个命令以后再用</p>
+<pre><code>php -v</code></pre>
+<p>还是会看到有版本信息的。。。。。</p>
+<p>必须强制删除，使用下面命令查看全部php软件包</p>
+<pre><code>rpm -qa|grep php</code></pre>
+<p>提示如下：</p>
+<pre><code>php-pdo-5.1.6-27.el5_5.3
+php-mysql-5.1.6-27.el5_5.3
+php-xml-5.1.6-27.el5_5.3
+php-cli-5.1.6-27.el5_5.3
+php-common-5.1.6-27.el5_5.3
+php-gd-5.1.6-27.el5_5.3</code></pre>
+<p>注意卸载要先卸载没有依赖的</p>
+<p>pdo是mysql的依赖项；common是gd的依赖项；<br>例如：</p>
+<pre><code>rpm -e php-pdo-5.1.6-27.el5_5.3
+error: Failed dependencies:
+        php-pdo is needed by (installed) php-mysql-5.1.6-27.el5_5.3.i386</code></pre>
+<p>所以正确的卸载顺序是：</p>
+<pre><code>rpm -e php-mysql-5.1.6-27.el5_5.3 
+rpm -e php-pdo-5.1.6-27.el5_5.3 
+rpm -e php-xml-5.1.6-27.el5_5.3 
+rpm -e php-cli-5.1.6-27.el5_5.3 
+rpm -e php-gd-5.1.6-27.el5_5.3 
+rpm -e php-common-5.1.6-27.el5_5.3 </code></pre>
+<p>再用</p>
+<pre><code> php -v</code></pre>
+<p>没有版本信息就删好了。</p>
+
+            </div>
+            <hr/>
 
             
 
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">不染轻裳</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://hesifan.top/2021/010561027.html">http://hesifan.top/2021/010561027.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">不染轻裳</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                                    <span class="chip bg-color">服务器</span>
+                                </a>
+                            
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
+                                </a>
+                            
+                                <a href="/tags/apache/">
+                                    <span class="chip bg-color">apache</span>
+                                </a>
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
             
+        </div>
+    </div>
 
-            
-            <style>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1413,12 +1594,307 @@ new Valine({
 
 
 
-            
-			
-			
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/010561027.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="centos服务器手动安装PHP环境">
+                        
+                        <span class="card-title">centos服务器手动安装PHP环境</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+为什么选择手动安装呢，因为不会用宝塔，虽然很多人都说宝塔好用，但我确实不太会用宝塔，还是选择手动安装吧。本文是我在安装过程中对网上教程的总结避坑，以及自己碰到的问题的总结。
+
+安装顺序最佳的安装顺序是先安装apache再安装mysql最后
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP/" class="post-category">
+                                    PHP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">服务器</span>
+                    </a>
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/apache/">
+                        <span class="chip bg-color">apache</span>
+                    </a>
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/122050093.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="我常用的一些快捷键">
+                        
+                        <span class="card-title">我常用的一些快捷键</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            windows
+剪贴板历史Windows键+V 访问剪贴板历史，粘贴历史复制内容  
+
+
+恢复不小心关闭的网页:Ctrl+Shift+T
+
+xshell
+复制粘贴CTRL + ins shift + ins  
+
+
+重新连接shift + 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
+                                    其他
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <span class="chip bg-color">快捷键</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 凡尘纪<br />'
+            + '文章作者: 不染轻裳<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4,h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4,h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
