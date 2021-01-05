@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="status, 凡尘纪">
+    <meta name="keywords" content="census, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>status | 凡尘纪</title>
+    <title>census | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -772,37 +772,190 @@
 
     </div>
 </div>
-
-  <main class="content">
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<main class="content">
     <div class="container">
-  <div class="card">
-    <div class="card-content">
-       <!-- 主题 挂件 -->
-       <div class="caishendengsd">        
-        <div class="caishenxianleftsd">
-            <img class="caishenpic" src="/medias/christmas-img/1.png">
-        </div>                    
+		<div class="container archive-calendar">
+    <div class="card">
+		<!--主题 挂件-->
+		<div class="caishendengsd">        
+			<div class="caishenxiansd">
+				<img class="caishenpic fudai" src="/medias/christmas-img/4.png">
+			</div>              
+		</div>
+		<div class="caishendengsd">        
+			<div class="caishenxianleftsd">
+				<img class="caishenpic fudai" src="/medias/christmas-img/4.png">
+			</div>              
+		</div>
+		<div class="caishendeng">        
+			<div class="caishenxian">
+				<img class="caishenpic fudai" src="/medias/spring-img/4.png">
+			</div>              
+		</div>
+		<div class="caishendeng">        
+			<div class="caishenxianleft">
+				<img class="caishenpic fudai" src="/medias/spring-img/4.png">
+			</div>              
+		</div>
+        <div id="post-calendar" class="card-content"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('post-calendar'));
+                var nameMap = 'cn' ;
+                var titleText = '访客日历' ;
+        
+            var option = {
+                title: {
+                    top: 0,
+                    text: '访客日历',
+                    left: 'center',
+                    textStyle: {
+                        color: '#3C4858'
+                    }
+                },
+                tooltip: {
+                    padding: 10,
+                    backgroundColor: '#555',
+                    borderColor: '#777',
+                    borderWidth: 1,
+                    formatter: function (obj) {
+                        var value = obj.value;
+                        return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+                    }
+                },
+                visualMap: {
+                    show: false,
+                    showLabel: true,
+                    categories: [0, 
+                            1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,
+                           16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
+                           31,32,33,34,35,36,37,38,00,40,41,42,43,44,45,
+                           46,47,48,49,50,51,52,53,54,55,56,57,58,59,60
+                           ],
+                    calculable: true,
+                    inRange: {
+                        symbol: 'rect',
+                        color: ['#ebedf0',
+                                 '#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b',
+                                 '#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f', 
+                                 '#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b', 
+                                 '#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127'
+                                 ]
+                    },
+                    itemWidth: 12,
+                    itemHeight: 12,
+                    orient: 'horizontal',
+                    left: 'center',
+                    bottom: 0
+                },
+                calendar: [{
+                    left: 'center',
+                    range: ['2020-9-1', '2020-12-30'],
+                    cellSize: [13, 13],
+                    splitLine: {
+                        show: false
+                    },
+                    itemStyle: {
+                        color: '#ebedf0',
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    yearLabel: {
+                        show: false
+                    },
+                    monthLabel: {
+                        nameMap: 'cn',
+                        fontSize: 11
+                    },
+                    dayLabel: {
+                        formatter: '{start}  1st',
+                        nameMap: 'cn',
+                        fontSize: 11
+                    }
+                }],
+                series: [{
+                    type: 'heatmap',
+                    coordinateSystem: 'calendar',
+                    calendarIndex: 0,
+                    data: [['2020-11-14', 9], ['2020-11-15', 22], ['2020-11-16', 31],['2020-11-17', 22], ['2020-11-18', 26], ['2020-11-19', 25],['2020-11-20', 26], 
+					['2020-11-21', 36], ['2020-11-22', 18], ['2020-11-23', 30], ['2020-11-24', 15], ['2020-11-25', 22], ['2020-11-26', 25], ['2020-11-27', 33], ['2020-11-28', 23],['2020-11-29', 15], ['2020-11-30', 16], 
+					['2020-12-01', 20], ['2020-12-02', 16], ['2020-12-03', 34], ['2020-12-04', 20], ['2020-12-05', 11], ['2020-12-06', 08], ['2020-12-07', 14], ['2020-12-08', 12],['2020-12-09', 20], ['2020-12-10', 20],
+					['2020-12-11', 12], ['2020-12-12', 10], ['2020-12-13', 11], ['2020-12-14', 26], ['2020-12-15', 19], ['2020-12-16', 18], ['2020-12-17', 12], ['2020-12-18', 18],['2020-12-19', 22], ['2020-12-10', 18],
+						  ]
+                }]
+        
+            };
+        
+            myChart.setOption(option);
+        </script>
     </div>
-    <div class="caishendengsd">        
-        <div class="caishenxiansd">
-            <img class="caishenpic" src="/medias/christmas-img/1.png">
-        </div>                    
+</div>
+    <div class="card">
+		<div class="card-content">
+            <script >
+            var jsref51la = document.getElementById('la_21036417');
+                var content51la = '<a href="//www.51.la/?comId=21036417" target="_blank">总访问量&nbsp;17,005，本月访问量&nbsp;81，昨日访问量&nbsp;60，今日访问量&nbsp;21，当前在线&nbsp;4</a>';
+                if (jsref51la) {jsref51la.innerHTML = content51la;} else {document.write(content51la);}
+            </script>
+            <a href="https://www.51.la/?comId=21036417" target="_blank" data-pjax-state="">总访问量&nbsp;17,004，本月访问量&nbsp;80，昨日访问量&nbsp;60，今日访问量&nbsp;20，当前在线&nbsp;3</a>
+        <div id="uv-container" style="min-width: 400px; height: 400px; margin-top: 50px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1609569953900"><div style="position: relative; width: 800px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1000" height="500" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 146px; top: 150px; pointer-events: none;">二月<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#d223e7;"></span>2020年访客数: -<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#3F77FE;"></span>2021年访客数: 2,225</div></div>
+        <div id="pv-container" style="min-width: 400px; height: 400px; margin-top: 50px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1609569953901"><div style="position: relative; width: 800px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1000" height="500" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 577px; top: 315px; pointer-events: none;">九月<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#01C2F9;"></span>2020年访问量: 14,501<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#18D070;"></span>2021年访问量: 9,436</div></div>
+        <div id="refer-container" style="min-width: 400px; height: 400px; margin-top: 50px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1609569953902"><div style="position: relative; width: 800px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1000" height="500" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 538px; top: 206px; pointer-events: none;">访问来源 <br>直达: 16334 (52.67%)</div></div>
+        
+        </div>
     </div>
-   
-    <div class="caishendeng">        
-        <div class="caishenxianleft">
-            <img class="caishenpic" src="/medias/spring-img/1.png">
-        </div>                    
-    </div>
-    <div class="caishendeng">        
-        <div class="caishenxian">
-            <img class="caishenpic" src="/medias/spring-img/1.png">
-        </div>                    
-    </div>
-    <iframe width="100%" height="900px" src="/sakura/status/index.html"  frameborder="no" border="0"  scrolling="no" marginwidth="0" marginheight="0" ></iframe>
-    </div>
-  </div>
-    </div>
+    <script>
+        var uvChart=echarts.init(document.getElementById('uv-container'),'shine');
+        var option={color:['#d223e7','#3F77FE','#01C2F9','#18D070'],title:{text:'站点访客数统计',subtext:'数据来源: 百度统计（自 2020/11/14 开始统计）',textStyle:{color:'#504b4d',}},tooltip:{trigger:'axis'},
+        legend:{data:['2020年访客数','2021年访客数'],bottom:0,left:'center',textStyle:{color:'#504b4d',}},
+        toolbox:{show:true,feature:{mark:{show:true},magicType:{show:true,type:['line','bar','stack','tiled']},restore:{show:true},saveAsImage:{show:true}}},
+        calculable:true,xAxis:[{type:'category',boundaryGap:false,data:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],yAxis:[{type:'value',axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],
+        series:[{name:'2020年访客数',type:'line',smooth:true,itemStyle:{normal:{areaStyle:{type:'default'}}},
+        data:[null,null,null,null,null,null,null,null,null,null,379,702],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}},},
+        {name:'2021年访客数',type:'line',smooth:true,itemStyle:{normal:{areaStyle:{type:'default'}}},
+        data:[122,null,null,null,null,null,null,null,null,null,null,null],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}},}]};
+        uvChart.setOption(option);var pvChart=echarts.init(document.getElementById('pv-container'));
+
+
+
+        var pv_option={color:['#01C2F9','#18D070','#d223e7','#3F77FE'],
+        title:{text:'站点访问量统计',subtext:'数据来源: 百度统计（自 2020/11/14 开始统计）',
+        textStyle:{color:'#504b4d',}},legend:{data:['2020年访问量','2021年访问量'],
+        bottom:0,left:'center',textStyle:{color:'#504b4d',}},
+        tooltip:{trigger:'axis'},toolbox:{show:true,feature:{mark:{show:true},
+        magicType:{show:true,type:['line','bar','stack','tiled']},
+        restore:{show:true},saveAsImage:{show:true}}},calculable:true,
+        xAxis:[{type:'category',boundaryGap:false,data:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],yAxis:[{type:'value',axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],
+        series:[{name:'2020年访问量',type:'line',stack:'总量',data:[null,null,null,null,null,null,null,null,null,null,2974,4362],axisLabel:{formatter:'{value}',
+        textStyle:{color:'#929298'}}},{name:'2021年访问量',type:'line',stack:'总量',data:[500,null,null,null,null,null,null,null,null,null,null,null],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}]};
+        pvChart.setOption(pv_option);
+
+        var referChart=echarts.init(document.getElementById('refer-container'));
+
+        var refer_option={title:{text:'站点访客来源统计',itemGap:20,subtext:'数据来源: 百度统计（最近三个月的统计数据）',left:'right',textStyle:{color:'#504b4d',}},
+        tooltip:{trigger:'item',
+        formatter:'{a} <br/>{b}: {c} ({d}%)'},
+
+        legend:{orient:'vertical',left:10,data:['直达','友链','百度','Google','Bing'],
+
+        textStyle:{color:'#929298',}},series:[{name:'访问来源',type:'pie',selectedMode:'single',radius:[0,'30%'],label:{position:'inner'},labelLine:{show:false},
+        
+        data:[{value:5982,name:'直接访问',selected:true},{value:1756,name:'外链'},{value:238,name:'搜索'}]},
+        
+        {name:'访问来源',type:'pie',radius:['40%','55%'],
+        label:{formatter:'{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',backgroundColor:'#eee',borderColor:'#aaa',borderWidth:1,borderRadius:4,rich:{a:{color:'#999',lineHeight:22,align:'center'},hr:{borderColor:'#aaa',width:'100%',borderWidth:0.5,height:0},b:{fontSize:16,lineHeight:33},per:{color:'#eee',backgroundColor:'#334455',padding:[2,4],borderRadius:2}}},
+
+        data:[{value:5982,name:'直达'},{value:1756,name:'友链'},{value:126,name:'百度'},{value:92,name:'Google'},{value:19,name:'Bing'}]}]};
+
+        referChart.setOption(refer_option);
+        </script>
+        
+        
 
 </main>
 
