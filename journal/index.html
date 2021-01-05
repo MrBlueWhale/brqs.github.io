@@ -909,121 +909,6 @@
 </style>	
 <main class="content">
 	<div class="container">
-		<div class="container archive-calendar">
-    <div class="card">
-		<!--主题 挂件-->
-		<div class="caishendengsd">        
-			<div class="caishenxiansd">
-				<img class="caishenpic fudai" src="/medias/christmas-img/4.png">
-			</div>              
-		</div>
-		<div class="caishendengsd">        
-			<div class="caishenxianleftsd">
-				<img class="caishenpic fudai" src="/medias/christmas-img/4.png">
-			</div>              
-		</div>
-		<div class="caishendeng">        
-			<div class="caishenxian">
-				<img class="caishenpic fudai" src="/medias/spring-img/4.png">
-			</div>              
-		</div>
-		<div class="caishendeng">        
-			<div class="caishenxianleft">
-				<img class="caishenpic fudai" src="/medias/spring-img/4.png">
-			</div>              
-		</div>
-        <div id="post-calendar" class="card-content"></div>
-            <script type="text/javascript">
-                var myChart = echarts.init(document.getElementById('post-calendar'));
-                var nameMap = 'cn' ;
-                var titleText = '访客日历' ;
-        
-            var option = {
-                title: {
-                    top: 0,
-                    text: '访客日历',
-                    left: 'center',
-                    textStyle: {
-                        color: '#3C4858'
-                    }
-                },
-                tooltip: {
-                    padding: 10,
-                    backgroundColor: '#555',
-                    borderColor: '#777',
-                    borderWidth: 1,
-                    formatter: function (obj) {
-                        var value = obj.value;
-                        return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-                    }
-                },
-                visualMap: {
-                    show: false,
-                    showLabel: true,
-                    categories: [0, 
-                            1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,
-                           16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
-                           31,32,33,34,35,36,37,38,00,40,41,42,43,44,45,
-                           46,47,48,49,50,51,52,53,54,55,56,57,58,59,60
-                           ],
-                    calculable: true,
-                    inRange: {
-                        symbol: 'rect',
-                        color: ['#ebedf0',
-                                 '#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b','#c6e48b',
-                                 '#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f','#7bc96f', 
-                                 '#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b','#200a3b', 
-                                 '#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127','#196127'
-                                 ]
-                    },
-                    itemWidth: 12,
-                    itemHeight: 12,
-                    orient: 'horizontal',
-                    left: 'center',
-                    bottom: 0
-                },
-                calendar: [{
-                    left: 'center',
-                    range: ['2020-9-1', '2020-12-30'],
-                    cellSize: [13, 13],
-                    splitLine: {
-                        show: false
-                    },
-                    itemStyle: {
-                        color: '#ebedf0',
-                        borderColor: '#fff',
-                        borderWidth: 2
-                    },
-                    yearLabel: {
-                        show: false
-                    },
-                    monthLabel: {
-                        nameMap: 'cn',
-                        fontSize: 11
-                    },
-                    dayLabel: {
-                        formatter: '{start}  1st',
-                        nameMap: 'cn',
-                        fontSize: 11
-                    }
-                }],
-                series: [{
-                    type: 'heatmap',
-                    coordinateSystem: 'calendar',
-                    calendarIndex: 0,
-                    data: [['2020-11-14', 9], ['2020-11-15', 22], ['2020-11-16', 31],['2020-11-17', 22], ['2020-11-18', 26], ['2020-11-19', 25],['2020-11-20', 26], 
-					['2020-11-21', 36], ['2020-11-22', 18], ['2020-11-23', 30], ['2020-11-24', 15], ['2020-11-25', 22], ['2020-11-26', 25], ['2020-11-27', 33], ['2020-11-28', 23],['2020-11-29', 15], ['2020-11-30', 16], 
-					['2020-12-01', 20], ['2020-12-02', 16], ['2020-12-03', 34], ['2020-12-04', 20], ['2020-12-05', 11], ['2020-12-06', 08], ['2020-12-07', 14], ['2020-12-08', 12],['2020-12-09', 20], ['2020-12-10', 20],
-					['2020-12-11', 12], ['2020-12-12', 10], ['2020-12-13', 11], ['2020-12-14', 26], ['2020-12-15', 19], ['2020-12-16', 18], ['2020-12-17', 12], ['2020-12-18', 18],['2020-12-19', 22], ['2020-12-10', 18],
-						  ]
-                }]
-        
-            };
-        
-            myChart.setOption(option);
-        </script>
-    </div>
-</div>
     <div class="card">
 			<div class="card-content">
 			
@@ -1058,6 +943,20 @@
 						<div class="min">
 							<div class="line"></div>
 							<div class="vas">
+								<div class="list">
+									<div class="dian"></div>
+									<div class="list_box">
+										<div class="hx"></div>
+										<div class="list_nr">
+											<p class="date">2021-01-05 20:46:00</p>
+											<div class="nr_tit">
+												<a href="/census"># 添加新页面统计</a>
+											</div>
+											<div class="nr_nr">
+												很长时间之前就准备弄这个页面的一直缺少数据才拖到现在</div>
+										</div>
+									</div>
+								</div> 
 								<div class="list">
 									<div class="dian"></div>
 									<div class="list_box">

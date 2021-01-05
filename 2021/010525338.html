@@ -974,7 +974,7 @@ layout: "census"
 <blockquote>
 <p>这也是matery主题新建页面通用步骤，将对应的文件名替换即可  </p>
 </blockquote>
-<h2 id="编辑census-ejs文件"><a href="#编辑census-ejs文件" class="headerlink" title="编辑census.ejs文件"></a>编辑census.ejs文件</h2><p>将以下内容，复制到census.ejs文件中需要修改的地方我已经注释了，对照着改就好建议等百度统计积累的时间长一点在添加不然像我一样数据太少不好看。</p>
+<h2 id="编辑census-ejs文件"><a href="#编辑census-ejs文件" class="headerlink" title="编辑census.ejs文件"></a>编辑census.ejs文件</h2><p>将以下内容，复制到census.ejs文件中需要修改的地方我已经注释了，对照着改就好建议等百度统计积累的时间长一点在添加不然像我一样数据太少不好看。需要自己按月输入数据，动态调用百度统计api有点难。</p>
 <pre><code>&lt;%- partial('_partial/bg-cover') %&gt;
 &lt;script type="text/javascript" src="&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.libs.js.echarts) %&gt;"&gt;&lt;/script&gt;
 &lt;main class="content"&gt;  
