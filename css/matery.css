@@ -10,7 +10,9 @@
     .vcards,.vcard,.vpanel{
         width: 90vw ;
     }
-    
+    .uv-container,.pv-container,.refer-container{
+        width: 50vw ;
+    }
     
 }
 
