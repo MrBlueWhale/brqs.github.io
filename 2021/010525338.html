@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决hexo-matery主题站内搜索异常问题, 凡尘纪">
+    <meta name="keywords" content="hexo-matery添加站点统计页面, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>解决hexo-matery主题站内搜索异常问题 | 凡尘纪</title>
+    <title>hexo-matery添加站点统计页面 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -747,12 +747,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决hexo-matery主题站内搜索异常问题</h1>
+                    <h1 class="description center-align post-title">hexo-matery添加站点统计页面</h1>
                 </div>
             </div>
         </div>
@@ -883,8 +883,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/matery/">
+                                <span class="chip bg-color">matery</span>
                             </a>
                         
                     </div>
@@ -908,28 +908,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-19
+                    2021-01-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-01
+                    2021-01-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    10 分
                 </div>
                 
 
@@ -945,100 +945,110 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>在群里看到群友说搜索功能有问题，最开始我也没发现，搜索功能在主页没有问题在其他页面会因为添加这个页面的地址导致404.但是在观察友链其他人的网站没有发现问题，而我和群友的确实有问题。  </p>
+<p>之前有不少铁子让我写一写教程，一直在折腾就没空写现在空了打算逐步开始写一写（本站大多数页面都是我从别人网站借鉴来的），写出来能帮助到有需要的好兄弟也是挺棒的。  </p>
 </blockquote>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>解决过程首先我怀疑是我的search.js文件的问题替换了友链其他人的，还是不行。<br>然后开始f12慢慢调试排查，我发现在searchlist里面显示的链接为不完整的链接如2020/111623576.html这样在主页没有问题在其他页面如 <a href="https://hesifan.top/contact/">https://hesifan.top/contact/</a>  就会因为补全为 <a href="https://hesifan.top/contact/2020/111623576.html">https://hesifan.top/contact/2020/111623576.html</a> 导致404，我就开始改search.js文件将增加了一个 <code>/</code></p>
-<pre><code>if (isMatch) {
-                        str += "&lt;li&gt;&lt;a href='/" + data_url + "' class='search-result-title'&gt;" + data_title + "&lt;/a&gt;";
+<h2 id="演示页面"><a href="#演示页面" class="headerlink" title="演示页面"></a>演示页面</h2><p>由于本站建站时间太短，数据过少，导致 [统计]&lt;<a href="https://hesifan.top/census">https://hesifan.top/census</a> &gt;效果并不好，可以去[大佬的站点]&lt;<a target="_blank" rel="noopener" href="https://bestzuo.cn/s/statistics">https://bestzuo.cn/s/statistics</a> &gt;查看效果。</p>
+<h2 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h2><p>去百度统计注册账号，添加站点会得到一段js代码以我的为例，每个人都不一样所以要自己注册。</p>
+<pre><code>&lt;script&gt;
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8723c5c2669a112d08b51b84e31ef4c2";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+    &lt;/script&gt;</code></pre>
+<p>将这段js加入head.ejs里，上传百度统计就可以开始记录你站点各种信息了，注意如果你有跳过渲染的页面，该页面需要单独添加这段js代码。  </p>
+<h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>1.在source文件夹下新建文件夹census，在该文件夹中新建一个名字为<code>index.md </code>文本文件<br>的文件内容为</p>
+<pre><code>---
+title: census
+date: 2020-10-31 10:11:28
+type: "census"
+layout: "census"
+---</code></pre>
+<p>2.在主题-config.yaml文件里菜单menu添加</p>
+<pre><code>统计:
+    url: /census
+    icon: fa fa-layer-group</code></pre>
+<p>3.在layout文件夹里新建一个census.ejs文本文件，用于后续写入htmlcss和js</p>
+<blockquote>
+<p>这也是matery主题新建页面通用步骤，将对应的文件名替换即可  </p>
+</blockquote>
+<h2 id="编辑census-ejs文件"><a href="#编辑census-ejs文件" class="headerlink" title="编辑census.ejs文件"></a>编辑census.ejs文件</h2><p>将以下内容，复制到census.ejs文件中需要修改的地方我已经注释了，对照着改就好建议等百度统计积累的时间长一点在添加不然像我一样数据太少不好看。</p>
+<pre><code>&lt;%- partial('_partial/bg-cover') %&gt;
+&lt;script type="text/javascript" src="&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.libs.js.echarts) %&gt;"&gt;&lt;/script&gt;
+&lt;main class="content"&gt;  
+     &lt;div class="card"&gt;
+        &lt;div class="card-content"&gt;
+
+        &lt;div id="uv-container" style="min-width: 250px; height: 400px; margin-top: 50px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1609569953900"&gt;&lt;div style="position: relative; width: 800px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"&gt;&lt;canvas data-zr-dom-id="zr_0" width="1000" height="500" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &amp;quot;Microsoft YaHei&amp;quot;; padding: 5px; left: 146px; top: 150px; pointer-events: none;"&gt;二月&lt;br&gt;&lt;span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#d223e7;"&gt;&lt;/span&gt;2020年访客数: -&lt;br&gt;&lt;span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#3F77FE;"&gt;&lt;/span&gt;2021年访客数: 2,225&lt;/div&gt;&lt;/div&gt;
+        &lt;div id="pv-container" style="min-width: 250px; height: 400px; margin-top: 50px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1609569953901"&gt;&lt;div style="position: relative; width: 800px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"&gt;&lt;canvas data-zr-dom-id="zr_0" width="1000" height="500" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &amp;quot;Microsoft YaHei&amp;quot;; padding: 5px; left: 577px; top: 315px; pointer-events: none;"&gt;九月&lt;br&gt;&lt;span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#01C2F9;"&gt;&lt;/span&gt;2020年访问量: 14,501&lt;br&gt;&lt;span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#18D070;"&gt;&lt;/span&gt;2021年访问量: 9,436&lt;/div&gt;&lt;/div&gt;
+        &lt;div id="refer-container" style="min-width: 250px; height: 400px; margin-top: 50px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1609569953902"&gt;&lt;div style="position: relative; width: 800px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"&gt;&lt;canvas data-zr-dom-id="zr_0" width="1000" height="500" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &amp;quot;Microsoft YaHei&amp;quot;; padding: 5px; left: 538px; top: 206px; pointer-events: none;"&gt;访问来源 &lt;br&gt;直达: 16334 (52.67%)&lt;/div&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        var uvChart=echarts.init(document.getElementById('uv-container'),'shine');
+        var option={color:['#d223e7','#3F77FE','#01C2F9','#18D070'],title:{text:'站点访客数统计',subtext:'数据来源: 百度统计（自 2020/11/14 开始统计）',textStyle:{color:'#504b4d',}},tooltip:{trigger:'axis'},
+        legend:{data:['2020年访客数','2021年访客数'],bottom:0,left:'center',textStyle:{color:'#504b4d',}},//修改年份
+        toolbox:{show:true,feature:{mark:{show:true},magicType:{show:true,type:['line','bar','stack','tiled']},restore:{show:true},saveAsImage:{show:true}}},
+        calculable:true,xAxis:[{type:'category',boundaryGap:false,data:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],yAxis:[{type:'value',axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],
+        series:[{name:'2020年访客数',type:'line',smooth:true,itemStyle:{normal:{areaStyle:{type:'default'}}},
+        data:[null,null,null,null,null,null,null,null,null,null,379,702],//第一个年份对应的数据顺序对应月份
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}},},
+        {name:'2021年访客数',type:'line',smooth:true,itemStyle:{normal:{areaStyle:{type:'default'}}},
+        data:[122,null,null,null,null,null,null,null,null,null,null,null],//第二个年份对应的数据顺序对应月份
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}},}]};
+        uvChart.setOption(option);var pvChart=echarts.init(document.getElementById('pv-container'));
+
+
+
+        var pv_option={color:['#01C2F9','#18D070','#d223e7','#3F77FE'],
+        title:{text:'站点访问量统计',subtext:'数据来源: 百度统计（自 2020/11/14 开始统计）',
+        textStyle:{color:'#504b4d',}},legend:{data:['2020年访问量','2021年访问量'],//修改年份
+        bottom:0,left:'center',textStyle:{color:'#504b4d',}},
+        tooltip:{trigger:'axis'},toolbox:{show:true,feature:{mark:{show:true},
+        magicType:{show:true,type:['line','bar','stack','tiled']},
+        restore:{show:true},saveAsImage:{show:true}}},calculable:true,
+        xAxis:[{type:'category',boundaryGap:false,data:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],yAxis:[{type:'value',axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}],
+        series:[{name:'2020年访问量',type:'line',stack:'总量',data:[null,null,null,null,null,null,null,null,null,null,2974,4362],axisLabel:{formatter:'{value}',//第一个年份对应的数据顺序对应月份
+        textStyle:{color:'#929298'}}},{name:'2021年访问量',type:'line',stack:'总量',data:[500,null,null,null,null,null,null,null,null,null,null,null],//第二个年份对应的数据顺序对应月份
+        axisLabel:{formatter:'{value}',textStyle:{color:'#929298'}}}]};
+        pvChart.setOption(pv_option);
+
+        var referChart=echarts.init(document.getElementById('refer-container'));
+
+        var refer_option={title:{text:'站点访客来源统计',itemGap:20,subtext:'数据来源: 百度统计（最近三个月的统计数据）',left:'right',textStyle:{color:'#504b4d',}},
+        tooltip:{trigger:'item',
+        formatter:'{a} &lt;br/&gt;{b}: {c} ({d}%)'},
+
+        legend:{orient:'vertical',left:10,data:['直达','友链','百度','Google','Bing'],//来源
+
+        textStyle:{color:'#929298',}},series:[{name:'访问来源',type:'pie',selectedMode:'single',radius:[0,'30%'],label:{position:'inner'},labelLine:{show:false},
+
+        data:[{value:5982,name:'直接访问',selected:true},{value:1756,name:'外链'},{value:238,name:'搜索'}]},//大类数据，修改value后面的值
+
+        {name:'访问来源',type:'pie',radius:['40%','55%'],
+        label:{formatter:'{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',backgroundColor:'#eee',borderColor:'#aaa',borderWidth:1,borderRadius:4,rich:{a:{color:'#999',lineHeight:22,align:'center'},hr:{borderColor:'#aaa',width:'100%',borderWidth:0.5,height:0},b:{fontSize:16,lineHeight:33},per:{color:'#eee',backgroundColor:'#334455',padding:[2,4],borderRadius:2}}},
+
+        data:[{value:5982,name:'直达'},{value:1756,name:'友链'},{value:126,name:'百度'},{value:92,name:'Google'},{value:19,name:'Bing'}]}]};//各个来源数据，修改value后面的值
+
+        referChart.setOption(refer_option);
+        &lt;/script&gt;
+
+
+
+&lt;/main&gt;</code></pre>
+<p>对于非matery主题的人来说，去echarts官网<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh">https://echarts.apache.org/zh</a> 下载 echarts.js将第二行的引入js这段  </p>
+<pre><code>&lt;script type="text/javascript" src="&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.libs.js.echarts) %&gt;"&gt;&lt;/script&gt;
 
 </code></pre>
-<p>hexo d 之后正常，应该算是解决了吧，暂时还未出错。<br>贴上改后完整的js文件  </p>
-<pre><code>var searchFunc = function (path, search_id, content_id) {
-    'use strict';
-    $.ajax({
-        url: path,
-        dataType: "xml",
-        success: function (xmlResponse) {
-            // get the contents from search data
-            var datas = $("entry", xmlResponse).map(function () {
-                return {
-                    title: $("title", this).text(),
-                    content: $("content", this).text(),
-                    url: $("url", this).text()
-                };
-            }).get();
-            var $input = document.getElementById(search_id);
-            var $resultContent = document.getElementById(content_id);
-            $input.addEventListener('input', function () {
-                var str = '&lt;ul class=\"search-result-list\"&gt;';
-                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                $resultContent.innerHTML = "";
-                if (this.value.trim().length &lt;= 0) {
-                    return;
-                }
-                // perform local searching
-                datas.forEach(function (data) {
-                    var isMatch = true;
-                    var content_index = [];
-                    var data_title = data.title.trim().toLowerCase();
-                    var data_content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, "").toLowerCase();
-                    var data_url = data.url;
-                    var index_title = -1;
-                    var index_content = -1;
-                    var first_occur = -1;
-                    // only match artiles with not empty titles and contents
-                    if (data_title != '' &amp;&amp; data_content != '') {
-                        keywords.forEach(function (keyword, i) {
-                            index_title = data_title.indexOf(keyword);
-                            index_content = data_content.indexOf(keyword);
-                            if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) {
-                                isMatch = false;
-                            } else {
-                                if (index_content &lt; 0) {
-                                    index_content = 0;
-                                }
-                                if (i == 0) {
-                                    first_occur = index_content;
-                                }
-                            }
-                        });
-                    }
-                    // show search results
-                    if (isMatch) {
-                        str += "&lt;li&gt;&lt;a href='/" + data_url + "' class='search-result-title'&gt;" + data_title + "&lt;/a&gt;";
-                        var content = data.content.trim().replace(/&lt;[^&gt;]+&gt;/g, "");
-                        if (first_occur &gt;= 0) {
-                            // cut out 100 characters
-                            var start = first_occur - 20;
-                            var end = first_occur + 80;
-                            if (start &lt; 0) {
-                                start = 0;
-                            }
-                            if (start == 0) {
-                                end = 100;
-                            }
-                            if (end &gt; content.length) {
-                                end = content.length;
-                            }
-                            var match_content = content.substr(start, end);
-                            // highlight all keywords
-                            keywords.forEach(function (keyword) {
-                                var regS = new RegExp(keyword, "gi");
-                                match_content = match_content.replace(regS, "&lt;em class=\"search-keyword\"&gt;" + keyword + "&lt;/em&gt;");
-                            });
-
-                            str += "&lt;p class=\"search-result\"&gt;" + match_content + "...&lt;/p&gt;"
-                        }
-                        str += "&lt;/li&gt;";
-                    }
-                });
-                str += "&lt;/ul&gt;";
-                $resultContent.innerHTML = str;
-            });
-        }
-    });
-}</code></pre>
-<h2 id="思考原因"><a href="#思考原因" class="headerlink" title="思考原因"></a>思考原因</h2><p>这里是胡乱猜测，可能是因为我使用的生成链接是全数字，我发现其他人是随机或者拼音都没问题。  </p>
+<p>替换为</p>
+<pre><code>&lt;script src="echarts.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>echarts官网提供了详细的教程有空可以去学习一下挺棒的。</p>
 
             </div>
             <hr/>
@@ -1064,7 +1074,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hesifan.top/2020/111917267.html">http://hesifan.top/2020/111917267.html</a>
+                    <a href="http://hesifan.top/2021/010525338.html">http://hesifan.top/2021/010525338.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1102,8 +1112,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/matery/">
+                                    <span class="chip bg-color">matery</span>
                                 </a>
                             
                         </div>
@@ -1569,87 +1579,32 @@ new Valine({
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/122050093.html">
+                <a href="/2021/010525338.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="我常用的一些快捷键">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="hexo-matery添加站点统计页面">
                         
-                        <span class="card-title">我常用的一些快捷键</span>
+                        <span class="card-title">hexo-matery添加站点统计页面</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            windows
-剪贴板历史Windows键+V 访问剪贴板历史，粘贴历史复制内容  
-
-
-恢复不小心关闭的网页:Ctrl+Shift+T
-
-xshell
-复制粘贴CTRL + ins shift + ins  
-
-
-重新连接shift + 
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
-                        </span>
-                        <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
-                                    其他
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-                        <span class="chip bg-color">快捷键</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/111623576.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="关于我的实验室">
-                        
-                        <span class="card-title">关于我的实验室</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            关于我的实验室：实验室内大部分页面都是我平时浏览大佬的博客发现的有趣的页面，然后用F12扒下来的。这些页面大多为开源项目，可以按照其说明自由引用，本人崇尚开源精神
+之前有不少铁子让我写一写教程，一直在折腾就没空写现在空了打算逐步开始写一写（本站大多数页面都是我从别人网站借鉴来的），写出来能帮助到有需要的好兄弟也是挺棒的。  
+
+演示页面由于本站建站时间太短，数据过少，导致 [统计]&lt;https
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
@@ -1663,15 +1618,76 @@ xshell
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
                     </a>
                     
-                    <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">
-                        <span class="chip bg-color">实验室</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/010561027.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="centos服务器手动安装PHP环境">
+                        
+                        <span class="card-title">centos服务器手动安装PHP环境</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+为什么选择手动安装呢，因为不会用宝塔，虽然很多人都说宝塔好用，但我确实不太会用宝塔，还是选择手动安装吧。本文是我在安装过程中对网上教程的总结避坑，以及自己碰到的问题的总结。
+
+安装顺序最佳的安装顺序是先安装apache再安装mysql最后
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP/" class="post-category">
+                                    PHP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">服务器</span>
+                    </a>
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/apache/">
+                        <span class="chip bg-color">apache</span>
+                    </a>
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
                     </a>
                     
                 </div>
