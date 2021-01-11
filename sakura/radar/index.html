@@ -77,6 +77,23 @@ a {
 </head>
 
 <body>
+  <div style="position: fixed;top: 20px;right: 30px;z-index: 90;">
+		<button id="button1" onclick="requestFullScreen();" style="border: none;font-size: 20px;color: #AAA;font-weight: bold;background: rgba(255,255,255,0);display: block;">全屏</button>
+	</div>
+  <script type="text/javascript">
+		//进入全屏
+		function requestFullScreen(element) {
+   			var de = document.querySelector(element) || document.documentElement;
+    		if (de.requestFullscreen) {
+        		de.requestFullscreen();
+    		} else if (de.mozRequestFullScreen) {
+        		de.mozRequestFullScreen();
+    		} else if (de.webkitRequestFullScreen) {
+        		de.webkitRequestFullScreen();
+    		}
+    		document.getElementById('button1').style.display = "none";
+		}
+	</script>
 
   <div id="control-panel">
 <p>Click and drag to make more!</p>
