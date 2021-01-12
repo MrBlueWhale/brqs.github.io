@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>我的mc服务器又开服了</title>
+      <link href="2021/011239152.html"/>
+      <url>2021/011239152.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>回顾自己买云服务器的初心其实是用来mc开服和朋友联机玩mc的，后来逐渐走上建站的邪路，最近群里有好兄弟说开个服玩一玩，老腐竹我重操旧业再次开服，一直有一个梦想能有一个很长时间的存档，记得很久以前在b站看了一个玩了四年的存档的视频真的很震撼，这次定个小目标这次服务器要维持一年以上，期间会积极备份数据以防出现意外，当然一年只是最短期限。保存好数据下次开服就可以直接导入继续。由于上几次开服都是用的windows系统建站之后改用了centos系统所以开服步骤有所变化。故此总结一下，以便下次开服使用。  </p></blockquote><h2 id="安装java环境"><a href="#安装java环境" class="headerlink" title="安装java环境"></a>安装java环境</h2><p>xshell连接主机后输入</p><pre><code>yum install java-1.8.0-openjdk </code></pre><p>自动安装Java8<br>安装完成后查看Java的版本，如果显示出版本号则表明安装成功了。</p><pre><code>java -version</code></pre><h2 id="安装Screen"><a href="#安装Screen" class="headerlink" title="安装Screen"></a>安装Screen</h2><p>这是一个虚拟终端可以让命令在后台运行  </p><pre><code>yum install screen</code></pre><p>它有很多用法，我最常用就这几个:</p><pre><code>screen -S screenname #新建一个叫screenname的screen会话screen -ls #列出当前所有的screen会话screen -r #恢复上一次离线的会话screen -x [会话id] #恢复指定id的会话，id可通过 screen -ls 查看screen -d #离线（不是关闭）当前会话#离线会话还可以通过快捷键C-a d完成（先按组合键Ctrl+a,再按d）</code></pre><blockquote><p>安装这个东西的目的是让服务端一直在后台运行保持打开，否则你一xshell服务端就关闭了。  </p></blockquote><h2 id="安装服务端"><a href="#安装服务端" class="headerlink" title="安装服务端"></a>安装服务端</h2><blockquote><p>本文只关注如何配置 CentOS系统使其能运行 Minecraft 服务端，Minecraft 服务端的配置不在此文讨论范围，如果你不熟悉服务端配置可以自行谷歌必应或者百度，顺带放一个我的1.16.4mod服服务端下载网盘地址留给有需要的人。提取码brqs <a href="https://pan.baidu.com/s/1mjSe26py2zzn5jyfx0eIQA">https://pan.baidu.com/s/1mjSe26py2zzn5jyfx0eIQA</a><br>直接将这个服务端上传到你想要放的位置，我一般是用winscp上传。   </p></blockquote><p>创建启动脚本同样可以在本地创建好了上传到服务器必用vim创建方便<br>创建一个run.sh的文件里面写入如下内容然后上传。</p><pre><code>java -Xms1G -Xmx1G  -jar forge-1.16.4-35.1.4.jar nogui</code></pre><h2 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h2><p>切换到存放启动脚本的文件内<br>新建一个screen会话:</p><pre><code>screen -S mc  </code></pre><p>然后接下来的操作都在此会话窗口进行<br>运行</p><pre><code>bash run.sh</code></pre><p>如果想离开（该会话仍会在后台运行）可以Ctrl+a 再按d<br>若想恢复会话:screen -r #恢复上一次离线的会话或<br>screen -x [会话id] 而会话id可通过screen -ls查看<br>开放云服务器25565端口，这个端口是mc使用的需要开放。</p><h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>如果你也想加入我的服务器一起玩你需要做以下这几件事（在此你完全没有安装过java版我的世界<br>）</p><ol><li>安装java8，自行搜索引擎解决。</li><li>下载hmcl，可以通过我提供的网盘链接下载提取码brqs &lt;<a href="https://pan.baidu.com/s/1g38tic4PAhXz1PLMv94YjA">https://pan.baidu.com/s/1g38tic4PAhXz1PLMv94YjA</a> &gt;<br>，里面已经下载好了，相关版本和相关mod<br>当然这是你什么都没有的情况。<br>你也可以自行下载1.16.4版本，然后问我要mod<br>文件加入mod文件夹，因为服务端装了这几个mod，客户端没有你是进不去的。  <h2 id="关于版本和mod"><a href="#关于版本和mod" class="headerlink" title="关于版本和mod"></a>关于版本和mod</h2>这次开服思来想去还是选用了1.16.4的版本一来这个版本比较新，可以体验新版本的内容，没有加入一些魔改的模组可以保留原版的风味，加入幸运方块这个mod和一个地图mod，因为我本身是比较喜欢幸运方块这个mod的比较有谁可以拒绝一个可能好运有可能厄运的方块呢。另外想要一起玩的朋友可以考虑加一下这个qq<br>群<code>650928220</code>由于我的云服务器比较便宜可能带不了那么多人，就不直接公布ip地址了。看情况给吧。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> game </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo-matery添加站点统计页面</title>
       <link href="2021/010525338.html"/>
       <url>2021/010525338.html</url>

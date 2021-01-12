@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="凡尘纪">
+    <meta name="keywords" content="我的mc服务器又开服了, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>凡尘纪</title>
+    <title>我的mc服务器又开服了 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -665,12 +665,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">我的mc服务器又开服了</h1>
                 </div>
             </div>
         </div>
@@ -799,12 +799,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/mc/">
+                                <span class="chip bg-color">mc</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/game/" class="post-category">
+                                game
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -813,28 +826,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-24
+                    2021-01-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-24
+                    2021-01-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -849,10 +862,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                --- 
-layout: false
----
-google-site-verification: google779be48fee6de9f5.html
+                <blockquote>
+<p>回顾自己买云服务器的初心其实是用来mc开服和朋友联机玩mc的，后来逐渐走上建站的邪路，最近群里有好兄弟说开个服玩一玩，老腐竹我重操旧业再次开服，一直有一个梦想能有一个很长时间的存档，记得很久以前在b站看了一个玩了四年的存档的视频真的很震撼，这次定个小目标这次服务器要维持一年以上，期间会积极备份数据以防出现意外，当然一年只是最短期限。保存好数据下次开服就可以直接导入继续。由于上几次开服都是用的windows系统建站之后改用了centos系统所以开服步骤有所变化。故此总结一下，以便下次开服使用。  </p>
+</blockquote>
+<h2 id="安装java环境"><a href="#安装java环境" class="headerlink" title="安装java环境"></a>安装java环境</h2><p>xshell连接主机后输入</p>
+<pre><code>yum install java-1.8.0-openjdk </code></pre>
+<p>自动安装Java8<br>安装完成后查看Java的版本，如果显示出版本号则表明安装成功了。</p>
+<pre><code>java -version</code></pre>
+<h2 id="安装Screen"><a href="#安装Screen" class="headerlink" title="安装Screen"></a>安装Screen</h2><p>这是一个虚拟终端可以让命令在后台运行  </p>
+<pre><code>yum install screen</code></pre>
+<p>它有很多用法，我最常用就这几个:</p>
+<pre><code>screen -S screenname #新建一个叫screenname的screen会话
+screen -ls #列出当前所有的screen会话
+screen -r #恢复上一次离线的会话
+screen -x [会话id] #恢复指定id的会话，id可通过 screen -ls 查看
+screen -d #离线（不是关闭）当前会话
+#离线会话还可以通过快捷键C-a d完成（先按组合键Ctrl+a,再按d）</code></pre>
+<blockquote>
+<p>安装这个东西的目的是让服务端一直在后台运行保持打开，否则你一xshell服务端就关闭了。  </p>
+</blockquote>
+<h2 id="安装服务端"><a href="#安装服务端" class="headerlink" title="安装服务端"></a>安装服务端</h2><blockquote>
+<p>本文只关注如何配置 CentOS系统使其能运行 Minecraft 服务端，Minecraft 服务端的配置不在此文讨论范围，如果你不熟悉服务端配置可以自行谷歌必应或者百度，顺带放一个我的1.16.4mod服服务端下载网盘地址留给有需要的人。提取码brqs <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1mjSe26py2zzn5jyfx0eIQA">https://pan.baidu.com/s/1mjSe26py2zzn5jyfx0eIQA</a><br>直接将这个服务端上传到你想要放的位置，我一般是用winscp上传。   </p>
+</blockquote>
+<p>创建启动脚本同样可以在本地创建好了上传到服务器必用vim创建方便<br>创建一个run.sh的文件里面写入如下内容然后上传。</p>
+<pre><code>java -Xms1G -Xmx1G  -jar forge-1.16.4-35.1.4.jar nogui</code></pre>
+<h2 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h2><p>切换到存放启动脚本的文件内<br>新建一个screen会话:</p>
+<pre><code>screen -S mc  </code></pre>
+<p>然后接下来的操作都在此会话窗口进行<br>运行</p>
+<pre><code>bash run.sh</code></pre>
+<p>如果想离开（该会话仍会在后台运行）可以Ctrl+a 再按d<br>若想恢复会话:screen -r #恢复上一次离线的会话或<br>screen -x [会话id] 而会话id可通过screen -ls查看<br>开放云服务器25565端口，这个端口是mc使用的需要开放。</p>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>如果你也想加入我的服务器一起玩你需要做以下这几件事（在此你完全没有安装过java版我的世界<br>）</p>
+<ol>
+<li>安装java8，自行搜索引擎解决。</li>
+<li>下载hmcl，可以通过我提供的网盘链接下载提取码brqs &lt;<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1g38tic4PAhXz1PLMv94YjA">https://pan.baidu.com/s/1g38tic4PAhXz1PLMv94YjA</a> &gt;<br>，里面已经下载好了，相关版本和相关mod<br>当然这是你什么都没有的情况。<br>你也可以自行下载1.16.4版本，然后问我要mod<br>文件加入mod文件夹，因为服务端装了这几个mod，客户端没有你是进不去的。  <h2 id="关于版本和mod"><a href="#关于版本和mod" class="headerlink" title="关于版本和mod"></a>关于版本和mod</h2>这次开服思来想去还是选用了1.16.4的版本一来这个版本比较新，可以体验新版本的内容，没有加入一些魔改的模组可以保留原版的风味，加入幸运方块这个mod和一个地图mod，因为我本身是比较喜欢幸运方块这个mod的比较有谁可以拒绝一个可能好运有可能厄运的方块呢。另外想要一起玩的朋友可以考虑加一下这个qq<br>群<code>650928220</code>由于我的云服务器比较便宜可能带不了那么多人，就不直接公布ip地址了。看情况给吧。</li>
+</ol>
+
             </div>
             <hr/>
 
@@ -877,7 +921,7 @@ google-site-verification: google779be48fee6de9f5.html
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hesifan.top/google779be48fee6de9f5.html">http://hesifan.top/google779be48fee6de9f5.html</a>
+                    <a href="http://hesifan.top/2021/011239152.html">http://hesifan.top/2021/011239152.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -914,7 +958,11 @@ google-site-verification: google779be48fee6de9f5.html
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/mc/">
+                                    <span class="chip bg-color">mc</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1383,37 +1431,47 @@ new Valine({
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/google779be48fee6de9f5.html">
+                <a href="/2021/011239152.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="我的mc服务器又开服了">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">我的mc服务器又开服了</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            --- 
-layout: false
----
-google-site-verification: google779be48fee6de9f5.html
+                            
+回顾自己买云服务器的初心其实是用来mc开服和朋友联机玩mc的，后来逐渐走上建站的邪路，最近群里有好兄弟说开个服玩一玩，老腐竹我重操旧业再次开服，一直有一个梦想能有一个很长时间的存档，记得很久以前在b站看了一个玩了四年的存档的视频真的很震撼
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            不染轻裳
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/game/" class="post-category">
+                                    game
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mc/">
+                        <span class="chip bg-color">mc</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1421,40 +1479,51 @@ google-site-verification: google779be48fee6de9f5.html
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/google779be48fee6de9f5.html">
+                <a href="/2021/010525338.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="hexo-matery添加站点统计页面">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">hexo-matery添加站点统计页面</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            --- 
-layout: false
----
-google-site-verification: google779be48fee6de9f5.html
+                            
+之前有不少铁子让我写一写教程，一直在折腾就没空写现在空了打算逐步开始写一写（本站大多数页面都是我从别人网站借鉴来的），写出来能帮助到有需要的好兄弟也是挺棒的。  
+
+演示页面由于本站建站时间太短，数据过少，导致 [统计]&lt;https
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            不染轻裳
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
