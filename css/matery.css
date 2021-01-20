@@ -10,10 +10,7 @@
     .vcards,.vcard,.vpanel{
         width: 90vw ;
     }
-    .uv-container,.pv-container,.refer-container{
-        width: 50vw ;
-    }
-    
+
 }
 
 /*中等屏幕下(平板类)的样式*/
@@ -321,6 +318,35 @@ mark {
     margin-top: -64px;
 }
 
+/*aos动态*/
+header .nav-menu li a:hover{
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+    animation: line 1s;
+
+}
+
+header .nav-menu li a i{
+   transition:All 0.4s ease-in-out;
+   -webkit-transition:All 0.4s ease-in-out;
+   -moz-transition:All 0.4s ease-in-out;
+   -o-transition:All 0.4s ease-in-out;
+}
+header .nav-menu li a:hover i{
+   color: #271f5b;
+   transform:rotate(360deg);
+   -webkit-transform:rotate(360deg);
+   -moz-transform:rotate(360deg);
+   -o-transform:rotate(360deg);
+   -ms-transform:rotate(360deg);
+}
+
+
+@keyframes line {
+   0% {
+       background-position-x: 390px;
+   }
+}
+/*结束*/
 header .side-nav {
     width: 240px;
     z-index: 999;
@@ -374,6 +400,12 @@ header .side-nav .mobile-head .logo-name {
     margin-top: -30px;
     padding-left: 10px;
     font-size: 1.5rem;
+}
+header .nav-menu li a i {
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
 }
 
 header .side-nav .mobile-head .logo-desc {
@@ -889,100 +921,6 @@ header .go-back i {
     }
 }
 
-.recommend .row .col {
-    padding: 0 1.25rem;
-}
-
-.recommend .title {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.8rem;
-}
-
-.recommend .post-card:before {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    left: 0;
-    top: 0;
-    content: "";
-    background-color: rgba(0, 0, 0, .3);
-    border-radius: 10px;
-}
-
-.recommend .post-card {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    max-height: 300px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    text-align: center;
-    border: 0;
-    border-radius: 10px;
-    color: rgba(0, 0, 0, .87);
-    background: #fff 50%;
-    background-size: cover;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
-}
-
-.recommend .post-card .post-body {
-    position: relative;
-    margin: 0 auto;
-    padding: 1.8rem 1.25rem;
-    z-index: 2;
-}
-
-.recommend .post-card .post-categories {
-    margin: 10px auto;
-}
-
-.recommend .post-card .post-categories .category {
-    padding: 0 8px;
-    color: hsla(0, 0%, 100%, .7) !important;
-    font-size: .75rem;
-    font-weight: 500;
-}
-
-.recommend .post-card a {
-    color: #fff;
-}
-
-.recommend .post-card .post-title {
-    height: 48px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.recommend .post-card .post-description {
-    margin: 20px auto;
-    max-width: 500px;
-    height: 65px;
-    max-height: 65px;
-    font-size: 14px;
-    color: hsla(0, 0%, 100%, .78) !important;
-}
-
-.recommend .post-card .read-more {
-    height: 40px;
-    margin: .6rem 1px;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 40px;
-    color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 2px 2px 0 rgba(244, 67, 54, .14), 0 3px 1px -2px rgba(244, 67, 54, .2), 0 1px 5px 0 rgba(244, 67, 54, .12);
-}
-
-.recommend .post-card .read-more .icon {
-    font-size: 1.05rem;
-    padding-right: 10px;
-}
 
 .archive-calendar {
     margin-top: -60px;
@@ -1012,7 +950,7 @@ article a {
 
 article a:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #116022;
     text-decoration: underline;
 }
 
@@ -1026,15 +964,130 @@ article .card {
     overflow: hidden;
 }
 
-article .card-image {
-    background-color: #222;
-    border-radius: 8px;
-}
 
-article .card-image img {
+article .card-image{
+     font-family: Georgia, 'Noto Serif SC', Helvetica,Arial,Menlo,Monaco,monospace,serif;
+     background-color: #222;
+     border-radius: 8px;
+     overflow: hidden;
+     position: relative;
+     z-index: 1;
+     transition: all .5s;
+ }
+article .card-image:hover{ box-shadow: 3px 3px 5px #999; }
+article .card-image:before,
+article .card-image:after{
+    content: "";
+    background: radial-gradient(circle at 23% 70%,rgba(255,255,255,0.7),#fff 30%);
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    /*top:-10.5%;*/
+    right:-150%;
+    z-index: 1;
+    transition: all 0.35s ease;
+}
+article .card-image:hover:before{
+    opacity: 1;
+    right: -85%;
+}
+article .card-image:hover:after{
+    opacity: 1;
+    top: -42%;
+}
+article .card-image img{
+    width: 100%;
+    transition: all 0.5s ease;
     height: 220px;
     border-radius: 0.3rem;
     opacity: .7;
+}
+article .card-image .x img{
+    width: 100%;
+    transition: all 0.5s ease;
+    height: 230px;
+    border-radius: 0.3rem;
+    opacity: .7;
+}
+article .card-image:hover img{ transform: scale(1.2); }
+article .card-image .box-content{
+    text-align: right;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    z-index: 2;
+    transition: all .5s;
+}
+article .card-image:hover .box-content{ right: 5%; }
+article .card-image:hover .box-content h3::before {
+    content: "X";
+}
+article .card-image:hover .box-content h3::before{
+    font-size: .9rem !important;
+    vertical-align: bottom;
+    margin-right: .5rem;
+    padding: 2px;
+    border-radius: 5px;
+    background: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 100%);
+}
+.card-image:hover .title-V{
+    display: none;
+}
+article .card-image-V:before, article .card-image-V:after{
+    top: -10.5%;
+    
+}
+
+article .card-image .title{
+    color: #1e272e;
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 3px 0;
+}
+article .card-image .post{
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    display: block;
+    font-family: Georgia,'Noto Serif SC', serif;
+}
+article .card-image .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+article .card-image .icon li{
+    display: inline-block;
+    margin: 0 4px;
+}
+article .card-image .icon li a{
+    color: #fff;
+    background-color: #1e272e;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s;
+}
+article .card-image .icon li  a:hover{
+    color: #1e272e;
+    background-color: #fff;
+    border-radius: 10%;
+    box-shadow: 0 0 5px #1e272e inset;
+}
+@media only screen and (max-width:990px){
+    article .card-image { margin: 0 0 30px; }
+}
+@media only screen and (max-width:479px){
+    article .card-image .title{ font-size: 20px; }
 }
 
 article .tag-image img {
@@ -1050,6 +1103,12 @@ article .article-content .summary {
     padding-left: 0;
     margin-bottom: 6px;
     word-break: break-all;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 article .article-content .publish-author {
@@ -1980,22 +2039,6 @@ thead {
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
-.my-gallery {
-    margin: 4.5rem auto 1rem;
-    padding: 0 1.2rem;
-    max-width: 1100px;
-}
-
-.my-gallery .photo {
-    margin: .5rem 0;
-}
-
-.my-gallery .photo img {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
 /*尾部样式*/
 footer {
