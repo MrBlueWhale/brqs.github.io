@@ -632,7 +632,7 @@ header .go-back i {
 }
 
 .post-cover {
-    height: 75vh;
+    height: 75vh !important;
 }
 
 /* .bg-cover:after {
