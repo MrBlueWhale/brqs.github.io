@@ -1049,7 +1049,39 @@ echo calculation();
 //三次输出分别为248，这样就实现了变量的循环调用
 ?&gt;
 </code></pre>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>使用不同数据类型储存不同数据，就像我们家里面放衣服和放洗手液会使用用不同的容器一样。下面是常用PHP数据类型表：<br>|：–|：–|<br>|类型|    说明|<br>|integer    |整型|<br>|float|    浮点型|<br>|string|    字符串|<br>|boolean|    布尔型|<br>|array    |数组|<br>|object    |对象</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>使用不同数据类型储存不同数据，就像我们家里面放衣服和放洗手液会使用用不同的容器一样。下面是常用PHP数据类型表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">integer</td>
+<td align="left">整型</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">浮点型</td>
+</tr>
+<tr>
+<td align="left">string</td>
+<td align="left">字符串</td>
+</tr>
+<tr>
+<td align="left">boolean</td>
+<td align="left">布尔型</td>
+</tr>
+<tr>
+<td align="left">array</td>
+<td align="left">数组</td>
+</tr>
+<tr>
+<td align="left">object</td>
+<td align="left">对象</td>
+</tr>
+</tbody></table>
 <h4 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h4><p>整型可以是十进制、八进制、十六进制。<br>php函数可以轻松实现进位制的转化<br>如十六进制转化十进制函数hexdc（）</p>
 <pre><code>&lt;?php 
     var_dump(hexdec(FFF);
@@ -1073,14 +1105,61 @@ base_convert(number,frombase,tobase)//任意进位制之间的转化</code></pre
 $oct = "0530";
 $dec = base_convert($oct,8,10);
 echo "八进制的 $oct 等于十进制的 $dec。";
-?&gt;
-
-参数           描述
-number        必需，原始值
-frombase    必需，原进制
-tobase        必需，目标进制</code></pre>
+?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">number</td>
+<td align="left">必需，原始值</td>
+</tr>
+<tr>
+<td align="left">frombase</td>
+<td align="left">必需，原进制</td>
+</tr>
+<tr>
+<td align="left">tobase</td>
+<td align="left">必需，目标进制</td>
+</tr>
+</tbody></table>
 <h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>浮点数表示实数，可理解为有限或无限小数。</p>
-<h4 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h4><p>当转换为 boolean 时，以下值被认为是FALSE<br>|:—|:–|<br>|布尔值 |FALSE|<br>|整型值 |0（零）|<br>|浮点型值 |0.0（零）|<br>|字符串|空白字符串|<br>|字符串| “0”|<br>|数组|没有成员变量的数组|<br>|特殊类型| NULL（包括尚未设定的变量）|</p>
+<h4 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h4><p>当转换为 boolean 时，以下值被认为是FALSE</p>
+<table>
+<thead>
+<tr>
+<th align="left">布尔值</th>
+<th align="left">FALSE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">整型值</td>
+<td align="left">0（零）</td>
+</tr>
+<tr>
+<td align="left">浮点型值</td>
+<td align="left">0.0（零）</td>
+</tr>
+<tr>
+<td align="left">字符串</td>
+<td align="left">空白字符串</td>
+</tr>
+<tr>
+<td align="left">字符串</td>
+<td align="left">“0”</td>
+</tr>
+<tr>
+<td align="left">数组</td>
+<td align="left">没有成员变量的数组</td>
+</tr>
+<tr>
+<td align="left">特殊类型</td>
+<td align="left">NULL（包括尚未设定的变量）</td>
+</tr>
+</tbody></table>
 <blockquote>
 <p>所有其它值都被认为是 TRUE</p>
 </blockquote>
@@ -1146,7 +1225,30 @@ echo strlen(trim($string,' pot'));
 $string = ' hesifan.top ';
 echo strlen(rtrim($string,' pot'));
 ?&gt;</code></pre>
-<p>|函数|作用|<br>|：–|：–|<br>|strtolower |字母转为小写|<br>|strtoupper |字母转大写|<br>|ucfirst  |将字符串的首字母转换为大写|<br>|ucwords  |将字符串中每个单词的首字母转换为大写|</p>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">strtolower</td>
+<td align="left">字母转为小写</td>
+</tr>
+<tr>
+<td align="left">strtoupper</td>
+<td align="left">字母转大写</td>
+</tr>
+<tr>
+<td align="left">ucfirst</td>
+<td align="left">将字符串的首字母转换为大写</td>
+</tr>
+<tr>
+<td align="left">ucwords</td>
+<td align="left">将字符串中每个单词的首字母转换为大写</td>
+</tr>
+</tbody></table>
 <pre><code>&lt;?php 
 $string = ' hesifan.top ';
 echo strlen($string);//输出13
