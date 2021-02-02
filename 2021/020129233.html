@@ -1326,12 +1326,12 @@ echo str_replace(['小猫','小狗'], '*', '我家有一只可爱的小猫和小
 echo str_replace(['小猫','小狗'], ['喵喵','汪汪'], '我家有一只可爱的小猫和小狗'); //输出我家有一只可爱的喵喵和汪汪
 ?&gt;</code></pre>
 <h4 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h4><p>NULL数据类型只有一个值NULL。<br>1.变量未被赋予任何值<br>2.变量被赋值为NULL<br>3.被unset()函数处理后的变量</p>
-<pre><code>\$a;        //变量 \$a未被赋予任何变量，值为NULL
-\$b = NULL;    //变量 \$b被赋值为NULL
-\$c = 10;        
+<pre><code>$a;        //变量 $a未被赋予任何变量，值为NULL
+$b = NULL;    //变量 $b被赋值为NULL
+$c = 10;        
 
 unset($c);    
-//使用unset()函数处理后，\$c为NULL </code></pre>
+//使用unset()函数处理后，$c为NULL </code></pre>
 <h4 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h4><p>getType()</p>
 <pre><code>
 &lt;?php
