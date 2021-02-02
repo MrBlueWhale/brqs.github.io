@@ -823,21 +823,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-01
+                    2021-02-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    14 分
                 </div>
                 
 
@@ -1049,6 +1049,229 @@ echo calculation();
 //三次输出分别为248，这样就实现了变量的循环调用
 ?&gt;
 </code></pre>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>使用不同数据类型储存不同数据，就像我们家里面放衣服和放洗手液会使用用不同的容器一样。下面是常用PHP数据类型表：<br>|：–|：–|<br>|类型|    说明|<br>|integer    |整型|<br>|float|    浮点型|<br>|string|    字符串|<br>|boolean|    布尔型|<br>|array    |数组|<br>|object    |对象</p>
+<h4 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h4><p>整型可以是十进制、八进制、十六进制。<br>php函数可以轻松实现进位制的转化<br>如十六进制转化十进制函数hexdc（）</p>
+<pre><code>&lt;?php 
+    var_dump(hexdec(FFF);
+    //输出int(4095)
+?&gt;</code></pre>
+<p>其他进位制之间的转化函数如下</p>
+<pre><code>bindec() //二进制转换为十进制
+
+decbin() //十进制转换为二进制
+
+dechex() //十进制转换为十六进制
+
+decoct() //十进制转换为八进制
+
+hexdec() //十六进制转换为十进制
+
+octdec() //八进制转换为十进制
+base_convert(number,frombase,tobase)//任意进位制之间的转化</code></pre>
+<p>任意进位制转化实例及其参数说明如下</p>
+<pre><code>&lt;?php
+$oct = "0530";
+$dec = base_convert($oct,8,10);
+echo "八进制的 $oct 等于十进制的 $dec。";
+?&gt;
+
+参数           描述
+number        必需，原始值
+frombase    必需，原进制
+tobase        必需，目标进制</code></pre>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>浮点数表示实数，可理解为有限或无限小数。</p>
+<h4 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h4><p>当转换为 boolean 时，以下值被认为是FALSE<br>|:—|:–|<br>|布尔值 |FALSE|<br>|整型值 |0（零）|<br>|浮点型值 |0.0（零）|<br>|字符串|空白字符串|<br>|字符串| “0”|<br>|数组|没有成员变量的数组|<br>|特殊类型| NULL（包括尚未设定的变量）|</p>
+<blockquote>
+<p>所有其它值都被认为是 TRUE</p>
+</blockquote>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><h5 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h5><p>字符串可以用双引号<code>"" </code>或 <code>''</code> 号包含，区别是双引号中可以解析变量。</p>
+<pre><code>&lt;?php 
+$string = "hesifan.top";
+echo "FanHeart的网站{$string}!"
+//双引号可以解析变量输出为FanHeart的网站hesifan.top！单引号则为FanHeart的网站$string!用花括号可以避免变量错误，因为若变量后面有符合变量规范的字符会和被当作变量名
+?&gt;</code></pre>
+<blockquote>
+<p>用花括号可以避免变量错误，因为若变量后面有符合变量规范的字符会和被当作变量名<br>header响应头设置解决中文乱码问题</p>
+</blockquote>
+<pre><code>header('Content-type:text/html;charset=utf-8');</code></pre>
+<h5 id="转义符"><a href="#转义符" class="headerlink" title="转义符\"></a>转义符<code>\</code></h5><p>转义是将有多种含义的字符进行转换，比如 $即是变量前缀也是美元符号，就需要转义在不同场景进行改变。</p>
+<pre><code>
+&lt;?php 
+$string = "FanHeart \"hesifan.top\"";
+echo $string;
+echo '输出\\';
+echo '&lt;hr/&gt;';
+echo "定义变量方法\t\$string = 'hesifan.top'";//输出定义变量方法$string = 'hesifan.top'
+
+?&gt;</code></pre>
+<h5 id="定界符-lt-lt-lt"><a href="#定界符-lt-lt-lt" class="headerlink" title="定界符<<<"></a>定界符<code>&lt;&lt;&lt;</code></h5><p>文本表现的就和双引号字符串一样，在定界符文本中不需要转义引号，适合输入大量文本。</p>
+<pre><code>&lt;?php  
+$str=&lt;&lt;&lt;html
+&lt;h1 style="color:pink"&gt;hesifan.top&lt;/h1&gt; 
+&lt;script&gt;
+    document.write('FanHeart');
+&lt;/script&gt;
+html;
+echo $str;
+?&gt;</code></pre>
+<blockquote>
+<p>结束符必须从第一列开始，并且后面除了分号以外不能包含任何其他字符，空格也不可以。</p>
+</blockquote>
+<h5 id="连接符"><a href="#连接符" class="headerlink" title="连接符."></a>连接符<code>.</code></h5><p>多个字符串使用 . 符号连接</p>
+<pre><code>
+&lt;?php 
+$string1 = 'FanHeart';
+$string2 = 'hesifan.top';
+echo $string1.'=&gt;'.$string2;
+?&gt;</code></pre>
+<h5 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h5><p><code>strlen()</code> — 取得字符串长度传度的函数</p>
+<pre><code>&lt;?php  
+$string = 'blog.hesifan.top';
+echo strlen($string);
+echo '&lt;hr/&gt;';
+$string = '凡尘纪';
+echo mb_strlen($string,utf8);
+// 中文是宽字节一个汉字等于3个字节
+?&gt;</code></pre>
+<blockquote>
+<p>需要使用函数时优先查找使用php文档里的提供的函数效率最高<br><code>trim</code> 截去字符串首尾的内容</p>
+</blockquote>
+<pre><code>&lt;?php
+$string = ' hesifan.top  ';
+echo strlen(trim($string,' pot'));
+# 从前后删除 pot和空格字符
+?&gt;</code></pre>
+<p><code>rtrim</code>从右侧删除、<code>ltrim</code>从左侧删除</p>
+<pre><code>&lt;?php
+$string = ' hesifan.top ';
+echo strlen(rtrim($string,' pot'));
+?&gt;</code></pre>
+<p>|函数|作用|<br>|：–|：–|<br>|strtolower |字母转为小写|<br>|strtoupper |字母转大写|<br>|ucfirst  |将字符串的首字母转换为大写|<br>|ucwords  |将字符串中每个单词的首字母转换为大写|</p>
+<pre><code>&lt;?php 
+$string = ' hesifan.top ';
+echo strlen($string);//输出13
+echo trim($string,' pot.');//输出hesifan
+echo strtolower('Hello World');//输出hello world
+echo strtoupper('hello world');//输出HELLO　ＷＯＲＬＤ
+echo ucfirst('hello world');//输出Hello world
+echo ucwords('hello world');//输出Hello World
+?&gt;</code></pre>
+<p><code>md5</code>计算字符串的 MD5 散列值，以 32 字符十六进制数字形式返回散列值.<br>原来用于账户密码加密<br>现在可以用于存储用户信息<br>不要单纯理解为加密，他的特点时不可逆的生成一个32位hexo字符串</p>
+<pre><code>&lt;?php 
+$file = 'user-1-info';
+echo md5($file).'.php';
+$view = 'admin/master.php';
+echo md5($view).'.php';
+?&gt;</code></pre>
+<p><code>explode</code>  使用一个字符串分割另一个字符串</p>
+<pre><code>&lt;?php 
+$arr = (explode('.','hesifan.top'));
+echo  $arr[0];
+echo '&lt;hr/&gt;';
+echo  $arr[1];
+?&gt;</code></pre>
+<blockquote>
+<p>php 中有顺序时从0开始</p>
+</blockquote>
+<p>处理图像文件类型（后面会有更好的方式，仅用于举例）</p>
+<pre><code>&lt;?php 
+$file = 'card.jpg';
+$arr =explode('.',$file);
+print_r($arr).'&lt;hr/&gt;';//输出Array ( [0] =&gt; card [1] =&gt; jpg )
+echo $arr[1];//这样就输出了文件格式jpg啦
+?&gt;</code></pre>
+<p><code>implode</code>将一个一维数组的值转化为字符串</p>
+<pre><code>
+&lt;?php 
+ $arr =['email','3447851674@qq.com'];
+ echo implode(':',$arr);//输出email：3447851674@qq.com完成合并
+?&gt;</code></pre>
+<p><code>substr</code>返回字符串的子串,截取函数</p>
+<pre><code>&lt;?php 
+$file = 'user.webp';
+echo substr($file,0,-5);//输出user从第一个截到倒数五个
+$ad = '欢迎大家访问我的网站';
+echo mb_substr($ad,4,-4,'utf-8');//输出访问
+?&gt;</code></pre>
+<p><code>strstr</code> 查找字符串的首次出现</p>
+<pre><code>&lt;?php
+$email  = 'name@example.com';
+$domain = strstr($email, '@');
+echo $domain; // 输出 @example.com
+?&gt;</code></pre>
+<p><code>strrchr</code> 查找指定字符在字符串中的最后一次出现</p>
+<pre><code>&lt;?php
+$file = 'user.jpg';
+echo strrchr($file, '.'); // 输出.jpg
+?&gt;</code></pre>
+<p><code>strpos</code> 查找字符串首次出现的位置，如果没找到，将返回 FALSE</p>
+<pre><code>&lt;?php
+$name ='FanHeart';
+echo strpos($name, 'a'); // 输出1
+?&gt;</code></pre>
+<p><code>strrpos</code> 计算指定字符串在目标字符串中最后一次出现的位置</p>
+<pre><code>&lt;?php
+$name ='FanHeart';
+echo strrpos($name, 'a'); // 输出5
+?&gt;</code></pre>
+<p><code>str_replace</code>  子字符串替换</p>
+<pre><code>&lt;?php
+echo str_replace('hesifan', 'blog.hesifan', 'hesifan.top'); //输出blog.hesifan.top
+
+
+echo str_replace(['小猫','小狗'], '*', '我家有一只可爱的小猫和小狗');//输出我家有一只可爱的*和*
+
+echo str_replace(['小猫','小狗'], ['喵喵','汪汪'], '我家有一只可爱的小猫和小狗'); //输出我家有一只可爱的喵喵和汪汪
+?&gt;</code></pre>
+<h4 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h4><p>NULL数据类型只有一个值NULL。<br>1.变量未被赋予任何值<br>2.变量被赋值为NULL<br>3.被unset()函数处理后的变量</p>
+<pre><code>\$a;        //变量 \$a未被赋予任何变量，值为NULL
+\$b = NULL;    //变量 \$b被赋值为NULL
+\$c = 10;        
+
+unset($c);    
+//使用unset()函数处理后，\$c为NULL </code></pre>
+<h4 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h4><pre><code>getType()</code></pre>
+<!--?php
+$num = 1234; 
+ $type = gettype( $num); 
+var_dump( $type);
+
+$var = true;
+$bool = is_bool( $var);
+var_dump( $bool);
+//检测是否为布尔型
+
+$int = 1234; 
+$bool = is_int($int); 
+var_dump($bool);
+//检测是否为整型
+
+$num = 1.1234; 
+$bool = is_float($num); 
+var_dump($bool);
+//检测是否为浮点数
+
+$string = 'FanHeart'; 
+$bool = is_string($string); 
+var_dump($bool);
+//检测是否为字符串
+
+$var = null;
+$bool = is_null($var);
+var_dump($bool);
+
+//检测是否为NULL
+?-->
+<pre><code>#### 类型转换
+自动转换
+
+PHP类型根据值，自动转换</code></pre>
+<!--?php
+$num1 = '1'; 
+$num2 = '2'; 
+echo $num1 + $num2; # 字符串转为数字相加
+?-->
+<pre><code></code></pre>
 
             </div>
             <hr/>
@@ -1889,7 +2112,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">36.2k</span>&nbsp;字
             
             
             
