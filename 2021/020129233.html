@@ -830,7 +830,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.3k
+                    5.2k
                 </div>
                 
 
@@ -1409,15 +1409,15 @@ class demo{
 print_r(get_defined_constants(categorize:true));
 ?&gt;</code></pre>
 <blockquote>
-<p>const 是语言结构，在编译时要比define快,define 可以设置第三个参数为true，来定义不区分大小写的常量,类文件中定义常量也使用const，所以const统一易读</p>
+<p><code>const</code>是语言结构，在编译时要比<code>define</code>快,<code>define</code> 可以设置第三个参数为true，来定义不区分大小写的常量,类文件中定义常量也使用<code>const</code>，所以用<code>const</code>统一易读。</p>
 </blockquote>
 <pre><code>define('常量名',值); 
 define('WEBNAME','houdunwang');
 echo WEBNAME;</code></pre>
-<p>常量检测</p>
+<p><strong>常量检测</strong></p>
 <pre><code>$bool = defined('WEBNAME');
 var_dump($bool); // 结果是false</code></pre>
-<p><em>系统常量</em></p>
+<p><strong>系统常量</strong></p>
 <pre><code>__DIR__            文件所在目录
 __FILE__        文件路径
 __LINE__        程序代码行号
@@ -1612,7 +1612,7 @@ $a = $a*&amp;b ;</code></pre>
 </tr>
 <tr>
 <td align="left">$a `</td>
-<td align="left"></td>
+<td align="left"><code> </code></td>
 </tr>
 </tbody></table>
 <blockquote>
@@ -1643,9 +1643,8 @@ echo isset($var)?'yes':'no';//这样就可以实现检测
 <h4 id="屏蔽错误"><a href="#屏蔽错误" class="headerlink" title="屏蔽错误"></a>屏蔽错误</h4><p>@ 运算符用于屏蔽表达式警告错误</p>
 <pre><code>@(20/0); </code></pre>
 <h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><h4 id="if-else-elseif"><a href="#if-else-elseif" class="headerlink" title="if/else/elseif"></a>if/else/elseif</h4><p>当条件表达式的值为真（true）时，PHP将执行语句组，相反条件表达式的值为假（false）时，PHP将不执行语句组，忽略语句组执行下面的语句。</p>
-<pre><code>
-花括号形式
-&lt;?php
+<p>花括号形式</p>
+<pre><code>&lt;?php
 $status = false;
  if($status){
      echo 'FanHeart';
@@ -1653,52 +1652,45 @@ $status = false;
  else{
      echo 'hesifan.top';
  }
-?&gt;
-简化形式适合夹套书写html
-&lt;?php 
-$status = false;
-if($status):  
-
-?&gt;
-    &lt;h1&gt;真&lt;/h1&gt;
-&lt;?php 
+?&gt;</code></pre>
+<p>简化形式适合夹套书写html<br>&lt;?php<br>$status = false;<br>if($status):  </p>
+<p>?&gt;<br>    </p><h1>真</h1><br><!--?php 
 else: 
-?&gt; f
-   &lt;h1&gt;假&lt;/h1&gt;
-&lt;?php
+?--> f<br>   <h1>假</h1><br><!--?php
 endif;
-?&gt;
-多条件的
-&lt;?php 
+?--><p></p>
+<pre><code>多条件的</code></pre>
+<!--?php 
 $age = 10;
-if($age&lt;15){
+if($age<15){
     echo '儿童';
 }
-elseif($age&lt;30){
+elseif($age<30){
     echo '青年';
 }
-elseif($age&lt;50){
+elseif($age<50){
     echo '中年';
 }
 else{
     echo '老年';
 }
-?&gt;
-&lt;?php 
+?-->
+<!--?php 
 $age = 10;
-if($age&lt;15):
+if($age<15):
     echo '儿童';
 
-elseif($age&lt;30):
+elseif($age<30):
     echo '青年';
 
-elseif($age&lt;50):
+elseif($age<50):
     echo '中年';
 
 else:
     echo '老年';
 endif;
-?&gt;</code></pre>
+?-->
+<p>```</p>
 
             </div>
             <hr/>
