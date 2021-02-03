@@ -830,7 +830,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.2k
+                    5.3k
                 </div>
                 
 
@@ -1373,7 +1373,7 @@ $num2 = '2';
 echo $num1 + $num2; # 字符串转为数字相加
 ?&gt;</code></pre>
 <h3 id="常量使用"><a href="#常量使用" class="headerlink" title="常量使用"></a>常量使用</h3><p>常量是一个简单值的标识符（名字）。常量默认为大小写敏感。按照惯例常量标识符总是大写的。</p>
-<p><em>常量特性</em></p>
+<p><strong>常量特性</strong></p>
 <ul>
 <li>常量前面没有美元符号（$）</li>
 <li>常量只能用define() 函数定义，而不能通过赋值语句</li>
@@ -1381,7 +1381,7 @@ echo $num1 + $num2; # 字符串转为数字相加
 <li>常量的值用来定义 整型，浮点，字符串，布尔值，数组（PHP7新增）</li>
 <li>常量可以不用理会变量范围的可以在任何位置访问</li>
 </ul>
-<p><em>声明常量</em></p>
+<p><strong>声明常量</strong></p>
 <p>常量可以使用 const 和 define 定义。</p>
 <pre><code>&lt;?php 
 define('NAME','FanHeart',true);
@@ -1611,12 +1611,12 @@ $a = $a*&amp;b ;</code></pre>
 <td align="left">逻辑与 TRUE，如果 $a 与 $b 都为TRUE</td>
 </tr>
 <tr>
-<td align="left">$a `</td>
-<td align="left"><code> </code></td>
+<td align="left">$a 或 $b</td>
+<td align="left">逻辑或 TRUE，如果 $a 或 $b 任一为TRUE</td>
 </tr>
 </tbody></table>
 <blockquote>
-<p>and与&amp;&amp; 、or与||是同一逻辑运算符的两种写法，但优先级不同。这四个符号的优先允许从高到低是：&amp;&amp;、||、AND、OR。</p>
+<p><code>and</code>与<code>&amp;&amp;</code> 、<code>or</code>与<code>||</code>是同一逻辑运算符的两种写法，但优先级不同。这四个符号的优先允许从高到低是：<code>&amp;&amp;</code>、<code>||</code>、<code>AND</code>、<code>OR</code>。</p>
 </blockquote>
 <h4 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h4><p>变量=(表达式)？值1:值2; 当表达式的返回值为true时，$变量被赋予值1，否则被赋予值2</p>
 <pre><code>&lt;?php
@@ -1626,7 +1626,9 @@ $false = '假';
 echo $var?$true:$false;
 //通过第一个值的真假来控制输出第二个值还是第三个为真则二为假则三
 ?&gt;</code></pre>
+<blockquote>
 <p>PHP 7 新增加的 NULL 合并运算符（??）是用于执行isset()检测的三元运算的快捷方式。 ?: 只判断 true 或 false ，而 ?? 判断变量存在并且值不为null</p>
+</blockquote>
 <pre><code>
 &lt;?php  
 $var = null;
@@ -1643,7 +1645,7 @@ echo isset($var)?'yes':'no';//这样就可以实现检测
 <h4 id="屏蔽错误"><a href="#屏蔽错误" class="headerlink" title="屏蔽错误"></a>屏蔽错误</h4><p>@ 运算符用于屏蔽表达式警告错误</p>
 <pre><code>@(20/0); </code></pre>
 <h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><h4 id="if-else-elseif"><a href="#if-else-elseif" class="headerlink" title="if/else/elseif"></a>if/else/elseif</h4><p>当条件表达式的值为真（true）时，PHP将执行语句组，相反条件表达式的值为假（false）时，PHP将不执行语句组，忽略语句组执行下面的语句。</p>
-<p>花括号形式</p>
+<p><strong>花括号形式</strong></p>
 <pre><code>&lt;?php
 $status = false;
  if($status){
@@ -1653,44 +1655,51 @@ $status = false;
      echo 'hesifan.top';
  }
 ?&gt;</code></pre>
-<p>简化形式适合夹套书写html<br>&lt;?php<br>$status = false;<br>if($status):  </p>
-<p>?&gt;<br>    </p><h1>真</h1><br><!--?php 
+<p><strong>简化形式适合夹套书写html</strong></p>
+<pre><code>&lt;?php 
+$status = false;
+if($status):  
+
+?&gt;
+    &lt;h1&gt;真&lt;/h1&gt;
+&lt;?php 
 else: 
-?--> f<br>   <h1>假</h1><br><!--?php
+?&gt; f
+   &lt;h1&gt;假&lt;/h1&gt;
+&lt;?php
 endif;
-?--><p></p>
-<pre><code>多条件的</code></pre>
-<!--?php 
+?&gt;</code></pre>
+<p><strong>多条件的</strong></p>
+<pre><code>&lt;?php 
 $age = 10;
-if($age<15){
+if($age&lt;15){
     echo '儿童';
 }
-elseif($age<30){
+elseif($age&lt;30){
     echo '青年';
 }
-elseif($age<50){
+elseif($age&lt;50){
     echo '中年';
 }
 else{
     echo '老年';
 }
-?-->
-<!--?php 
+?&gt;
+&lt;?php 
 $age = 10;
-if($age<15):
+if($age&lt;15):
     echo '儿童';
 
-elseif($age<30):
+elseif($age&lt;30):
     echo '青年';
 
-elseif($age<50):
+elseif($age&lt;50):
     echo '中年';
 
 else:
     echo '老年';
 endif;
-?-->
-<p>```</p>
+?&gt;</code></pre>
 
             </div>
             <hr/>
@@ -2531,7 +2540,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">37.7k</span>&nbsp;字
+                class="white-color">37.8k</span>&nbsp;字
             
             
             
