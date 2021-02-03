@@ -823,21 +823,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-02
+                    2021-02-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    5.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    20 分
                 </div>
                 
 
@@ -1371,6 +1371,333 @@ var_dump($bool);
 $num1 = '1'; 
 $num2 = '2'; 
 echo $num1 + $num2; # 字符串转为数字相加
+?&gt;</code></pre>
+<h3 id="常量使用"><a href="#常量使用" class="headerlink" title="常量使用"></a>常量使用</h3><p>常量是一个简单值的标识符（名字）。常量默认为大小写敏感。按照惯例常量标识符总是大写的。</p>
+<p><em>常量特性</em></p>
+<ul>
+<li>常量前面没有美元符号（$）</li>
+<li>常量只能用define() 函数定义，而不能通过赋值语句</li>
+<li>常量一旦定义就不能被重新定义或者取消定义</li>
+<li>常量的值用来定义 整型，浮点，字符串，布尔值，数组（PHP7新增）</li>
+<li>常量可以不用理会变量范围的可以在任何位置访问</li>
+</ul>
+<p><em>声明常量</em></p>
+<p>常量可以使用 const 和 define 定义。</p>
+<pre><code>&lt;?php 
+define('NAME','FanHeart',true);
+//define('NAME','HSF');//常量规范常量大写
+echo NAME;
+const URL  = 'hesifan.top';
+echo '&lt;hr/&gt;';
+echo URL;
+function show(){
+    echo URL;
+    echo NAme;
+}
+show();
+echo '&lt;hr/&gt;';
+echo PHP_VERSION;
+echo '&lt;hr/&gt;';
+echo PHP_OS;
+class demo{
+    public function show(){
+        echo __METHOD__;
+
+    }
+}
+(new demo())-&gt;show();
+print_r(get_defined_constants(categorize:true));
+?&gt;</code></pre>
+<blockquote>
+<p>const 是语言结构，在编译时要比define快,define 可以设置第三个参数为true，来定义不区分大小写的常量,类文件中定义常量也使用const，所以const统一易读</p>
+</blockquote>
+<pre><code>define('常量名',值); 
+define('WEBNAME','houdunwang');
+echo WEBNAME;</code></pre>
+<p>常量检测</p>
+<pre><code>$bool = defined('WEBNAME');
+var_dump($bool); // 结果是false</code></pre>
+<p><em>系统常量</em></p>
+<pre><code>__DIR__            文件所在目录
+__FILE__        文件路径
+__LINE__        程序代码行号
+PHP_VERSION     显示PHP版本
+PHP_OS           显示服务器的操作系统版本
+TRUE            boolean值真(true)支持小写常量
+FALSE             boolean值假(false)支持小写常量
+__FUNCTION__    函数名称
+__METHOD__        方法名称
+__CLASS__        类名称</code></pre>
+<blockquote>
+<p>使用函数 get_defined_constants(true) 可以获取当前可使用的所有常量。</p>
+</blockquote>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><pre><code>&lt;?php 
+$a = 3;
+$b = 4;
+echo $a%$b;//输出3 
+echo $a++;//输出3，后加后减时先赋值后加减，所以输出时还是原值，但还是进行了加减在输出$a则为4
+echo --$a;//输出2
+?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$a+$b</td>
+<td align="left">加法 $a和$b的和</td>
+</tr>
+<tr>
+<td align="left">$a-$b</td>
+<td align="left">减法 $a和$b的差</td>
+</tr>
+<tr>
+<td align="left">$a*$b</td>
+<td align="left">乘法 $a和$b的积</td>
+</tr>
+<tr>
+<td align="left">$a/$b</td>
+<td align="left">除法 $a除以$b的商</td>
+</tr>
+<tr>
+<td align="left">$a<code>%</code> $b</td>
+<td align="left">取模 $a除以$b后的余</td>
+</tr>
+<tr>
+<td align="left">++$a    前加 $a 的值先加一，然后进行操作</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$a++</td>
+<td align="left">后加 $a 的值先进行操作，后加一</td>
+</tr>
+<tr>
+<td align="left">–$a</td>
+<td align="left">前减 $a 的值先减一，然后进行操作</td>
+</tr>
+<tr>
+<td align="left">$a–</td>
+<td align="left">后减 $a 的值先进行操作，后减一</td>
+</tr>
+</tbody></table>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><pre><code>
+$a *= $b;
+等价于
+$a = $a*&amp;b ;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">=</td>
+<td align="left">右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">左边值加上右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">左边值减掉右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">左边值乘以右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">左边值除以右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">.=</td>
+<td align="left">左边字符串连接到右边变量后面</td>
+</tr>
+<tr>
+<td align="left">%=</td>
+<td align="left">左边值对右边值取余数后赋值给左边变量</td>
+</tr>
+</tbody></table>
+<h4 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h4><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.</td>
+<td align="left">它返回其左右参数连接后的字符串</td>
+</tr>
+<tr>
+<td align="left">.=</td>
+<td align="left">左边字符串连接到右边变量后面</td>
+</tr>
+</tbody></table>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><pre><code>&lt;?php  
+ $a = 0;
+ $b = false;
+ var_dump($a == $b);//输出真，两个等号会进行转换，三个为假
+ ?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$a==$b</td>
+<td align="left">等于 TRUE，如果$a等于$b</td>
+</tr>
+<tr>
+<td align="left">$a===$b</td>
+<td align="left">全等于 TRUE，如果$a等于$b，并且类型也相同</td>
+</tr>
+<tr>
+<td align="left">$a!=$b</td>
+<td align="left">不等 TRUE，如果$a不等于$b</td>
+</tr>
+<tr>
+<td align="left">$a&lt;&gt;$b</td>
+<td align="left">不等 TRUE，如果$a不等于$b</td>
+</tr>
+<tr>
+<td align="left">$a!==$b</td>
+<td align="left">非全等 TRUE，如果$a不等于$b，或者类型不同</td>
+</tr>
+<tr>
+<td align="left">$a&lt;$b</td>
+<td align="left">小于 TRUE，如果$a严格小于$b</td>
+</tr>
+<tr>
+<td align="left">$a&gt;$b</td>
+<td align="left">大于 TRUE，如果$a严格$b</td>
+</tr>
+<tr>
+<td align="left">$a&lt;=$b</td>
+<td align="left">小于等于 TRUE，如果 $a 小于或者等于$b</td>
+</tr>
+<tr>
+<td align="left">$a&gt;=$b</td>
+<td align="left">大于等于 TRUE，如果 $a 大于或者等于$b</td>
+</tr>
+</tbody></table>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$a and $b</td>
+<td align="left">逻辑与 TRUE，如果 $a 与 $b 都为 TRUE</td>
+</tr>
+<tr>
+<td align="left">$a or $b</td>
+<td align="left">逻辑或 TRUE，如果 $a 或 $b 任一为TRUE</td>
+</tr>
+<tr>
+<td align="left">!$a</td>
+<td align="left">逻辑非 TRUE，如果 $a 不为 TRUE</td>
+</tr>
+<tr>
+<td align="left">$a &amp;&amp; $b</td>
+<td align="left">逻辑与 TRUE，如果 $a 与 $b 都为TRUE</td>
+</tr>
+<tr>
+<td align="left">$a `</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>and与&amp;&amp; 、or与||是同一逻辑运算符的两种写法，但优先级不同。这四个符号的优先允许从高到低是：&amp;&amp;、||、AND、OR。</p>
+</blockquote>
+<h4 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h4><p>变量=(表达式)？值1:值2; 当表达式的返回值为true时，$变量被赋予值1，否则被赋予值2</p>
+<pre><code>&lt;?php
+$var = 1;
+$true = '真';
+$false = '假';
+echo $var?$true:$false;
+//通过第一个值的真假来控制输出第二个值还是第三个为真则二为假则三
+?&gt;</code></pre>
+<p>PHP 7 新增加的 NULL 合并运算符（??）是用于执行isset()检测的三元运算的快捷方式。 ?: 只判断 true 或 false ，而 ?? 判断变量存在并且值不为null</p>
+<pre><code>
+&lt;?php  
+$var = null;
+echo $var??'no';//输出no
+$var = '1';
+echo $var??'no';//输出1
+/*若第一个值不存在或为null则输出第二个值反之存在则输出第一个值
+*同时具有输出，和检测是否为空的功能
+*/
+//若用？：则要用isset函数检测如 
+//echo $var?'yes':'no';若$var不存在会报错
+echo isset($var)?'yes':'no';//这样就可以实现检测
+?&gt;</code></pre>
+<h4 id="屏蔽错误"><a href="#屏蔽错误" class="headerlink" title="屏蔽错误"></a>屏蔽错误</h4><p>@ 运算符用于屏蔽表达式警告错误</p>
+<pre><code>@(20/0); </code></pre>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><h4 id="if-else-elseif"><a href="#if-else-elseif" class="headerlink" title="if/else/elseif"></a>if/else/elseif</h4><p>当条件表达式的值为真（true）时，PHP将执行语句组，相反条件表达式的值为假（false）时，PHP将不执行语句组，忽略语句组执行下面的语句。</p>
+<pre><code>
+花括号形式
+&lt;?php
+$status = false;
+ if($status){
+     echo 'FanHeart';
+ }
+ else{
+     echo 'hesifan.top';
+ }
+?&gt;
+简化形式适合夹套书写html
+&lt;?php 
+$status = false;
+if($status):  
+
+?&gt;
+    &lt;h1&gt;真&lt;/h1&gt;
+&lt;?php 
+else: 
+?&gt; f
+   &lt;h1&gt;假&lt;/h1&gt;
+&lt;?php
+endif;
+?&gt;
+多条件的
+&lt;?php 
+$age = 10;
+if($age&lt;15){
+    echo '儿童';
+}
+elseif($age&lt;30){
+    echo '青年';
+}
+elseif($age&lt;50){
+    echo '中年';
+}
+else{
+    echo '老年';
+}
+?&gt;
+&lt;?php 
+$age = 10;
+if($age&lt;15):
+    echo '儿童';
+
+elseif($age&lt;30):
+    echo '青年';
+
+elseif($age&lt;50):
+    echo '中年';
+
+else:
+    echo '老年';
+endif;
 ?&gt;</code></pre>
 
             </div>
@@ -2212,7 +2539,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.3k</span>&nbsp;字
+                class="white-color">37.7k</span>&nbsp;字
             
             
             
