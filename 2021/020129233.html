@@ -823,21 +823,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-03
+                    2021-02-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.3k
+                    6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    24 分
                 </div>
                 
 
@@ -1700,6 +1700,126 @@ else:
     echo '老年';
 endif;
 ?&gt;</code></pre>
+<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><p>switch设置多个执行代码块，break指令终止向下执行，default为上面条件都不满足时执行的默认代码块。</p>
+<pre><code>&lt;?php
+switch ($status) {
+case 'success':
+    echo '成功';
+    break;
+case 'error':
+    echo '错误';
+    break;
+case 'warning':
+    echo '警告';
+    break;
+}
+?&gt;</code></pre>
+<p>也可以使用以下写法</p>
+<pre><code>&lt;?php
+switch ($status) :
+    case 'success':
+        echo '成功';
+        break;
+    case 'error':
+        echo '错误';
+        break;
+    case 'warning':
+        echo '警告';
+        break;
+endswitch;</code></pre>
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><p>当while循环语句中表达式（循环控制语句）的结果为真时，程序将反复执行同一段程序：循环体（ while中的语句或语句序列），直到满足一定的条件（表达式的结果为假时）后才停止执行该段程序。</p>
+<pre><code>&lt;?php
+$num = 10;
+while ($num&gt;0) {
+    echo($num--).'&lt;br/&gt;';
+}
+
+//也可以使用以下写法
+$num = 10;
+while ($num&gt;0):
+    echo($num--).'&lt;br/&gt;';
+endwhile;
+?&gt;</code></pre>
+<h4 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h4><p>与while的差别是条件后判断。</p>
+<pre><code>&lt;?php
+$num = 10;
+do {
+    echo($num--).'&lt;hr/&gt;';
+} while ($num&gt;0);
+?&gt;</code></pre>
+<h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><pre><code>for(表达式1;表达式2;表达式3){
+    语句或语句序列;
+}
+// 表达式1为循环初始条件；
+// 表达式2为循环控制条件；
+// 表达式3为控制变量递增；</code></pre>
+<pre><code>&lt;?php
+for ($num=10;$num&gt;0;$num--) {
+    echo $num.'&lt;hr/&gt;';
+}
+// 也可以使用以下写法
+for ($num=10;$num&gt;0;$num--) :
+    echo $num.'&lt;hr/&gt;';
+endfor;
+
+?&gt;</code></pre>
+<h4 id="break-与-continue"><a href="#break-与-continue" class="headerlink" title="break 与 continue"></a>break 与 continue</h4><p><strong>break</strong></p>
+<p>我们之前在 switch 条件判断中已经使用过 break 关键字，它会使得程序流程离开 switch 本体中的语句，如果 break 使用在 for、while 或 do-while 循环结构中时，将会使得程序离开该层循环。</p>
+<pre><code>&lt;?php
+do {
+    if (!isset($num)) {
+        $num=10;
+    }
+    if ($num==0) {
+        break;
+    }
+    echo($num--).'&lt;hr/&gt;';
+} while (true);
+?&gt;</code></pre>
+<blockquote>
+<p>break 在多层循环嵌套使用时，可以指定跳转出层数。</p>
+</blockquote>
+<pre><code>&lt;?php
+$num=0;
+while (true):
+    $num++;
+    switch ($num) {
+        case $num%2==0:
+            echo $num."&lt;hr/&gt;";
+            break;
+        case $num%15==0:
+            echo $num."&lt;hr/&gt;";
+            break 2;
+    }
+endwhile;
+?&gt;</code></pre>
+<h4 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h4><p>continue 的作用与 break 有点类似，continue 若使用在 for、while 或 do-while循环结构中，当程序执行至 continue 时，之后的语句将直接被略过，而直接执行下一次的循环动作。</p>
+<pre><code>&lt;?php
+for ($num=10;$num&gt;0;$num--) {
+    if(!($num%2))continue;
+    echo $num.'&lt;hr/&gt;';
+}
+?&gt;</code></pre>
+<h3 id="文件引入"><a href="#文件引入" class="headerlink" title="文件引入"></a>文件引入</h3><p><strong>include &amp; require</strong></p>
+<p>使用include和require 将文件导入，就像把该文件粘贴到使用函数的地方。</p>
+<blockquote>
+<p>include( )与require ( )区别在于错误处理方式，当引入产生错误时include( )产生一个警告而require( )则导致一个致命错误。</p>
+</blockquote>
+<pre><code>&lt;?php
+include './test.php'; 
+echo 'test'; //如果test.php文件不存在会报一个warning错误，但是可以输出test
+?&gt;</code></pre>
+<blockquote>
+<p>可以使用 @ 屏蔽incluce加载警告错误</p>
+</blockquote>
+<pre><code>&lt;?php
+if (!@include 'a.php') {
+    echo '文件不存在';
+}
+?&gt;</code></pre>
+<p>require 加载失败时将终止程序执行</p>
+<pre><code>require './test.php'; 
+echo 'test'; //如果test.php文件不存在会报一个fatal错误，不可以输出test</code></pre>
 
             </div>
             <hr/>
@@ -2540,7 +2660,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">37.8k</span>&nbsp;字
+                class="white-color">38.5k</span>&nbsp;字
             
             
             
