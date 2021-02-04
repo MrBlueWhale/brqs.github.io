@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>我的centos使用手册</title>
+      <link href="2021/020425073.html"/>
+      <url>2021/020425073.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>本文记录我的centos使用之路，逐渐<br>驯服centos的过程，最开始用其实很迷，后来越来越了解。本文仅为我可以快速查阅相关命令用，对于其他读者价值较小</p></blockquote><h3 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h3><p> 开机启动保障网页和mc服务器的正常运行<br> <strong>网站</strong></p><pre><code>systemctl start nginxsystemctl start mariadbsystemctl start php-fpm.service</code></pre><p> <strong>mc服务器</strong></p><pre><code>screen -S mccd /opt/Mc11604bash go.sh</code></pre><blockquote><p>习惯性手动开启一下服务，有开机自启  </p></blockquote><h3 id="重启停止"><a href="#重启停止" class="headerlink" title="重启停止"></a>重启停止</h3><p>这里记录服务器上各种软件的各种操作<br><strong>nginx</strong></p><pre><code>systemctl start nginxsystemctl stop nginxsystemctl restart nginxsystemctl enable nginxnginx -t</code></pre><p><strong>php72</strong></p><pre><code>systemctl start php-fpm.servicesystemctl stop php-fpm.servicesystemctl restart php-fpm.servicesystemctl enable php-fpm.service</code></pre><p><strong>mysql</strong></p><pre><code>mysql -u root -p  CREATE DATABASE typecho;     CREATE USER admin@localhost IDENTIFIED BY 'password';     GRANT ALL PRIVILEGES ON typecho.* TO admin@localhost IDENTIFIED BY 'password';  FLUSH PRIVILEGES;systemctl start mariadbsystemctl stop mariadbsystemctl restart mariadbsystemctl enable mariadb</code></pre><p><strong>screen</strong>  </p><pre><code>screen -S screenname  screen -x [会话id]  screen -S screenname -X quit #彻底杀死会话  </code></pre><p><strong>docker</strong></p><pre><code>systemctl start dockersystemctl stop dockersystemctl restart dockersystemctl enable dockercd zhamao-framework-starterdocker run -it --rm -v $(pwd):/app/ -p 20001:20001 zmbot/swoole vendor/bin/start serverreload</code></pre><p><strong>cqhttp</strong></p><pre><code>cd /home/qq./go-cqhttp</code></pre><h3 id="提升文件权限"><a href="#提升文件权限" class="headerlink" title="提升文件权限"></a>提升文件权限</h3><pre><code> chmod 777 文件路径(/*) chmod +x  文件路径(/*)</code></pre><h3 id="改变文件所属用户"><a href="#改变文件所属用户" class="headerlink" title="改变文件所属用户"></a>改变文件所属用户</h3><pre><code>chown -R root(user) 文件路径(/*)chown username filename</code></pre><h3 id="当前路径"><a href="#当前路径" class="headerlink" title="当前路径"></a>当前路径</h3><pre><code>pwd</code></pre><h3 id="查包删除"><a href="#查包删除" class="headerlink" title="查包删除"></a>查包删除</h3><pre><code>rpm -qa|grep 软件名rpm -ev 查找结果find / -name mysqlrm -rf /var/lib/mysqlyum remove 软件名</code></pre><h3 id="执行脚本"><a href="#执行脚本" class="headerlink" title="执行脚本"></a>执行脚本</h3><pre><code>cd 脚本存放位置bash 脚本</code></pre><h3 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h3><pre><code>软件名 -vnginx -vphp -v</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centos </tag>
+            
+            <tag> 手册 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>php学习笔记</title>
       <link href="2021/020129233.html"/>
       <url>2021/020129233.html</url>
