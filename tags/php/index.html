@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: php, 凡尘纪">
+    <meta name="keywords" content="标签: PHP, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: php | 凡尘纪</title>
+    <title>标签: PHP | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -724,11 +724,11 @@
                 </a>
                 
                 
-                <a href="/tags/php/" title="php: 3">
+                <a href="/tags/php/" title="php: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
+                             chip-default "
                             data-tagname="php" style="background-color: #E8F8F5;">php
-                        <span class="tag-length">3</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -912,6 +912,15 @@
                     </span>
                 </a>
                 
+                
+                <a href="/tags/PHP/" title="PHP: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="PHP" style="background-color: #85C1E9;">PHP
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -923,82 +932,21 @@
         <div class="row tags-posts">
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="php, 笔记, 总结" data-aos="fade-up">
+            <div class="article tag-post col s12 m6 l4" data-tags="笔记, 总结, PHP" data-aos="fade-up">
                 <div class="card">
-                    <a href="/2021/020129233.html">
+                    <a href="/2021/02011.html">
                         <div class="card-image tag-image">
                             
-                            <img src="/medias/post/webp/php.webp" class="responsive-img" alt="php学习笔记">
                             
-                            <span class="card-title">php学习笔记</span>
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/php/" class="post-category">
-                                php
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="mysql, php, nginx, centos" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2021/012225762.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/post/webp/typecho.webp" class="responsive-img" alt="centos7.6全指令安装typecho及其php环境">
-                            
-                            <span class="card-title">centos7.6全指令安装typecho及其php环境</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-22
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/typecho/" class="post-category">
-                                typecho
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="服务器, mysql, apache, php" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2021/010561027.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/post/webp/php.webp" class="responsive-img" alt="centos服务器手动安装PHP环境">
-                            
-                            <span class="card-title">centos服务器手动安装PHP环境</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                             <span class="publish-author">
                                 
@@ -1264,6 +1212,66 @@ $(function () {
         b = !b;
         b ? enterfullscreen() : exitfullscreen();
     })
+    </script>
+<!-- 樱花特效 -->
+<script type="text/javascript">
+//只在桌面版网页启用特效
+var windowWidth = $(window).width();
+if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+}
+</script>
+
+<script> 
+//深色模式
+if (localStorage.getItem('dark') === '1') { 
+    document.body.classList.add('dark'); 
+	} 
+else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
+	document.body.classList.add('dark'); } 
+</script> 
+<!-- 深色模式按钮 -->
+<a onclick="switchNightMode()" id="sma"> 
+	<i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
+</a>
+
+
+<!-- 网站主题切换模式开始 -->
+
+<!--春节模式按钮-->
+<script>
+    if (localStorage.getItem('themespring') === '1') {
+    document.body.classList.add('themespring');
+    }
+    else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+    document.body.classList.add('themespring');
+    }
+</script>
+<div onclick="switchSpringThemes()" id="switchspring">
+    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
+</div>
+
+
+<!--圣诞模式按钮-->
+<script>
+    if (localStorage.getItem('themechris') === '1') {
+    document.body.classList.add('themechris');
+    }
+    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+    document.body.classList.add('themechris');
+    }
+</script>
+<a onclick="switchChrisThemes()" id="switchchristmas">
+    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
+</a>
+
+
+
+
+</body> 
+
+</html>
+ })
     </script>
 <!-- 樱花特效 -->
 <script type="text/javascript">
