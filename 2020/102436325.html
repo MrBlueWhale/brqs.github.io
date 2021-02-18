@@ -1292,7 +1292,7 @@ hexo s</code></pre>
     max-height: 100%;
     /* transform: translate(0,-0.5px); */
   }
-  #poster {
+  #posterxz {
     border-radius: inherit;
     display: block;
     position: inherit;
@@ -1321,7 +1321,7 @@ hexo s</code></pre>
           <div id="xz">
             <div id="html2img">
               <div id="html2canvas">
-                <span id="poster"> </span>
+                <span id="posterxz"> </span>
               </div>
             </div>
           </div>
@@ -1367,7 +1367,7 @@ hexo s</code></pre>
     html2canvas($('#capture')[0], { useCORS: true, allowTaint: true, scrollX: 0, scrollY: 0, backgroundColor: null }).then((canvas) => {
       let baseUrl = canvas.toDataURL('image/png'),
         imgDom = '<img src="' + baseUrl + '" />'
-      document.getElementById('poster').innerHTML += imgDom
+      document.getElementById('posterxz').innerHTML += imgDom
     })
   }
 </script>
