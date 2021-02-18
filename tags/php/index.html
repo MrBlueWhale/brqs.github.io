@@ -937,9 +937,9 @@
                     <a href="/2021/02011.html">
                         <div class="card-image tag-image">
                             
-                            <img src="/medias/post/webp/php.webp" class="responsive-img" alt="">
+                            <img src="/medias/post/webp/php.webp" class="responsive-img" alt="php笔记">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">php笔记</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
@@ -1210,67 +1210,6 @@ $(function () {
     $('#fullscreen_li ').on('click', function() {
         b = !b;
         b ? enterfullscreen() : exitfullscreen();
-    })
-    </script>
-<!-- 樱花特效 -->
-<script type="text/javascript">
-//只在桌面版网页启用特效
-var windowWidth = $(window).width();
-if (windowWidth > 768) {
-    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-}
-</script>
-
-<script> 
-//深色模式
-if (localStorage.getItem('dark') === '1') { 
-    document.body.classList.add('dark'); 
-	} 
-else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
-	document.body.classList.add('dark'); } 
-</script> 
-<!-- 深色模式按钮 -->
-<a onclick="switchNightMode()" id="sma"> 
-	<i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
-</a>
-
-
-<!-- 网站主题切换模式开始 -->
-
-<!--春节模式按钮-->
-<script>
-    if (localStorage.getItem('themespring') === '1') {
-    document.body.classList.add('themespring');
-    }
-    else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
-    document.body.classList.add('themespring');
-    }
-</script>
-<div onclick="switchSpringThemes()" id="switchspring">
-    <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式">
-</div>
-
-
-<!--圣诞模式按钮-->
-<script>
-    if (localStorage.getItem('themechris') === '1') {
-    document.body.classList.add('themechris');
-    }
-    else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
-    document.body.classList.add('themechris');
-    }
-</script>
-<a onclick="switchChrisThemes()" id="switchchristmas">
-    <img class="theme-buttonchrismas" src="/medias/christmas-img/ball.jpg" title="圣诞模式">
-</a>
-
-
-
-
-</body> 
-
-</html>
-reen() : exitfullscreen();
     })
     </script>
 <!-- 樱花特效 -->
