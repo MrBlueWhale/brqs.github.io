@@ -76,9 +76,9 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
             <tag> php </tag>
+            
+            <tag> mysql </tag>
             
             <tag> nginx </tag>
             
@@ -157,13 +157,13 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
+            <tag> php </tag>
             
             <tag> mysql </tag>
             
-            <tag> apache </tag>
+            <tag> 服务器 </tag>
             
-            <tag> php </tag>
+            <tag> apache </tag>
             
         </tags>
       
