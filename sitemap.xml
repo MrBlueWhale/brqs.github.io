@@ -368,14 +368,14 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/matery/</loc>
+    <loc>http://hesifan.top/tags/hexo/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/hexo/</loc>
+    <loc>http://hesifan.top/tags/matery/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -389,13 +389,6 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/</loc>
-    <lastmod>2021-02-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hesifan.top/tags/ps/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
@@ -403,14 +396,14 @@
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>http://hesifan.top/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hesifan.top/tags/mc/</loc>
+    <loc>http://hesifan.top/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -425,6 +418,13 @@
   
   <url>
     <loc>http://hesifan.top/tags/%E7%AB%99%E7%82%B9/</loc>
+    <lastmod>2021-02-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hesifan.top/tags/mc/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -475,14 +475,14 @@
 
   
   <url>
-    <loc>http://hesifan.top/categories/typecho/</loc>
+    <loc>http://hesifan.top/categories/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hesifan.top/categories/%E6%80%BB%E7%BB%93/</loc>
+    <loc>http://hesifan.top/categories/typecho/</loc>
     <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
