@@ -883,13 +883,16 @@
             padding: 0 0.8rem;
           }
           .article-sort-item-title {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
             font-size: 1.1em;
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             -o-transition: all 0.3s;
             -ms-transition: all 0.3s;
             transition: all 0.3s;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 1;
           }
         </style>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
