@@ -270,6 +270,20 @@
 
   
   <url>
+    <loc>https://hesifan.top/tags/awbw/</loc>
+    <lastmod>2021-03-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hesifan.top/tags/game/</loc>
+    <lastmod>2021-03-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hesifan.top/tags/php/</loc>
     <lastmod>2021-03-03</lastmod>
     <changefreq>daily</changefreq>
@@ -375,6 +389,13 @@
   </url>
   
   <url>
+    <loc>https://hesifan.top/tags/mc/</loc>
+    <lastmod>2021-03-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hesifan.top/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2021-03-03</lastmod>
     <changefreq>daily</changefreq>
@@ -390,13 +411,6 @@
   
   <url>
     <loc>https://hesifan.top/tags/%E7%AB%99%E7%82%B9/</loc>
-    <lastmod>2021-03-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hesifan.top/tags/mc/</loc>
     <lastmod>2021-03-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -444,24 +458,17 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://hesifan.top/tags/awbw/</loc>
-    <lastmod>2021-03-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hesifan.top/tags/game/</loc>
-    <lastmod>2021-03-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
     <loc>https://hesifan.top/categories/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2021-03-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hesifan.top/categories/game/</loc>
     <lastmod>2021-03-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -504,13 +511,6 @@
   
   <url>
     <loc>https://hesifan.top/categories/abode/</loc>
-    <lastmod>2021-03-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hesifan.top/categories/game/</loc>
     <lastmod>2021-03-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
