@@ -107,7 +107,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/pyq" class="waves-effect waves-light">
+    <a href="/friendcircle" class="waves-effect waves-light">
       
       <i class="fa fa-puzzle-piece" style="zoom: 0.6;"></i>
       
@@ -299,7 +299,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/pyq" class="waves-effect waves-light">
+		<a href="/friendcircle" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fa fa-puzzle-piece"></i>
 			
@@ -1334,7 +1334,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.2k</span>&nbsp;字
+                class="white-color">44.7k</span>&nbsp;字
             
             
             
@@ -1657,9 +1657,6 @@ $(function () {
     </script>
     <script>
       setTimeout(function () {
-        $('img.lazyload').lazyload()
-      }, 100)
-      setTimeout(function () {
         if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
           let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bell" aria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)/</span>'
           M.toast({ html: toastHTML })
@@ -1672,12 +1669,5 @@ $(function () {
         $('.cat-container').remove()
       }, 1800)
     </script>
-    <style>
-      @media only screen and (max-width: 760px) {
-        .bg-cover {
-          background-image: url(/medias/banner/sj.webp) !important;
-        }
-      }
-    </style>
   </body>
 </html>

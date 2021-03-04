@@ -107,7 +107,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/pyq" class="waves-effect waves-light">
+    <a href="/friendcircle" class="waves-effect waves-light">
       
       <i class="fa fa-puzzle-piece" style="zoom: 0.6;"></i>
       
@@ -299,7 +299,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/pyq" class="waves-effect waves-light">
+		<a href="/friendcircle" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fa fa-puzzle-piece"></i>
 			
@@ -448,7 +448,14 @@
 
 </header>
  
-    <div class="bg-cover pd-header about-cover">
+    <style>
+  @media only screen and (max-width: 760px) {
+    .bg-cover {
+      background-image: url(/medias/banner/sj.webp) !important;
+    }
+  }
+</style>
+<div class="bg-cover pd-header about-cover">
   <div class="container"><div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
@@ -490,7 +497,13 @@
 </div>
 
 
-
+<style>
+    @media only screen and (max-width: 760px) {
+      .bg-cover {
+        background-image: url(/medias/banner/sj.webp) !important;
+      }
+    }
+  </style>
 <main class="content">
 
     
@@ -509,6 +522,74 @@
     <div class="row article-row">
     <article id="articles" class="container articles">
         
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    
+                    <a href="/2020/111623576.html">
+                        <div class="card-image card-image-V">
+                            <div class="box-content">
+                                <h3 class="title">阅读全文</h3>
+                                <span class="post" style="width: 180px">关于我的实验室</span>
+                            </div>
+                            
+                            <img src="/medias/post/webp/lab.webp" class="responsive-img" alt="关于我的实验室">
+                            
+                            <!-- 主题 挂件-->
+                            <div class="caishendengsd">        
+                                <div class="caishenxianleftsd">
+                                    <img class="caishenpic huadengpic" src="/medias/christmas-img/3.png">
+                                </div>              
+                            </div>
+                            <div class="caishendeng">        
+                                <div class="caishenxianleft">
+                                    <img class="caishenpic huadengpic" src="/medias/spring-img/3.png">
+                                </div>              
+                            </div>
+                            <span class="card-title title-V">关于我的实验室</span>
+                           
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                关于我的实验室：实验室内大部分页面都是我平时浏览大佬的博客发现的有趣的页面，然后用F12扒下来的。这些页面大多为开源项目，可以按照其说明自由引用，本人崇尚开源精神
+                            
+                        </div>
+                        
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">
+                            <span class="chip bg-color">实验室</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -1316,7 +1397,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.2k</span>&nbsp;字
+                class="white-color">44.7k</span>&nbsp;字
             
             
             
@@ -1639,9 +1720,6 @@ $(function () {
     </script>
     <script>
       setTimeout(function () {
-        $('img.lazyload').lazyload()
-      }, 100)
-      setTimeout(function () {
         if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
           let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bell" aria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)/</span>'
           M.toast({ html: toastHTML })
@@ -1654,12 +1732,5 @@ $(function () {
         $('.cat-container').remove()
       }, 1800)
     </script>
-    <style>
-      @media only screen and (max-width: 760px) {
-        .bg-cover {
-          background-image: url(/medias/banner/sj.webp) !important;
-        }
-      }
-    </style>
   </body>
 </html>
