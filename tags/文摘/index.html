@@ -171,6 +171,24 @@
       </li>
       
       <li>
+        <a href="/time">
+          
+          <i class="fa fa-history" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>倒计时</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/game">
+          
+          <i class="fa fa-sync" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>小游戏</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/journal">
           
           <i class="fa fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -189,11 +207,11 @@
       </li>
       
       <li>
-        <a href="/time">
+        <a href="/status">
           
-          <i class="fa fa-history" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fa fa-sync" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>倒计时</span>
+          <span>检测器</span>
         </a>
       </li>
       
@@ -203,15 +221,6 @@
           <i class="fa fa-bullhorn" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>博主说</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/status">
-          
-          <i class="fa fa-sync" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>检测器</span>
         </a>
       </li>
       
@@ -364,6 +373,26 @@
               
                 <li>
 
+                  <a href="/time " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-history" style="position: absolute;left:50px" ></i>
+			      
+		          <span>倒计时</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/game " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-sync" style="position: absolute;left:50px" ></i>
+			      
+		          <span>小游戏</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/journal " style="margin-left:75px">
 				  
 				   <i class="fa fa fa-book" style="position: absolute;left:50px" ></i>
@@ -384,11 +413,11 @@
               
                 <li>
 
-                  <a href="/time " style="margin-left:75px">
+                  <a href="/status " style="margin-left:75px">
 				  
-				   <i class="fa fa fa-history" style="position: absolute;left:50px" ></i>
+				   <i class="fa fa fa-sync" style="position: absolute;left:50px" ></i>
 			      
-		          <span>倒计时</span>
+		          <span>检测器</span>
                   </a>
                 </li>
               
@@ -399,16 +428,6 @@
 				   <i class="fa fa fa-bullhorn" style="position: absolute;left:50px" ></i>
 			      
 		          <span>博主说</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/status " style="margin-left:75px">
-				  
-				   <i class="fa fa fa-sync" style="position: absolute;left:50px" ></i>
-			      
-		          <span>检测器</span>
                   </a>
                 </li>
               
@@ -1150,20 +1169,6 @@ $(function () {
         $('.menu-V .toggle').on('click', function () {
           $('.menu-V').toggleClass('expanded'), $('.menu-V a').toggleClass('hidden'), $('.menu-V .container-M , .toggle').toggleClass('close')
         })
-    </script>
-    <script>
-      setTimeout(function () {
-        if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
-          let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bell" aria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)/</span>'
-          M.toast({ html: toastHTML })
-        }
-      }, 2200)
-
-      setTimeout(function () {
-        $('.fa-macos').addClass('fa-apple').removeClass('fa-macos')
-        $('.vcount').before('<hr data-aos="fade-right">')
-        $('.cat-container').remove()
-      }, 1800)
     </script>
   </body>
 </html>
