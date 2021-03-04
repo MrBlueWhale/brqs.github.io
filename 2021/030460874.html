@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: C语言, 凡尘纪">
+    <meta name="keywords" content="近期网站优化小结, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: C语言 | 凡尘纪</title>
+    <title>近期网站优化小结 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -447,366 +447,862 @@
     </div>
 
 </header>
- <div class="bg-cover pd-header about-cover">
-  <div class="container"><div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                念念不忘 必有回响
-                
-            </div>
+ 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['欲买桂花同载酒 终不似 少年游','骨子里文艺的人,一半柴米油盐酱醋茶,一半琴棋书画诗酒花,满头霜雪走过半生,抬眼之处,仍是少年出世之年。'],
-                        startDelay: 300,
-                        typeSpeed: 150,
-                        loop: true,
-                        backSpeed: 150,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">近期网站优化小结</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css" />
+<style>
+  #articleContent h1::before,
+  #articleContent h2::before,
+  #articleContent h3::before,
+  #articleContent h4::before,
+  #articleContent h5::before,
+  #articleContent h6::before {
+    display: block;
+    content: ' ';
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+  }
+
+  #articleContent :focus {
+    outline: none;
+  }
+
+  .toc-fixed {
+    position: fixed;
+    top: 64px;
+  }
+
+  .toc-widget {
+    width: 345px;
+    padding-left: 20px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 35px 2px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.07), 0 2px 5px -5px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .toc-widget .toc-title {
+    margin: 35px 0 15px 0;
+    padding-left: 17px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+
+  .toc-widget ol {
+    padding: 0;
+    list-style: none;
+  }
+
+  #toc-content {
+    height: calc(100vh - 250px);
+    overflow: auto;
+  }
+
+  #toc-content ol {
+    padding-left: 10px;
+  }
+
+  #toc-content ol li {
+    padding-left: 10px;
+  }
+
+  #toc-content .toc-link:hover {
+    color: #42b983;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  #toc-content .toc-link::before {
+    background-color: transparent;
+    max-height: 25px;
+
+    position: absolute;
+    right: 23.5vw;
+    display: block;
+  }
+
+  #toc-content .is-active-link {
+    color: #42b983;
+  }
+</style>
+<div class="row">
+  <div id="main-content" class="col s12 m12 l9"><!-- 文章内容详情 -->
+<div id="artDetail">
+  <div class="card">
+    <div class="card-content article-info">
+      <!-- 主题 挂件 （中） -->
+      <div class="caishendengsd">
+        <div class="guguxiansd wenzhangxian">
+          <img class="caishenpic gugus" src="/medias/christmas-img/2.png" />
+        </div>
+      </div>
+      <div class="caishendeng">
+        <div class="guguxian wenzhangxian">
+          <img class="caishenpic gugus" src="/medias/spring-img/2.png" />
+        </div>
+      </div>
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/hexo/">
+              <span class="chip bg-color">hexo</span>
+            </a>
+            
+            <a href="/tags/%E7%BD%91%E7%AB%99/">
+              <span class="chip bg-color">网站</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/%E6%80%BB%E7%BB%93/" class="post-category"> 总结 </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2021-03-04</div>
+         
+        <div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2021-03-04</div>
+         
+        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 524</div>
+         
+        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 1 分</div>
+         
+        <div id="busuanzi_container_page_pv" class="info-break-policy">
+          <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+          <span id="busuanzi_value_page_pv"></span>
+        </div>
+        
+      </div>
+    </div>
+    <hr class="clearfix" />
+    <div class="card-content article-card-content">
+      <div id="articleContent"><blockquote>
+<p>昨天对网站做了很大变动（已经很久没变动过了），断舍离了很多东西，也修改（F12）了不少东西，就此做个小结。</p>
+</blockquote>
+<h2 id="删除不必要的页面"><a href="#删除不必要的页面" class="headerlink" title="删除不必要的页面"></a>删除不必要的页面</h2><p>删除了小游戏，书单，捐助系统等页面，原因很简单我的心态已经从开始单纯追求页面多变为了少而精，删除的页面要么几乎没人访问，甚至我自己都从来不会点进去比如书单页面，要么就是没必要比如小游戏的页面，谁在无聊也不会在你网站上玩小游戏啊。但是毕竟当时也花了一定的时间去整理页面所以我并没有直接彻底删除只是将其隐藏在了彩蛋文件夹里等有时间重新整理聚合成一个小页面再放出来，以我拖延症的性格这估计又是有生之年系列了。</p>
+<h2 id="聚合调整导航栏"><a href="#聚合调整导航栏" class="headerlink" title="聚合调整导航栏"></a>聚合调整导航栏</h2><p>原本导航栏很长而且折叠很多，在删除了一些页面后，将关于站点和关于博主合并为关于页面，将大多数折叠页面拆开，聚合到清单页面。</p>
+<h2 id="修改网站字体"><a href="#修改网站字体" class="headerlink" title="修改网站字体"></a>修改网站字体</h2><p>之前的江西浊楷体用了很久，最开始看见这个字体甚是欢喜，但是也存在很多问题，如字体包过大拖慢网站加载速度，文章页面字体不清晰，数字容易堆叠。拖到昨天就着断舍离的东风下定决心换成宋体为主要字体，副标题和logo旁字体为楷体。</p>
+<h2 id="修改侧边按钮"><a href="#修改侧边按钮" class="headerlink" title="修改侧边按钮"></a>修改侧边按钮</h2><p>修改了侧边按钮样式，将一部分按钮聚合，同时优化深色模式并加了切换动画</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>修复文章格式错误,适配了移动端bannner，去除player提升访问速度。</p>
+<h2 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h2><p>由于这次变动过大，请清除浏览器缓存在访问否则可能会出现样式异常的问题，电脑可使用CTRL F5强制刷新访问。</p>
+</div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">不染轻裳</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://hesifan.top/2021/030460874.html">https://hesifan.top/2021/030460874.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">不染轻裳</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block">
+        <div class="post-meta__tag-list" style="display: inline-block">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/hexo/">
+              <span class="chip bg-color">hexo</span>
+            </a>
+            
+            <a href="/tags/%E7%BD%91%E7%AB%99/">
+              <span class="chip bg-color">网站</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0"><link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+</div>
+      </div>
+        
+    </div>
+  </div>
+       <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 10px 10px 5px 10px;
+    }
+
+
+
+
+
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+.v[data-class="v"] .vwrap .vheader .vinput {
+  width: 32%;
+  border-bottom: 1px dashed #dedede;
+}
+	
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <!-- 主题 挂件 -->
+    <div class="caishendengsd">        
+        <div class="caishenxianleftsd">
+            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
+        </div>              
+    </div>
+    <div class="caishendeng">        
+        <div class="caishenxianleft">
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
+        </div>              
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid" data-class="v">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    let metaPlaceholder = {"nick":"昵称/qq(必填)","mail":"邮箱(必填)","link":"网址(https://)选填"} ;
+//这里要换行
+new Valine({
+        el: '#vcomments',
+        appId: 'MTf2zMKqfswMOoRa90rOoCWC-gzGzoHsz',
+        appKey: 'lJMlfgSfSTKrTvrIzNhpGyhG',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-CN',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        meta: ["nick", "mail", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'monsterid',
+        requiredFields: ["f5a3318ea1fc0d20"],
+        master: 'ddf016c0f5a3318ea1fc0d20c8ac4429',
+        friends: ["efc1730bf09301ac92cf7ba5a8c88df0", "80a023e11167a78a35f72ef4dd0a48f4", "1512958e18378c98b498d5effe3e76ff"],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        metaPlaceholder: metaPlaceholder,
+
+    });
+</script>
+
+
+
+
+   
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/030460874.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="近期网站优化小结">
+                        
+                        <span class="card-title">近期网站优化小结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+昨天对网站做了很大变动（已经很久没变动过了），断舍离了很多东西，也修改（F12）了不少东西，就此做个小结。
+
+删除不必要的页面删除了小游戏，书单，捐助系统等页面，原因很简单我的心态已经从开始单纯追求页面多变为了少而精，删除的页面要么几乎没
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E7%AB%99/">
+                        <span class="chip bg-color">网站</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/022259789.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/post/webp/awbw.webp" class="responsive-img" alt="awbw入坑指南">
+                        
+                        <span class="card-title">awbw入坑指南</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            awbw入坑指南
+一 awbw简介AWBW全称Advance Wars By Web网址https://awbw.amarriner.com 于2007由国外爱好者联合开发，值得一提的是网站的出资者amarriner先生 虽然已经很久没上线
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/game/" class="post-category">
+                                    game
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/awbw/">
+                        <span class="chip bg-color">awbw</span>
+                    </a>
+                    
+                    <a href="/tags/game/">
+                        <span class="chip bg-color">game</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
 </div>
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+  $('#articleContent').on('copy', function (e) {
+    // IE8 or earlier browser is 'undefined'
+    if (typeof window.getSelection === 'undefined') return
+
+    var selection = window.getSelection()
+    // if the selection is short let's not annoy our users.
+    if (('' + selection).length < Number.parseInt('120')) {
+      return
+    }
+
+    // create a div outside of the visible area and fill it with the selected text.
+    var bodyElement = document.getElementsByTagName('body')[0]
+    var newdiv = document.createElement('div')
+    newdiv.style.position = 'absolute'
+    newdiv.style.left = '-99999px'
+    bodyElement.appendChild(newdiv)
+    newdiv.appendChild(selection.getRangeAt(0).cloneContents())
+
+    // we need a <pre> tag workaround.
+    // otherwise the text inside "pre" loses all the line breaks!
+    if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+      newdiv.innerHTML = '<pre>' + newdiv.innerHTML + '</pre>'
+    }
+
+    var url = document.location.href
+    newdiv.innerHTML += '<br />' + '来源: 凡尘纪<br />' + '文章作者: 不染轻裳<br />' + '文章链接: <a href="' + url + '">' + url + '</a><br />' + '本文章著作权归作者所有，任何形式的转载都请注明出处。'
+
+    selection.selectAllChildren(newdiv)
+    window.setTimeout(function () {
+      bodyElement.removeChild(newdiv)
+    }, 200)
+  })
 </script>
 
 
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+  code[class*='language-'],
+  pre[class*='language-'] {
+    white-space: pre !important;
+  }
+</style>
+
 </div>
-</div>
-
-
-<main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <!-- 主题 挂件 -->
-        <div class="caishendengsd">        
-            <div class="guguxiansd">
-                <img class="caishenpic gugus" src="/medias/christmas-img/7.png">
-            </div>              
-        </div>
-        <div class="caishendeng">        
-            <div class="guguxian">
-                <img class="caishenpic gugus" src="/medias/spring-img/7.png">
-            </div>              
-        </div>
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/awbw/" title="awbw: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="awbw" style="background-color: #F9EBEA;">awbw
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/game/" title="game: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="game" style="background-color: #F5EEF8;">game
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/php/" title="php: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="php" style="background-color: #D5F5E3;">php
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/mysql/" title="mysql: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="mysql" style="background-color: #E8F8F5;">mysql
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/nginx/" title="nginx: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="nginx" style="background-color: #FEF9E7;">nginx
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/centos/" title="centos: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="centos" style="background-color: #F8F9F9;">centos
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%89%8B%E5%86%8C/" title="手册: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="手册" style="background-color: #82E0AA;">手册
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="服务器" style="background-color: #D7BDE2;">服务器
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/apache/" title="apache: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="apache" style="background-color: #A3E4D7;">apache
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/C%E8%AF%AD%E8%A8%80/" title="C语言: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="C语言" style="background-color: #85C1E9;">C语言
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%AC%94%E8%AE%B0/" title="笔记: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="笔记" style="background-color: #F8C471;">笔记
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hello-world/" title="hello  world: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hello  world" style="background-color: #F9E79F;">hello  world
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo/" title="hexo: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo" style="background-color: #FFF;">hexo
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/matery/" title="matery: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="matery" style="background-color: #D7BDE2;">matery
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/markdown/" title="markdown: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="markdown" style="background-color: #D5F5E3;">markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ps/" title="ps: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ps" style="background-color: #FFF;">ps
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" title="实验室: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="实验室" style="background-color: #F8F9F9;">实验室
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/mc/" title="mc: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="mc" style="background-color: #D7BDE2;">mc
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="快捷键: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="快捷键" style="background-color: #FEF9E7;">快捷键
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%80%BB%E7%BB%93/" title="总结: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="总结" style="background-color: #82E0AA;">总结
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%AB%99%E7%82%B9/" title="站点: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="站点" style="background-color: #D7BDE2;">站点
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ssl/" title="ssl: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ssl" style="background-color: #85C1E9;">ssl
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%96%87%E6%91%98/" title="文摘: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="文摘" style="background-color: #D7BDE2;">文摘
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%A2%8E%E8%AF%AD/" title="碎语: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="碎语" style="background-color: #82E0AA;">碎语
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PHP/" title="PHP: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PHP" style="background-color: #85C1E9;">PHP
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo/" title="hexo : 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo " style="background-color: #F5EEF8;">hexo 
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/seo/" title="seo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="seo" style="background-color: #D7BDE2;">seo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BD%91%E7%AB%99/" title="网站: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="网站" style="background-color: #FFF;">网站
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
+  <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+    <div class="toc-widget">
+      <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+      <div id="toc-content"></div>
     </div>
+  </div>
 </div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+  <a class="btn-floating btn-large waves-effect waves-light">
+    <svg t="1612426735340" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15071" width="37" height="37">
+      <path d="M942.7456 293.2736h-35.9424l3.1232 474.5728c0 15.0528-17.8176 22.0672-31.3856 15.4624-147.0464-71.6288-297.472-7.2704-348.2112 15.9744-8.448 3.8912-18.0736-2.2528-18.0736-11.5712v-1.3824c0 9.5232-10.1376 15.7696-18.5856 11.3152-141.4656-75.0592-280.6272-30.2592-341.8112-7.3216-26.1632 9.7792-47.7696-11.4176-47.7696-11.4176l-0.2048 83.1488c0 17.92 44.4928-0.6656 62.3616-2.0992l340.1216-27.3408c1.6384-0.1536 9.5744-0.1536 11.2128 0l422.1952 38.2976c17.8688 1.4336 33.6384-2.0992 33.6384-20.0192V323.9936c0.0512-16.9984-13.7216-30.72-30.6688-30.72z" fill="#BC9BE0" p-id="15072"></path>
+      <path d="M164.3008 252.8768v472.2688c0 13.7216 13.1584 22.9376 25.088 17.6128 52.992-23.9104 181.7088-67.2768 306.2784 2.7648 7.424 4.1472 16.3328-1.6384 16.3328-10.5472V264.3456c0-7.6288-4.2496-14.5408-10.8544-17.5616-41.5744-18.8416-189.8496-72.3968-327.424-10.8032-6.144 2.7648-9.4208 9.8816-9.4208 16.896zM558.3872 252.8768v472.2688c0 13.7216 13.2096 22.9376 25.1392 17.6128 53.0944-23.9104 182.0672-67.2768 306.8928 2.7648 7.424 4.1472 16.384-1.6384 16.384-10.5472V264.3456c0-7.6288-4.2496-14.5408-10.9056-17.5616-41.6256-18.8416-190.208-72.3968-328.0384-10.8032-6.144 2.7648-9.472 9.8816-9.472 16.896z" fill="#FFB47A" p-id="15073"></path>
+      <path
+        d="M942.7456 262.5536h-20.5824V235.52c0-14.3872-8.4992-27.2896-21.6576-32.9216-50.8928-21.76-229.12-86.1696-385.2288 0.1024-1.4848 0.8192-2.9184 1.792-4.2496 2.7648-1.6896-1.0752-3.4304-2.048-5.2736-2.8672-50.8928-21.76-229.12-86.1696-385.2288 0.1024a36.0192 36.0192 0 0 0-18.6368 31.488v28.3648h-14.0288c-25.3952 0-46.08 20.6848-46.08 46.08v526.848c0 12.8 5.4272 25.1904 14.848 33.8944a46.2592 46.2592 0 0 0 34.9184 12.0832l419.2768-33.7408c0.8192-0.0512 1.6384-0.0512 2.4576 0l425.8816 33.792a46.1312 46.1312 0 0 0 34.9184-12.0832 46.19776 46.19776 0 0 0 14.7968-33.8432V308.6336c-0.0512-25.4464-20.736-46.08-46.1312-46.08zM527.36 234.1888c0-1.8944 1.0752-3.6352 2.7648-4.5568 53.8624-29.7472 110.8992-39.936 163.6864-39.936 88.2688 0 164.7616 28.416 194.56 41.216 1.8432 0.768 3.0208 2.6112 3.0208 4.6592v491.52c0 2.4576-1.536 3.7888-2.4064 4.352-0.6656 0.4096-1.8432 0.9728-3.2768 0.768a4.74624 4.74624 0 0 1-1.536-0.4608 361.344 361.344 0 0 0-66.2528-24.576c-124.16-32.8192-239.0528 6.8608-290.56 29.8496V234.1888z m-394.8032 0c0-1.8944 1.0752-3.6352 2.7648-4.5568 143.872-79.5136 310.6304-19.1488 358.2976 1.28 1.8432 0.768 3.0208 2.56 3.0208 4.608v499.7632c-4.1984-2.1504-8.3968-4.1984-12.5952-6.144-1.28-0.6144-2.6112-1.1776-3.8912-1.7408-2.9696-1.3312-5.9392-2.6624-8.9088-3.8912-1.4336-0.6144-2.8672-1.1776-4.3008-1.792-3.0208-1.2288-6.0928-2.4064-9.1136-3.5328-1.2288-0.4608-2.4064-0.9216-3.6352-1.3312-4.1984-1.536-8.3968-2.9696-12.5952-4.3008-0.4096-0.1536-0.8192-0.256-1.2288-0.3584-3.7888-1.1776-7.5776-2.304-11.3664-3.3792-1.3312-0.3584-2.6112-0.7168-3.8912-1.0752-2.9184-0.768-5.888-1.536-8.8064-2.2528-1.3824-0.3584-2.7648-0.6656-4.1472-0.9728-3.1232-0.7168-6.1952-1.3824-9.2672-1.9968-1.0752-0.2048-2.0992-0.4608-3.1744-0.6656-4.1472-0.8192-8.2432-1.536-12.3392-2.1504l-1.9968-0.3072c-3.4304-0.512-6.8608-1.024-10.2912-1.4336l-3.84-0.4608c-2.8672-0.3072-5.7344-0.6144-8.6016-0.8704-1.28-0.1024-2.56-0.256-3.84-0.3584-3.1744-0.256-6.2976-0.4608-9.4208-0.6656l-2.56-0.1536c-3.9936-0.2048-7.936-0.3584-11.8784-0.4608-0.768 0-1.536 0-2.304-0.0512-2.3552-0.0512-4.7104-0.1024-7.0656-0.1024-0.6144 0-1.1776 0.0512-1.792 0.0512-3.4816 0-6.8608 0.1024-10.2912 0.2048-1.2288 0.0512-2.4576 0.0512-3.6864 0.1024-4.5568 0.1536-9.0624 0.4096-13.5168 0.7168l-3.84 0.3072c-3.2256 0.256-6.4 0.512-9.5744 0.8192-1.6896 0.1536-3.328 0.3584-4.9664 0.512-2.7648 0.3072-5.5296 0.6144-8.2432 0.9728-1.6896 0.2048-3.3792 0.4608-5.0176 0.6656-2.7136 0.3584-5.4272 0.768-8.0896 1.1776-1.536 0.256-3.072 0.4608-4.5568 0.7168-3.1744 0.512-6.3488 1.0752-9.4208 1.6896-0.9216 0.1536-1.792 0.3072-2.7136 0.512-3.9424 0.768-7.8336 1.5872-11.6224 2.4064-1.2288 0.256-2.4064 0.5632-3.584 0.8192-2.6112 0.6144-5.2224 1.1776-7.8336 1.8432-1.4336 0.3584-2.7648 0.7168-4.1984 1.024-2.304 0.5632-4.608 1.1776-6.8608 1.792-1.3824 0.3584-2.7136 0.7168-4.0448 1.0752-2.304 0.6144-4.5568 1.28-6.7584 1.9456-1.1776 0.3584-2.3552 0.6656-3.4816 1.024-2.816 0.8704-5.5808 1.6896-8.2944 2.56-0.4608 0.1536-0.9216 0.256-1.3312 0.4096-3.1232 1.024-6.144 1.9968-9.0624 3.0208-0.9728 0.3072-1.8432 0.6656-2.816 0.9728-1.9968 0.6656-3.9424 1.3824-5.8368 2.048-1.024 0.3584-2.048 0.768-3.072 1.1264-1.7408 0.6144-3.4304 1.28-5.0688 1.8944-0.9728 0.3584-1.8944 0.7168-2.816 1.0752-1.6896 0.6656-3.328 1.3312-4.9152 1.9456-0.7168 0.3072-1.4848 0.6144-2.2016 0.8704-2.2528 0.9216-4.4032 1.792-6.4512 2.6624-2.2016 0.9216-3.9424 0.1536-4.8128-0.4096a5.00224 5.00224 0 0 1-2.304-4.3008V234.1888z m825.5488 601.344c0 4.352-1.7408 8.3456-4.9152 11.264-3.1744 2.9696-7.3728 4.352-11.6224 4.0448l-425.8304-33.792a44.36992 44.36992 0 0 0-7.3728 0l-419.2768 33.7408c-4.2496 0.3584-8.448-1.0752-11.6224-4.0448-3.1744-2.9184-4.9664-6.9632-4.9664-11.3152V308.6336c0-8.448 6.912-15.36 15.36-15.36h14.0288v435.9168a35.6864 35.6864 0 0 0 16.0768 29.9008 35.75296 35.75296 0 0 0 33.792 3.072c55.0912-23.4496 197.888-70.0928 334.5408 2.4064 1.024 0.512 2.048 0.9728 3.072 1.3824 0.3072 0.1024 0.6656 0.2048 0.9728 0.3072 0.7168 0.256 1.4336 0.512 2.2016 0.6656 0.4096 0.1024 0.768 0.1536 1.1776 0.256 0.6656 0.1536 1.3312 0.3072 2.048 0.3584 0.4096 0.0512 0.8704 0.1024 1.28 0.1024 0.6656 0.0512 1.28 0.1024 1.9456 0.1024h0.4096c0.256 0 0.512-0.0512 0.8192-0.0512 0.768 0 1.536-0.0512 2.304-0.1536l1.28-0.1536c0.768-0.1024 1.4848-0.256 2.2528-0.4608l1.2288-0.3072c0.8192-0.256 1.5872-0.512 2.3552-0.8192 0.3072-0.1536 0.6656-0.256 0.9728-0.3584 0.0512-0.0512 0.1536-0.0512 0.2048-0.1024 0.512 0.3072 1.0752 0.5632 1.6384 0.8192 0.3584 0.2048 0.7168 0.3584 1.0752 0.5632 1.1264 0.512 2.304 0.9728 3.4816 1.28h0.0512a21.26336 21.26336 0 0 0 4.7104 0.8704c0.8704 0.1024 1.6896 0.1536 2.56 0.2048 0.2048 0 0.3584 0.0512 0.5632 0.0512 0.3584 0 0.7168-0.0512 1.0752-0.0512 0.4608 0 0.9216-0.0512 1.3824-0.0512 0.6144-0.0512 1.2288-0.1536 1.8432-0.256 0.4096-0.0512 0.8704-0.1024 1.28-0.2048 0.6656-0.1536 1.3312-0.3072 1.9968-0.512l1.0752-0.3072c1.024-0.3584 2.048-0.7168 3.0208-1.1776 54.1184-24.7808 195.072-75.0592 334.2848-7.2704 1.3824 0.6656 2.816 1.28 4.2496 1.7408 0.768 0.256 1.5872 0.4608 2.4064 0.6656 0.6656 0.1536 1.28 0.4096 1.9456 0.512 0.8192 0.1536 1.6896 0.256 2.5088 0.3584 0.6144 0.1024 1.28 0.2048 1.8944 0.256 1.3312 0.1024 2.6112 0.1024 3.9424 0.0512h0.512c1.28-0.0512 2.56-0.256 3.84-0.4608 0.2048-0.0512 0.4096-0.0512 0.5632-0.0512 4.4032-0.8192 8.704-2.4576 12.6464-4.9152a35.6864 35.6864 0 0 0 16.8448-30.4128V293.2736h20.5824c8.448 0 15.36 6.912 15.36 15.36v526.8992z"
+        fill="#333333"
+        p-id="15074"
+      ></path>
+    </svg>
+  </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+  $(function () {
+      tocbot.init({
+          tocSelector: '#toc-content',
+          contentSelector: '#articleContent',
+          headingsOffset: -($(window).height() * 0.4 - 45),
+          collapseDepth: Number('0'),
+          headingSelector: 'h2, h3, h4,h5'
+      });
+
+      // modify the toc link href to support Chinese.
+      let i = 0;
+      let tocHeading = 'toc-heading-';
+      $('#toc-content a').each(function () {
+          $(this).attr('href', '#' + tocHeading + (++i));
+      });
+
+      // modify the heading title id to support Chinese.
+      i = 0;
+      $('#articleContent').children('h2, h3, h4,h5').each(function () {
+          $(this).attr('id', tocHeading + (++i));
+      });
+
+      // Set scroll toc fixed.
+      let tocHeight = parseInt($(window).height() * 0.4 - 64);
+      let $tocWidget = $('.toc-widget');
+      $(window).scroll(function () {
+          let scroll = $(window).scrollTop();
+          /* add post toc fixed. */
+          if (scroll > tocHeight) {
+              $tocWidget.addClass('toc-fixed');
+          } else {
+              $tocWidget.removeClass('toc-fixed');
+          }
+      });
+
+      
+      /* 修复文章卡片 div 的宽度. */
+      let fixPostCardWidth = function (srcId, targetId) {
+          let srcDiv = $('#' + srcId);
+          if (srcDiv.length === 0) {
+              return;
+          }
+
+          let w = srcDiv.width();
+          if (w >= 450) {
+              w = w + 21;
+          } else if (w >= 350 && w < 450) {
+              w = w + 18;
+          } else if (w >= 300 && w < 350) {
+              w = w + 16;
+          } else {
+              w = w + 14;
+          }
+          $('#' + targetId).width(w);
+      };
+
+      // 切换TOC目录展开收缩的相关操作.
+      const expandedClass = 'expanded';
+      let $tocAside = $('#toc-aside');
+      let $mainContent = $('#main-content');
+      $('#floating-toc-btn .btn-floating').click(function () {
+          if ($tocAside.hasClass(expandedClass)) {
+              $tocAside.removeClass(expandedClass).hide();
+              $mainContent.removeClass('l9');
+          } else {
+              $tocAside.addClass(expandedClass).show();
+              $mainContent.addClass('l9');
+          }
+          fixPostCardWidth('artDetail', 'prenext-posts');
+      });
+      
+  });
+</script>
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="C语言, 笔记" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2020/102449769.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/post/webp/c.webp" class="responsive-img" alt="c语言笔记">
-                            
-                            <span class="card-title">c语言笔记</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                C语言
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
 
