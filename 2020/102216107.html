@@ -1057,8 +1057,12 @@ new Valine({
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            不染轻裳
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1206,6 +1210,7 @@ new Valine({
 <!-- TOC 悬浮按钮. -->
 
 <script>
+  localStorage.setItem('read', '0')
   function readMode() {
     var body = document.body
     if (body.classList.contains('read')) {
