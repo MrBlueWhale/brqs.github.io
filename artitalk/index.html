@@ -513,16 +513,27 @@
 
 </div>
 </div>
+     
+<script type="text/javascript" size="80" alpha="0.4" zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+  
+<script src="/libs/instantpage/instantpage.js" type="module"></script>
 
+<script src="/js/FunnyTitle.js"></script>
 
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width()
+  if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>')
+  }
+</script>
+ 
 <style ype="text/css">
+  #pubShuo {
+    margin-right: 5px;
+  }
 
-#pubShuo {
-
-  margin-right: 5px;
-}
-
-#operare_artitalk .shuoshuo_input_log {
+  #operare_artitalk .shuoshuo_input_log {
     outline-style: none;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -535,85 +546,73 @@
     width: 70%;
     height: 28px;
     margin-left: 10px;
-}
+  }
 
-#artitalk_main {
+  #artitalk_main {
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 
-  margin-top: 5px ;
-  margin-left: 5%;
-  margin-right: 5%;
-
-}
-
-#lazy{
-  margin-top: 130px;
-}
-
+  #lazy {
+    margin-top: 130px;
+  }
 </style>
-
 
 <script src="https://cdn.jsdelivr.net/npm/artitalk"></script>
 
-<article id="articles11" class="container  chip-container">
-  <div class="row ">
-
-      <div class=" card">
-        <div class="card-content" >
-          <!--主题 挂件-->
-        <div class="caishendengsd">        
+<article id="articles11" class="container chip-container">
+  <div class="row">
+    <div class="card">
+      <div class="card-content">
+        <!--主题 挂件-->
+        <div class="caishendengsd">
           <div class="caishenxiansd">
-            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
-          </div>              
+            <img class="caishenpic fudao" src="/medias/christmas-img/9.png" />
+          </div>
         </div>
-        <div class="caishendengsd">        
+        <div class="caishendengsd">
           <div class="caishenxianleftsd">
-            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
-          </div>              
+            <img class="caishenpic fudao" src="/medias/christmas-img/9.png" />
+          </div>
         </div>
-        <div class="caishendeng">        
+        <div class="caishendeng">
           <div class="caishenxian">
-            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
-          </div>              
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png" />
+          </div>
         </div>
-        <div class="caishendeng">        
+        <div class="caishendeng">
           <div class="caishenxianleft">
-            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
-          </div>              
+            <img class="caishenpic fudao" src="/medias/spring-img/9.png" />
+          </div>
         </div>
-          <div class="tag-title center-align">
-                <i class="fas fa-pen-alt"></i> 说说
-           </div>
-          <div id="artitalk_main"></div>
-        </div>  
+        <div class="tag-title center-align"><i class="fas fa-pen-alt"></i> 说说</div>
+        <div id="artitalk_main"></div>
       </div>
-
+    </div>
   </div>
 </article>
 <script>
   new Artitalk({
-        appId: "Ly34JntGSsHvqXszlQajjH6y-MdYXbMMI",
-        appKey: "p9gLoBwszj1XJb2bev3XtHHF",
-     
-          atEmoji: {
-              baiyan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/baiyan.png",
-              bishi: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bishi.png",
-              bizui: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bizui.png",
-              chan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/chan.png",
-              daku: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/daku.png",
-              dalao: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalao.png",
-              dalian: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalian.png",
-              dianzan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dianzan.png",
-              doge: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/doge.png",
-              facai: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/facai.png",
-              fadai: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fadai.png",
-              fanu: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fanu.png",
-           },
-     })
+    appId: 'Ly34JntGSsHvqXszlQajjH6y-MdYXbMMI',
+    appKey: 'p9gLoBwszj1XJb2bev3XtHHF',
+
+    atEmoji: {
+      baiyan: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/baiyan.png',
+      bishi: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bishi.png',
+      bizui: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bizui.png',
+      chan: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/chan.png',
+      daku: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/daku.png',
+      dalao: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalao.png',
+      dalian: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalian.png',
+      dianzan: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dianzan.png',
+      doge: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/doge.png',
+      facai: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/facai.png',
+      fadai: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fadai.png',
+      fanu: 'https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fanu.png',
+    },
+  })
 </script>
-
-
-
-
  <footer class="page-footer bg-color">
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
@@ -786,12 +785,7 @@ $(function () {
     <script src="/libs/others/clicklove.js" async="async"></script>
      
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-         
-    <script type="text/javascript" size="80" alpha="0.4" zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
-      
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-    <script src="/js/FunnyTitle.js"></script>
+     
     <script>
       function enterfullscreen() {
         //进入全屏
@@ -838,13 +832,6 @@ $(function () {
         b ? enterfullscreen() : exitfullscreen()
       })
     </script>
-    <script type="text/javascript">
-      //只在桌面版网页启用特效
-      var windowWidth = $(window).width()
-      if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>')
-      }
-    </script>
     <script>
       if (localStorage.getItem('themespring') === '1') {
         document.body.classList.add('themespring')
@@ -881,7 +868,7 @@ $(function () {
           <use id="modeicon" xlink:href="#icon-moon"></use>
         </svg>
       </a>
-      <a href="#vcomment" class="icon-V hidden" id="toComment" title="前往评论区">
+      <a href="#vcomments" class="icon-V hidden" id="toComment" title="前往评论区">
         <svg t="1612414443145" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1879" width="38" height="38">
           <path d="M113.834667 291.84v449.194667a29.013333 29.013333 0 0 0 28.842666 29.013333h252.928v90.453333l160.597334-90.453333h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333h-665.6a29.013333 29.013333 0 0 0-29.696 29.013333z" fill="#FFDEAD" p-id="1880"></path>
           <path d="M809.130667 262.826667h-665.6a29.013333 29.013333 0 0 0-28.842667 29.013333v40.106667a29.013333 29.013333 0 0 1 28.842667-29.013334h665.6a29.013333 29.013333 0 0 1 29.013333 29.013334V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333z" fill="#FFF3DB" p-id="1881"></path>

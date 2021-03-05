@@ -513,11 +513,24 @@
 
 </div>
 </div>
+    
+<script type="text/javascript" size="80" alpha="0.4" zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+  
+<script src="/libs/instantpage/instantpage.js" type="module"></script>
 
+<script src="/js/FunnyTitle.js"></script>
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width()
+  if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>')
+  }
+</script>
+ 
 
 <main class="content">
-
-    
+  
 
 <div id="category-cloud" class="container chip-container">
     <div class="card">
@@ -634,128 +647,108 @@
         </div>
     </div>
 </div>
+ 
 
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/02011.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/post/webp/php.webp" class="responsive-img" alt="php笔记">
-                            
-                            <span class="card-title">php笔记</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                基础知识基础知识php是什么？PHP(PHP: Hypertext Preprocessor，超文本预处理器的缩写)，是一种被广泛应用的开放源代码的、基于服务器端的用于产生动态网页的、可嵌入HTML中的脚本程序语言，尤其适合 WEB 开发。
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/PHP/" class="post-category">
-                                    PHP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                            <span class="chip bg-color">笔记</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                        <a href="/tags/PHP/">
-                            <span class="chip bg-color">PHP</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
+  <article id="articles" class="container articles">
+    <div class="row tags-posts">
+      
+      <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+        <div class="card">
+          <a href="/2021/02011.html">
+            <div class="card-image tag-image">
+              
+              <img src="/medias/post/webp/php.webp" class="responsive-img" alt="php笔记" />
+              
+              <span class="card-title">php笔记</span>
             </div>
+          </a>
+          <div class="card-content article-content">
+            <div class="summary block-with-text"> 基础知识基础知识php是什么？PHP(PHP: Hypertext Preprocessor，超文本预处理器的缩写)，是一种被广泛应用的开放源代码的、基于服务器端的用于产生动态网页的、可嵌入HTML中的脚本程序语言，尤其适合 WEB 开发。 </div>
+            <div class="publish-info">
+              <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-02-01 </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/PHP/" class="post-category"> PHP </a>
+                 
+              </span>
+            </div>
+          </div>
+
+          
+          <div class="card-action article-tags">
             
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/010561027.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/post/webp/php.webp" class="responsive-img" alt="centos服务器手动安装PHP环境">
-                            
-                            <span class="card-title">centos服务器手动安装PHP环境</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
+            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+              <span class="chip bg-color">笔记</span>
+            </a>
+            
+            <a href="/tags/%E6%80%BB%E7%BB%93/">
+              <span class="chip bg-color">总结</span>
+            </a>
+            
+            <a href="/tags/PHP/">
+              <span class="chip bg-color">PHP</span>
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+        <div class="card">
+          <a href="/2021/010561027.html">
+            <div class="card-image tag-image">
+              
+              <img src="/medias/post/webp/php.webp" class="responsive-img" alt="centos服务器手动安装PHP环境" />
+              
+              <span class="card-title">centos服务器手动安装PHP环境</span>
+            </div>
+          </a>
+          <div class="card-content article-content">
+            <div class="summary block-with-text"> 
 为什么选择手动安装呢，因为不会用宝塔，虽然很多人都说宝塔好用，但我确实不太会用宝塔，还是选择手动安装吧。本文是我在安装过程中对网上教程的总结避坑，以及自己碰到的问题的总结。
 
-安装顺序最佳的安装顺序是先安装apache再安装mysql最后
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/PHP/" class="post-category">
-                                    PHP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/php/">
-                            <span class="chip bg-color">php</span>
-                        </a>
-                        
-                        <a href="/tags/mysql/">
-                            <span class="chip bg-color">mysql</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                            <span class="chip bg-color">服务器</span>
-                        </a>
-                        
-                        <a href="/tags/apache/">
-                            <span class="chip bg-color">apache</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
+安装顺序最佳的安装顺序是先安装apache再安装mysql最后 </div>
+            <div class="publish-info">
+              <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-01-05 </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/PHP/" class="post-category"> PHP </a>
+                 
+              </span>
             </div>
+          </div>
+
+          
+          <div class="card-action article-tags">
             
+            <a href="/tags/php/">
+              <span class="chip bg-color">php</span>
+            </a>
+            
+            <a href="/tags/mysql/">
+              <span class="chip bg-color">mysql</span>
+            </a>
+            
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+              <span class="chip bg-color">服务器</span>
+            </a>
+            
+            <a href="/tags/apache/">
+              <span class="chip bg-color">apache</span>
+            </a>
+            
+          </div>
+          
         </div>
-    </article>
+      </div>
+      
+    </div>
+  </article>
 </main>
 
 
@@ -931,12 +924,7 @@ $(function () {
     <script src="/libs/others/clicklove.js" async="async"></script>
      
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-         
-    <script type="text/javascript" size="80" alpha="0.4" zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
-      
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-    <script src="/js/FunnyTitle.js"></script>
+     
     <script>
       function enterfullscreen() {
         //进入全屏
@@ -983,13 +971,6 @@ $(function () {
         b ? enterfullscreen() : exitfullscreen()
       })
     </script>
-    <script type="text/javascript">
-      //只在桌面版网页启用特效
-      var windowWidth = $(window).width()
-      if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>')
-      }
-    </script>
     <script>
       if (localStorage.getItem('themespring') === '1') {
         document.body.classList.add('themespring')
@@ -1026,7 +1007,7 @@ $(function () {
           <use id="modeicon" xlink:href="#icon-moon"></use>
         </svg>
       </a>
-      <a href="#vcomment" class="icon-V hidden" id="toComment" title="前往评论区">
+      <a href="#vcomments" class="icon-V hidden" id="toComment" title="前往评论区">
         <svg t="1612414443145" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1879" width="38" height="38">
           <path d="M113.834667 291.84v449.194667a29.013333 29.013333 0 0 0 28.842666 29.013333h252.928v90.453333l160.597334-90.453333h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333h-665.6a29.013333 29.013333 0 0 0-29.696 29.013333z" fill="#FFDEAD" p-id="1880"></path>
           <path d="M809.130667 262.826667h-665.6a29.013333 29.013333 0 0 0-28.842667 29.013333v40.106667a29.013333 29.013333 0 0 1 28.842667-29.013334h665.6a29.013333 29.013333 0 0 1 29.013333 29.013334V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333z" fill="#FFF3DB" p-id="1881"></path>

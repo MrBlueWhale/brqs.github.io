@@ -3116,3 +3116,48 @@ body.themespring .denglong {
   transform: rotate(225deg);
   top: 0;
 }
+/*阅读模式*/
+
+#readmode {
+  position: fixed;
+  right: 15px;
+  bottom: 134px;
+  padding-top: 15px;
+  z-index: 998;
+}
+#readmode .btn-floating {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 6px !important;
+}
+#readmode .btn-floating svg {
+  position: relative;
+  top: 5px;
+}
+body.read .navbar-fixed,
+body.read .toc-widget.toc-fixed,
+body.read .card.valine-card.aos-init.aos-animate,
+body.read #prenext-posts.prev-next.articles,
+body.read footer.page-footer.bg-color,
+body.read .progress-bar {
+  display: none !important;
+}
+body.read {
+  background-color: transparent;
+  background-image: none !important;
+}
+body.read .bg-cover.pd-header.post-cover {
+  background-color: transparent;
+  background-image: none !important;
+}
+body.read #main-content.col.m12.l9 {
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+body.read .bg-cover .description {
+  color: #000;
+}

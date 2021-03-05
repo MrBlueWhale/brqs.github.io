@@ -513,11 +513,24 @@
 
 </div>
 </div>
+    
+<script type="text/javascript" size="80" alpha="0.4" zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+  
+<script src="/libs/instantpage/instantpage.js" type="module"></script>
 
+<script src="/js/FunnyTitle.js"></script>
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width()
+  if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>')
+  }
+</script>
+ 
 
 <main class="content">
-
-    
+  
 
 <div id="category-cloud" class="container chip-container">
     <div class="card">
@@ -634,61 +647,50 @@
         </div>
     </div>
 </div>
+ 
 
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/030421816.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/post/webp/hszl.webp" class="responsive-img" alt="三人一狗牛山红色之旅">
-                            
-                            <span class="card-title">三人一狗牛山红色之旅</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-为什么要写这篇文章呢？目的是为了记录下这次略显惨痛的爬山之旅，今天距离那天已经过去两天了，我的屁股和小腿还酸疼，一次性运动量有点大。也为同我们一起上山的狗而写。对于它来说，我们只是它生命中的过客，而它却陪我们上山下山最后目送我们远远离开才
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                    生活
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%B8%B8%E8%AE%B0/">
-                            <span class="chip bg-color">游记</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
+  <article id="articles" class="container articles">
+    <div class="row tags-posts">
+      
+      <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+        <div class="card">
+          <a href="/2021/030421816.html">
+            <div class="card-image tag-image">
+              
+              <img src="/medias/post/webp/hszl.webp" class="responsive-img" alt="三人一狗牛山红色之旅" />
+              
+              <span class="card-title">三人一狗牛山红色之旅</span>
             </div>
+          </a>
+          <div class="card-content article-content">
+            <div class="summary block-with-text"> 
+为什么要写这篇文章呢？目的是为了记录下这次略显惨痛的爬山之旅，今天距离那天已经过去两天了，我的屁股和小腿还酸疼，一次性运动量有点大。也为同我们一起上山的狗而写。对于它来说，我们只是它生命中的过客，而它却陪我们上山下山最后目送我们远远离开才 </div>
+            <div class="publish-info">
+              <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-03-04 </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category"> 生活 </a>
+                 
+              </span>
+            </div>
+          </div>
+
+          
+          <div class="card-action article-tags">
             
+            <a href="/tags/%E6%B8%B8%E8%AE%B0/">
+              <span class="chip bg-color">游记</span>
+            </a>
+            
+          </div>
+          
         </div>
-    </article>
+      </div>
+      
+    </div>
+  </article>
 </main>
 
 
@@ -864,12 +866,7 @@ $(function () {
     <script src="/libs/others/clicklove.js" async="async"></script>
      
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-         
-    <script type="text/javascript" size="80" alpha="0.4" zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
-      
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-    <script src="/js/FunnyTitle.js"></script>
+     
     <script>
       function enterfullscreen() {
         //进入全屏
@@ -916,13 +913,6 @@ $(function () {
         b ? enterfullscreen() : exitfullscreen()
       })
     </script>
-    <script type="text/javascript">
-      //只在桌面版网页启用特效
-      var windowWidth = $(window).width()
-      if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>')
-      }
-    </script>
     <script>
       if (localStorage.getItem('themespring') === '1') {
         document.body.classList.add('themespring')
@@ -959,7 +949,7 @@ $(function () {
           <use id="modeicon" xlink:href="#icon-moon"></use>
         </svg>
       </a>
-      <a href="#vcomment" class="icon-V hidden" id="toComment" title="前往评论区">
+      <a href="#vcomments" class="icon-V hidden" id="toComment" title="前往评论区">
         <svg t="1612414443145" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1879" width="38" height="38">
           <path d="M113.834667 291.84v449.194667a29.013333 29.013333 0 0 0 28.842666 29.013333h252.928v90.453333l160.597334-90.453333h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333h-665.6a29.013333 29.013333 0 0 0-29.696 29.013333z" fill="#FFDEAD" p-id="1880"></path>
           <path d="M809.130667 262.826667h-665.6a29.013333 29.013333 0 0 0-28.842667 29.013333v40.106667a29.013333 29.013333 0 0 1 28.842667-29.013334h665.6a29.013333 29.013333 0 0 1 29.013333 29.013334V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333z" fill="#FFF3DB" p-id="1881"></path>
