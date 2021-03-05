@@ -2458,7 +2458,7 @@ body.DarkMode header .side-nav .mobile-head .logo-name,
 body.DarkMode header .side-nav .mobile-head .logo-desc,
 body.DarkMode header .side-nav .menu-list a,
 body.DarkMode .bg-cover .post-title,
-body.DarkMode a {
+body.DarkMode.read .bg-cover .description {
   color: rgba(255, 255, 255, 0.6);
 }
 /* 背景颜色变灰色 */
@@ -3145,7 +3145,6 @@ body.read .progress-bar {
   display: none !important;
 }
 body.read {
-  background-color: transparent;
   background-image: none !important;
 }
 body.read .bg-cover.pd-header.post-cover {
