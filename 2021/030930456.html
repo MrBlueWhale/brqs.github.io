@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="给你的网站添加小锁头（安装ssl证书）, 凡尘纪">
+    <meta name="keywords" content="mc服务器进入3.0时代, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>给你的网站添加小锁头（安装ssl证书） | 凡尘纪</title>
+    <title>mc服务器进入3.0时代 | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -483,12 +483,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/post/webp/https.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/post/webp/mc3.0.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">给你的网站添加小锁头（安装ssl证书）</h1>
+                    <h1 class="description center-align post-title">mc服务器进入3.0时代</h1>
                 </div>
             </div>
         </div>
@@ -599,12 +599,12 @@
           
           <div class="article-tag">
             
-            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-              <span class="chip bg-color">服务器</span>
+            <a href="/tags/game/">
+              <span class="chip bg-color">game</span>
             </a>
             
-            <a href="/tags/ssl/">
-              <span class="chip bg-color">ssl</span>
+            <a href="/tags/mc/">
+              <span class="chip bg-color">mc</span>
             </a>
             
           </div>
@@ -615,7 +615,7 @@
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
+            <a href="/categories/game/" class="post-category"> game </a>
             
           </div>
           
@@ -624,13 +624,13 @@
 
       <div class="post-info">
         
-        <div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2020-10-29</div>
+        <div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2021-03-09</div>
          
-        <div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2021-03-05</div>
+        <div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2021-03-09</div>
          
-        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 1k</div>
+        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 895</div>
          
-        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 4 分</div>
+        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 3 分</div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
           <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -642,143 +642,19 @@
     <hr class="clearfix" />
     <div class="card-content article-card-content">
       <div id="articleContent"><blockquote>
-<p>之前一直没能给我的网站安装上小锁头，作为一个有强迫症的boy怎么能没有一个锁头呢，安装过程虽然有些曲折但是其实很简单的，只在没部署到服务器上时难度确实很大，主要原因在于GitHub提供的域名本身的证书会和你自己安装的证书冲突导致出现证书信息不一致等问题，较难解决就一直搁置了。</p>
+<p>由于突发意外（应该是积患已久，如果不咕咕咕的话应该会写一下前因后果），mc的服务器崩了，但好在mc服务端数据都还在，俗话说的好只要数据在一切都可以重来，还变得更好，之前升配云服务器就完全用来玩mc了，用我好兄弟的账号又买了一台学生机把网站迁了过去，然后升配的云服务器带着3.0时代来了，前两版本见 <a href="https://hesifan.top/2021/011239152.html">前文</a>  </p>
 </blockquote>
-<h2 id="http和https的区别："><a href="#http和https的区别：" class="headerlink" title="http和https的区别："></a>http和https的区别：</h2><p>未安装ssl证书的网站采用http协议用户和站点服务器之间数据传输未加密容易被其他攻击者盗取信息浏览器会提示不安全，其实问题不大没有利益冲突谁会来盗取你站点的信息，如果人家有技术想盗去你信息，加了ssl证书也没意义。<br>安装ssl证书的好处浏览器会提示用户安全，用户在和服务器信息交换时进行加密更加安全，拥有高贵的小锁头，但是网页加载速度可能会变慢个人感觉，而且https有利于seo会拥有更高的排名。  </p>
-<h2 id="centos-nginx服务器安装ssl证书："><a href="#centos-nginx服务器安装ssl证书：" class="headerlink" title="centos nginx服务器安装ssl证书："></a>centos nginx服务器安装ssl证书：</h2><blockquote>
-<p>由于我自己目前使用的时centos nginx的服务器所以就简介一下安装过程。  </p>
-</blockquote>
+<p>最开始使用的forge后面换到fabric，再到现在重回forge（旧时代的遗物的回归），主要原因如下感觉fabric比forge要卡一些，个人感受，其次fabric的mod实在在少以至于最后更换的时候唯一让人不舍就是辅助地图，本来是打算开原生插件服弄个be-java互通服，这样就可以用手机玩了，结果后来好兄弟们都没有be的正版账号，只能作罢，继续玩mod服，重新找mod，为了以后更高版本更新可以兼容，没有选择对游戏改动过大的mod，依旧以原版为基础增加了一些辅助类的mod，和我最爱的幸运方块以及一个风滚草。</p>
+<p>下面是服务器玩家进入3.0时代的引导书</p>
 <ol>
-<li>向域名商申请免费的ssl证书</li>
-<li>下载ssl证书里面有对应服务器的密匙文件</li>
-<li>将密匙文件复制到nginx安装路径里新建一个文件夹cert用于存放这两个文件。有时候并不会像域名商提供的文档里的默认安装路径，而是你自己的安装路径比如腾讯提供的路径是usr/local/nginx/conf而我自己的路径却是etc/nginx  </li>
-<li>最重要的一步就是修改配置文件nginx.conf主要修改你自己密匙文件路径位置和网站根目录  </li>
+<li>在hmcl启动器版本列表中点击游戏版本进入游戏管理页面，删除fabric，并前往mods文件夹删除所有.jar mod文件，再安装forge1.16.4对应最新版本耐心等待一会即可。安装完成后关闭hmcl。</li>
+<li>下载mod通过<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1b9rMEv0koiIr0Xl_LvW6xA">网盘</a>下载提取码brqs或者找我私发给你。将下载好的mod放入mods文件夹中</li>
+<li>打开游戏，按正常步骤进入即可</li>
 </ol>
-<pre><code>
-#你的这段代码可能已经存在你只需要将前面注释的#号去除并修改对应信息即可
-Settings for a TLS enabled server.
-
-    server {
-        listen       443 ssl http2 default_server;
-        listen       [::]:443 ssl http2 default_server;
-        server_name  _;
-        root         /home/hexo;            #网站根目录
-
-        ssl_certificate "/etc/nginx/cert/1_www.hesifan.top_bundle.crt";  #填你自己的路径文件名
-        ssl_certificate_key "/etc/nginx/cert/2_www.hesifan.top.key";         #填你自己的路径文件名
-        ssl_session_cache shared:SSL:1m;
-        ssl_session_timeout  10m;
-        ssl_ciphers HIGH:!aNULL:!MD5;
-        ssl_prefer_server_ciphers on;
-
-#        # Load configuration files for the default server block.
-        include /etc/nginx/default.d/*.conf;
-
-        location / {
-       }
-
-        error_page 404 /404.html;
-         location = /404.html {
-        }
-
-         error_page 500 502 503 504 /50x.html;
-        location = /50x.html {
-        }
-    } 
-   }  </code></pre>
+<p><strong>mod列表</strong><br>1.luckyblock（旧时代遗物的归来）最开始的服务器就有他，但是由于后面更换为fabric之后就把他删掉了，但是这个mod产生的一些物品还是原版的被保留了下来，那些物品被我称为旧时代的遗物。幸运方块最令人着谜的地方就在于在你打开他之前你完全不知道结果会是如何。<br>2.风滚草  Tumbleweed和幸运方块类似但是没有负面效果，在沙漠枯萎灌木生成，打落随机掉落物品。<br>3.ping可以发送信息的模组是把一个方块用红色效果框起来，然后发送给当前维度的人。功能分别是：警告-矿物-观察-移动。<br>使用说明：<br>按住菜单键（默认V键），鼠标移动到想使用的功能并松开菜单键（或点击想要使用的功能）选择想要谁来接收信息（必须同维度且在你的Ping范围内），如不指定则发给当前维度范围内的所有人。此时接收人会看到信息（选择矿物功能就会看到你发送的矿物），如果Ping的位置在对方的视野范围外（像是对方背对着你时）会在屏幕一侧显示一个小图标指向它当你挖到或者发现什么东西时可以通过此模组分享给基友。<br>4.区块预生成器Chunk-Pregenerator，优化服务器加载，可能导致光影异常。<br>5.体素地图<br>6.伤害血量显示<br>7.自动钓鱼  </p>
 <blockquote>
-<p>可选：设置HTTP请求自动跳转HTTPS。<br>在需要跳转的HTTP站点下添加以下rewrite语句，实现HTTP访问自动跳转到HTTPS页面。这个是添加在nginx.conf文件里关于http站点的设定里的而不是新加在HTTPs设定后面  </p>
+<p>注除前三个mod外后面的mod可以自由删除或保留，建议保留。</p>
 </blockquote>
-<pre><code>server {
- listen 443;
- server_name www.hesifan.top; #将www.hesifan.top修改为您证书绑定的域名，例如：www.hesifan.top。
-rewrite ^(.*)$ https://$host$1 permanent;   #将所有HTTP请求通过rewrite重定向到HTTPS。
- location / {
-index index.html index.htm;
-}
-}
-</code></pre>
-<p>5.重启nginx服务器</p>
-<pre><code>systemctl restart nginx.service  </code></pre>
-<p>6.访问新的地址<a href="https://hesifan.top/">https://hesifan.top</a> 无误即可<br>7.这是我nginx文件全部相关信息  </p>
-<pre><code>http {
-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                      '$status $body_bytes_sent "$http_referer" '
-                      '"$http_user_agent" "$http_x_forwarded_for"';
-
-    access_log  /var/log/nginx/access.log  main;
-
-    sendfile            on;
-    tcp_nopush          on;
-    tcp_nodelay         on;
-    keepalive_timeout   65;
-    types_hash_max_size 2048;
-
-    include             /etc/nginx/mime.types;
-    default_type        application/octet-stream;
-
-    # Load modular configuration files from the /etc/nginx/conf.d directory.
-    # See http://nginx.org/en/docs/ngx_core_module.html#include
-    # for more information.
-    include /etc/nginx/conf.d/*.conf;
-
-    server {
-        listen       80 default_server;
-        listen       [::]:80 default_server;
-        server_name www.hesifan.top_;
-        root         /home/hexo;
-
-        listen 443;
-        rewrite ^(.*)$ https://$host$1 permanent;   #将所有HTTP请求通过rewrite重定向到HTTPS。
-
-        # Load configuration files for the default server block.
-        include /etc/nginx/default.d/*.conf;
-
-        location / {
-        }
-
-        error_page 404 /404.html;
-        location = /404.html {
-        }
-
-        error_page 500 502 503 504 /50x.html;
-        location = /50x.html {
-        }
-    }
-
-# Settings for a TLS enabled server.
-
-    server {
-        listen       443 ssl http2 default_server;
-        listen       [::]:443 ssl http2 default_server;
-        server_name  _;
-        root         /home/hexo;
-
-        ssl_certificate "/etc/nginx/cert/1_www.hesifan.top_bundle.crt";
-        ssl_certificate_key "/etc/nginx/cert/2_www.hesifan.top.key";
-        ssl_session_cache shared:SSL:1m;
-        ssl_session_timeout  10m;
-        ssl_ciphers HIGH:!aNULL:!MD5;
-        ssl_prefer_server_ciphers on;
-
-#        # Load configuration files for the default server block.
-        include /etc/nginx/default.d/*.conf;
-
-        location / {
-       }
-
-        error_page 404 /404.html;
-         location = /404.html {
-        }
-
-         error_page 500 502 503 504 /50x.html;
-        location = /50x.html {
-        }
-    }
-
-}
-
-</code></pre>
 </div>
       <hr />
 
@@ -803,7 +679,7 @@ index index.html index.htm;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hesifan.top/2020/102948118.html">https://hesifan.top/2020/102948118.html</a>
+                    <a href="https://hesifan.top/2021/030930456.html">https://hesifan.top/2021/030930456.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -841,12 +717,12 @@ index index.html index.htm;
           
           <div class="article-tag">
             
-            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-              <span class="chip bg-color">服务器</span>
+            <a href="/tags/game/">
+              <span class="chip bg-color">game</span>
             </a>
             
-            <a href="/tags/ssl/">
-              <span class="chip bg-color">ssl</span>
+            <a href="/tags/mc/">
+              <span class="chip bg-color">mc</span>
             </a>
             
           </div>
@@ -1169,28 +1045,84 @@ new Valine({
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/111623576.html">
+                <a href="/2021/030930456.html">
                     <div class="card-image">
                         
-                        <img src="/medias/post/webp/lab.webp" class="responsive-img" alt="关于我的实验室">
+                        <img src="/medias/post/webp/mc3.0.webp" class="responsive-img" alt="mc服务器进入3.0时代">
                         
-                        <span class="card-title">关于我的实验室</span>
+                        <span class="card-title">mc服务器进入3.0时代</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于我的实验室：实验室内大部分页面都是我平时浏览大佬的博客发现的有趣的页面，然后用F12扒下来的。这些页面大多为开源项目，可以按照其说明自由引用，本人崇尚开源精神
+                            
+由于突发意外（应该是积患已久，如果不咕咕咕的话应该会写一下前因后果），mc的服务器崩了，但好在mc服务端数据都还在，俗话说的好只要数据在一切都可以重来，还变得更好，之前升配云服务器就完全用来玩mc了，用我好兄弟的账号又买了一台学生机把网站
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-16
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/game/" class="post-category">
+                                    game
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/game/">
+                        <span class="chip bg-color">game</span>
+                    </a>
+                    
+                    <a href="/tags/mc/">
+                        <span class="chip bg-color">mc</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/030521326.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/post/webp/friendcircle.webp" class="responsive-img" alt="hexo-matery添加友链朋友圈">
+                        
+                        <span class="card-title">hexo-matery添加友链朋友圈</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+这是冰老师做的友链朋友圈项目，我最开始看到它的时候，真就眼前一亮，这就是我想要的效果，立马加了群去了解这个项目，在部署项目的时候冰老师也一直耐心指导，给冰老师点赞👍冰老师还直接帮忙写了css，我觉得这个项目真的特别不错，就转载了冰老师的
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1206,63 +1138,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
+                    </a>
+                    
                     <a href="/tags/hexo/">
                         <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">
-                        <span class="chip bg-color">实验室</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/102646933.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="送给自己的话">
-                        
-                        <span class="card-title">送给自己的话</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-人生难免有时迷茫困顿失去航向，难免有时有些感触，难免有些想法，在这里写下想要对自己说的话，别人写给我的话。  
-
-
-我希望上天一直对我不公平，像以前那样，让我过的不如意，这样，我能更坚强。——友人赠 
-
-世界上只有一种英雄主义，就是发现了
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            不染轻裳
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%A2%8E%E8%AF%AD/">
-                        <span class="chip bg-color">碎语</span>
                     </a>
                     
                 </div>
