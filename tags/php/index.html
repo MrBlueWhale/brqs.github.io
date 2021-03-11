@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: PHP, 凡尘纪">
+    <meta name="keywords" content="标签: php, 凡尘纪">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: PHP | 凡尘纪</title>
+    <title>标签: php | 凡尘纪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -588,11 +588,11 @@
                 </a>
                 
                 
-                <a href="/tags/php/" title="php: 2">
+                <a href="/tags/php/" title="php: 3">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             data-tagname="php" style="background-color: #FEF9E7;">php
-                        <span class="tag-length">2</span>
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
@@ -777,15 +777,6 @@
                 </a>
                 
                 
-                <a href="/tags/PHP/" title="PHP: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="PHP" style="background-color: #85C1E9;">PHP
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/hexo/" title="hexo : 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -838,7 +829,7 @@
   <article id="articles" class="container articles">
     <div class="row tags-posts">
        
-      <div class="article tag-post col s12 m6 l4" data-tags="笔记, 总结, PHP" data-aos="fade-up">
+      <div class="article tag-post col s12 m6 l4" data-tags="php, 笔记, 总结" data-aos="fade-up">
         <div class="card">
           <a href="/2021/02011.html">
             <div class="card-image tag-image">
@@ -856,6 +847,56 @@
                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                 
                 <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category"> 学习 </a>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div class="article tag-post col s12 m6 l4" data-tags="centos, php, mysql, nginx, typecho" data-aos="fade-up">
+        <div class="card">
+          <a href="/2021/012225762.html">
+            <div class="card-image tag-image">
+              
+              <img src="/medias/post/webp/typecho.webp" class="responsive-img" alt="centos7.6全指令安装typecho及其php环境" />
+              
+              <span class="card-title">centos7.6全指令安装typecho及其php环境</span>
+            </div>
+          </a>
+          <div class="card-content article-content">
+            <div class="publish-info">
+              <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-01-22 </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div class="article tag-post col s12 m6 l4" data-tags="php, mysql, 服务器, apache" data-aos="fade-up">
+        <div class="card">
+          <a href="/2021/010561027.html">
+            <div class="card-image tag-image">
+              
+              <img src="/medias/post/webp/php.webp" class="responsive-img" alt="centos服务器手动安装PHP环境" />
+              
+              <span class="card-title">centos服务器手动安装PHP环境</span>
+            </div>
+          </a>
+          <div class="card-content article-content">
+            <div class="publish-info">
+              <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-01-05 </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
                  
               </span>
             </div>
@@ -1174,24 +1215,6 @@ $(function () {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
           setTimeout(function () {
             $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
-              setTimeout(function () {
-                $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-                  $(this).remove()
-                })
-              }, 2e3)
-          })
-      }
-      function switchNightModeTop() {
-        $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
-      }
-      checkNightMode(),
-        $('.menu-V .toggle').on('click', function () {
-          $('.menu-V').toggleClass('expanded'), $('.menu-V a').toggleClass('hidden'), $('.menu-V .container-M , .toggle').toggleClass('close')
-        })
-    </script>
-  </body>
-</html>
-attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
               setTimeout(function () {
                 $('.Cuteen_DarkSky').fadeOut(1e3, function () {
                   $(this).remove()
