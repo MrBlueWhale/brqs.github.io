@@ -37,9 +37,9 @@
 	s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="凡尘纪" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="凡尘纪" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
   <meta name="baidu-site-verification" content="code-e4kN1NOKf6" />
@@ -1705,304 +1705,301 @@ echo 'test'; //如果test.php文件不存在会报一个fatal错误，不可以�
     </div>
   </div>
        <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
+  .valine-card {
+    margin: 1.5rem auto;
+  }
 
-    .valine-card .card-content {
-        padding: 10px 10px 5px 10px;
-    }
+  .valine-card .card-content {
+    padding: 10px 10px 5px 10px;
+  }
 
+  #vcomments textarea {
+    box-sizing: border-box;
+    background: url('/medias/comment_bg.png') 100% 100% no-repeat;
+  }
 
+  #vcomments p {
+    margin: 2px 2px 10px;
+    font-size: 1.05rem;
+    line-height: 1.78rem;
+  }
 
+  #vcomments blockquote p {
+    text-indent: 0.2rem;
+  }
 
+  #vcomments a {
+    padding: 0 2px;
+    color: #4cbf30;
+    font-weight: 500;
+    text-decoration: none;
+  }
 
+  #vcomments img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
 
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
-    }
+  #vcomments ol li {
+    list-style-type: decimal;
+  }
 
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
+  #vcomments ol,
+  ul {
+    display: block;
+    padding-left: 2em;
+    word-spacing: 0.05rem;
+  }
 
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
+  #vcomments ul li,
+  ol li {
+    display: list-item;
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
 
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
+  #vcomments ul li {
+    list-style-type: disc;
+  }
 
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
+  #vcomments ul ul li {
+    list-style-type: circle;
+  }
 
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
+  #vcomments table,
+  th,
+  td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+  }
 
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
+  #vcomments table,
+  th,
+  td {
+    border: 0;
+  }
 
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
+  table tr:nth-child(2n),
+  thead {
+    background-color: #fafafa;
+  }
 
-    #vcomments ul li {
-        list-style-type: disc;
-    }
+  #vcomments table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+  }
 
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
+  #vcomments table td {
+    min-width: 80px;
+  }
 
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
+  #vcomments h1 {
+    font-size: 1.85rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+  }
 
-    #vcomments table, th, td {
-        border: 0;
-    }
+  #vcomments h2 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+  }
 
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
+  #vcomments h3 {
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+  }
 
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
+  #vcomments h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
 
-    #vcomments table td {
-        min-width: 80px;
-    }
+  #vcomments h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+  }
 
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
+  #vcomments h6 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
 
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
+  #vcomments p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
+  #vcomments hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
 
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
+  #vcomments blockquote {
+    margin: 15px 0;
+    border-left: 5px solid #42b983;
+    padding: 1rem 0.8rem 0.3rem 0.8rem;
+    color: #666;
+    background-color: rgba(66, 185, 131, 0.1);
+  }
 
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
+  #vcomments pre {
+    font-family: monospace, monospace;
+    padding: 1.2em;
+    margin: 0.5em 0;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.3em;
+    tab-size: 4;
+  }
 
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
+  #vcomments code {
+    font-family: monospace, monospace;
+    padding: 1px 3px;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+  }
 
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
+  #vcomments pre code {
+    font-family: monospace, monospace;
+    padding: 0;
+    color: #e8eaf6;
+    background-color: #272822;
+  }
 
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
+  #vcomments pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 0.5em 0;
+  }
 
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
+  #vcomments code[class*='language-'],
+  pre[class*='language-'] {
+    color: #e8eaf6;
+  }
 
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
+  #vcomments [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+  }
 
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
+  #vcomments b,
+  strong {
+    font-weight: bold;
+  }
 
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
+  #vcomments dfn {
+    font-style: italic;
+  }
 
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
+  #vcomments small {
+    font-size: 85%;
+  }
 
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
+  #vcomments cite {
+    font-style: normal;
+  }
 
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
+  #vcomments mark {
+    background-color: #fcf8e3;
+    padding: 0.2em;
+  }
 
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
+  #vcomments table,
+  th,
+  td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+  }
 
-    #vcomments dfn {
-        font-style: italic;
-    }
+  table tr:nth-child(2n),
+  thead {
+    background-color: #fafafa;
+  }
 
-    #vcomments small {
-        font-size: 85%;
-    }
+  #vcomments table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+  }
 
-    #vcomments cite {
-        font-style: normal;
-    }
+  #vcomments table td {
+    min-width: 80px;
+  }
 
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
+  #vcomments [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+  }
 
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-.v[data-class="v"] .vwrap .vheader .vinput {
-  width: 32%;
-  border-bottom: 1px dashed #dedede;
-}
-	
+  .v[data-class='v'] .vwrap .vheader .vinput {
+    width: 32%;
+    border-bottom: 1px dashed #dedede;
+  }
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
+  <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px">
+    <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+    <span>评论</span>
+  </div>
+  <!-- 主题 挂件 -->
+  <div class="caishendengsd">
+    <div class="caishenxianleftsd">
+      <img class="caishenpic fudao" src="/medias/christmas-img/9.png" />
     </div>
-    <!-- 主题 挂件 -->
-    <div class="caishendengsd">        
-        <div class="caishenxianleftsd">
-            <img class="caishenpic fudao" src="/medias/christmas-img/9.png">
-        </div>              
+  </div>
+  <div class="caishendeng">
+    <div class="caishenxianleft">
+      <img class="caishenpic fudao" src="/medias/spring-img/9.png" />
     </div>
-    <div class="caishendeng">        
-        <div class="caishenxianleft">
-            <img class="caishenpic fudao" src="/medias/spring-img/9.png">
-        </div>              
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid" data-class="v">
-    </div>
+  </div>
+  <div id="vcomments" class="card-content" style="display: grid" data-class="v"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/av-min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/Valine.min.js"></script>
 <script>
-    let metaPlaceholder = {"nick":"昵称/qq(必填)","mail":"邮箱(必填)","link":"网址(https://)选填"} ;
-//这里要换行
-new Valine({
-        el: '#vcomments',
-        appId: 'MTf2zMKqfswMOoRa90rOoCWC-gzGzoHsz',
-        appKey: 'lJMlfgSfSTKrTvrIzNhpGyhG',
-        notify: 'true' === 'true',
-        verify: 'true' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'monsterid',
-        pageSize: '10',
-        lang: 'zh-CN',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        meta: ["nick", "mail", "link"],
-        recordIP: 'true' === 'true',
-        enableQQ: 'monsterid',
-        requiredFields: ["f5a3318ea1fc0d20"],
-        master: 'ddf016c0f5a3318ea1fc0d20c8ac4429',
-        friends: ["efc1730bf09301ac92cf7ba5a8c88df0", "80a023e11167a78a35f72ef4dd0a48f4", "1512958e18378c98b498d5effe3e76ff"],
-        tagMeta: ["博主", "小伙伴", "访客"],
-        metaPlaceholder: metaPlaceholder,
-
-    });
+  let metaPlaceholder = { nick: '昵称/qq(必填)', mail: '邮箱(必填)', link: '网址(https://)选填' }
+  //这里要换行
+  new Valine({
+    el: '#vcomments',
+    appId: 'MTf2zMKqfswMOoRa90rOoCWC-gzGzoHsz',
+    appKey: 'lJMlfgSfSTKrTvrIzNhpGyhG',
+    notify: 'true' === 'true',
+    verify: 'true' === 'true',
+    visitor: 'true' === 'true',
+    avatar: 'monsterid',
+    pageSize: '10',
+    lang: 'zh-CN',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    meta: ['nick', 'mail', 'link'],
+    recordIP: 'true' === 'true',
+    enableQQ: 'monsterid',
+    requiredFields: ['f5a3318ea1fc0d20'],
+    master: 'ddf016c0f5a3318ea1fc0d20c8ac4429',
+    friends: ['efc1730bf09301ac92cf7ba5a8c88df0', '80a023e11167a78a35f72ef4dd0a48f4', '1512958e18378c98b498d5effe3e76ff'],
+    tagMeta: ['博主', '小伙伴', '访客'],
+    metaPlaceholder: metaPlaceholder,
+  })
 </script>
-
-
-
-
    
 
 <article id="prenext-posts" class="prev-next articles">
@@ -2408,21 +2405,20 @@ systemctl star
 <div class="progress-bar"></div>
  <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
+  <div class="modal-content">
+    <div class="search-header">
+      <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+      <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" />
     </div>
+    <div id="searchResult"></div>
+  </div>
 </div>
 
 <script src="/js/search.js"></script>
 <script type="text/javascript">
-$(function () {
-    searchFunc("/search.xml", 'searchInput', 'searchResult');
-});
+  $(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult')
+  })
 </script>
  <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
