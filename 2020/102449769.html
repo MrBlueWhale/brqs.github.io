@@ -629,9 +629,9 @@
          
         <div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2021-03-28</div>
          
-        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 2.4k</div>
+        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 2.9k</div>
          
-        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 9 分</div>
+        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 11 分</div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
           <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -707,6 +707,7 @@ double//双精度浮点数</code></pre>
 </code></pre>
 <blockquote>
 <p>chart 为单个字符不是字符串<br>%c 打印字符<br>%d 打印整型<br>%f 打印浮点型<br>%lf 打印双精度浮点数<br>%p 打印地址  </p>
+<p>%s打印字符串</p>
 </blockquote>
 <h4 id="int-short-long的区别"><a href="#int-short-long的区别" class="headerlink" title="int short long的区别"></a>int short long的区别</h4><h5 id="1、定义不同"><a href="#1、定义不同" class="headerlink" title="1、定义不同"></a>1、定义不同</h5><p>int类型称为整型；</p>
 <p>short类型称为短整型；</p>
@@ -834,25 +835,110 @@ sum<span class="token operator">=</span>num1<span class="token operator">+</span
 <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <h5 id="枚举常量"><a href="#枚举常量" class="headerlink" title="枚举常量"></a>枚举常量</h5><p>枚举常量：可以一一列举的值。枚举关键字-<strong>enum</strong></p>
-<pre><code>#include &lt;stdio.h&gt;
-enum Sex{
-MALE,
-FEMALE,
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">enum</span> Sex<span class="token punctuation">{</span>
+MALE<span class="token punctuation">,</span>
+FEMALE<span class="token punctuation">,</span>
 SECRET
-};
-//MALE,FEMALE,SECRET即为枚举常量
-int main(){
-enum Sex sex=MALE;
-printf("%d\n",sex);
-printf("%d\n",MALE);
-printf("%d\n",FEMALE);
-printf("%d\n",SECRET);
-sex=SECRET;
-}</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//MALE,FEMALE,SECRET即为枚举常量</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token keyword">enum</span> Sex sex<span class="token operator">=</span>MALE<span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>sex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>MALE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>FEMALE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>SECRET<span class="token punctuation">)</span><span class="token punctuation">;</span>
+sex<span class="token operator">=</span>SECRET<span class="token punctuation">;</span>
+return0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <blockquote>
 <p>枚举变量不能更改，枚举类型创建的变量是可以改变的。</p>
 </blockquote>
-<h3 id="字符串，转义符，注释"><a href="#字符串，转义符，注释" class="headerlink" title="字符串，转义符，注释"></a>字符串，转义符，注释</h3></div>
+<h3 id="5-字符串，转义符，注释"><a href="#5-字符串，转义符，注释" class="headerlink" title="5.字符串，转义符，注释"></a>5.字符串，转义符，注释</h3><h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p><strong>“hello world\n”</strong></p>
+<p>这种有双引号（double quote）引起来的一串字符称为字符串字面值（string literal）简称字符串。</p>
+<blockquote>
+<p>注： 字符串的结束标志是一个\0的转义字符，在计算字符串长度的时候\0是结束标志，不算做字符串内容。</p>
+</blockquote>
+<p>C语言里面没有专门的字符串类型。在C语言中，字符串是被当做字符数组来处理的。</p>
+<p> <strong>字符数组初始化</strong></p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">char</span> arr1<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"hsf"</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> arr2<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'h'</span><span class="token punctuation">,</span><span class="token string">'s'</span><span class="token punctuation">,</span><span class="token string">'f'</span><span class="token punctuation">,</span><span class="token string">'\0'</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>字符数组初始化时可以直接使用字符串字面常量进行初始化此方式不需要添加\0结束默认有一个隐藏的\0结束字符串。使用{}初始化字符数组时需要添加\0结束字符串，否则会出现数组越界产生随机值，越界后的值是无意义的。</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">char</span> arr1<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"hsf"</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span> arr2<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'h'</span><span class="token punctuation">,</span><span class="token string">'s'</span><span class="token punctuation">,</span><span class="token string">'f'</span><span class="token punctuation">,</span><span class="token string">'\0'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">strlen</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//3</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">strlen</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//3</span>
+<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>strlen string length字符串长度检测函数，使用需要引入string.h文件。</p>
+<p>若使用{}初始化字符数组不添加结束转义符将会打印出无意义的随机值。</p>
+</blockquote>
+<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>转义是将有多种含义的字符进行转换。 </p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>释义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>?</td>
+<td>在书写连续多个问号时使用，防止他们被解析为三字母词</td>
+</tr>
+<tr>
+<td>\‘</td>
+<td>用于表示字符常量’</td>
+</tr>
+<tr>
+<td>\“</td>
+<td>用于表示字符串内部的双引号</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>用于表示一个反斜杠，防止他被解释为一个转义序列符</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>警告字符，蜂鸣</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表符</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表符</td>
+</tr>
+<tr>
+<td>\ddd</td>
+<td>ddd表示一个1-3个八进制数字如\130X</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</div>
       <hr />
 
       
@@ -1517,7 +1603,7 @@ sex=SECRET;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.2k</span>&nbsp;字
+                class="white-color">46.7k</span>&nbsp;字
             
             
             
