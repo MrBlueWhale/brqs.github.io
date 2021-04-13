@@ -347,20 +347,6 @@
   </url>
   
   <url>
-    <loc>https://hesifan.top/tags/C%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hesifan.top/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hesifan.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -375,6 +361,27 @@
   </url>
   
   <url>
+    <loc>https://hesifan.top/tags/C%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hesifan.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hesifan.top/tags/hello-world/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hesifan.top/tags/matery/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -383,13 +390,6 @@
   
   <url>
     <loc>https://hesifan.top/tags/hexo/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hesifan.top/tags/hello-world/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -517,14 +517,14 @@
 
   
   <url>
-    <loc>https://hesifan.top/categories/game/</loc>
+    <loc>https://hesifan.top/categories/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hesifan.top/categories/%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://hesifan.top/categories/game/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
