@@ -1770,6 +1770,10 @@ thead {
 .jz {
   padding: 0 118px;
   /* font-family: 'Architects Daughter', cursive!important; */
+  position: relative;
+  padding: 26px 20px;
+  margin: 10px 0px;
+  border-radius: 8px;
 }
 .jz ul {
   padding-left: 6px;
